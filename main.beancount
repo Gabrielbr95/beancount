@@ -1,0 +1,18 @@
+; ===========================================================================
+; Main Beancount Ledger
+; ===========================================================================
+
+option "operating_currency" "BRL"
+option "operating_currency" "USD"
+option "booking_method" "AVERAGE"
+
+; Fava Import Configuration
+; Importer configuration is managed in `import.py` via the `CONFIG` and `HOOKS` variables.
+
+plugin "beancount.plugins.auto_accounts"
+plugin "beancount.plugins.implicit_prices"
+
+include "accounts.beancount"
+include "commodities.beancount"
+include "transactions.beancount"
+include "prices.beancount"

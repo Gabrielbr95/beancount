@@ -1,0 +1,105 @@
+; ===========================================================================
+; Commodities and Currencies
+; ===========================================================================
+
+; Primary Currencies
+1900-01-01 commodity BRL
+  name: "Brazilian Real"
+  precision: 2
+
+1900-01-01 commodity USD
+  name: "US Dollar"
+  precision: 2
+
+; Secondary Currencies
+1900-01-01 commodity EUR
+  name: "Euro"
+  precision: 2
+
+1900-01-01 commodity GBP
+  name: "British Pound"
+  precision: 2
+
+; ===========================================================================
+; Brazilian Stocks (B3) - Examples based on export samples
+; ===========================================================================
+
+1900-01-01 commodity BBAS3
+  name: "Banco do Brasil S/A"
+  precision: 2
+
+1900-01-01 commodity WEGE3
+  name: "WEG S.A."
+  precision: 2
+
+1900-01-01 commodity HGLG11
+  name: "Pátria Log - Fundo de Investimento Imobiliário"
+  precision: 2
+
+1900-01-01 commodity HGRU11
+  name: "Patria Renda Urbana - Fundo de Investimento Imobiliário"
+  precision: 2
+
+1900-01-01 commodity IRIM11
+  name: "Iridium Fundo de Investimento Imobiliário"
+  precision: 2
+
+1900-01-01 commodity PMLL11
+  name: "Genial Malls Fundo de Investimento Imobiliario"
+  precision: 2
+
+1900-01-01 commodity BBDC3
+  name: "Banco Bradesco S.A."
+  precision: 2
+
+1900-01-01 commodity ITUB3
+  name: "Itaú Unibanco Holding S.A."
+  precision: 2
+
+1900-01-01 commodity HYPE3
+  name: "Hypera Pharma S.A."
+  precision: 2
+
+1900-01-01 commodity LEVE3
+  name: "Metal Leve S.A. Indústria e Comércio"
+  precision: 2
+
+1900-01-01 commodity PETR4
+  name: "Petróleo Brasileiro S.A. - Petrobras"
+  precision: 2
+
+1900-01-01 commodity BOVA11
+  name: "iShares Ibovespa Fundo de Índice"
+  precision: 2
+
+1900-01-01 commodity MGLU3
+  name: "Magazine Luiza S.A."
+  precision: 2
+
+; ===========================================================================
+; US Stocks (IBKR)
+; ===========================================================================
+
+1900-01-01 commodity AAPL
+  name: "Apple Inc."
+  precision: 2
+
+1900-01-01 commodity VTI
+  name: "Vanguard Total Stock Market ETF"
+  precision: 2
+
+; ===========================================================================
+; Crypto (Binance)
+; ===========================================================================
+
+1900-01-01 commodity BTC
+  name: "Bitcoin"
+  precision: 8
+
+1900-01-01 commodity ETH
+  name: "Ethereum"
+  precision: 8
+
+1900-01-01 commodity USDT
+  name: "Tether USD"
+  precision: 6

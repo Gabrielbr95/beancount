@@ -1,0 +1,74 @@
+; ===========================================================================
+; Accounts
+; ===========================================================================
+
+; Bank: Banco do Brasil (BB)
+; Assets
+1900-01-01 open Assets:Investment:BB:Cash BRL
+1900-01-01 open Assets:Investment:BB:Savings BRL
+; Income
+1900-01-01 open Income:Investment:BB:Dividend BRL
+1900-01-01 open Income:Investment:BB:JCP BRL
+1900-01-01 open Income:Investment:BB:Interest BRL
+1900-01-01 open Income:Investment:BB:Gains BRL
+; Expenses
+1900-01-01 open Expenses:Investment:BB:Fees BRL
+1900-01-01 open Expenses:Investment:BB:Taxes BRL
+; Equity
+1900-01-01 open Equity:Portfolio:BB:Opening BRL
+; Liabilities
+1900-01-01 open Liabilities:Credit:BB:Card BRL
+
+; Bank: Banco Inter
+; Assets
+1900-01-01 open Assets:Investment:Inter:Cash BRL
+; Income
+1900-01-01 open Income:Investment:Inter:Dividend BRL
+1900-01-01 open Income:Investment:Inter:JCP BRL
+1900-01-01 open Income:Investment:Inter:Interest BRL
+1900-01-01 open Income:Investment:Inter:Gains BRL
+; Expenses
+1900-01-01 open Expenses:Investment:Inter:Fees BRL
+1900-01-01 open Expenses:Investment:Inter:Taxes BRL
+; Equity
+1900-01-01 open Equity:Portfolio:Inter:Opening BRL
+
+; Broker: Clear Corretora
+; Assets
+1900-01-01 open Assets:Investment:Clear:Cash BRL
+; Income
+1900-01-01 open Income:Investment:Clear:Dividend BRL
+1900-01-01 open Income:Investment:Clear:JCP BRL
+1900-01-01 open Income:Investment:Clear:Interest BRL
+1900-01-01 open Income:Investment:Clear:Gains BRL
+; Expenses
+1900-01-01 open Expenses:Investment:Clear:Fees BRL
+1900-01-01 open Expenses:Investment:Clear:Taxes BRL
+; Equity
+1900-01-01 open Equity:Portfolio:Clear:Opening BRL
+
+; Broker: Interactive Brokers (IBKR)
+; Assets
+1900-01-01 open Assets:Investment:IBKR:Cash USD
+; Income
+1900-01-01 open Income:Investment:IBKR:Dividend USD
+1900-01-01 open Income:Investment:IBKR:Interest USD
+1900-01-01 open Income:Investment:IBKR:Gains USD
+; Expenses
+1900-01-01 open Expenses:Investment:IBKR:Fees USD
+1900-01-01 open Expenses:Investment:IBKR:Taxes USD
+; Equity
+1900-01-01 open Equity:Portfolio:IBKR:Opening USD
+
+; Exchange: Binance
+; Assets
+1900-01-01 open Assets:Investment:Binance:Cash USDT,BRL
+; Income
+1900-01-01 open Income:Investment:Binance:Interest USDT
+1900-01-01 open Income:Investment:Binance:Gains USDT
+1900-01-01 open Income:Investment:Binance:Rewards USDT
+; Expenses
+1900-01-01 open Expenses:Investment:Binance:Fees USDT
+1900-01-01 open Expenses:Investment:Binance:Taxes USDT
+; Equity
+1900-01-01 open Equity:Portfolio:Binance:Opening USDT

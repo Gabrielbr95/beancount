@@ -1,0 +1,58 @@
+TYPE: Transferencia count=6
+  ('Credito', '14/02/2025', 'Transferencia', 'Tesouro IPCA+ 2045', 'XP INVESTIMENTOS CCTVM S/A', 29.27, '-', '-')
+  ('Debito', '14/02/2025', 'Transferencia', 'Tesouro IPCA+ 2045', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 29.27, '-', '-')
+  ('Credito', '14/02/2025', 'Transferencia', 'Tesouro Prefixado 2029', 'XP INVESTIMENTOS CCTVM S/A', 22.05, '-', '-')
+  ('Debito', '14/02/2025', 'Transferencia', 'Tesouro Prefixado 2029', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 22.05, '-', '-')
+  ('Credito', '14/02/2025', 'Transferencia', 'Tesouro Prefixado 2031', 'XP INVESTIMENTOS CCTVM S/A', 20.04, '-', '-')
+
+TYPE: Juros Sobre Capital Próprio - Transferido count=44
+  ('Credito', '14/02/2025', 'Juros Sobre Capital Próprio - Transferido', 'ETER3 - ETERNIT S.A.', 'XP INVESTIMENTOS CCTVM S/A', 500, 0.052, 22.11)
+  ('Debito', '14/02/2025', 'Juros Sobre Capital Próprio - Transferido', 'ETER3 - ETERNIT S.A.', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 500, 0.052, 22.11)
+  ('Credito', '14/02/2025', 'Juros Sobre Capital Próprio - Transferido', 'HYPE3 - HYPERA S/A', 'XP INVESTIMENTOS CCTVM S/A', 400, 0.097, 33.06)
+  ('Credito', '14/02/2025', 'Juros Sobre Capital Próprio - Transferido', 'HYPE3 - HYPERA S/A', 'XP INVESTIMENTOS CCTVM S/A', 400, 0.169, 57.5)
+  ('Credito', '14/02/2025', 'Juros Sobre Capital Próprio - Transferido', 'HYPE3 - HYPERA S/A', 'XP INVESTIMENTOS CCTVM S/A', 400, 0.098, 33.21)
+
+TYPE: Dividendo - Transferido count=8
+  ('Credito', '14/02/2025', 'Dividendo - Transferido', 'EGIE3 - ENGIE BRASIL ENERGIA S.A.', 'XP INVESTIMENTOS CCTVM S/A', 300, 1.143, 342.97)
+  ('Debito', '14/02/2025', 'Dividendo - Transferido', 'EGIE3 - ENGIE BRASIL ENERGIA S.A.', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 300, 1.143, 342.97)
+  ('Credito', '14/02/2025', 'Dividendo - Transferido', 'HYPE3 - HYPERA S/A', 'XP INVESTIMENTOS CCTVM S/A', 400, 0.122, 48.68)
+  ('Debito', '14/02/2025', 'Dividendo - Transferido', 'HYPE3 - HYPERA S/A', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 400, 0.122, 48.68)
+  ('Credito', '14/02/2025', 'Dividendo - Transferido', 'PETR4 - PETROLEO BRASILEIRO S/A - PETROBRAS', 'XP INVESTIMENTOS CCTVM S/A', 500, 0.654, 326.78)
+
+TYPE: Rendimento - Transferido count=4
+  ('Credito', '14/02/2025', 'Rendimento - Transferido', 'IRDM11 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 187, 0.75, 140.25)
+  ('Debito', '14/02/2025', 'Rendimento - Transferido', 'IRDM11 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 187, 0.75, 140.25)
+  ('Debito', '09/10/2023', 'Rendimento - Transferido', 'PETR4 - PETROLEO BRASILEIRO S/A - PETROBRAS', 'MODAL DTVM LTDA', 500, 0.021, 8)
+  ('Credito', '09/10/2023', 'Rendimento - Transferido', 'PETR4 - PETROLEO BRASILEIRO S/A - PETROBRAS', 'XP INVESTIMENTOS CCTVM S/A', 500, 0.021, 8)
+
+TYPE: Recibo de Subscrição count=18
+  ('Credito', '17/08/2021', 'Recibo de Subscrição', 'XPML13 - XP MALLS FDO INV IMOB FII', 'MODAL DTVM LTDA', 8, '-', '-')
+  ('Debito', '17/08/2021', 'Recibo de Subscrição', 'XPML13 - XP MALLS FDO INV IMOB FII', 'MODAL DTVM LTDA', 8, '-', '-')
+  ('Debito', '12/08/2021', 'Recibo de Subscrição', 'HGLG14 - CSHG LOGÍSTICA FDO INV IMOB - FII', 'MODAL DTVM LTDA', 3, '-', '-')
+  ('Credito', '12/08/2021', 'Recibo de Subscrição', 'HGLG14 - CSHG LOGÍSTICA FDO INV IMOB - FII', 'MODAL DTVM LTDA', 3, '-', '-')
+  ('Credito', '05/08/2021', 'Recibo de Subscrição', 'IRDM13 - FII IRIDIUM RECEBIVEIS IMOBILIARIOS', 'MODAL DTVM LTDA', 9, '-', '-')
+
+TYPE: Solicitação de Subscrição count=9
+  ('Debito', '16/08/2021', 'Solicitação de Subscrição', 'XPML12 - XP MALLS FDO INV IMOB FII', 'MODAL DTVM LTDA', 8, '-', '-')
+  ('Debito', '10/08/2021', 'Solicitação de Subscrição', 'HGLG12 - CSHG LOGÍSTICA FDO INV IMOB - FII', 'MODAL DTVM LTDA', 3, '-', '-')
+  ('Debito', '04/08/2021', 'Solicitação de Subscrição', 'IRDM12 - FII IRIDIUM RECEBIVEIS IMOBILIARIOS', 'MODAL DTVM LTDA', 9, '-', '-')
+  ('Debito', '23/03/2021', 'Solicitação de Subscrição', 'IRDM12 - FII IRIDIUM RECEBIVEIS IMOBILIARIOS', 'MODAL DTVM LTDA', 7, '-', '-')
+  ('Debito', '23/12/2020', 'Solicitação de Subscrição', 'XPLG12 - XP LOG FUNDO DE INVESTIMENTO IMOBILIARIO FII', 'MODAL DTVM LTDA', 5, '-', '-')
+
+TYPE: Direitos de Subscrição - Exercido count=9
+  ('Debito', '16/08/2021', 'Direitos de Subscrição - Exercido', 'XPML12 - XP MALLS FDO INV IMOB FII', 'MODAL DTVM LTDA', 8, '-', '-')
+  ('Debito', '11/08/2021', 'Direitos de Subscrição - Exercido', 'HGLG12 - CSHG LOGÍSTICA FDO INV IMOB - FII', 'MODAL DTVM LTDA', 3, '-', '-')
+  ('Debito', '04/08/2021', 'Direitos de Subscrição - Exercido', 'IRDM12 - FII IRIDIUM RECEBIVEIS IMOBILIARIOS', 'MODAL DTVM LTDA', 9, '-', '-')
+  ('Debito', '23/03/2021', 'Direitos de Subscrição - Exercido', 'IRDM12 - FII IRIDIUM RECEBIVEIS IMOBILIARIOS', 'MODAL DTVM LTDA', 7, '-', '-')
+  ('Debito', '23/12/2020', 'Direitos de Subscrição - Exercido', 'XPLG12 - XP LOG FUNDO DE INVESTIMENTO IMOBILIARIO FII', 'MODAL DTVM LTDA', 5, '-', '-')
+
+TYPE: Fração em Ativos count=2
+  ('Debito', '03/12/2025', 'Fração em Ativos', 'IRIM15 - IRIDIUM FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CCTVM S/A', 0.46, '-', '-')
+  ('Debito', '18/10/2021', 'Fração em Ativos', 'XPBR31 - XP INC.', 'MODAL DTVM LTDA', 0, '-', '-')
+
+TYPE: Cisão count=2
+  ('Credito', '05/10/2021', 'Cisão', 'ITUB3 - ITAU UNIBANCO HOLDING S/A', 'MODAL DTVM LTDA', 300, '-', '-')
+  ('Credito', '05/10/2021', 'Cisão', 'XPAR3 - XINGUARA INDUSTRIA E COMERCIO S/A', 'MODAL DTVM LTDA', 300, '-', '-')
+
+TYPE: Incorporação count=1
+  ('Credito', '05/10/2021', 'Incorporação', 'XPBR31 - XP INC.', 'MODAL DTVM LTDA', 6.92, '-', '-')

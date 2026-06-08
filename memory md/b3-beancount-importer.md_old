@@ -1,0 +1,544 @@
+OLD VERSION. DO NOT USE !!!!!!!!
+
+
+
+
+# B3 → Beancount Importer — Design Notes
+
+Source files analysed:
+- `movimentacao-2025-12-15-22-19-44.xlsx` — corporate actions, income, transfers
+- `negociacao-2025-12-15-22-20-47.xlsx` — buy/sell trades
+
+---
+
+## File structure
+
+### negociacao (trades)
+
+| Column | Notes |
+|---|---|
+| `Data do Negócio` | Trade date, format `DD/MM/YYYY` |
+| `Tipo de Movimentação` | `Compra` or `Venda` |
+| `Mercado` | `Mercado à Vista` or `Mercado Fracionário` |
+| `Prazo/Vencimento` | Usually `-`; occasionally a date for fixed-income |
+| `Instituição` | Broker name |
+| `Código de Negociação` | Ticker (fracionário appends `F`, e.g. `BBDC3F`) |
+| `Quantidade` | Shares traded |
+| `Preço` | Unit price in BRL |
+| `Valor` | Total in BRL |
+
+### movimentacao (everything else)
+
+| Column | Notes |
+|---|---|
+| `Entrada/Saída` | `Credito` or `Debito` |
+| `Data` | Date, format `DD/MM/YYYY` |
+| `Movimentação` | Event type (see mapping below) |
+| `Produto` | Full name, ticker is the prefix before ` - ` |
+| `Instituição` | Broker name |
+| `Quantidade` | Shares; may be `-` for zero-value events |
+| `Preço unitário` | May be `-` |
+| `Valor da Operação` | Cash amount in BRL; may be `-` |
+
+Ticker extraction: `ticker = produto.split(" - ")[0].strip()`
+
+---
+
+## Suggested account structure
+
+```
+Assets:BR:Broker:XP
+Assets:BR:Broker:Clear
+Assets:BR:Broker:Modal
+
+Assets:BR:Stocks:PETR4          ; one per ticker
+Assets:BR:FII:HGLG11            ; real-estate investment funds
+Assets:BR:TesouroDireto:IPCA2045
+Assets:BR:TesouroDireto:PRE2029
+Assets:BR:Rights:HGLG12RTS      ; ephemeral — must zero out after each rights cycle
+
+Income:BR:Dividends:WEGE3
+Income:BR:JCP:BBAS3
+Income:BR:FII:HGLG11
+Income:BR:CapGains               ; single account is fine
+Income:BR:CorporateActions       ; wash for splits, grupamentos, bonificações
+
+Expenses:BR:Fees:TesouroDireto
+```
+
+---
+
+## Transaction type mapping
+
+### From negociacao
+
+#### Compra (buy)
+
+```beancount
+2023-06-27 * "Compra VALE3"
+  Assets:BR:Broker:Clear            -13350.00 BRL
+  Assets:BR:Stocks:VALE3              200 VALE3 {66.75 BRL}
+```
+
+- Use `{unit_price BRL}` as cost basis.
+- Fracionário trades (`Mercado Fracionário`, ticker ending in `F`): strip the trailing `F` and map to the base ticker.
+
+#### Venda (sell)
+
+```beancount
+2023-06-27 * "Venda ENBR3"
+  Assets:BR:Broker:Clear             9416.00 BRL
+  Assets:BR:Stocks:ENBR3             -400 ENBR3 {}
+  Income:BR:CapGains
+```
+
+- Use `{}` (empty cost spec) — beancount matches lots using the configured booking method.
+- Capital-gain leg is auto-balanced.
+- Brazilian law requires **custo médio ponderado** (weighted average cost) for stocks. Set `option "booking" "AVERAGE"` in your beancount file.
+
+---
+
+### From movimentacao
+
+#### Dividendo
+
+```beancount
+2025-12-12 * "Dividendo WEGE3"
+  Assets:BR:Broker:XP                273.36 BRL
+  Income:BR:Dividends:WEGE3         -273.36 BRL
+```
+
+- Use `Income:BR:FII:Rendimento` instead of `Dividends` for FII tickers (funds ending in 11, 12, etc.).
+
+#### Juros Sobre Capital Próprio (JCP)
+
+```beancount
+2025-12-12 * "JCP BBAS3"
+  Assets:BR:Broker:XP                 27.27 BRL
+  Income:BR:JCP:BBAS3               -27.27 BRL
+```
+
+- JCP is withheld at source (15% IRRF). `Valor da Operação` is the **net** amount after withholding.
+- If gross + tax tracking is needed, add `Liabilities:BR:IRRF` — but the gross is not in the export.
+
+#### Rendimento (FII yield)
+
+```beancount
+2025-12-12 * "Rendimento HGLG11"
+  Assets:BR:Broker:XP                108.90 BRL
+  Income:BR:FII:HGLG11              -108.90 BRL
+```
+
+- FII yields are IRRF-exempt for individual investors — no withholding adjustment needed.
+
+#### Atualização — **SKIP**
+
+Zero-value events emitted by the custodian to sync share counts after corporate actions. `Quantidade` and `Valor da Operação` are both `-`. Safe to discard entirely.
+
+#### Cobrança de Taxa Semestral (Tesouro Direto custody fee)
+
+```beancount
+2024-07-01 * "Taxa Semestral Tesouro Prefixado 2029"
+  Expenses:BR:Fees:TesouroDireto      13.35 BRL
+  Assets:BR:Broker:Clear             -13.35 BRL
+```
+
+- Always a `Debito`, `Quantidade = 0`. Use `Valor da Operação` as the fee.
+- B3 charges 0.20% p.a., billed semiannually on 01/01 and 01/07.
+
+#### Compra (Tesouro Direto bond purchase — appears in movimentacao, not negociacao)
+
+```beancount
+2024-08-16 * "Compra Tesouro IPCA+ 2045"
+  Assets:BR:Broker:Clear           -24997.94 BRL
+  Assets:BR:TesouroDireto:IPCA2045   19.26 TDIPCA2045 {1297.92 BRL}
+```
+
+- Create one commodity per bond type + maturity (e.g. `TDIPCA2045`, `TDPRE2029`).
+- `Preço unitário` is the face-value price on that day, not par.
+
+#### Resgate (partial FII redemption / amortisation)
+
+```beancount
+2024-12-09 * "Resgate IRDM11"
+  Assets:BR:Broker:XP                17.84 BRL
+  Assets:BR:FII:IRDM11              -187 IRDM11 {}
+  Income:BR:CapGains
+```
+
+- Treat as a forced partial sell. Use `Valor da Operação` as the authoritative cash amount (`Preço unitário × Quantidade` may not match due to rounding or partial amortisation logic).
+
+#### Leilão de Fração (fractional share auction)
+
+```beancount
+2021-12-10 * "Leilão de Fração XPBR31"
+  Assets:BR:Broker:Modal             154.05 BRL
+  Assets:BR:Stocks:XPBR31F           -1 XPBR31F {}
+  Income:BR:CapGains
+```
+
+- B3 auctions leftover fractional shares after splits. Treat as a forced sell.
+
+#### Transferência (broker-to-broker custody transfer)
+
+```beancount
+2025-02-14 * "Transferência BBAS3 Modal→XP"
+  Assets:BR:Broker:Modal:Stocks:BBAS3  -700 BBAS3 {}
+  Assets:BR:Broker:XP:Stocks:BBAS3     700 BBAS3 {}
+```
+
+- Always comes in pairs: one `Debito` (old broker) + one `Credito` (new broker), same date, same ticker, same quantity.
+- **Match pairs by `(date, ticker, quantity)` before emitting.** An unmatched row is an error.
+- No monetary value — pure custody move.
+
+#### Transferência - Liquidação (executed trade via custody transfer)
+
+```beancount
+; Credito = buy
+2024-05-13 * "Transferência-Liquidação BBAS3"
+  Assets:BR:Broker:Clear            -2715.00 BRL
+  Assets:BR:Stocks:BBAS3             100 BBAS3 {27.15 BRL}
+
+; Debito = sell
+2024-05-13 * "Transferência-Liquidação BBDC3"
+  Assets:BR:Broker:Clear             5990.00 BRL
+  Assets:BR:Stocks:BBDC3             -500 BBDC3 {}
+  Income:BR:CapGains
+```
+
+- Effectively a buy (Credito) or sell (Debito) settled through B3's custody mechanism rather than the order book.
+- **Cross-check against negociacao for the same date + ticker + quantity + value — deduplicate to avoid double-counting.**
+
+#### Direito de Subscrição (subscription rights received)
+
+```beancount
+2025-10-01 * "Direito de Subscrição HGLG12"
+  Assets:BR:Rights:HGLG12RTS            36 HGLG12RTS {0 BRL}
+  Income:BR:Rights:HGLG11                0 BRL
+```
+
+- Create synthetic commodity `{ticker}RTS`. Cost = 0. These will be closed by Cessão de Direitos or Direitos de Subscrição - Não Exercido.
+
+#### Cessão de Direitos (rights sold)
+
+```beancount
+2025-10-13 * "Cessão de Direitos HGLG12"
+  Assets:BR:Rights:HGLG12RTS            -36 HGLG12RTS {}
+  Income:BR:Rights:HGLG12                 0 BRL
+```
+
+- Paired with `Cessão de Direitos - Solicitada` (the Debito request) on the same date. Emit one entry only, from the Credito row. Discard the Debito.
+
+#### Direitos de Subscrição - Não Exercido (rights expired)
+
+```beancount
+2025-10-14 * "Direitos Não Exercidos HGLG12"
+  Assets:BR:Rights:HGLG12RTS            -36 HGLG12RTS {}
+  Income:BR:Rights:HGLG12                 0 BRL
+```
+
+- `Quantidade = 0` in the file — look up the existing rights balance from the position tracker to close them.
+
+#### Dividendo/JCP/Rendimento - Transferido (income carried over during broker transfer)
+
+```beancount
+; Keep the Credito (destination broker) only
+2025-02-14 * "Dividendo EGIE3 (transferido)"
+  Assets:BR:Broker:XP                342.97 BRL
+  Income:BR:Dividends:EGIE3         -342.97 BRL
+```
+
+- These appear on the bulk transfer date (e.g. 14/02/2025) alongside Transferência rows.
+- Both a Debito (old broker) and a Credito (new broker) exist for the same income event.
+- **Keep the Credito only. Discard the Debito.** The income was earned before the transfer; the cash just moved with it.
+
+---
+
+## Corporate actions — close and reopen
+
+All three corporate actions (Bonificação, Desdobro, Grupamento) use the same **close-and-reopen** pattern for consistency. The existing position is always closed at its current average cost and immediately reopened at the recalculated average cost. `Income:BR:CorporateActions` auto-balances to zero (or to the declared value of bonus shares if non-zero).
+
+### The unified formula
+
+```
+new_avg_cost = (old_qty × old_avg_cost + new_shares × declared_value) / new_qty
+```
+
+| Event | `new_qty` | `declared_value` |
+|---|---|---|
+| Bonificação em Ativos | `old_qty + credited_qty` | from IR notice; default `0` |
+| Desdobro | `old_qty + credited_qty` (delta) | `0` |
+| Grupamento | `credited_qty` (this IS the new total) | `0` |
+
+For Desdobro and Grupamento `declared_value = 0`, so total book value is preserved exactly and `Income:BR:CorporateActions = 0`.
+
+### Beancount entry shape (all three)
+
+```beancount
+YYYY-MM-DD * "EventType TICKER — ratio"
+  Assets:BR:Stocks:TICKER    -old_qty TICKER {old_avg_cost BRL}
+  Assets:BR:Stocks:TICKER     new_qty TICKER {new_avg_cost BRL}
+  Income:BR:CorporateActions
+```
+
+### Bonificação em Ativos
+
+- The file credits the **delta** (bonus shares received), not the new total.
+- `declared_value`: the value per share stated in the company's board resolution (deliberação). Find it on CVM's website (cvmweb.cvm.gov.br, Fatos Relevantes for the company). Not in the export.
+- If unknown, use `0` and tag the entry for manual review.
+- The bonus is **not taxed at receipt** in Brazil — only at sale.
+
+Example: 120 existing EGIE3 at avg cost R$41.80, +120 bonus shares, declared value = 0:
+
+```beancount
+2025-11-28 * "Bonificação em Ativos EGIE3 — +120 bonus (declared value unknown — using 0)"
+  declared_value_needed: "True"
+  Assets:BR:Stocks:EGIE3   -120 EGIE3 {41.800000 BRL}
+  Assets:BR:Stocks:EGIE3    240 EGIE3 {20.900000 BRL}   ; 5016.00 / 240
+  Income:BR:CorporateActions
+```
+
+If declared value is R$18.50:
+
+```beancount
+2025-11-28 * "Bonificação em Ativos EGIE3 — +120 bonus @ 18.5 BRL"
+  Assets:BR:Stocks:EGIE3   -120 EGIE3 {41.800000 BRL}
+  Assets:BR:Stocks:EGIE3    240 EGIE3 {30.275000 BRL}   ; (5016 + 2220) / 240
+  Income:BR:CorporateActions                             ; -2220.00 BRL (value received)
+```
+
+### Desdobro (stock split)
+
+- The file credits the **delta** (new shares added), not the new total.
+- `new_qty = old_qty + credited_qty`, ratio = `new_qty / old_qty` (should be a clean integer or simple fraction).
+
+Example: 300 BBAS3 at avg cost R$28.00, 2:1 split (+300 shares):
+
+```beancount
+2024-04-17 * "Desdobro BBAS3 — 2:1 split"
+  Assets:BR:Stocks:BBAS3   -300 BBAS3 {28.000000 BRL}
+  Assets:BR:Stocks:BBAS3    600 BBAS3 {14.000000 BRL}   ; 8400.00 / 600
+  Income:BR:CorporateActions                             ; 0 BRL
+```
+
+### Grupamento (reverse stock split)
+
+- The file's `Quantidade` is the **resulting total**, not a delta. Confirm: `credited_qty < old_qty` should always hold.
+- `new_qty = credited_qty`, ratio = `old_qty / new_qty` (should be a clean integer).
+
+Example: 1100 MGLU3 at avg cost R$9.50, 10:1 reverse split → 110 shares:
+
+```beancount
+2024-05-28 * "Grupamento MGLU3 — 10:1 reverse split"
+  Assets:BR:Stocks:MGLU3   -1100 MGLU3 {9.500000 BRL}
+  Assets:BR:Stocks:MGLU3     110 MGLU3 {95.000000 BRL}  ; 10450.00 / 110
+  Income:BR:CorporateActions                             ; 0 BRL
+```
+
+---
+
+## Python implementation
+
+### Position tracker
+
+```python
+from dataclasses import dataclass
+from decimal import Decimal, ROUND_HALF_UP
+from collections import defaultdict
+import datetime
+
+ROUNDING = Decimal("0.000001")
+
+
+@dataclass
+class Position:
+    quantity: Decimal
+    total_cost: Decimal  # BRL
+
+    @property
+    def avg_cost(self) -> Decimal:
+        if self.quantity == 0:
+            return Decimal(0)
+        return (self.total_cost / self.quantity).quantize(ROUNDING, ROUND_HALF_UP)
+
+    def update(self, new_qty: Decimal, new_total: Decimal) -> None:
+        self.quantity = new_qty
+        self.total_cost = new_total
+
+    def add(self, qty: Decimal, unit_cost: Decimal) -> None:
+        self.total_cost += qty * unit_cost
+        self.quantity += qty
+
+    def remove(self, qty: Decimal) -> Decimal:
+        """Remove qty at current avg cost. Returns cost basis consumed."""
+        consumed = self.avg_cost * qty
+        self.total_cost -= consumed
+        self.quantity -= qty
+        return consumed
+
+
+inventory: dict[str, Position] = defaultdict(lambda: Position(Decimal(0), Decimal(0)))
+```
+
+### Corporate action handler
+
+```python
+from fractions import Fraction
+
+
+def handle_corporate_action(
+    date: datetime.date,
+    ticker: str,
+    event_type: str,            # "Bonificação em Ativos" | "Desdobro" | "Grupamento"
+    credited_qty: Decimal,      # Quantidade field from the row
+    declared_value: Decimal = Decimal(0),  # Bonificação only; 0 if unknown
+) -> list[str]:
+    """
+    Returns a list of beancount directive strings (usually one).
+    Closes the full existing position and reopens at the adjusted average cost.
+    Processes transactions in strict chronological order; call with a stateful inventory.
+    """
+    pos = inventory[ticker]
+    old_qty = pos.quantity
+    old_avg = pos.avg_cost
+    old_total = pos.total_cost
+
+    if old_qty == 0:
+        raise ValueError(
+            f"{event_type} {ticker} on {date}: no existing position to act on. "
+            "Check that all prior buys and transfers are processed first."
+        )
+
+    # ── compute new position ──────────────────────────────────────────────────
+    if event_type == "Desdobro":
+        new_qty = old_qty + credited_qty        # file credits the delta
+        new_total = old_total                   # total cost unchanged
+        ratio = new_qty / old_qty
+        _assert_clean_ratio(ratio, event_type, ticker, date)
+        ratio_str = f"{ratio:.4g}:1 split"
+
+    elif event_type == "Grupamento":
+        new_qty = credited_qty                  # file shows the resulting total
+        new_total = old_total                   # total cost unchanged
+        ratio = old_qty / new_qty
+        _assert_clean_ratio(ratio, event_type, ticker, date)
+        ratio_str = f"{ratio:.4g}:1 reverse split"
+
+    elif event_type == "Bonificação em Ativos":
+        new_qty = old_qty + credited_qty        # file credits the delta
+        new_total = old_total + credited_qty * declared_value
+        ratio_str = (
+            f"+{credited_qty} bonus @ {declared_value} BRL"
+            if declared_value
+            else f"+{credited_qty} bonus (declared value unknown — using 0)"
+        )
+    else:
+        raise ValueError(f"Unknown corporate action type: {event_type!r}")
+
+    new_avg = (new_total / new_qty).quantize(ROUNDING, ROUND_HALF_UP)
+
+    # ── update inventory ──────────────────────────────────────────────────────
+    pos.update(new_qty, new_total)
+
+    # ── build directive ───────────────────────────────────────────────────────
+    meta = ""
+    if event_type == "Bonificação em Ativos" and declared_value == 0:
+        meta = '  declared_value_needed: "True"\n'
+
+    account = f"Assets:BR:Stocks:{ticker}"
+    lines = [
+        f'{date} * "{event_type} {ticker} — {ratio_str}"',
+        meta.rstrip("\n"),
+        f"  {account}  -{old_qty} {ticker} {{{old_avg} BRL}}",
+        f"  {account}   {new_qty} {ticker} {{{new_avg} BRL}}",
+        "  Income:BR:CorporateActions",
+        "",
+    ]
+    return ["\n".join(l for l in lines if l != "")]
+
+
+def _assert_clean_ratio(ratio: Decimal, event_type: str, ticker: str, date) -> None:
+    f = Fraction(ratio).limit_denominator(20)
+    if abs(float(f) - float(ratio)) > 0.001:
+        raise ValueError(
+            f"{event_type} {ticker} on {date}: inferred ratio {ratio:.4f} "
+            f"is not a clean fraction. Check position history for missing transactions."
+        )
+```
+
+### Pairing helper for Transferência rows
+
+```python
+from collections import defaultdict
+
+def pair_transfers(rows) -> list[tuple]:
+    """
+    Groups movimentacao rows with Movimentação == 'Transferência' by
+    (date, ticker, quantity) and returns matched (debito, credito) pairs.
+    Raises if any row is unmatched.
+    """
+    buckets: dict[tuple, list] = defaultdict(list)
+    for row in rows:
+        key = (row.data, extract_ticker(row.produto), row.quantidade)
+        buckets[key].append(row)
+
+    pairs = []
+    for key, group in buckets.items():
+        debitos  = [r for r in group if r.entrada_saida == "Debito"]
+        creditos = [r for r in group if r.entrada_saida == "Credito"]
+        if len(debitos) != 1 or len(creditos) != 1:
+            raise ValueError(
+                f"Unmatched Transferência at {key}: "
+                f"{len(debitos)} debitos, {len(creditos)} creditos"
+            )
+        pairs.append((debitos[0], creditos[0]))
+    return pairs
+```
+
+---
+
+## Processing order and deduplication
+
+1. **Parse both files** into a combined list of raw events.
+2. **Sort chronologically** by date, then by file (negociacao before movimentacao for same-date events).
+3. **Deduplication**: `Transferência - Liquidação` rows in movimentacao can mirror rows in negociacao. Dedup key: `(date, ticker, abs(quantity), abs(value))`. Keep the negociacao row; discard the movimentacao duplicate.
+4. **Buffer same-date rows** before emitting, to match Transferência pairs and discard `Cessão de Direitos - Solicitada` counterparts.
+5. **Maintain the position inventory** throughout — it is required for corporate action cost basis calculations.
+6. **Emit directives** in chronological order.
+
+---
+
+## Event type dispatch table
+
+| `Movimentação` field | Direction | Action |
+|---|---|---|
+| `Compra` | Credito | Buy (bond, appears in movimentacao for Tesouro Direto) |
+| `Dividendo` | Credito | Income — `Income:BR:Dividends:{ticker}` |
+| `Juros Sobre Capital Próprio` | Credito | Income — `Income:BR:JCP:{ticker}` |
+| `Rendimento` | Credito | FII yield — `Income:BR:FII:{ticker}` |
+| `Atualização` | Either | **Skip** |
+| `Bonificação em Ativos` | Credito | Corporate action — close/reopen |
+| `Desdobro` | Credito | Corporate action — close/reopen |
+| `Grupamento` | Credito | Corporate action — close/reopen |
+| `Transferência` | Either | Buffer, match pair, emit custody move |
+| `Transferência - Liquidação` | Credito | Buy (dedup against negociacao) |
+| `Transferência - Liquidação` | Debito | Sell (dedup against negociacao) |
+| `Direito de Subscrição` | Credito | Open rights lot at `{0 BRL}` |
+| `Cessão de Direitos` | Credito | Close rights lot (keep this row) |
+| `Cessão de Direitos - Solicitada` | Debito | **Skip** (counterpart to above) |
+| `Direitos de Subscrição - Não Exercido` | Debito | Close rights lot at zero |
+| `Resgate` | Credito | Partial sell of FII units |
+| `Leilão de Fração` | Credito | Forced sell of fractional shares |
+| `Cobrança de Taxa Semestral` | Debito | `Expenses:BR:Fees:TesouroDireto` |
+| `Dividendo - Transferido` | Credito | Income (keep Credito, discard Debito) |
+| `JCP - Transferido` | Credito | Income (keep Credito, discard Debito) |
+| `Rendimento - Transferido` | Credito | Income (keep Credito, discard Debito) |
+| `Transferência` (Tesouro Direto) | Either | Buffer, match pair, emit custody move |
+| `Fração em Ativos` | Debito | **Skip** (fractional tracking artefact) |
+
+For the negociacao file:
+
+| `Tipo de Movimentação` | Action |
+|---|---|
+| `Compra` | Buy — `Assets:BR:Stocks:{ticker} {qty} {ticker} {{price BRL}}` |
+| `Venda` | Sell — close lot with `{}`, auto-balance to `Income:BR:CapGains` |

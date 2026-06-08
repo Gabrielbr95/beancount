@@ -1,0 +1,55 @@
+FILE: movimentacao-2025-12-15-22-19-44.xlsx
+  SHEET: Movimentação
+  rows: 1488
+  movement types: Rendimento=549, Juros Sobre Capital Próprio=273, Dividendo=188, Transferência - Liquidação=148, Transferência=81, Juros Sobre Capital Próprio - Transferido=44, Atualização=33, Direitos de Subscrição - Não Exercido=30, Direito de Subscrição=30, Recibo de Subscrição=18, Cessão de Direitos=16, Cessão de Direitos - Solicitada=16, Solicitação de Subscrição=9, Direitos de Subscrição - Exercido=9, Dividendo - Transferido=8, Transferencia=6, Bonificação em Ativos=5, Desdobro=5, Rendimento - Transferido=4, Compra=4, Cobrança de Taxa Semestral=4, Fração em Ativos=2, Cisão=2, Resgate=1, Grupamento=1, Leilão de Fração=1, Incorporação=1
+  directions: Credito=1311, Debito=177
+  institutions: MODAL DTVM LTDA=894, CLEAR CORRETORA - GRUPO XP=251, XP INVESTIMENTOS CCTVM S/A=218, XP INVESTIMENTOS CORRETORA DE CAMBIO TITULOS E VALORES MOBILIARIOS S/A=66, XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI=58, XP SERVICOS FINANCEIROS DTVM LTDA=1
+  sample Transferência:
+    ('Credito', '14/02/2025', 'Transferência', 'B3SA3 - B3 S.A. - BRASIL, BOLSA, BALCÃO', 'XP INVESTIMENTOS CCTVM S/A', 700, '-', '-')
+    ('Debito', '14/02/2025', 'Transferência', 'B3SA3 - B3 S.A. - BRASIL, BOLSA, BALCÃO', 'XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBI', 700, '-', '-')
+    ('Credito', '14/02/2025', 'Transferência', 'BBAS3 - BANCO DO BRASIL S/A', 'XP INVESTIMENTOS CCTVM S/A', 700, '-', '-')
+  sample Transferência - Liquidação:
+    ('Credito', '13/05/2024', 'Transferência - Liquidação', 'BBAS3 - BANCO DO BRASIL S/A', 'CLEAR CORRETORA - GRUPO XP', 100, 27.15, 2715)
+    ('Debito', '13/05/2024', 'Transferência - Liquidação', 'BBDC3 - BANCO BRADESCO S/A', 'CLEAR CORRETORA - GRUPO XP', 550, 11.98, 6589)
+    ('Credito', '13/05/2024', 'Transferência - Liquidação', 'ITUB3 - ITAU UNIBANCO HOLDING S/A', 'CLEAR CORRETORA - GRUPO XP', 200, 28.16, 5632)
+  sample Cessão de Direitos:
+    ('Credito', '13/10/2025', 'Cessão de Direitos', 'HGLG12 - PÁTRIA LOG - FDO INV IMOB - RESPONSABILIDADE LTDA.', 'XP INVESTIMENTOS CCTVM S/A', 36, '-', '-')
+    ('Credito', '27/08/2025', 'Cessão de Direitos', 'IRDM12 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 7, '-', '-')
+    ('Credito', '23/12/2024', 'Cessão de Direitos', 'MALL12 - GENIAL MALLS FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CORRETORA DE CAMBIO TITULOS E VALORES MOBILIARIOS S/A', 19, '-', '-')
+  sample Cessão de Direitos - Solicitada:
+    ('Debito', '13/10/2025', 'Cessão de Direitos - Solicitada', 'HGLG12 - PÁTRIA LOG - FDO INV IMOB - RESPONSABILIDADE LTDA.', 'XP INVESTIMENTOS CCTVM S/A', 36, '-', '-')
+    ('Debito', '27/08/2025', 'Cessão de Direitos - Solicitada', 'IRDM12 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 7, '-', '-')
+    ('Debito', '23/12/2024', 'Cessão de Direitos - Solicitada', 'MALL12 - GENIAL MALLS FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CORRETORA DE CAMBIO TITULOS E VALORES MOBILIARIOS S/A', 19, '-', '-')
+  sample Direito de Subscrição:
+    ('Credito', '01/10/2025', 'Direito de Subscrição', 'HGLG12 - PÁTRIA LOG - FDO INV IMOB - RESPONSABILIDADE LTDA.', 'XP INVESTIMENTOS CCTVM S/A', 36, '-', '-')
+    ('Credito', '15/08/2025', 'Direito de Subscrição', 'IRDM12 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 7, '-', '-')
+    ('Credito', '11/12/2024', 'Direito de Subscrição', 'MALL12 - GENIAL MALLS FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CORRETORA DE CAMBIO TITULOS E VALORES MOBILIARIOS S/A', 19, '-', '-')
+  sample Direitos de Subscrição - Não Exercido:
+    ('Debito', '14/10/2025', 'Direitos de Subscrição - Não Exercido', 'HGLG12 - PÁTRIA LOG - FDO INV IMOB - RESPONSABILIDADE LTDA.', 'XP INVESTIMENTOS CCTVM S/A', 0, '-', '-')
+    ('Debito', '28/08/2025', 'Direitos de Subscrição - Não Exercido', 'IRDM12 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 0, '-', '-')
+    ('Debito', '26/12/2024', 'Direitos de Subscrição - Não Exercido', 'MALL12 - GENIAL MALLS FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CORRETORA DE CAMBIO TITULOS E VALORES MOBILIARIOS S/A', 0, '-', '-')
+  sample Cobrança de Taxa Semestral:
+    ('Debito', '01/07/2024', 'Cobrança de Taxa Semestral', 'Tesouro IPCA+ 2045', 'CLEAR CORRETORA - GRUPO XP', 0, '-', 12.31)
+    ('Debito', '01/07/2024', 'Cobrança de Taxa Semestral', 'Tesouro Prefixado 2029', 'CLEAR CORRETORA - GRUPO XP', 0, '-', 13.35)
+    ('Debito', '01/01/2024', 'Cobrança de Taxa Semestral', 'Tesouro IPCA+ 2045', 'CLEAR CORRETORA - GRUPO XP', 0, '-', 12.9)
+  sample Resgate:
+    ('Credito', '09/12/2025', 'Resgate', 'IRDM11 - FII IRIDIUM RECEBÍVEIS IMOBILIÁRIOS', 'XP INVESTIMENTOS CCTVM S/A', 187, 4.306, 17.84)
+  sample Leilão de Fração:
+    ('Credito', '10/12/2021', 'Leilão de Fração', 'XPBR31 - XP INC.', 'MODAL DTVM LTDA', 1, 166.36, 154.05)
+  sample Bonificação em Ativos:
+    ('Credito', '28/11/2025', 'Bonificação em Ativos', 'EGIE3 - ENGIE BRASIL ENERGIA S.A.', 'XP INVESTIMENTOS CCTVM S/A', 120, '-', '-')
+    ('Credito', '19/03/2025', 'Bonificação em Ativos', 'ITUB3 - ITAU UNIBANCO HOLDING S/A', 'XP INVESTIMENTOS CCTVM S/A', 20, '-', '-')
+    ('Credito', '14/06/2023', 'Bonificação em Ativos', 'FLRY3 - FLEURY S.A.', 'CLEAR CORRETORA - GRUPO XP', 30, '-', '-')
+  sample Desdobro:
+    ('Credito', '17/04/2024', 'Desdobro', 'BBAS3 - BANCO DO BRASIL S/A', 'CLEAR CORRETORA - GRUPO XP', 300, '-', '-')
+    ('Credito', '18/05/2021', 'Desdobro', 'B3SA3 - B3 S.A. - BRASIL, BOLSA, BALCÃO', 'MODAL DTVM LTDA', 200, '-', '-')
+    ('Credito', '29/04/2021', 'Desdobro', 'WEGE3 - WEG S.A.', 'MODAL DTVM LTDA', 200, '-', '-')
+  sample Grupamento:
+    ('Credito', '28/05/2024', 'Grupamento', 'MGLU3 - MAGAZINE LUIZA S/A', 'CLEAR CORRETORA - GRUPO XP', 110, '-', '-')
+
+FILE: negociacao-2025-12-15-22-20-47.xlsx
+  SHEET: Negociação
+  rows: 180
+  types: Compra=141, Venda=39
+  markets: Mercado à Vista=173, Mercado Fracionário=7
+  first 20 tickers: PETR4, RBRP11, MALL11, MCCI11, HGRU11, HGLG11, IRDM11, HYPE3, FLRY3, XPLG11, TAEE11, BBAS3, ITUB3, B3SA3, MGLU3, LEVE3, MDIA3, AERI3, ODPV3, ETER3

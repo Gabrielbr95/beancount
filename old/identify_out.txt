@@ -1,0 +1,2 @@
+* /home/gabriel/Documents/Projects/beancount/export_samples/movimentacao-2025-12-15-22-19-44.xlsx ... OK
+  <bound method B3Importer.name of <importers.b3.B3Importer object at 0x7f7220d78550>>

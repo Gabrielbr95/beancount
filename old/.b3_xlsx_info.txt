@@ -1,0 +1,23 @@
+FILE: movimentacao-2025-12-15-22-19-44.xlsx
+  sheets: Movimentação
+  SHEET: Movimentação dim=1489x8
+   ('Entrada/Saída', 'Data', 'Movimentação', 'Produto', 'Instituição', 'Quantidade', 'Preço unitário', 'Valor da Operação')
+   ('Credito', '12/12/2025', 'Juros Sobre Capital Próprio', 'BBAS3 - BANCO DO BRASIL S/A', 'XP INVESTIMENTOS CCTVM S/A', 700, 0.046, 27.27)
+   ('Credito', '12/12/2025', 'Rendimento', 'HGLG11 - PÁTRIA LOG - FDO INV IMOB - RESPONSABILIDADE LTDA.', 'XP INVESTIMENTOS CCTVM S/A', 99, 1.1, 108.9)
+   ('Credito', '12/12/2025', 'Rendimento', 'HGRU11 - PATRIA RENDA URBANA - FUNDO DE INVESTIMENTO IMOBILIARIO - RE', 'XP INVESTIMENTOS CCTVM S/A', 129, 0.95, 122.55)
+   ('Credito', '12/12/2025', 'Atualização', 'IRIM11 - IRIDIUM FUNDO DE INVESTIMENTO IMOBILIÁRIO', 'XP INVESTIMENTOS CCTVM S/A', 165, '-', '-')
+   ('Credito', '12/12/2025', 'Rendimento', 'PMLL11 - GENIAL MALLS FUNDO DE INVESTIMENTO IMOBILIARIO', 'XP INVESTIMENTOS CCTVM S/A', 153, 0.86, 131.58)
+   ('Credito', '12/12/2025', 'Dividendo', 'WEGE3 - WEG S.A.', 'XP INVESTIMENTOS CCTVM S/A', 800, 0.342, 273.36)
+   ('Credito', '12/12/2025', 'Juros Sobre Capital Próprio', 'WEGE3 - WEG S.A.', 'XP INVESTIMENTOS CCTVM S/A', 800, 0.111, 75.68)
+
+FILE: negociacao-2025-12-15-22-20-47.xlsx
+  sheets: Negociação
+  SHEET: Negociação dim=181x9
+   ('Data do Negócio', 'Tipo de Movimentação', 'Mercado', 'Prazo/Vencimento', 'Instituição', 'Código de Negociação', 'Quantidade', 'Preço', 'Valor')
+   ('09/05/2024', 'Compra', 'Mercado à Vista', '-', 'CLEAR CORRETORA - GRUPO XP', 'BBAS3', 100, 27.15, 2715)
+   ('09/05/2024', 'Venda', 'Mercado à Vista', '-', 'CLEAR CORRETORA - GRUPO XP', 'BBDC3', 500, 11.98, 5990)
+   ('09/05/2024', 'Venda', 'Mercado Fracionário', '-', 'CLEAR CORRETORA - GRUPO XP', 'BBDC3F', 25, 11.98, 299.5)
+   ('09/05/2024', 'Venda', 'Mercado Fracionário', '-', 'CLEAR CORRETORA - GRUPO XP', 'BBDC3F', 25, 11.99, 299.75)
+   ('09/05/2024', 'Compra', 'Mercado à Vista', '-', 'CLEAR CORRETORA - GRUPO XP', 'ITUB3', 200, 28.16, 5632)
+   ('05/03/2024', 'Compra', 'Mercado à Vista', '-', 'CLEAR CORRETORA - GRUPO XP', 'HYPE3', 100, 33.47, 3347)
+   ('05/03/2024', 'Compra', 'Mercado à Vista', '-', 'CLEAR CORRETORA - GRUPO XP', 'LEVE3', 100, 36.57, 3657)
