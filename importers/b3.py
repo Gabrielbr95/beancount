@@ -95,10 +95,12 @@ class B3Importer(beangulp.Importer):
         try:
             wb = openpyxl.load_workbook(filepath, read_only=True, data_only=True)
             # Check if it has expected sheets
-            has_sheet = any("Movimentação" in sh.title or "Negociação" in sh.title for sh in wb.sheetnames)
+            has_sheet = any("Movimentação" in sh or "Negociação" in sh for sh in wb.sheetnames)
             wb.close()
+            print ("true")
             return has_sheet
-        except Exception:
+        except Exception as e:
+            raise e
             return False
 
     def name(self) -> str:

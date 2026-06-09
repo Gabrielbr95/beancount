@@ -1,4 +1,5 @@
 from importers.b3 import B3Importer
+import beangulp
 
 # List of importers to be used by Beangulp and Fava
 CONFIG = [
@@ -9,6 +10,5 @@ CONFIG = [
 HOOKS = []
 
 if __name__ == "__main__":
-    import beangulp
     ingest = beangulp.Ingest(CONFIG, HOOKS)
     ingest()
