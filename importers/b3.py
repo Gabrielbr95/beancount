@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from datetime import datetime
+from datetime import datetime, date
 from decimal import Decimal, InvalidOperation
 from typing import List, Optional, Dict, Any
 
@@ -52,15 +52,29 @@ def normalize_fixed_income_ticker(produto: str) -> str:
     text = re.sub(r"[^A-Z0-9\s]", "", text.upper())
     return text.replace(" ", "_")
 
-def parse_date(date_str: str) -> Optional[datetime.date]:
-    if not date_str or str(date_str).strip() == "-":
+def parse_date(value) -> Optional[date]:
+    if value is None:
         return None
-    date_str = str(date_str).strip()
+
+    # Already a date
+    if isinstance(value, date) and not isinstance(value, datetime):
+        return value
+
+    # Datetime -> date
+    if isinstance(value, datetime):
+        return value.date()
+
+    # String parsing
+    value = str(value).strip()
+    if not value or value == "-":
+        return None
+
     for fmt in ("%d/%m/%Y", "%Y-%m-%d", "%d/%m/%y"):
         try:
-            return datetime.strptime(date_str, fmt).date()
+            return datetime.strptime(value, fmt).date()
         except ValueError:
-            continue
+            pass
+
     return None
 
 def parse_decimal(val: Any) -> Optional[Decimal]:
@@ -137,7 +151,7 @@ class B3Importer(beangulp.Importer):
     def extract(self, filepath: str, existing_entries: List[data.Directive]) -> List[data.Directive]:
         entries = []
         try:
-            wb = openpyxl.load_workbook(filepath, read_only=True, data_only=True)
+            wb = openpyxl.load_workbook(filepath, read_only=False, data_only=True)
             
             # Process sheets
             for sheet_name in wb.sheetnames:
