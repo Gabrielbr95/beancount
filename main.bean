@@ -1,0 +1,50 @@
+; ===========================================================================
+; Main Beancount Ledger
+; ===========================================================================
+
+option "operating_currency" "BRL"
+option "operating_currency" "USD"
+; Beancount 3.2.3 has Booking.AVERAGE disabled; use NONE as the supported
+; workaround for imported stock trades.
+option "booking_method" "AVERAGE"
+;option "booking_method" "FIFO"
+
+option "insert_pythonpath" "True"
+
+plugin "beancount.plugins.auto_accounts"
+plugin "beancount.plugins.implicit_prices"
+plugin "beancount.plugins.check_average_cost"
+plugin "plugins.stock_split"
+
+
+; Fava Import Configuration
+; Importer configuration is managed in `import.py` via the `CONFIG` and `HOOKS` variables.
+2016-04-01 custom "fava-option" "import-config" "import.py"
+2016-04-01 custom "fava-option" "import-dirs" "export"
+2010-01-01 custom "fava-extension" "fava_dashboards"
+2010-01-01 custom "fava-extension" "plugins.price_updater"
+
+2010-01-01 custom "fava-extension" "fava_portfolio_returns" "{
+  'beangrow_config': 'beangrow.pbtxt'
+}"
+
+2000-01-01 custom "fava-extension" "fava_portfolio_summary" "{
+    'metadata-key': 'portfolio',
+    'account-groups': (
+        { 'name': 'cash', 'cols': ['balance', 'allocation'] },
+        { 'name': 'investment', 'mwr': False },
+        'retirement-pretax',
+        'retirement-roth'),
+    'internal': (
+      '.*:PnL',
+      'Income:Investments:Dividends',
+      'Income:Bank:Interest'),
+    'mwr': 'children',
+    'twr': False,
+    }"
+
+include "accounts.bean"
+include "commodities.bean"
+include "transactions.bean"
+include "prices/prices.bean"
+include "splits.bean"

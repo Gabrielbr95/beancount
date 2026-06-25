@@ -1,0 +1,486 @@
+"""Minimal B3 XLSX importer.
+
+This importer is intentionally small and explicit:
+
+- identify files by filename
+- assume the XLSX table layout is stable
+- raise on parsing errors
+- log each row decision
+"""
+
+from __future__ import annotations
+
+import logging
+import os
+import re
+import unicodedata
+from datetime import date, datetime
+from decimal import Decimal, InvalidOperation
+from typing import Any, Iterable, Optional
+
+import beangulp
+import openpyxl
+from beancount.core import amount, data
+from beancount.core.position import Cost, CostSpec
+from beancount.core.number import MISSING
+
+
+logger = logging.getLogger(__name__)
+
+BROKERS = {
+    "XP INVESTIMENTOS CCTVM S/A": "XP",
+    "MODAL DTVM LTDA": "Modal",
+    "CLEAR CORRETORA - GRUPO XP": "Clear",
+    "INTER DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS LTDA": "Inter",
+    "BANCO DO BRASIL S/A": "BB",
+}
+
+IGNORED_MOVEMENTS = {
+    "ATUALIZACAO",
+    "DIREITO DE SUBSCRICAO",
+    "DIREITOS DE SUBSCRICAO - EXERCIDO", 
+    "DIREITOS DE SUBSCRICAO - NAO EXERCIDO",
+    "CESSAO DE DIREITOS",
+    "CESSAO DE DIREITOS - SOLICITADA",
+    "RECIBO DE SUBSCRICAO",
+    "SOLICITACAO DE SUBSCRICAO",
+    "TRANSFERENCIA - LIQUIDACAO",
+    "RESGATE",
+    "CISAO",
+    "INCORPORACAO",
+}
+
+
+def _strip_accents(text: str) -> str:
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+
+
+def normalize_text(value: Any) -> str:
+    if value is None:
+        return ""
+    text = _strip_accents(str(value)).upper().strip()
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"\s+", " ", text)
+    return text
+
+
+def parse_date(value: Any, *, context: str) -> date:
+    if isinstance(value, date) and not isinstance(value, datetime):
+        return value
+    if isinstance(value, datetime):
+        return value.date()
+
+    text = str(value).strip() if value is not None else ""
+    for fmt in ("%d/%m/%Y", "%d/%m/%y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(text, fmt).date()
+        except ValueError:
+            continue
+    raise ValueError(f"{context}: invalid date value {value!r}")
+
+
+def parse_decimal(value: Any, *, context: str) -> Optional[Decimal]:
+    if value is None:
+        return None
+    if isinstance(value, Decimal):
+        return value
+    if isinstance(value, (int, float)):
+        return Decimal(str(value))
+
+    text = str(value).strip()
+    if not text or text == "-":
+        return None
+
+    text = text.replace("R$", "").replace(" ", "")
+    if "," in text:
+        text = text.replace(".", "").replace(",", ".")
+    text = re.sub(r"[^0-9.\-]", "", text)
+
+    try:
+        return Decimal(text)
+    except InvalidOperation as exc:
+        raise ValueError(f"{context}: invalid decimal value {value!r}") from exc
+
+
+def normalize_ticker(product: Any, movement: str) -> str:
+    text = str(product).strip()
+    if " - " in text:
+        candidate = text.split(" - ", 1)[0].strip()
+        candidate_norm = normalize_text(candidate)
+        if candidate_norm and candidate_norm.replace(" ", "").isalnum() and any(ch.isdigit() for ch in candidate_norm) and len(candidate_norm) <= 6:
+            text = candidate
+
+    normalized_movement = normalize_text(movement)
+    if normalized_movement not in {"COMPRA", "VENDA", "TRANSFERENCIA", "TRANSFERENCIA - LIQUIDACAO"} and not re.match(r"^[A-Z]{4}\d{1,4}F?$", normalize_text(text)):
+        text = normalize_text(text)
+        text = re.sub(r"[^A-Z0-9]+", "_", text).strip("_")
+        return text
+
+    text = normalize_text(text)
+    return text[:-1] if text.endswith("F") else text
+
+
+def broker_code(institution: Any, *, context: str) -> str:
+    normalized = normalize_text(institution)
+    if not normalized:
+        raise ValueError(f"{context}: missing institution")
+    for key, code in BROKERS.items():
+        if key in normalized:
+            return code
+    raise ValueError(f"{context}: unknown institution {institution!r}")
+
+
+def row_has_content(row: Iterable[Any]) -> bool:
+    return any(cell is not None and str(cell).strip() != "" for cell in row)
+
+
+class B3Importer(beangulp.Importer):
+    def __init__(self, account_root: str = "Assets:Investment"):
+        self.account_root = account_root.rstrip(":")
+
+    def identify(self, filepath: str) -> bool:
+        base = os.path.basename(filepath).lower()
+        return base.endswith(".xlsx") and ("movimentacao" in base or "negociacao" in base)
+
+    @property
+    def name(self) -> str:
+        return "B3 Importer"
+
+    def account(self, filepath: str) -> str:
+        return f"{self.account_root}:B3"
+
+    def date(self, filepath: str) -> Optional[date]:
+        workbook = openpyxl.load_workbook(filepath, read_only=False, data_only=True) #(filepath, read_only=True, data_only=True)
+        try:
+            for sheet_name in workbook.sheetnames:
+                sheet_key = normalize_text(sheet_name)
+                if "NEGOCIACAO" in sheet_key:
+                    for row in workbook[sheet_name].iter_rows(min_row=2, max_row=10, values_only=True):
+                        if row_has_content(row):
+                            return parse_date(row[0], context=f"{filepath} / {sheet_name} / date")
+                if "MOVIMENTACAO" in sheet_key:
+                    for row in workbook[sheet_name].iter_rows(min_row=2, max_row=10, values_only=True):
+                        if row_has_content(row):
+                            return parse_date(row[1], context=f"{filepath} / {sheet_name} / date")
+        finally:
+            workbook.close()
+        return None
+
+    def filename(self, filepath: str) -> str:
+        base = os.path.basename(filepath)
+        file_date = self.date(filepath)
+        return f"{file_date:%Y-%m-%d}.{base}" if file_date else base
+
+    def extract(self, filepath: str, existing: list[data.Directive]) -> list[data.Directive]:
+        logger.info("Starting B3 import: %s", filepath)
+        workbook = openpyxl.load_workbook(filepath, read_only=False, data_only=True) #(filepath, read_only=True, data_only=True)
+        try:
+            entries: list[data.Directive] = []
+            for sheet_name in workbook.sheetnames:
+                sheet_key = normalize_text(sheet_name)
+                if "NEGOCIACAO" in sheet_key:
+                    entries.extend(self._extract_negociacoes(filepath, workbook[sheet_name], sheet_name))
+                elif "MOVIMENTACAO" in sheet_key:
+                    entries.extend(self._extract_movimentacoes(filepath, workbook[sheet_name], sheet_name))
+
+            entries.sort(key=lambda entry: (entry.date, entry.meta.get("lineno", 0)))
+            logger.info("Finished B3 import: %s (%d entries)", filepath, len(entries))
+            return entries
+        except Exception:
+            logger.exception("Failed importing %s", filepath)
+            raise
+        finally:
+            workbook.close()
+
+    def _meta(self, filepath: str, lineno: int, **extra: str) -> data.Meta:
+        meta = data.new_metadata(filepath, lineno, extra or None)
+        return meta
+
+    def _txn(
+        self,
+        filepath: str,
+        lineno: int,
+        txn_date: date,
+        narration: str,
+        postings: list[data.Posting],
+        **meta: str,
+    ) -> data.Transaction:
+        meta_dict = self._meta(filepath, lineno, **meta)
+        return data.Transaction(meta_dict, txn_date, "*", None, narration, frozenset(), frozenset(), postings)
+
+    def _amount(self, value: Decimal, currency: str) -> amount.Amount:
+        return amount.Amount(value, currency)
+
+    def _cost(self, value: Decimal, txn_date: date) -> Cost:
+        return Cost(value, "BRL", txn_date, None)
+
+    def _empty_costspec(self) -> CostSpec:
+        # Emit the parser-equivalent of `{}` so Beancount can book the lot
+        # under the configured booking method (AVERAGE).
+        return CostSpec(MISSING, None, MISSING, None, None, False)  # type: ignore[arg-type]
+
+    def _asset_account(self, broker: str, ticker: str) -> str:
+        return f"{self.account_root}:{broker}:{ticker}"
+
+    def _cash_account(self, broker: str) -> str:
+        return f"{self.account_root}:{broker}:Cash"
+
+    def _income_account(self, broker: str, category: str) -> str:
+        return f"Income:Investment:{broker}:{category}"
+
+    def _expense_account(self, broker: str, category: str) -> str:
+        return f"Expenses:Investment:{broker}:{category}"
+
+    def _extract_negociacoes(self, filepath: str, sheet, sheet_name: str) -> list[data.Directive]:
+        entries: list[data.Directive] = []
+        for lineno, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
+            if not row_has_content(row):
+                continue
+
+            context = f"{filepath} / {sheet_name} / row {lineno}"
+            txn_date = parse_date(row[0], context=context)
+            trade_type = normalize_text(row[1])
+            institution = broker_code(row[4], context=context)
+            ticker = normalize_ticker(row[5], trade_type)
+            quantity = parse_decimal(row[6], context=context)
+            price = parse_decimal(row[7], context=context)
+            value = parse_decimal(row[8], context=context)
+
+            if quantity is None or value is None:
+                raise ValueError(f"{context}: missing quantity/value")
+
+            if price is None:
+                price = (abs(value) / abs(quantity)) if quantity != 0 else Decimal("0")
+
+            meta = {
+                "id": f"b3-neg-{txn_date:%Y%m%d}-{lineno}",
+                "source": "b3_negociacoes",
+                "asset": ticker,
+            }
+
+            cash_account = self._cash_account(institution)
+            asset_account = self._asset_account(institution, ticker)
+
+            if trade_type == "COMPRA":
+                logger.info("Imported purchase: %s", context)
+                gross_value = abs(quantity) * price
+                fee_value = abs(value) - gross_value
+                postings = [
+                    data.Posting(asset_account, self._amount(quantity, ticker), self._cost(price, txn_date), None, None, None),
+                    data.Posting(cash_account, self._amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                if fee_value != 0:
+                    postings.append(
+                        data.Posting(
+                            self._expense_account(institution, "Fees"),
+                            self._amount(fee_value, "BRL"),
+                            None,
+                            None,
+                            None,
+                            None,
+                        )
+                    )
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Buy", postings, **meta))
+                continue
+
+            if trade_type == "VENDA":
+                logger.info("Imported sale: %s", context)
+                gross_value = abs(quantity) * price
+                fee_value = gross_value - abs(value)
+                postings = [
+                    data.Posting(cash_account, self._amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(asset_account, self._amount(-abs(quantity), ticker), self._empty_costspec(), self._amount(price, "BRL"), None, None),
+                ]
+                if fee_value != 0:
+                    postings.append(
+                        data.Posting(
+                            self._expense_account(institution, "Fees"),
+                            self._amount(fee_value, "BRL"),
+                            None,
+                            None,
+                            None,
+                            None,
+                        )
+                    )
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Sell", postings, **meta))
+                continue
+
+            raise ValueError(f"{context}: unsupported negociacao type {trade_type!r}")
+
+        return entries
+
+    def _extract_movimentacoes(self, filepath: str, sheet, sheet_name: str) -> list[data.Directive]:
+        entries: list[data.Directive] = []
+        for lineno, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
+            if not row_has_content(row):
+                continue
+
+            context = f"{filepath} / {sheet_name} / row {lineno}"
+            direction = normalize_text(row[0])
+            txn_date = parse_date(row[1], context=context)
+            movement = normalize_text(row[3])
+            product = str(row[4]).strip() if row[4] is not None else ""
+            institution = broker_code(row[5], context=context)
+            quantity = parse_decimal(row[6], context=context)
+            unit_price = parse_decimal(row[7], context=context)
+            value = parse_decimal(row[8], context=context)
+
+            if not movement:
+                raise ValueError(f"{context}: missing movement type")
+
+            ticker = normalize_ticker(product, movement)
+            cash_account = self._cash_account(institution)
+            asset_account = self._asset_account(institution, ticker)
+
+            meta = {
+                "id": f"b3-mov-{txn_date:%Y%m%d}-{lineno}",
+                "source": "b3_movimentacoes",
+                "asset": ticker,
+            }
+
+            if movement in IGNORED_MOVEMENTS:
+                logger.info("Ignored by rule: %s", context)
+                continue
+
+            if movement in {"RENDIMENTO", "DIVIDENDO", "DIVIDENDO - TRANSFERIDO", "RENDIMENTO - TRANSFERIDO"}:
+                if value is None:
+                    raise ValueError(f"{context}: missing value for income event")
+                if "TRANSFERIDO" in movement:
+                    meta["warning"] = "needs_review"
+                income_kind = "Rendimento" if movement.startswith("RENDIMENTO") else "Dividend"
+                logger.info("Imported income: %s", context)
+                postings = [
+                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(self._income_account(institution, income_kind), amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} {income_kind}", postings, **meta))
+                continue
+
+            if movement in {"JUROS SOBRE CAPITAL PROPRIO", "JUROS SOBRE CAPITAL PROPRIO - TRANSFERIDO"}:
+                if value is None:
+                    raise ValueError(f"{context}: missing value for JCP")
+                if "TRANSFERIDO" in movement:
+                    meta["warning"] = "needs_review"
+                logger.info("Imported JCP: %s", context)
+                postings = [
+                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(self._income_account(institution, "JCP"), amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} JCP", postings, **meta))
+                continue
+
+            if movement == "PAGAMENTO DE JUROS":
+                if value is None:
+                    raise ValueError(f"{context}: missing value for interest payment")
+                logger.info("Imported interest payment: %s", context)
+                postings = [
+                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(self._income_account(institution, "Interest"), amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Interest", postings, **meta))
+                continue
+
+            if movement in {"BONIFICACAO EM ATIVOS", "DESDOBRO", "GRUPAMENTO", "FRACAO EM ATIVOS"}:
+                if quantity is None:
+                    raise ValueError(f"{context}: missing quantity for corporate action")
+                if quantity == 0:
+                    logger.info("Ignored zero-quantity corporate action: %s", context)
+                    continue
+                meta["warning"] = "needs_review" if movement in {"GRUPAMENTO", "FRACAO EM ATIVOS"} else ""
+                if not meta["warning"]:
+                    meta.pop("warning", None)
+                logger.info("Imported corporate action: %s", context)
+                postings = [
+                    data.Posting(asset_account, amount.Amount(quantity, ticker), self._cost(Decimal("0"), txn_date), None, None, None),
+                    data.Posting("Equity:CorporateActions", None, None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{movement} {ticker}", postings, **meta))
+                continue
+
+            if movement == "LEILAO DE FRACAO":
+                if quantity is None or value is None:
+                    raise ValueError(f"{context}: missing quantity/value for fraction auction")
+                if quantity == 0:
+                    raise ValueError(f"{context}: zero quantity for fraction auction")
+                effective_unit_price = abs(value) / abs(quantity) if unit_price is None else unit_price
+                logger.info("Imported fraction auction: %s", context)
+                postings = [
+                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(asset_account, amount.Amount(-abs(quantity), ticker), None, amount.Amount(effective_unit_price, "BRL"), None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Fraction Auction", postings, **meta))
+                continue
+
+            if movement == "TRANSFERENCIA":
+                if quantity is None:
+                    raise ValueError(f"{context}: missing quantity for transfer")
+                logger.info("Imported asset transfer: %s", context)
+                postings = [
+                    data.Posting(asset_account, self._amount(quantity, ticker), self._cost(Decimal("0"), txn_date), None, None, None),
+                    data.Posting("Equity:Transfers", self._amount(-quantity, ticker), None, None, None, None),
+                ]
+                meta["warning"] = "unmatched_transfer"
+                entries.append(self._txn(filepath, lineno, txn_date, f"Asset Transfer {ticker}", postings, **meta))
+                continue
+
+            if movement in {"RESGATE ANTECIPADO/", "RESGATE ANTECIPADO"}:
+                if quantity is None or value is None:
+                    raise ValueError(f"{context}: missing quantity/value for redemption")
+                if quantity == 0:
+                    raise ValueError(f"{context}: zero quantity for redemption")
+                effective_price = abs(value) / abs(quantity) if unit_price is None else unit_price
+                logger.info("Imported redemption: %s", context)
+                postings = [
+                    data.Posting(cash_account, self._amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(asset_account, self._amount(-abs(quantity), ticker), None, self._amount(effective_price, "BRL"), None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Redemption", postings, **meta))
+                continue
+
+            if movement in {"COMPRA", "APLICACAO"}:
+                if quantity is None or value is None:
+                    raise ValueError(f"{context}: missing quantity/value for purchase")
+                effective_price = abs(value) / abs(quantity) if unit_price is None else unit_price
+                logger.info("Imported fixed income purchase: %s", context)
+                postings = [
+                    data.Posting(asset_account, amount.Amount(quantity, ticker), self._cost(effective_price, txn_date), None, None, None),
+                    data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Purchase", postings, **meta))
+                continue
+
+            if movement in {"COMPRA / VENDA", "COMPRA/VENDA"}:
+                if quantity is None or value is None:
+                    raise ValueError(f"{context}: missing quantity/value for compra/venda")
+                effective_price = abs(value) / abs(quantity) if unit_price is None else unit_price
+                if direction == "DEBITO":
+                    logger.info("Imported fixed income sale: %s", context)
+                    postings = [
+                        data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                        data.Posting(asset_account, amount.Amount(-abs(quantity), ticker), None, amount.Amount(effective_price, "BRL"), None, None),
+                    ]
+                    entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Sale", postings, **meta))
+                else:
+                    logger.info("Imported fixed income purchase: %s", context)
+                    postings = [
+                        data.Posting(asset_account, amount.Amount(abs(quantity), ticker), self._cost(effective_price, txn_date), None, None, None),
+                        data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                    ]
+                    entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Purchase", postings, **meta))
+                continue
+
+            if "TAXA" in movement or "COBRANCA" in movement:
+                if value is None:
+                    raise ValueError(f"{context}: missing value for fee")
+                logger.info("Imported fee: %s", context)
+                postings = [
+                    data.Posting(self._expense_account(institution, "Fees"), amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                ]
+                entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Fee", postings, **meta))
+                continue
+
+            logger.error("Unsupported movement type at %s: %s", context, movement)
+            raise ValueError(f"{context}: unsupported movement type {movement!r}")
+
+        return entries

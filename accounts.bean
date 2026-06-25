@@ -1,0 +1,53 @@
+; ===========================================================================
+; Accounts
+; ===========================================================================
+
+; Assets
+1900-01-01 open Assets:Investment:BB:Cash BRL
+1900-01-01 open Assets:Investment:BB:Savings BRL
+1900-01-01 open Assets:Investment:Binance:Cash USDT,BRL
+1900-01-01 open Assets:Investment:Clear:Cash BRL
+1900-01-01 open Assets:Investment:IBKR:Cash USD
+1900-01-01 open Assets:Investment:Inter:Cash BRL
+
+; Equity
+1900-01-01 open Equity:Portfolio:BB:Opening BRL
+1900-01-01 open Equity:Portfolio:Binance:Opening USDT
+1900-01-01 open Equity:Portfolio:Clear:Opening BRL
+1900-01-01 open Equity:Portfolio:IBKR:Opening USD
+1900-01-01 open Equity:Portfolio:Inter:Opening BRL
+
+; Expenses
+1900-01-01 open Expenses:Investment:BB:Fees BRL
+1900-01-01 open Expenses:Investment:BB:Taxes BRL
+1900-01-01 open Expenses:Investment:Binance:Fees USDT
+1900-01-01 open Expenses:Investment:Binance:Taxes USDT
+1900-01-01 open Expenses:Investment:Clear:Fees BRL
+1900-01-01 open Expenses:Investment:Clear:Taxes BRL
+1900-01-01 open Expenses:Investment:IBKR:Fees USD
+1900-01-01 open Expenses:Investment:IBKR:Taxes USD
+1900-01-01 open Expenses:Investment:Inter:Fees BRL
+1900-01-01 open Expenses:Investment:Inter:Taxes BRL
+
+; Income
+1900-01-01 open Income:Investment:BB:Dividend BRL
+1900-01-01 open Income:Investment:BB:Gains BRL
+1900-01-01 open Income:Investment:BB:Interest BRL
+1900-01-01 open Income:Investment:BB:JCP BRL
+1900-01-01 open Income:Investment:Binance:Gains USDT
+1900-01-01 open Income:Investment:Binance:Interest USDT
+1900-01-01 open Income:Investment:Binance:Rewards USDT
+1900-01-01 open Income:Investment:Clear:Dividend BRL
+1900-01-01 open Income:Investment:Clear:Gains BRL
+1900-01-01 open Income:Investment:Clear:Interest BRL
+1900-01-01 open Income:Investment:Clear:JCP BRL
+1900-01-01 open Income:Investment:IBKR:Dividend USD
+1900-01-01 open Income:Investment:IBKR:Gains USD
+1900-01-01 open Income:Investment:IBKR:Interest USD
+1900-01-01 open Income:Investment:Inter:Dividend BRL
+1900-01-01 open Income:Investment:Inter:Gains BRL
+1900-01-01 open Income:Investment:Inter:Interest BRL
+1900-01-01 open Income:Investment:Inter:JCP BRL
+
+; Liabilities
+1900-01-01 open Liabilities:Credit:BB:Card BRL

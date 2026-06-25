@@ -455,9 +455,10 @@ class B3Importer(beangulp.Importer):
                     raise ValueError(f"{context}: missing quantity for transfer")
                 logger.info("Imported asset transfer: %s", context)
                 signed_quantity = -abs(quantity) if direction == "DEBITO" else abs(quantity)
+                zero_cost = self._cost(Decimal("0"), txn_date)
                 postings = [
-                    data.Posting(asset_account, self._amount(signed_quantity, ticker), self._empty_costspec(), None, None, None),
-                    data.Posting("Equity:Transfers", self._amount(-signed_quantity, ticker), self._empty_costspec(), None, None, None),
+                    data.Posting(asset_account, self._amount(signed_quantity, ticker), zero_cost, None, None, None),
+                    data.Posting("Equity:Transfers", self._amount(-signed_quantity, ticker), zero_cost, None, None, None),
                 ]
                 meta["warning"] = "unmatched_transfer"
                 entries.append(self._txn(filepath, lineno, txn_date, f"Asset Transfer {ticker}", postings, **meta))

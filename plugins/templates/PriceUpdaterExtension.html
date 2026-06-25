@@ -1,0 +1,71 @@
+<div class="page">
+  <h1>Price Updater</h1>
+
+  <p>
+    Manually download BRAPI price history for currently open BR holdings.
+  </p>
+
+  <form method="post" action="update_prices">
+    <button type="submit">Update Prices</button>
+  </form>
+
+  {% if extension.last_result %}
+    <h2>Last run</h2>
+
+    {% if extension.last_result.errors %}
+      <h3>Errors</h3>
+      <ul>
+        {% for item in extension.last_result.errors %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if extension.last_result.warnings %}
+      <h3>Warnings</h3>
+      <ul>
+        {% for item in extension.last_result.warnings %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <h3>Updated holdings</h3>
+    {% if extension.last_result.updated %}
+      <ul>
+        {% for item in extension.last_result.updated %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No holdings updated.</p>
+    {% endif %}
+
+    {% if extension.last_result.full_refresh %}
+      <h3>Full refresh triggered</h3>
+      <ul>
+        {% for item in extension.last_result.full_refresh %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if extension.last_result.skipped %}
+      <h3>Skipped</h3>
+      <ul>
+        {% for item in extension.last_result.skipped %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if extension.last_result.generated_files %}
+      <h3>Generated files</h3>
+      <ul>
+        {% for item in extension.last_result.generated_files %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+</div>

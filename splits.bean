@@ -1,0 +1,60 @@
+
+2020-10-15 custom "split" "MGLU3" 4
+  id: "b3-mov-20201015-68"
+  source: "b3_movimentacoes"
+  asset: "MGLU3"
+
+2021-04-29 custom "split" "WEGE3" 2
+  id: "b3-mov-20210429-237"
+  source: "b3_movimentacoes"
+  asset: "WEGE3"
+
+2021-05-18 custom "split" "B3SA3" 3
+  id: "b3-mov-20210518-213"
+  source: "b3_movimentacoes"
+  asset: "B3SA3"
+
+2021-12-22 custom "split" "ITSA3" 1.05
+  id: "b3-mov-20211222-11"
+  source: "b3_movimentacoes"
+  asset: "ITSA3"
+
+2022-04-20 custom "split" "BBDC3" 1.1
+  id: "b3-mov-20220420-186"
+  source: "b3_movimentacoes"
+  asset: "BBDC3"
+
+2023-06-14 custom "split" "FLRY3" 1.05
+  id: "b3-mov-20230614-125"
+  source: "b3_movimentacoes"
+  asset: "FLRY3"
+
+2024-04-17 custom "split" "BBAS3" 2
+  id: "b3-mov-20240417-119"
+  source: "b3_movimentacoes"
+  asset: "BBAS3"
+
+2024-05-28 custom "split" "MGLU3" 0.1
+  id: "b3-mov-20240528-104"
+  source: "b3_movimentacoes"
+  asset: "MGLU3"
+
+2025-03-19 custom "split" "ITUB3" 1.1
+  id: "b3-mov-20250319-166"
+  source: "b3_movimentacoes"
+  asset: "ITUB3"
+
+2025-11-28 custom "split" "EGIE3" 1.4
+  id: "b3-mov-20251128-54"
+  source: "b3_movimentacoes"
+  asset: "EGIE3"
+
+2025-12-29 custom "split" "ITUB3" 1.03
+  id: "b3-mov-20251229-17"
+  source: "b3_movimentacoes"
+  asset: "ITUB3"
+
+2026-01-02 custom "split" "MGLU3" 1.05
+  id: "b3-mov-20260102-120"
+  source: "b3_movimentacoes"
+  asset: "MGLU3"
