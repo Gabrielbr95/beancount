@@ -4,10 +4,11 @@
 
 option "operating_currency" "BRL"
 option "operating_currency" "USD"
+option "inferred_tolerance_default" "BRL:0.01"
 ; Beancount 3.2.3 has Booking.AVERAGE disabled; use NONE as the supported
 ; workaround for imported stock trades.
-option "booking_method" "AVERAGE"
-;option "booking_method" "FIFO"
+;option "booking_method" "AVERAGE"
+option "booking_method" "FIFO"
 
 option "insert_pythonpath" "True"
 

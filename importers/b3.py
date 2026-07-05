@@ -14,6 +14,7 @@ import logging
 import os
 import re
 import unicodedata
+from collections import defaultdict
 from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 from typing import Any, Iterable, Optional
@@ -211,12 +212,108 @@ class B3Importer(beangulp.Importer):
                 elif "MOVIMENTACAO" in sheet_key:
                     entries.extend(self._extract_movimentacoes(filepath, workbook[sheet_name], sheet_name))
 
+            entries = self._merge_transfers(entries)
             entries.sort(key=lambda entry: (entry.date, entry.meta.get("lineno", 0)))
             logger.info("Finished B3 import: %s (%d entries)", filepath, len(entries))
             return entries
         except Exception:
             logger.exception("Failed importing %s", filepath)
             raise
+
+    def _merge_transfers(self, entries: list[data.Directive]) -> list[data.Directive]:
+        """Merge paired custody transfer transactions into a single direct transaction.
+
+        The importer emits each TRANSFERENCIA row as a stub with Equity:Transfers
+        as the counterpart. When the same file contains both sides of the transfer
+        (same date, same ticker, same absolute quantity, opposite direction), we
+        replace the two stubs with one transaction that moves directly from the
+        outgoing account to the incoming account. Beancount then carries the cost
+        basis across automatically under FIFO.
+
+        Any stub without a matching pair (e.g. transfer to an external broker not
+        present in the exports) is left unchanged.
+        """
+        # Separate transfer stubs from everything else.
+        # A transfer stub is identified by the Equity:Transfers posting.
+        transfer_stubs: list[data.Transaction] = []
+        other_entries: list[data.Directive] = []
+
+        for entry in entries:
+            if (
+                isinstance(entry, data.Transaction)
+                and entry.meta.get("warning") == "unmatched_transfer"
+                and any(p.account == "Equity:Transfers" for p in entry.postings)
+            ):
+                transfer_stubs.append(entry)
+            else:
+                other_entries.append(entry)
+
+        # Build a pairing key: (date, ticker, abs_quantity).
+        # For each key, collect the stubs. Outgoing stubs have a negative
+        # quantity on the asset account; incoming stubs have a positive quantity.
+            by_key: dict[tuple, list[data.Transaction]] = defaultdict(list)
+
+        for stub in transfer_stubs:
+            # The asset posting is the one that is NOT Equity:Transfers.
+            asset_posting = next(p for p in stub.postings if p.account != "Equity:Transfers")
+            ticker = asset_posting.units.currency
+            qty = abs(asset_posting.units.number)
+            key = (stub.date, ticker, qty)
+            by_key[key].append(stub)
+
+        merged: list[data.Directive] = []
+
+        for key, stubs in by_key.items():
+            # Partition into outgoing (negative asset qty) and incoming (positive).
+            outgoing = [s for s in stubs if next(p for p in s.postings if p.account != "Equity:Transfers").units.number < 0]
+            incoming = [s for s in stubs if next(p for p in s.postings if p.account != "Equity:Transfers").units.number > 0]
+
+            # Pair them off one-to-one in order.
+            while outgoing and incoming:
+                out_stub = outgoing.pop(0)
+                in_stub = incoming.pop(0)
+
+                out_posting = next(p for p in out_stub.postings if p.account != "Equity:Transfers")
+                in_posting = next(p for p in in_stub.postings if p.account != "Equity:Transfers")
+
+                # Build merged transaction: outgoing account → incoming account.
+                # The outgoing side keeps {} so FIFO can match the lot.
+                # The incoming side also uses {} so Beancount assigns the matched cost.
+                merged_postings = [
+                    data.Posting(out_posting.account, out_posting.units, self._empty_costspec(), None, None, None),
+                    data.Posting(in_posting.account, in_posting.units, self._empty_costspec(), None, None, None),
+                ]
+
+                # Combine metadata from both stubs; use out_stub as the base.
+                meta = dict(out_stub.meta)
+                meta["id_in"] = in_stub.meta.get("id", "")
+                meta.pop("warning", None)  # no longer unmatched
+
+                txn = data.Transaction(
+                    meta,
+                    out_stub.date,
+                    "*",
+                    None,
+                    out_stub.narration,
+                    frozenset(),
+                    frozenset(),
+                    merged_postings,
+                )
+                logger.info(
+                    "Merged transfer pair: %s → %s (%s %s)",
+                    out_posting.account, in_posting.account, key[2], key[1],
+                )
+                merged.append(txn)
+
+            # Any leftovers had no match — keep as unmatched stubs.
+            for stub in outgoing + incoming:
+                logger.warning(
+                    "Unmatched transfer stub kept as-is: %s %s qty=%s",
+                    stub.date, key[1], key[2],
+                )
+                merged.append(stub)
+
+        return other_entries + merged
 
     def _meta(self, filepath: str, lineno: int, **extra: str) -> data.Meta:
         meta = data.new_metadata(filepath, lineno, extra or None)
@@ -325,6 +422,13 @@ class B3Importer(beangulp.Importer):
                             None, None, None, None,
                         )
                     )
+                # Gains leg: amount left blank so Beancount infers it from the
+                # difference between cash received and cost basis of the lot(s).
+                # Works with FIFO/LIFO. When AVERAGE booking is re-enabled in a
+                # future Beancount version, this leg will still be correct.
+                postings.append(
+                    data.Posting(self._income_account(institution, "Gains"), None, None, None, None, None)
+                )
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Sell", postings, **meta))
                 continue
 
@@ -447,6 +551,9 @@ class B3Importer(beangulp.Importer):
                             None, None, None, None,
                         )
                     )
+                postings.append(
+                    data.Posting(self._income_account(institution, "Gains"), None, None, None, None, None)
+                )
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Fraction Auction", postings, **meta))
                 continue
 
@@ -485,6 +592,9 @@ class B3Importer(beangulp.Importer):
                             None, None, None, None,
                         )
                     )
+                postings.append(
+                    data.Posting(self._income_account(institution, "Gains"), None, None, None, None, None)
+                )
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Redemption", postings, **meta))
                 continue
 
@@ -531,6 +641,9 @@ class B3Importer(beangulp.Importer):
                                 None, None, None, None,
                             )
                         )
+                    postings.append(
+                        data.Posting(self._income_account(institution, "Gains"), None, None, None, None, None)
+                    )
                     entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Sale", postings, **meta))
                 else:
                     gross_value = abs(quantity) * effective_price

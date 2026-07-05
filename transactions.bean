@@ -1,6 +1,6 @@
 ;; -*- mode: beancount -*-
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2019.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2019.xlsx
 
 2018-05-28 * "PETR4 Buy"
   id: "b3-neg-20180528-13"
@@ -57,6 +57,7 @@
   Assets:Investment:XP:Cash    5576.43 BRL
   Assets:Investment:XP:PETR4      -200 PETR4 {} @ 28 BRL
   Expenses:Investment:XP:Fees    23.57 BRL
+  Income:Investment:XP:Gains
 
 2019-07-15 * "PETR4 Sell"
   id: "b3-neg-20190715-5"
@@ -65,6 +66,7 @@
   Assets:Investment:XP:Cash    2670.56 BRL
   Assets:Investment:XP:PETR4       -94 PETR4 {} @ 28.44 BRL
   Expenses:Investment:XP:Fees     2.80 BRL
+  Income:Investment:XP:Gains
 
 2019-07-15 * "PETR4 Sell"
   id: "b3-neg-20190715-6"
@@ -73,6 +75,7 @@
   Assets:Investment:XP:Cash    27.73 BRL
   Assets:Investment:XP:PETR4      -1 PETR4 {} @ 28.43 BRL
   Expenses:Investment:XP:Fees   0.70 BRL
+  Income:Investment:XP:Gains
 
 2019-08-05 * "PETR4 Buy"
   id: "b3-neg-20190805-3"
@@ -99,7 +102,7 @@
   Expenses:Investment:XP:Fees      3.44 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2019_parcial.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2019_parcial.xlsx
 
 2019-11-01 * "ITUB3 Dividend"
   id: "b3-mov-20191101-3"
@@ -116,7 +119,7 @@
   Income:Investment:XP:Dividend  -1.5 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2020.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2020.xlsx
 
 2020-03-09 * "B3SA3 Buy"
   id: "b3-neg-20200309-33"
@@ -369,6 +372,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   19800 BRL
   Assets:Investment:XP:PETR4  -1000 PETR4 {} @ 19.8 BRL
+  Income:Investment:XP:Gains
 
 2020-12-15 * "PETR4 Sell"
   id: "b3-neg-20201215-2"
@@ -376,9 +380,10 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   19453 BRL
   Assets:Investment:XP:PETR4   -700 PETR4 {} @ 27.79 BRL
+  Income:Investment:XP:Gains
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2020.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2020.xlsx
 
 2020-01-02 * "ITUB3 Dividend"
   id: "b3-mov-20200102-189"
@@ -1191,7 +1196,7 @@
   Income:Investment:XP:Rendimento  -12.6 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2021.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2021.xlsx
 
 2021-01-08 * "AERI3 Buy"
   id: "b3-neg-20210108-43"
@@ -1206,6 +1211,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   8541 BRL
   Assets:Investment:XP:PETR4  -300 PETR4 {} @ 28.47 BRL
+  Income:Investment:XP:Gains
 
 2021-01-29 * "IRBR3 Buy"
   id: "b3-neg-20210129-41"
@@ -1234,6 +1240,7 @@
   asset: "IRBR3"
   Assets:Investment:XP:Cash   3085 BRL
   Assets:Investment:XP:IRBR3  -500 IRBR3 {} @ 6.17 BRL
+  Income:Investment:XP:Gains
 
 2021-04-19 * "PETR4 Sell"
   id: "b3-neg-20210419-37"
@@ -1241,6 +1248,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   19704 BRL
   Assets:Investment:XP:PETR4   -800 PETR4 {} @ 24.63 BRL
+  Income:Investment:XP:Gains
 
 2021-04-28 * "ETER3 Buy"
   id: "b3-neg-20210428-35"
@@ -1437,6 +1445,7 @@
   asset: "CVCB3"
   Assets:Investment:XP:Cash   1527 BRL
   Assets:Investment:XP:CVCB3  -100 CVCB3 {} @ 15.27 BRL
+  Income:Investment:XP:Gains
 
 2021-11-22 * "CVCB3 Sell"
   id: "b3-neg-20211122-5"
@@ -1444,6 +1453,7 @@
   asset: "CVCB3"
   Assets:Investment:XP:Cash   228.9 BRL
   Assets:Investment:XP:CVCB3    -15 CVCB3 {} @ 15.26 BRL
+  Income:Investment:XP:Gains
 
 2021-11-22 * "FLRY3 Buy"
   id: "b3-neg-20211122-6"
@@ -1458,6 +1468,7 @@
   asset: "ITUB3"
   Assets:Investment:XP:Cash   6075 BRL
   Assets:Investment:XP:ITUB3  -300 ITUB3 {} @ 20.25 BRL
+  Income:Investment:XP:Gains
 
 2021-11-22 * "MGLU3 Buy"
   id: "b3-neg-20211122-8"
@@ -1472,6 +1483,7 @@
   asset: "ODPV3"
   Assets:Investment:XP:Cash   2654 BRL
   Assets:Investment:XP:ODPV3  -200 ODPV3 {} @ 13.27 BRL
+  Income:Investment:XP:Gains
 
 2021-11-26 * "CRFB3 Buy"
   id: "b3-neg-20211126-2"
@@ -1488,7 +1500,7 @@
   Assets:Investment:XP:Cash   -2800 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2021.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2021.xlsx
 
 2021-01-04 * "ITSA3 Dividend"
   id: "b3-mov-20210104-340"
@@ -3081,6 +3093,7 @@
   Assets:Investment:XP:Cash    154.05 BRL
   Assets:Investment:XP:XPBR31      -1 XPBR31 {} @ 166.36 BRL
   Expenses:Investment:XP:Fees   12.31 BRL
+  Income:Investment:XP:Gains
 
 2021-12-14 * "HGLG11 Rendimento"
   id: "b3-mov-20211214-16"
@@ -3235,7 +3248,7 @@
   Income:Investment:XP:JCP   -8.5 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2022.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2022.xlsx
 
 2022-04-04 * "FLRY3 Buy"
   id: "b3-neg-20220404-48"
@@ -3299,6 +3312,7 @@
   asset: "AERI3"
   Assets:Investment:XP:Cash   2976 BRL
   Assets:Investment:XP:AERI3  -800 AERI3 {} @ 3.72 BRL
+  Income:Investment:XP:Gains
 
 2022-05-26 * "HGLG11 Buy"
   id: "b3-neg-20220526-31"
@@ -3320,6 +3334,7 @@
   asset: "HSML11"
   Assets:Investment:XP:Cash    2636.7 BRL
   Assets:Investment:XP:HSML11     -34 HSML11 {} @ 77.55 BRL
+  Income:Investment:XP:Gains
 
 2022-05-26 * "IRDM11 Buy"
   id: "b3-neg-20220526-34"
@@ -3334,6 +3349,7 @@
   asset: "KNRI11"
   Assets:Investment:XP:Cash    1322.5 BRL
   Assets:Investment:XP:KNRI11     -10 KNRI11 {} @ 132.25 BRL
+  Income:Investment:XP:Gains
 
 2022-05-26 * "MALL11 Buy"
   id: "b3-neg-20220526-36"
@@ -3362,6 +3378,7 @@
   asset: "VILG11"
   Assets:Investment:XP:Cash    2462 BRL
   Assets:Investment:XP:VILG11   -25 VILG11 {} @ 98.48 BRL
+  Income:Investment:XP:Gains
 
 2022-05-26 * "VISC11 Sell"
   id: "b3-neg-20220526-40"
@@ -3369,6 +3386,7 @@
   asset: "VISC11"
   Assets:Investment:XP:Cash    2805.04 BRL
   Assets:Investment:XP:VISC11      -28 VISC11 {} @ 100.18 BRL
+  Income:Investment:XP:Gains
 
 2022-05-26 * "XPLG11 Buy"
   id: "b3-neg-20220526-41"
@@ -3397,6 +3415,7 @@
   asset: "ITSA3"
   Assets:Investment:XP:Cash   9.7 BRL
   Assets:Investment:XP:ITSA3   -1 ITSA3 {} @ 9.7 BRL
+  Income:Investment:XP:Gains
 
 2022-06-01 * "TAEE11 Buy"
   id: "b3-neg-20220601-29"
@@ -3418,6 +3437,7 @@
   asset: "BBSE3"
   Assets:Investment:XP:Cash   4958 BRL
   Assets:Investment:XP:BBSE3  -200 BBSE3 {} @ 24.79 BRL
+  Income:Investment:XP:Gains
 
 2022-06-10 * "ITSA3 Sell"
   id: "b3-neg-20220610-23"
@@ -3425,6 +3445,7 @@
   asset: "ITSA3"
   Assets:Investment:XP:Cash   2769 BRL
   Assets:Investment:XP:ITSA3  -300 ITSA3 {} @ 9.23 BRL
+  Income:Investment:XP:Gains
 
 2022-06-10 * "ITSA3 Sell"
   id: "b3-neg-20220610-24"
@@ -3432,6 +3453,7 @@
   asset: "ITSA3"
   Assets:Investment:XP:Cash   129.22 BRL
   Assets:Investment:XP:ITSA3     -14 ITSA3 {} @ 9.23 BRL
+  Income:Investment:XP:Gains
 
 2022-06-10 * "TAEE11 Buy"
   id: "b3-neg-20220610-25"
@@ -3523,6 +3545,7 @@
   asset: "XPLG11"
   Assets:Investment:XP:Cash    7429.76 BRL
   Assets:Investment:XP:XPLG11      -76 XPLG11 {} @ 97.76 BRL
+  Income:Investment:XP:Gains
 
 2022-08-09 * "XPML11 Sell"
   id: "b3-neg-20220809-15"
@@ -3530,6 +3553,7 @@
   asset: "XPML11"
   Assets:Investment:XP:Cash    3547.44 BRL
   Assets:Investment:XP:XPML11      -36 XPML11 {} @ 98.54 BRL
+  Income:Investment:XP:Gains
 
 2022-08-18 * "CRFB3 Sell"
   id: "b3-neg-20220818-7"
@@ -3537,6 +3561,7 @@
   asset: "CRFB3"
   Assets:Investment:XP:Cash   2039 BRL
   Assets:Investment:XP:CRFB3  -100 CRFB3 {} @ 20.39 BRL
+  Income:Investment:XP:Gains
 
 2022-09-19 * "PETR4 Sell"
   id: "b3-neg-20220919-5"
@@ -3544,6 +3569,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   3042 BRL
   Assets:Investment:XP:PETR4  -100 PETR4 {} @ 30.42 BRL
+  Income:Investment:XP:Gains
 
 2022-09-19 * "PETR4 Sell"
   id: "b3-neg-20220919-6"
@@ -3551,6 +3577,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   12144 BRL
   Assets:Investment:XP:PETR4   -400 PETR4 {} @ 30.36 BRL
+  Income:Investment:XP:Gains
 
 2022-11-01 * "PETR4 Buy"
   id: "b3-neg-20221101-3"
@@ -3572,9 +3599,10 @@
   asset: "VALE3"
   Assets:Investment:XP:Cash   8920 BRL
   Assets:Investment:XP:VALE3  -100 VALE3 {} @ 89.2 BRL
+  Income:Investment:XP:Gains
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2022.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2022.xlsx
 
 2022-01-03 * "BBDC3 JCP"
   id: "b3-mov-20220103-268"
@@ -4996,7 +5024,7 @@
   Income:Investment:XP:JCP   -8.5 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2023.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2023.xlsx
 
 2023-01-10 * "HGLG11 Buy"
   id: "b3-neg-20230110-34"
@@ -5102,6 +5130,7 @@
   asset: "PETR4"
   Assets:Investment:XP:Cash   13055 BRL
   Assets:Investment:XP:PETR4   -500 PETR4 {} @ 26.11 BRL
+  Income:Investment:XP:Gains
 
 2023-06-23 * "HGLG11 Buy"
   id: "b3-neg-20230623-14"
@@ -5193,6 +5222,7 @@
   asset: "ENBR3"
   Assets:Investment:XP:Cash   9416 BRL
   Assets:Investment:XP:ENBR3  -400 ENBR3 {} @ 23.54 BRL
+  Income:Investment:XP:Gains
 
 2023-06-27 * "FLRY3 Buy"
   id: "b3-neg-20230627-8"
@@ -5221,6 +5251,7 @@
   asset: "HYPE3"
   Assets:Investment:XP:Cash   4269 BRL
   Assets:Investment:XP:HYPE3  -100 HYPE3 {} @ 42.69 BRL
+  Income:Investment:XP:Gains
 
 2023-06-27 * "TAEE11 Buy"
   id: "b3-neg-20230627-12"
@@ -5242,6 +5273,7 @@
   asset: "XPBR31"
   Assets:Investment:XP:Cash    629.22 BRL
   Assets:Investment:XP:XPBR31      -6 XPBR31 {} @ 104.87 BRL
+  Income:Investment:XP:Gains
 
 2023-12-01 * "HYPE3 Buy"
   id: "b3-neg-20231201-2"
@@ -5263,6 +5295,7 @@
   asset: "MDIA3"
   Assets:Investment:XP:Cash   7102 BRL
   Assets:Investment:XP:MDIA3  -200 MDIA3 {} @ 35.51 BRL
+  Income:Investment:XP:Gains
 
 2023-12-01 * "TAEE11 Buy"
   id: "b3-neg-20231201-5"
@@ -5272,7 +5305,7 @@
   Assets:Investment:XP:Cash    -3658 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2023.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2023.xlsx
 
 2023-01-02 * "BBDC3 JCP"
   id: "b3-mov-20230102-258"
@@ -5450,14 +5483,6 @@
   Assets:Investment:XP:Cash   18.48 BRL
   Income:Investment:XP:JCP   -18.48 BRL
 
-2023-02-16 * "Asset Transfer WEGE3"
-  id: "b3-mov-20230216-229"
-  source: "b3_movimentacoes"
-  asset: "WEGE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:WEGE3   400 WEGE3 {}
-  Equity:Transfers            -400 WEGE3 {}
-
 2023-02-16 * "WEGE3 JCP"
   id: "b3-mov-20230216-230"
   source: "b3_movimentacoes"
@@ -5478,9 +5503,9 @@
   id: "b3-mov-20230216-232"
   source: "b3_movimentacoes"
   asset: "WEGE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230216-229"
   Assets:Investment:XP:WEGE3  -400 WEGE3 {}
-  Equity:Transfers             400 WEGE3 {}
+  Assets:Investment:XP:WEGE3   400 WEGE3 {}
 
 2023-02-16 * "WEGE3 JCP"
   id: "b3-mov-20230216-233"
@@ -5799,324 +5824,164 @@
   Income:Investment:XP:Dividend  -25.13 BRL
 
 2023-05-31 * "Asset Transfer B3SA3"
-  id: "b3-mov-20230531-136"
-  source: "b3_movimentacoes"
-  asset: "B3SA3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:B3SA3   700 B3SA3 {}
-  Equity:Transfers            -700 B3SA3 {}
-
-2023-05-31 * "Asset Transfer B3SA3"
   id: "b3-mov-20230531-137"
   source: "b3_movimentacoes"
   asset: "B3SA3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-136"
   Assets:Investment:XP:B3SA3  -700 B3SA3 {}
-  Equity:Transfers             700 B3SA3 {}
-
-2023-05-31 * "Asset Transfer BBAS3"
-  id: "b3-mov-20230531-138"
-  source: "b3_movimentacoes"
-  asset: "BBAS3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:BBAS3   300 BBAS3 {}
-  Equity:Transfers            -300 BBAS3 {}
+  Assets:Investment:XP:B3SA3   700 B3SA3 {}
 
 2023-05-31 * "Asset Transfer BBAS3"
   id: "b3-mov-20230531-139"
   source: "b3_movimentacoes"
   asset: "BBAS3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-138"
   Assets:Investment:XP:BBAS3  -300 BBAS3 {}
-  Equity:Transfers             300 BBAS3 {}
-
-2023-05-31 * "Asset Transfer BBDC3"
-  id: "b3-mov-20230531-140"
-  source: "b3_movimentacoes"
-  asset: "BBDC3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:BBDC3   550 BBDC3 {}
-  Equity:Transfers            -550 BBDC3 {}
+  Assets:Investment:XP:BBAS3   300 BBAS3 {}
 
 2023-05-31 * "Asset Transfer BBDC3"
   id: "b3-mov-20230531-141"
   source: "b3_movimentacoes"
   asset: "BBDC3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-140"
   Assets:Investment:XP:BBDC3  -550 BBDC3 {}
-  Equity:Transfers             550 BBDC3 {}
-
-2023-05-31 * "Asset Transfer EGIE3"
-  id: "b3-mov-20230531-142"
-  source: "b3_movimentacoes"
-  asset: "EGIE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:EGIE3   300 EGIE3 {}
-  Equity:Transfers            -300 EGIE3 {}
+  Assets:Investment:XP:BBDC3   550 BBDC3 {}
 
 2023-05-31 * "Asset Transfer EGIE3"
   id: "b3-mov-20230531-143"
   source: "b3_movimentacoes"
   asset: "EGIE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-142"
   Assets:Investment:XP:EGIE3  -300 EGIE3 {}
-  Equity:Transfers             300 EGIE3 {}
-
-2023-05-31 * "Asset Transfer ENBR3"
-  id: "b3-mov-20230531-144"
-  source: "b3_movimentacoes"
-  asset: "ENBR3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:ENBR3   400 ENBR3 {}
-  Equity:Transfers            -400 ENBR3 {}
+  Assets:Investment:XP:EGIE3   300 EGIE3 {}
 
 2023-05-31 * "Asset Transfer ENBR3"
   id: "b3-mov-20230531-145"
   source: "b3_movimentacoes"
   asset: "ENBR3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-144"
   Assets:Investment:XP:ENBR3  -400 ENBR3 {}
-  Equity:Transfers             400 ENBR3 {}
-
-2023-05-31 * "Asset Transfer ETER3"
-  id: "b3-mov-20230531-146"
-  source: "b3_movimentacoes"
-  asset: "ETER3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:ETER3   500 ETER3 {}
-  Equity:Transfers            -500 ETER3 {}
+  Assets:Investment:XP:ENBR3   400 ENBR3 {}
 
 2023-05-31 * "Asset Transfer ETER3"
   id: "b3-mov-20230531-147"
   source: "b3_movimentacoes"
   asset: "ETER3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-146"
   Assets:Investment:XP:ETER3  -500 ETER3 {}
-  Equity:Transfers             500 ETER3 {}
-
-2023-05-31 * "Asset Transfer FLRY3"
-  id: "b3-mov-20230531-148"
-  source: "b3_movimentacoes"
-  asset: "FLRY3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:FLRY3   600 FLRY3 {}
-  Equity:Transfers            -600 FLRY3 {}
+  Assets:Investment:XP:ETER3   500 ETER3 {}
 
 2023-05-31 * "Asset Transfer FLRY3"
   id: "b3-mov-20230531-149"
   source: "b3_movimentacoes"
   asset: "FLRY3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-148"
   Assets:Investment:XP:FLRY3  -600 FLRY3 {}
-  Equity:Transfers             600 FLRY3 {}
-
-2023-05-31 * "Asset Transfer HGLG11"
-  id: "b3-mov-20230531-150"
-  source: "b3_movimentacoes"
-  asset: "HGLG11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HGLG11   64 HGLG11 {}
-  Equity:Transfers             -64 HGLG11 {}
+  Assets:Investment:XP:FLRY3   600 FLRY3 {}
 
 2023-05-31 * "Asset Transfer HGLG11"
   id: "b3-mov-20230531-151"
   source: "b3_movimentacoes"
   asset: "HGLG11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-150"
   Assets:Investment:XP:HGLG11  -64 HGLG11 {}
-  Equity:Transfers              64 HGLG11 {}
-
-2023-05-31 * "Asset Transfer HGRU11"
-  id: "b3-mov-20230531-152"
-  source: "b3_movimentacoes"
-  asset: "HGRU11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HGRU11   89 HGRU11 {}
-  Equity:Transfers             -89 HGRU11 {}
+  Assets:Investment:XP:HGLG11   64 HGLG11 {}
 
 2023-05-31 * "Asset Transfer HGRU11"
   id: "b3-mov-20230531-153"
   source: "b3_movimentacoes"
   asset: "HGRU11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-152"
   Assets:Investment:XP:HGRU11  -89 HGRU11 {}
-  Equity:Transfers              89 HGRU11 {}
-
-2023-05-31 * "Asset Transfer HYPE3"
-  id: "b3-mov-20230531-154"
-  source: "b3_movimentacoes"
-  asset: "HYPE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HYPE3   100 HYPE3 {}
-  Equity:Transfers            -100 HYPE3 {}
+  Assets:Investment:XP:HGRU11   89 HGRU11 {}
 
 2023-05-31 * "Asset Transfer HYPE3"
   id: "b3-mov-20230531-155"
   source: "b3_movimentacoes"
   asset: "HYPE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-154"
   Assets:Investment:XP:HYPE3  -100 HYPE3 {}
-  Equity:Transfers             100 HYPE3 {}
-
-2023-05-31 * "Asset Transfer IRDM11"
-  id: "b3-mov-20230531-156"
-  source: "b3_movimentacoes"
-  asset: "IRDM11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:IRDM11   112 IRDM11 {}
-  Equity:Transfers             -112 IRDM11 {}
+  Assets:Investment:XP:HYPE3   100 HYPE3 {}
 
 2023-05-31 * "Asset Transfer IRDM11"
   id: "b3-mov-20230531-157"
   source: "b3_movimentacoes"
   asset: "IRDM11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-156"
   Assets:Investment:XP:IRDM11  -112 IRDM11 {}
-  Equity:Transfers              112 IRDM11 {}
-
-2023-05-31 * "Asset Transfer LEVE3"
-  id: "b3-mov-20230531-158"
-  source: "b3_movimentacoes"
-  asset: "LEVE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:LEVE3   100 LEVE3 {}
-  Equity:Transfers            -100 LEVE3 {}
+  Assets:Investment:XP:IRDM11   112 IRDM11 {}
 
 2023-05-31 * "Asset Transfer LEVE3"
   id: "b3-mov-20230531-159"
   source: "b3_movimentacoes"
   asset: "LEVE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-158"
   Assets:Investment:XP:LEVE3  -100 LEVE3 {}
-  Equity:Transfers             100 LEVE3 {}
-
-2023-05-31 * "Asset Transfer MALL11"
-  id: "b3-mov-20230531-160"
-  source: "b3_movimentacoes"
-  asset: "MALL11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MALL11   103 MALL11 {}
-  Equity:Transfers             -103 MALL11 {}
+  Assets:Investment:XP:LEVE3   100 LEVE3 {}
 
 2023-05-31 * "Asset Transfer MALL11"
   id: "b3-mov-20230531-161"
   source: "b3_movimentacoes"
   asset: "MALL11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-160"
   Assets:Investment:XP:MALL11  -103 MALL11 {}
-  Equity:Transfers              103 MALL11 {}
-
-2023-05-31 * "Asset Transfer MCCI11"
-  id: "b3-mov-20230531-162"
-  source: "b3_movimentacoes"
-  asset: "MCCI11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MCCI11   114 MCCI11 {}
-  Equity:Transfers             -114 MCCI11 {}
+  Assets:Investment:XP:MALL11   103 MALL11 {}
 
 2023-05-31 * "Asset Transfer MCCI11"
   id: "b3-mov-20230531-163"
   source: "b3_movimentacoes"
   asset: "MCCI11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-162"
   Assets:Investment:XP:MCCI11  -114 MCCI11 {}
-  Equity:Transfers              114 MCCI11 {}
-
-2023-05-31 * "Asset Transfer MDIA3"
-  id: "b3-mov-20230531-164"
-  source: "b3_movimentacoes"
-  asset: "MDIA3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MDIA3   200 MDIA3 {}
-  Equity:Transfers            -200 MDIA3 {}
+  Assets:Investment:XP:MCCI11   114 MCCI11 {}
 
 2023-05-31 * "Asset Transfer MDIA3"
   id: "b3-mov-20230531-165"
   source: "b3_movimentacoes"
   asset: "MDIA3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-164"
   Assets:Investment:XP:MDIA3  -200 MDIA3 {}
-  Equity:Transfers             200 MDIA3 {}
-
-2023-05-31 * "Asset Transfer MGLU3"
-  id: "b3-mov-20230531-166"
-  source: "b3_movimentacoes"
-  asset: "MGLU3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MGLU3   1100 MGLU3 {}
-  Equity:Transfers            -1100 MGLU3 {}
+  Assets:Investment:XP:MDIA3   200 MDIA3 {}
 
 2023-05-31 * "Asset Transfer MGLU3"
   id: "b3-mov-20230531-167"
   source: "b3_movimentacoes"
   asset: "MGLU3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-166"
   Assets:Investment:XP:MGLU3  -1100 MGLU3 {}
-  Equity:Transfers             1100 MGLU3 {}
-
-2023-05-31 * "Asset Transfer PETR4"
-  id: "b3-mov-20230531-168"
-  source: "b3_movimentacoes"
-  asset: "PETR4"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:PETR4   500 PETR4 {}
-  Equity:Transfers            -500 PETR4 {}
+  Assets:Investment:XP:MGLU3   1100 MGLU3 {}
 
 2023-05-31 * "Asset Transfer PETR4"
   id: "b3-mov-20230531-169"
   source: "b3_movimentacoes"
   asset: "PETR4"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-168"
   Assets:Investment:XP:PETR4  -500 PETR4 {}
-  Equity:Transfers             500 PETR4 {}
-
-2023-05-31 * "Asset Transfer RBRP11"
-  id: "b3-mov-20230531-170"
-  source: "b3_movimentacoes"
-  asset: "RBRP11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:RBRP11   191 RBRP11 {}
-  Equity:Transfers             -191 RBRP11 {}
+  Assets:Investment:XP:PETR4   500 PETR4 {}
 
 2023-05-31 * "Asset Transfer RBRP11"
   id: "b3-mov-20230531-171"
   source: "b3_movimentacoes"
   asset: "RBRP11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-170"
   Assets:Investment:XP:RBRP11  -191 RBRP11 {}
-  Equity:Transfers              191 RBRP11 {}
-
-2023-05-31 * "Asset Transfer TAEE11"
-  id: "b3-mov-20230531-172"
-  source: "b3_movimentacoes"
-  asset: "TAEE11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:TAEE11   400 TAEE11 {}
-  Equity:Transfers             -400 TAEE11 {}
+  Assets:Investment:XP:RBRP11   191 RBRP11 {}
 
 2023-05-31 * "Asset Transfer TAEE11"
   id: "b3-mov-20230531-173"
   source: "b3_movimentacoes"
   asset: "TAEE11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-172"
   Assets:Investment:XP:TAEE11  -400 TAEE11 {}
-  Equity:Transfers              400 TAEE11 {}
-
-2023-05-31 * "Asset Transfer WEGE3"
-  id: "b3-mov-20230531-174"
-  source: "b3_movimentacoes"
-  asset: "WEGE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:WEGE3   800 WEGE3 {}
-  Equity:Transfers            -800 WEGE3 {}
+  Assets:Investment:XP:TAEE11   400 TAEE11 {}
 
 2023-05-31 * "Asset Transfer WEGE3"
   id: "b3-mov-20230531-175"
   source: "b3_movimentacoes"
   asset: "WEGE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20230531-174"
   Assets:Investment:XP:WEGE3  -800 WEGE3 {}
-  Equity:Transfers             800 WEGE3 {}
+  Assets:Investment:XP:WEGE3   800 WEGE3 {}
 
 2023-06-01 * "BBDC3 JCP"
   id: "b3-mov-20230601-131"
@@ -6611,17 +6476,9 @@
   id: "b3-mov-20231009-54"
   source: "b3_movimentacoes"
   asset: "XPBR31"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20231009-55"
   Assets:Investment:XP:XPBR31  -6 XPBR31 {}
-  Equity:Transfers              6 XPBR31 {}
-
-2023-10-09 * "Asset Transfer XPBR31"
-  id: "b3-mov-20231009-55"
-  source: "b3_movimentacoes"
-  asset: "XPBR31"
-  warning: "unmatched_transfer"
   Assets:Investment:XP:XPBR31   6 XPBR31 {}
-  Equity:Transfers             -6 XPBR31 {}
 
 2023-10-16 * "HGLG11 Rendimento"
   id: "b3-mov-20231016-43"
@@ -6883,7 +6740,7 @@
   Income:Investment:XP:JCP   -187.37 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2024.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2024.xlsx
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-9"
@@ -6891,6 +6748,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    231.08 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.77 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-10"
@@ -6898,6 +6756,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    8255.39 BRL
   Assets:Investment:XP:RBRP11     -143 RBRP11 {} @ 57.73 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-11"
@@ -6905,6 +6764,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    231 BRL
   Assets:Investment:XP:RBRP11   -4 RBRP11 {} @ 57.75 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-12"
@@ -6912,6 +6772,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    231.12 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.78 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-13"
@@ -6919,6 +6780,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    1733.7 BRL
   Assets:Investment:XP:RBRP11     -30 RBRP11 {} @ 57.79 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-14"
@@ -6926,6 +6788,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    230.96 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.74 BRL
+  Income:Investment:XP:Gains
 
 2024-02-19 * "RBRP11 Sell"
   id: "b3-neg-20240219-15"
@@ -6933,6 +6796,7 @@
   asset: "RBRP11"
   Assets:Investment:XP:Cash    115.52 BRL
   Assets:Investment:XP:RBRP11      -2 RBRP11 {} @ 57.76 BRL
+  Income:Investment:XP:Gains
 
 2024-03-05 * "HYPE3 Buy"
   id: "b3-neg-20240305-7"
@@ -6961,6 +6825,7 @@
   asset: "BBDC3"
   Assets:Investment:XP:Cash   5990 BRL
   Assets:Investment:XP:BBDC3  -500 BBDC3 {} @ 11.98 BRL
+  Income:Investment:XP:Gains
 
 2024-05-09 * "BBDC3 Sell"
   id: "b3-neg-20240509-4"
@@ -6968,6 +6833,7 @@
   asset: "BBDC3"
   Assets:Investment:XP:Cash   299.5 BRL
   Assets:Investment:XP:BBDC3    -25 BBDC3 {} @ 11.98 BRL
+  Income:Investment:XP:Gains
 
 2024-05-09 * "BBDC3 Sell"
   id: "b3-neg-20240509-5"
@@ -6975,6 +6841,7 @@
   asset: "BBDC3"
   Assets:Investment:XP:Cash   299.75 BRL
   Assets:Investment:XP:BBDC3     -25 BBDC3 {} @ 11.99 BRL
+  Income:Investment:XP:Gains
 
 2024-05-09 * "ITUB3 Buy"
   id: "b3-neg-20240509-6"
@@ -6984,7 +6851,7 @@
   Assets:Investment:XP:Cash   -5632 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2024.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2024.xlsx
 
 2024-01-01 * "TESOURO-IPCA-2045 Fee"
   id: "b3-mov-20240101-179"
@@ -8091,7 +7958,7 @@
   Income:Investment:XP:JCP   -52.35 BRL
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2025.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2025.xlsx
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-2"
@@ -8134,6 +8001,7 @@
   asset: "B3SA3"
   Assets:Investment:XP:Cash   4080 BRL
   Assets:Investment:XP:B3SA3  -300 B3SA3 {} @ 13.6 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "BBAS3 Sell"
   id: "b3-neg-20251226-8"
@@ -8141,6 +8009,7 @@
   asset: "BBAS3"
   Assets:Investment:XP:Cash   6501 BRL
   Assets:Investment:XP:BBAS3  -300 BBAS3 {} @ 21.67 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "BBSE3 Buy"
   id: "b3-neg-20251226-9"
@@ -8183,6 +8052,7 @@
   asset: "IRIM11"
   Assets:Investment:XP:Cash    5927.98 BRL
   Assets:Investment:XP:IRIM11      -86 IRIM11 {} @ 68.93 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "IRIM11 Sell"
   id: "b3-neg-20251226-15"
@@ -8190,6 +8060,7 @@
   asset: "IRIM11"
   Assets:Investment:XP:Cash    620.46 BRL
   Assets:Investment:XP:IRIM11      -9 IRIM11 {} @ 68.94 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "IRIM11 Sell"
   id: "b3-neg-20251226-16"
@@ -8197,6 +8068,7 @@
   asset: "IRIM11"
   Assets:Investment:XP:Cash    3239.24 BRL
   Assets:Investment:XP:IRIM11      -47 IRIM11 {} @ 68.92 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "IRIM11 Sell"
   id: "b3-neg-20251226-17"
@@ -8204,6 +8076,7 @@
   asset: "IRIM11"
   Assets:Investment:XP:Cash    1379.8 BRL
   Assets:Investment:XP:IRIM11     -20 IRIM11 {} @ 68.99 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "IRIM11 Sell"
   id: "b3-neg-20251226-18"
@@ -8211,6 +8084,7 @@
   asset: "IRIM11"
   Assets:Investment:XP:Cash    206.85 BRL
   Assets:Investment:XP:IRIM11      -3 IRIM11 {} @ 68.95 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "ITUB3 Buy"
   id: "b3-neg-20251226-19"
@@ -8253,6 +8127,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1480.8 BRL
   Assets:Investment:XP:MCCI11     -16 MCCI11 {} @ 92.55 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-25"
@@ -8260,6 +8135,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1389.15 BRL
   Assets:Investment:XP:MCCI11      -15 MCCI11 {} @ 92.61 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-26"
@@ -8267,6 +8143,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1480.64 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.54 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-27"
@@ -8274,6 +8151,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    370.6 BRL
   Assets:Investment:XP:MCCI11     -4 MCCI11 {} @ 92.65 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-28"
@@ -8281,6 +8159,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    185.02 BRL
   Assets:Investment:XP:MCCI11      -2 MCCI11 {} @ 92.51 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-29"
@@ -8288,6 +8167,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1481.12 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.57 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-30"
@@ -8295,6 +8175,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    462.65 BRL
   Assets:Investment:XP:MCCI11      -5 MCCI11 {} @ 92.53 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-31"
@@ -8302,6 +8183,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1481.44 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.59 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-32"
@@ -8309,6 +8191,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    740.8 BRL
   Assets:Investment:XP:MCCI11     -8 MCCI11 {} @ 92.6 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-33"
@@ -8316,6 +8199,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1944.18 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.58 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-34"
@@ -8323,6 +8207,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1945.44 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.64 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-35"
@@ -8330,6 +8215,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    463.1 BRL
   Assets:Investment:XP:MCCI11     -5 MCCI11 {} @ 92.62 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-36"
@@ -8337,6 +8223,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1480.32 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.52 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-37"
@@ -8344,6 +8231,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    1945.23 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.63 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-38"
@@ -8351,6 +8239,7 @@
   asset: "MCCI11"
   Assets:Investment:XP:Cash    555.36 BRL
   Assets:Investment:XP:MCCI11      -6 MCCI11 {} @ 92.56 BRL
+  Income:Investment:XP:Gains
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-39"
@@ -8407,9 +8296,10 @@
   asset: "VALE3"
   Assets:Investment:XP:Cash   7314 BRL
   Assets:Investment:XP:VALE3  -100 VALE3 {} @ 73.14 BRL
+  Income:Investment:XP:Gains
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2025.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2025.xlsx
 
 2025-01-02 * "ITUB3 JCP"
   id: "b3-mov-20250102-287"
@@ -8489,36 +8379,20 @@
   Income:Investment:XP:JCP   -78.13 BRL
 
 2025-02-14 * "Asset Transfer B3SA3"
-  id: "b3-mov-20250214-185"
-  source: "b3_movimentacoes"
-  asset: "B3SA3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:B3SA3   700 B3SA3 {}
-  Equity:Transfers            -700 B3SA3 {}
-
-2025-02-14 * "Asset Transfer B3SA3"
   id: "b3-mov-20250214-186"
   source: "b3_movimentacoes"
   asset: "B3SA3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-185"
   Assets:Investment:XP:B3SA3  -700 B3SA3 {}
-  Equity:Transfers             700 B3SA3 {}
-
-2025-02-14 * "Asset Transfer BBAS3"
-  id: "b3-mov-20250214-187"
-  source: "b3_movimentacoes"
-  asset: "BBAS3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:BBAS3   700 BBAS3 {}
-  Equity:Transfers            -700 BBAS3 {}
+  Assets:Investment:XP:B3SA3   700 B3SA3 {}
 
 2025-02-14 * "Asset Transfer BBAS3"
   id: "b3-mov-20250214-188"
   source: "b3_movimentacoes"
   asset: "BBAS3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-187"
   Assets:Investment:XP:BBAS3  -700 BBAS3 {}
-  Equity:Transfers             700 BBAS3 {}
+  Assets:Investment:XP:BBAS3   700 BBAS3 {}
 
 2025-02-14 * "EGIE3 Dividend"
   id: "b3-mov-20250214-189"
@@ -8527,14 +8401,6 @@
   warning: "needs_review"
   Assets:Investment:XP:Cash       342.97 BRL
   Income:Investment:XP:Dividend  -342.97 BRL
-
-2025-02-14 * "Asset Transfer EGIE3"
-  id: "b3-mov-20250214-190"
-  source: "b3_movimentacoes"
-  asset: "EGIE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:EGIE3   300 EGIE3 {}
-  Equity:Transfers            -300 EGIE3 {}
 
 2025-02-14 * "EGIE3 Dividend"
   id: "b3-mov-20250214-191"
@@ -8548,9 +8414,9 @@
   id: "b3-mov-20250214-192"
   source: "b3_movimentacoes"
   asset: "EGIE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-190"
   Assets:Investment:XP:EGIE3  -300 EGIE3 {}
-  Equity:Transfers             300 EGIE3 {}
+  Assets:Investment:XP:EGIE3   300 EGIE3 {}
 
 2025-02-14 * "ETER3 JCP"
   id: "b3-mov-20250214-193"
@@ -8561,20 +8427,12 @@
   Income:Investment:XP:JCP   -22.11 BRL
 
 2025-02-14 * "Asset Transfer ETER3"
-  id: "b3-mov-20250214-194"
-  source: "b3_movimentacoes"
-  asset: "ETER3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:ETER3   500 ETER3 {}
-  Equity:Transfers            -500 ETER3 {}
-
-2025-02-14 * "Asset Transfer ETER3"
   id: "b3-mov-20250214-195"
   source: "b3_movimentacoes"
   asset: "ETER3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-194"
   Assets:Investment:XP:ETER3  -500 ETER3 {}
-  Equity:Transfers             500 ETER3 {}
+  Assets:Investment:XP:ETER3   500 ETER3 {}
 
 2025-02-14 * "ETER3 JCP"
   id: "b3-mov-20250214-196"
@@ -8585,28 +8443,12 @@
   Income:Investment:XP:JCP   -22.11 BRL
 
 2025-02-14 * "Asset Transfer FLRY3"
-  id: "b3-mov-20250214-197"
-  source: "b3_movimentacoes"
-  asset: "FLRY3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:FLRY3   830 FLRY3 {}
-  Equity:Transfers            -830 FLRY3 {}
-
-2025-02-14 * "Asset Transfer FLRY3"
   id: "b3-mov-20250214-198"
   source: "b3_movimentacoes"
   asset: "FLRY3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-197"
   Assets:Investment:XP:FLRY3  -830 FLRY3 {}
-  Equity:Transfers             830 FLRY3 {}
-
-2025-02-14 * "Asset Transfer HGLG11"
-  id: "b3-mov-20250214-199"
-  source: "b3_movimentacoes"
-  asset: "HGLG11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HGLG11   99 HGLG11 {}
-  Equity:Transfers             -99 HGLG11 {}
+  Assets:Investment:XP:FLRY3   830 FLRY3 {}
 
 2025-02-14 * "HGLG11 Rendimento"
   id: "b3-mov-20250214-200"
@@ -8619,17 +8461,9 @@
   id: "b3-mov-20250214-201"
   source: "b3_movimentacoes"
   asset: "HGLG11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-199"
   Assets:Investment:XP:HGLG11  -99 HGLG11 {}
-  Equity:Transfers              99 HGLG11 {}
-
-2025-02-14 * "Asset Transfer HGRU11"
-  id: "b3-mov-20250214-202"
-  source: "b3_movimentacoes"
-  asset: "HGRU11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HGRU11   129 HGRU11 {}
-  Equity:Transfers             -129 HGRU11 {}
+  Assets:Investment:XP:HGLG11   99 HGLG11 {}
 
 2025-02-14 * "HGRU11 Rendimento"
   id: "b3-mov-20250214-203"
@@ -8642,9 +8476,9 @@
   id: "b3-mov-20250214-204"
   source: "b3_movimentacoes"
   asset: "HGRU11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-202"
   Assets:Investment:XP:HGRU11  -129 HGRU11 {}
-  Equity:Transfers              129 HGRU11 {}
+  Assets:Investment:XP:HGRU11   129 HGRU11 {}
 
 2025-02-14 * "HYPE3 JCP"
   id: "b3-mov-20250214-205"
@@ -8693,14 +8527,6 @@
   warning: "needs_review"
   Assets:Investment:XP:Cash   24.8 BRL
   Income:Investment:XP:JCP   -24.8 BRL
-
-2025-02-14 * "Asset Transfer HYPE3"
-  id: "b3-mov-20250214-211"
-  source: "b3_movimentacoes"
-  asset: "HYPE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:HYPE3   400 HYPE3 {}
-  Equity:Transfers            -400 HYPE3 {}
 
 2025-02-14 * "HYPE3 JCP"
   id: "b3-mov-20250214-212"
@@ -8762,9 +8588,9 @@
   id: "b3-mov-20250214-219"
   source: "b3_movimentacoes"
   asset: "HYPE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-211"
   Assets:Investment:XP:HYPE3  -400 HYPE3 {}
-  Equity:Transfers             400 HYPE3 {}
+  Assets:Investment:XP:HYPE3   400 HYPE3 {}
 
 2025-02-14 * "HYPE3 Dividend"
   id: "b3-mov-20250214-220"
@@ -8822,14 +8648,6 @@
   Assets:Investment:XP:Cash   33.1 BRL
   Income:Investment:XP:JCP   -33.1 BRL
 
-2025-02-14 * "Asset Transfer IRDM11"
-  id: "b3-mov-20250214-227"
-  source: "b3_movimentacoes"
-  asset: "IRDM11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:IRDM11   187 IRDM11 {}
-  Equity:Transfers             -187 IRDM11 {}
-
 2025-02-14 * "IRDM11 Rendimento"
   id: "b3-mov-20250214-228"
   source: "b3_movimentacoes"
@@ -8850,9 +8668,9 @@
   id: "b3-mov-20250214-230"
   source: "b3_movimentacoes"
   asset: "IRDM11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-227"
   Assets:Investment:XP:IRDM11  -187 IRDM11 {}
-  Equity:Transfers              187 IRDM11 {}
+  Assets:Investment:XP:IRDM11   187 IRDM11 {}
 
 2025-02-14 * "ITUB3 JCP"
   id: "b3-mov-20250214-231"
@@ -8879,20 +8697,12 @@
   Income:Investment:XP:JCP   -52.8 BRL
 
 2025-02-14 * "Asset Transfer ITUB3"
-  id: "b3-mov-20250214-234"
-  source: "b3_movimentacoes"
-  asset: "ITUB3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:ITUB3   200 ITUB3 {}
-  Equity:Transfers            -200 ITUB3 {}
-
-2025-02-14 * "Asset Transfer ITUB3"
   id: "b3-mov-20250214-235"
   source: "b3_movimentacoes"
   asset: "ITUB3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-234"
   Assets:Investment:XP:ITUB3  -200 ITUB3 {}
-  Equity:Transfers             200 ITUB3 {}
+  Assets:Investment:XP:ITUB3   200 ITUB3 {}
 
 2025-02-14 * "ITUB3 JCP"
   id: "b3-mov-20250214-236"
@@ -8926,14 +8736,6 @@
   Assets:Investment:XP:Cash   48.62 BRL
   Income:Investment:XP:JCP   -48.62 BRL
 
-2025-02-14 * "Asset Transfer LEVE3"
-  id: "b3-mov-20250214-240"
-  source: "b3_movimentacoes"
-  asset: "LEVE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:LEVE3   300 LEVE3 {}
-  Equity:Transfers            -300 LEVE3 {}
-
 2025-02-14 * "LEVE3 JCP"
   id: "b3-mov-20250214-241"
   source: "b3_movimentacoes"
@@ -8946,25 +8748,17 @@
   id: "b3-mov-20250214-242"
   source: "b3_movimentacoes"
   asset: "LEVE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-240"
   Assets:Investment:XP:LEVE3  -300 LEVE3 {}
-  Equity:Transfers             300 LEVE3 {}
-
-2025-02-14 * "Asset Transfer MALL11"
-  id: "b3-mov-20250214-243"
-  source: "b3_movimentacoes"
-  asset: "MALL11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MALL11   153 MALL11 {}
-  Equity:Transfers             -153 MALL11 {}
+  Assets:Investment:XP:LEVE3   300 LEVE3 {}
 
 2025-02-14 * "Asset Transfer MALL11"
   id: "b3-mov-20250214-244"
   source: "b3_movimentacoes"
   asset: "MALL11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-243"
   Assets:Investment:XP:MALL11  -153 MALL11 {}
-  Equity:Transfers              153 MALL11 {}
+  Assets:Investment:XP:MALL11   153 MALL11 {}
 
 2025-02-14 * "MALL11 Rendimento"
   id: "b3-mov-20250214-245"
@@ -8974,44 +8768,20 @@
   Income:Investment:XP:Rendimento  -126.99 BRL
 
 2025-02-14 * "Asset Transfer MCCI11"
-  id: "b3-mov-20250214-246"
-  source: "b3_movimentacoes"
-  asset: "MCCI11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MCCI11   188 MCCI11 {}
-  Equity:Transfers             -188 MCCI11 {}
-
-2025-02-14 * "Asset Transfer MCCI11"
   id: "b3-mov-20250214-247"
   source: "b3_movimentacoes"
   asset: "MCCI11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-246"
   Assets:Investment:XP:MCCI11  -188 MCCI11 {}
-  Equity:Transfers              188 MCCI11 {}
-
-2025-02-14 * "Asset Transfer MGLU3"
-  id: "b3-mov-20250214-248"
-  source: "b3_movimentacoes"
-  asset: "MGLU3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:MGLU3   110 MGLU3 {}
-  Equity:Transfers            -110 MGLU3 {}
+  Assets:Investment:XP:MCCI11   188 MCCI11 {}
 
 2025-02-14 * "Asset Transfer MGLU3"
   id: "b3-mov-20250214-249"
   source: "b3_movimentacoes"
   asset: "MGLU3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-248"
   Assets:Investment:XP:MGLU3  -110 MGLU3 {}
-  Equity:Transfers             110 MGLU3 {}
-
-2025-02-14 * "Asset Transfer PETR4"
-  id: "b3-mov-20250214-250"
-  source: "b3_movimentacoes"
-  asset: "PETR4"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:PETR4   500 PETR4 {}
-  Equity:Transfers            -500 PETR4 {}
+  Assets:Investment:XP:MGLU3   110 MGLU3 {}
 
 2025-02-14 * "PETR4 Dividend"
   id: "b3-mov-20250214-251"
@@ -9049,9 +8819,9 @@
   id: "b3-mov-20250214-255"
   source: "b3_movimentacoes"
   asset: "PETR4"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-250"
   Assets:Investment:XP:PETR4  -500 PETR4 {}
-  Equity:Transfers             500 PETR4 {}
+  Assets:Investment:XP:PETR4   500 PETR4 {}
 
 2025-02-14 * "PETR4 Dividend"
   id: "b3-mov-20250214-256"
@@ -9070,76 +8840,36 @@
   Income:Investment:XP:JCP   -4.48 BRL
 
 2025-02-14 * "Asset Transfer TAEE11"
-  id: "b3-mov-20250214-258"
-  source: "b3_movimentacoes"
-  asset: "TAEE11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:TAEE11   700 TAEE11 {}
-  Equity:Transfers             -700 TAEE11 {}
-
-2025-02-14 * "Asset Transfer TAEE11"
   id: "b3-mov-20250214-259"
   source: "b3_movimentacoes"
   asset: "TAEE11"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-258"
   Assets:Investment:XP:TAEE11  -700 TAEE11 {}
-  Equity:Transfers              700 TAEE11 {}
-
-2025-02-14 * "Asset Transfer TESOURO-IPCA-2045"
-  id: "b3-mov-20250214-260"
-  source: "b3_movimentacoes"
-  asset: "TESOURO-IPCA-2045"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:TESOURO-IPCA-2045   29.27 TESOURO-IPCA-2045 {}
-  Equity:Transfers                        -29.27 TESOURO-IPCA-2045 {}
+  Assets:Investment:XP:TAEE11   700 TAEE11 {}
 
 2025-02-14 * "Asset Transfer TESOURO-IPCA-2045"
   id: "b3-mov-20250214-261"
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2045"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-260"
   Assets:Investment:XP:TESOURO-IPCA-2045  -29.27 TESOURO-IPCA-2045 {}
-  Equity:Transfers                         29.27 TESOURO-IPCA-2045 {}
-
-2025-02-14 * "Asset Transfer TESOURO-PREFIXADO-2029"
-  id: "b3-mov-20250214-262"
-  source: "b3_movimentacoes"
-  asset: "TESOURO-PREFIXADO-2029"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:TESOURO-PREFIXADO-2029   22.05 TESOURO-PREFIXADO-2029 {}
-  Equity:Transfers                             -22.05 TESOURO-PREFIXADO-2029 {}
+  Assets:Investment:XP:TESOURO-IPCA-2045   29.27 TESOURO-IPCA-2045 {}
 
 2025-02-14 * "Asset Transfer TESOURO-PREFIXADO-2029"
   id: "b3-mov-20250214-263"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2029"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-262"
   Assets:Investment:XP:TESOURO-PREFIXADO-2029  -22.05 TESOURO-PREFIXADO-2029 {}
-  Equity:Transfers                              22.05 TESOURO-PREFIXADO-2029 {}
-
-2025-02-14 * "Asset Transfer TESOURO-PREFIXADO-2031"
-  id: "b3-mov-20250214-264"
-  source: "b3_movimentacoes"
-  asset: "TESOURO-PREFIXADO-2031"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:TESOURO-PREFIXADO-2031   20.04 TESOURO-PREFIXADO-2031 {}
-  Equity:Transfers                             -20.04 TESOURO-PREFIXADO-2031 {}
+  Assets:Investment:XP:TESOURO-PREFIXADO-2029   22.05 TESOURO-PREFIXADO-2029 {}
 
 2025-02-14 * "Asset Transfer TESOURO-PREFIXADO-2031"
   id: "b3-mov-20250214-265"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2031"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-264"
   Assets:Investment:XP:TESOURO-PREFIXADO-2031  -20.04 TESOURO-PREFIXADO-2031 {}
-  Equity:Transfers                              20.04 TESOURO-PREFIXADO-2031 {}
-
-2025-02-14 * "Asset Transfer VALE3"
-  id: "b3-mov-20250214-266"
-  source: "b3_movimentacoes"
-  asset: "VALE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:VALE3   200 VALE3 {}
-  Equity:Transfers            -200 VALE3 {}
+  Assets:Investment:XP:TESOURO-PREFIXADO-2031   20.04 TESOURO-PREFIXADO-2031 {}
 
 2025-02-14 * "VALE3 JCP"
   id: "b3-mov-20250214-267"
@@ -9161,9 +8891,9 @@
   id: "b3-mov-20250214-269"
   source: "b3_movimentacoes"
   asset: "VALE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-266"
   Assets:Investment:XP:VALE3  -200 VALE3 {}
-  Equity:Transfers             200 VALE3 {}
+  Assets:Investment:XP:VALE3   200 VALE3 {}
 
 2025-02-14 * "WEGE3 JCP"
   id: "b3-mov-20250214-270"
@@ -9181,14 +8911,6 @@
   Assets:Investment:XP:Cash   47.64 BRL
   Income:Investment:XP:JCP   -47.64 BRL
 
-2025-02-14 * "Asset Transfer WEGE3"
-  id: "b3-mov-20250214-272"
-  source: "b3_movimentacoes"
-  asset: "WEGE3"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:WEGE3   800 WEGE3 {}
-  Equity:Transfers            -800 WEGE3 {}
-
 2025-02-14 * "WEGE3 JCP"
   id: "b3-mov-20250214-273"
   source: "b3_movimentacoes"
@@ -9201,9 +8923,9 @@
   id: "b3-mov-20250214-274"
   source: "b3_movimentacoes"
   asset: "WEGE3"
-  warning: "unmatched_transfer"
+  id_in: "b3-mov-20250214-272"
   Assets:Investment:XP:WEGE3  -800 WEGE3 {}
-  Equity:Transfers             800 WEGE3 {}
+  Assets:Investment:XP:WEGE3   800 WEGE3 {}
 
 2025-02-14 * "WEGE3 JCP"
   id: "b3-mov-20250214-275"
@@ -10204,7 +9926,7 @@
   asset: "ITUB3"
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/negociacao-2026_parcial.xlsx
+**** C:\Users\btny\Dev\beancount\export\negociacao-2026_parcial.xlsx
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-13"
@@ -10268,6 +9990,7 @@
   asset: "B3SA3"
   Assets:Investment:XP:Cash   5764 BRL
   Assets:Investment:XP:B3SA3  -400 B3SA3 {} @ 14.41 BRL
+  Income:Investment:XP:Gains
 
 2026-01-08 * "BBAS3 Sell"
   id: "b3-neg-20260108-22"
@@ -10275,6 +9998,7 @@
   asset: "BBAS3"
   Assets:Investment:XP:Cash   8700 BRL
   Assets:Investment:XP:BBAS3  -400 BBAS3 {} @ 21.75 BRL
+  Income:Investment:XP:Gains
 
 2026-01-08 * "BBSE3 Buy"
   id: "b3-neg-20260108-23"
@@ -10422,9 +10146,10 @@
   asset: "VALE3"
   Assets:Investment:XP:Cash   17598 BRL
   Assets:Investment:XP:VALE3   -200 VALE3 {} @ 87.99 BRL
+  Income:Investment:XP:Gains
 
 
-**** /home/gabriel/Documents/Projects/beancount/export/movimentacao-2026_parcial.xlsx
+**** C:\Users\btny\Dev\beancount\export\movimentacao-2026_parcial.xlsx
 
 2026-01-02 * "ITUB3 JCP"
   id: "b3-mov-20260102-119"
@@ -10473,6 +10198,7 @@
   Assets:Investment:XP:Cash      30.99 BRL
   Assets:Investment:XP:IRIM15    -0.46 IRIM15 {} @ 67.979 BRL
   Expenses:Investment:XP:Fees  0.28034 BRL
+  Income:Investment:XP:Gains
 
 2026-01-15 * "HGLG11 Rendimento"
   id: "b3-mov-20260115-101"
@@ -10671,6 +10397,7 @@
   Assets:Investment:XP:Cash     26.92 BRL
   Assets:Investment:XP:ITUB3     -0.6 ITUB3 {} @ 44.873 BRL
   Expenses:Investment:XP:Fees  0.0038 BRL
+  Income:Investment:XP:Gains
 
 2026-03-13 * "HGLG11 Rendimento"
   id: "b3-mov-20260313-56"
@@ -10742,6 +10469,7 @@
   Assets:Investment:XP:Cash      4.57 BRL
   Assets:Investment:XP:MGLU3     -0.5 MGLU3 {} @ 9.147 BRL
   Expenses:Investment:XP:Fees  0.0035 BRL
+  Income:Investment:XP:Gains
 
 2026-04-01 * "ITUB3 JCP"
   id: "b3-mov-20260401-44"
@@ -10946,6 +10674,7 @@
   Assets:Investment:BB:Cash                                         50 BRL
   Assets:Investment:BB:CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A       -5000 CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A {} @ 0.01000032 BRL
   Expenses:Investment:BB:Fees                               0.00160000 BRL
+  Income:Investment:BB:Gains
 
 2026-06-01 * "CDB-CDB6260FY9K Purchase"
   id: "b3-mov-20260601-7"
@@ -10968,5 +10697,6 @@
   Assets:Investment:BB:Cash                                       80.01 BRL
   Assets:Investment:BB:CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A        -8000 CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A {} @ 0.01000064 BRL
   Expenses:Investment:BB:Fees                               -0.00488000 BRL
+  Income:Investment:BB:Gains
 
 
