@@ -1,4 +1,4 @@
-"""Fava extension to manually trigger BRAPI price downloads."""
+"""Fava extension to manually trigger Yahoo Finance price downloads."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from flask import redirect, request
 
 from fava.ext import FavaExtensionBase, extension_endpoint
 
-from plugins.brapi_price_service import BrapiPriceUpdater
+from plugins.yahoo_price_service import YahooPriceUpdater
 
 
 class PriceUpdaterExtension(FavaExtensionBase):
@@ -18,9 +18,9 @@ class PriceUpdaterExtension(FavaExtensionBase):
         super().__init__(ledger, config)
         self.last_result: dict[str, Any] | None = None
 
-    def _service(self) -> BrapiPriceUpdater:
+    def _service(self) -> YahooPriceUpdater:
         cfg = self.config if isinstance(self.config, dict) else {}
-        return BrapiPriceUpdater(self.ledger, cfg)
+        return YahooPriceUpdater(self.ledger, cfg)
 
     @extension_endpoint("update_prices", ["POST"])
     def update_prices(self):

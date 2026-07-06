@@ -4,7 +4,9 @@ Usage in beancount:
     plugin "plugins.stock_split"
 
 Inside your journal:
-    2026-05-20 custom "split" "PETR4" "4"
+    2026-05-20 custom "desdobramento" "PETR4" "4"
+    2026-05-20 custom "grupamento" "PETR4" "0.5"
+    2026-05-20 custom "bonificacao" "PETR4" "1.05"
 """
 import collections
 from decimal import Decimal
@@ -25,12 +27,19 @@ def stock_split(entries: Entries, _: dict, plugin_config: Optional[str] = None):
 
     # Collect all split directives first.
     for entry in entries:
-        if isinstance(entry, Custom) and entry.type == "split":
+        if isinstance(entry, Custom) and entry.type in {"desdobramento", "grupamento", "bonificacao"}:
             try:
                 ticker = entry.values[0].value
                 ratio = Decimal(entry.values[1].value)
 
-                if ratio <= 0:
+                if ratio == 0:
+                    errors.append(SplitError(
+                        source=entry.meta,
+                        message=f"Ratio is 0 (sentinel — not yet enriched). Enrich this entry in corporate_actions.bean before running bean-check. Ticker: {ticker}",
+                        entry=entry,
+                    ))
+                    continue
+                if ratio < 0:
                     errors.append(SplitError(
                         source=entry.meta,
                         message=f"Split ratio must be positive, got {ratio} for {ticker}",

@@ -2,27 +2,36 @@
 
 ## Resume Here
 - **Tier:** Script
-- **Current Slice:** Ledger cleanup / error resolution
-- **Current Task:** Splits data fetching — implementation pending
-- **Next Action:** Write a splits fetch script using Python `urllib` + `ssl` (with `check_hostname=False`) to hit `query1.finance.yahoo.com/v8/finance/chart/{TICKER}.SA?events=splits&range=max&interval=1mo` directly — bypasses `yfinance`/`curl_cffi` SSL issue on corporate network. Parse the `events.splits` block from the JSON response and emit beancount-formatted entries for `splits.bean`. Target tickers: WEGE3, B3SA3, BBDC3, BBAS3, FLRY3, MGLU3, ITSA3.
+- **Current Slice:** All slices complete (1–6, 8). Task 18 deferred.
+- **Current Task:** N/A
+- **Next Action:**
+  1. `.venv\Scripts\pip install yfinance` — one-time install, not yet done
+  2. Open Fava → Price Updater button → rewrites `prices\TICKER.bean` and `prices\TICKER_events.bean` via Yahoo
+  3. Spot-check: `type prices\MGLU3_events.bean` — expect `custom "desdobramento"` with `^yahoo` tag
+  4. `.venv\Scripts\python import.py extract export\ > tmp.bean`
+  5. `.venv\Scripts\python reconcile_actions.py tmp.bean`
+  6. Manually fill any `; ⚠ no Yahoo match` entries in `corporate_actions.bean`
+  7. Bean-check: `python -c "import beancount.loader; entries,errors,opts=beancount.loader.load_file('main.bean'); [print(e) for e in errors]; print(len(errors),'errors')"`
 
 ## Completed This Session
-- Researched free B3 data sources: `yfinance` confirmed as best option (free, no auth, `.SA` suffix, full split history)
-- Researched `beanprice`: decided NOT to adopt it — existing BRAPI Fava extension is superior for this setup
-- Confirmed Yahoo Finance has split data for B3 tickers by manually fetching WEGE3.SA chart JSON
-  - WEGE3 splits confirmed: 13:10 (2014-04-24), 2:1 (2015-04-01), 13:10 (2018-04-25), 2:1 (2021-04-28)
-- Identified corporate network SSL issue: `curl_cffi` (used by `yfinance`) fails with self-signed cert in chain
-  - Workaround: use `urllib` with `ssl` context (`check_hostname=False`, `verify_mode=CERT_NONE`) — no curl_cffi involved
+- Slice 8: Yahoo Finance price service fully implemented
+- `plugins/yahoo_price_service.py` — new; prices + splits + dividends via yfinance; `.SA` suffix; split ratio → desdobramento/grupamento/bonificacao; dividends → `dividendo` (reference only); `^yahoo` tag
+- `plugins/price_updater.py` — swapped to YahooPriceUpdater; BRAPI service untouched
+- `reconcile_actions.py` — tag-agnostic event loader; split-only enrichment; `sanity_check_income` removed; enrichment tag now `^b3-yahoo-enriched`
+- `requirements.txt` — `yfinance>=0.2.0` added
 
 ## Blockers / Open Questions
-- **20 "Not enough lots" errors** — two distinct causes:
-  1. **FIIs (HGLG11, HGRU11, MCCI11, IRDM11, XPLG11, XPML11):** secondary offerings — missing buys not in exports. Need manual research.
-  2. **Stocks (WEGE3, B3SA3, BBDC3, BBAS3, FLRY3, MGLU3, ITSA3):** missing split entries in `splits.bean` — script will fix this.
-- **4 "Failed to categorize" errors** (CVCB11, XPBR31): malformed source data — fix manually in `transactions.bean`.
-- **SSL on corporate network:** `yfinance` unusable directly. Use raw `urllib` approach for Yahoo API calls.
+- **yfinance not installed yet** — must `pip install yfinance` before Fava price update will work
+- **Full pipeline not run on real data** — still needs fresh B3 export + reconcile run
+- **Income reconciliation deferred** — Yahoo cannot distinguish JCP from dividendo; `dividendo` entries in `_events.bean` are reference only for now
+- **11 "Not enough lots" on Asset Transfers** — broker migration rows (2023-05-31, 2025-02-14); manual lot matching needed
+- **FII secondary offerings** (HGLG11, HGRU11, MCCI11, IRDM11, XPLG11, XPML11) — 9 errors; manual research needed
+- **4 CategorizationError** (CVCB11, XPBR31) — fix manually in `transactions.bean`
+- **Task 18** (`^b3` tag on importer entries) — deferred; `_meta()` has no `tags=` param
 
 ## Read These First
-- `activeContext.md`: this file — resume point
-- `splits.bean`: current split registry — incomplete, needs additions from Yahoo data
-- `plugins/stock_split.py`: how splits are applied retroactively
-- `prices/`: BRAPI-based price system — working, do not replace with beanprice
+- `plan/tasks.md`: Slice 8 Tasks 19–22 `[x]`; Task 18 `[ ]` (deferred)
+- `plan/decisions.md`: Decision [006] — Yahoo primary, BRAPI retained as dormant upgrade path
+- `plugins/yahoo_price_service.py`: new primary service — read before touching price logic
+- `plugins/brapi_price_service.py`: dormant reference — do not delete, do not wire up
+- `reconcile_actions.py`: enrichment now uses `^b3-yahoo-enriched` tag; no income sanity-check

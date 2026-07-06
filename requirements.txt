@@ -6,3 +6,4 @@ fava-dashboards>=0.1.0
 git+https://github.com/beancount/beanprice.git#egg=beanprice
 git+https://github.com/PhracturedBlue/fava-portfolio-summary
 fava-portfolio-returns
+yfinance>=0.2.0

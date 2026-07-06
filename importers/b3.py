@@ -168,6 +168,8 @@ class B3Importer(beangulp.Importer):
     # "movimentacao".
     def identify(self, filepath: str) -> bool:
         base = _strip_accents(os.path.basename(filepath)).lower()
+        if base.startswith("~$"):  # Excel lock file created while workbook is open
+            return False
         return base.endswith(".xlsx") and ("movimentacao" in base or "negociacao" in base)
 
     @property
@@ -475,6 +477,10 @@ class B3Importer(beangulp.Importer):
                 if "TRANSFERIDO" in movement:
                     meta["warning"] = "needs_review"
                 income_kind = "Rendimento" if movement.startswith("RENDIMENTO") else "Dividend"
+                if quantity is not None:
+                    meta["quantity"] = str(quantity)
+                if quantity and value:
+                    meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported income: %s", context)
                 postings = [
                     data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
@@ -488,6 +494,10 @@ class B3Importer(beangulp.Importer):
                     raise ValueError(f"{context}: missing value for JCP")
                 if "TRANSFERIDO" in movement:
                     meta["warning"] = "needs_review"
+                if quantity is not None:
+                    meta["quantity"] = str(quantity)
+                if quantity and value:
+                    meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported JCP: %s", context)
                 postings = [
                     data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
@@ -499,6 +509,10 @@ class B3Importer(beangulp.Importer):
             if movement == "PAGAMENTO DE JUROS":
                 if value is None:
                     raise ValueError(f"{context}: missing value for interest payment")
+                if quantity is not None:
+                    meta["quantity"] = str(quantity)
+                if quantity and value:
+                    meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported interest payment: %s", context)
                 postings = [
                     data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
@@ -507,22 +521,56 @@ class B3Importer(beangulp.Importer):
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Interest", postings, **meta))
                 continue
 
-            if movement in {"BONIFICACAO EM ATIVOS", "DESDOBRO", "GRUPAMENTO"}:
+            if movement == "BONIFICACAO EM ATIVOS":
                 if quantity is None:
-                    raise ValueError(f"{context}: missing quantity for corporate action")
+                    raise ValueError(f"{context}: missing quantity for bonificacao")
                 if quantity == 0:
-                    logger.info("Ignored zero-quantity corporate action: %s", context)
+                    logger.info("Ignored zero-quantity bonificacao: %s", context)
                     continue
-                logger.warning(
-                    "Imported split placeholder with ratio=1; update manually: %s (%s %s)",
-                    context, movement, ticker,
-                )
+                meta["quantity"] = str(quantity)
+                logger.info("Imported bonificacao (ratio=0 sentinel, enrich later): %s", context)
                 entries.append(
                     data.Custom(
                         self._meta(filepath, lineno, **meta),
                         txn_date,
-                        "split",
-                        [self._custom_value(ticker), self._custom_value(Decimal("1"))],
+                        "bonificacao",
+                        [self._custom_value(ticker), self._custom_value(Decimal("0"))],
+                    )
+                )
+                continue
+
+            if movement == "DESDOBRO":
+                if quantity is None:
+                    raise ValueError(f"{context}: missing quantity for desdobramento")
+                if quantity == 0:
+                    logger.info("Ignored zero-quantity desdobramento: %s", context)
+                    continue
+                meta["quantity"] = str(quantity)
+                logger.info("Imported desdobramento (ratio=0 sentinel, enrich later): %s", context)
+                entries.append(
+                    data.Custom(
+                        self._meta(filepath, lineno, **meta),
+                        txn_date,
+                        "desdobramento",
+                        [self._custom_value(ticker), self._custom_value(Decimal("0"))],
+                    )
+                )
+                continue
+
+            if movement == "GRUPAMENTO":
+                if quantity is None:
+                    raise ValueError(f"{context}: missing quantity for grupamento")
+                if quantity == 0:
+                    logger.info("Ignored zero-quantity grupamento: %s", context)
+                    continue
+                meta["quantity"] = str(quantity)
+                logger.info("Imported grupamento (ratio=0 sentinel, enrich later): %s", context)
+                entries.append(
+                    data.Custom(
+                        self._meta(filepath, lineno, **meta),
+                        txn_date,
+                        "grupamento",
+                        [self._custom_value(ticker), self._custom_value(Decimal("0"))],
                     )
                 )
                 continue

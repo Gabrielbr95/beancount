@@ -2,28 +2,28 @@
 ; asset: MGLU3
 ; quote_currency: BRL
 ; last_update: 2026-05-08
-; generated_at: 2026-06-15T15:21:24-03:00
+; generated_at: 2026-07-05T22:26:03-03:00
 
-2012-05-23 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.014857" "label=DIVIDENDO" "paymentDate=2012-05-23T03:00:00.000Z" "approvedOn=2012-04-30T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2014-02-19 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.06568343" "label=JCP" "paymentDate=2014-02-19T03:00:00.000Z" "approvedOn=2014-01-30T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2014-04-21 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.10735864" "label=DIVIDENDO" "paymentDate=2014-04-21T03:00:00.000Z" "approvedOn=2014-04-17T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2015-01-13 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.07816785" "label=JCP" "paymentDate=2015-01-13T03:00:00.000Z" "approvedOn=2014-12-30T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2015-04-26 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.10947154" "label=DIVIDENDO" "paymentDate=2015-04-26T03:00:00.000Z" "approvedOn=2015-04-27T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2015-10-01 custom "brapi-stock-dividend" "BRMGLUACNOR2" "0.125" "label=GRUPAMENTO" "approvedOn=" "lastDatePrior=2015-10-01T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2017-05-05 custom "brapi-cash-dividend" "BRMGLUACNOR2" "1.0172615" "label=DIVIDENDO" "paymentDate=2017-05-05T03:00:00.000Z" "approvedOn=2017-04-20T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2017-09-05 custom "brapi-stock-dividend" "BRMGLUACNOR2" "8" "label=DESDOBRAMENTO" "approvedOn=" "lastDatePrior=2017-09-05T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2018-04-25 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.26446512" "label=DIVIDENDO" "paymentDate=2018-04-25T03:00:00.000Z" "approvedOn=2018-04-13T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2018-04-25 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.39610305" "label=JCP" "paymentDate=2018-04-25T03:00:00.000Z" "approvedOn=2017-12-13T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2019-04-26 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.37025988" "label=DIVIDENDO" "paymentDate=2019-04-26T03:00:00.000Z" "approvedOn=2019-04-12T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2019-04-26 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.5927049" "label=JCP" "paymentDate=2019-04-26T03:00:00.000Z" "approvedOn=2018-12-21T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2019-08-06 custom "brapi-stock-dividend" "BRMGLUACNOR2" "8" "label=DESDOBRAMENTO" "approvedOn=" "lastDatePrior=2019-08-06T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2020-08-19 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.094165966" "label=DIVIDENDO" "paymentDate=2020-08-19T03:00:00.000Z" "approvedOn=2020-07-27T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2020-08-19 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.03578916" "label=JCP" "paymentDate=2020-08-19T03:00:00.000Z" "approvedOn=2019-12-23T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2020-08-19 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.0736066" "label=JCP" "paymentDate=2020-08-19T03:00:00.000Z" "approvedOn=2019-09-30T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2020-10-07 custom "brapi-stock-dividend" "BRMGLUACNOR2" "4" "label=DESDOBRAMENTO" "approvedOn=2020-10-07T03:00:00.000Z" "lastDatePrior=2020-10-13T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2021-05-05 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.026301999" "label=JCP" "paymentDate=2021-05-05T03:00:00.000Z" "approvedOn=2020-12-22T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2022-05-06 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.015494258" "label=JCP" "paymentDate=2022-05-06T03:00:00.000Z" "approvedOn=2021-06-30T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2024-04-24 custom "brapi-stock-dividend" "BRMGLUACNOR2" "0.1" "label=GRUPAMENTO" "approvedOn=2024-04-24T03:00:00.000Z" "lastDatePrior=2024-05-24T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2025-05-05 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.30517548" "label=DIVIDENDO" "paymentDate=2025-05-05T03:00:00.000Z" "approvedOn=2025-04-24T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2025-12-22 custom "brapi-stock-dividend" "BRMGLUACNOR2" "1.05" "label=BONIFICACAO" "approvedOn=2025-12-22T03:00:00.000Z" "lastDatePrior=2025-12-29T03:00:00.000Z" "isinCode=BRMGLUACNOR2"
-2026-05-08 custom "brapi-cash-dividend" "BRMGLUACNOR2" "0.0813" "label=DIVIDENDO" "paymentDate=2026-05-08T03:00:00.000Z" "approvedOn=" "isinCode=BRMGLUACNOR2"
+2012-05-23 custom "dividendo" "MGLU3" "0.014857" "label=DIVIDENDO" "approvedOn=2012-04-30T03:00:00.000Z" "lastDatePrior=2012-04-30T03:00:00.000Z" "paymentDate=2012-05-23T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2014-02-19 custom "jcp" "MGLU3" "0.06568343" "label=JCP" "approvedOn=2014-01-30T03:00:00.000Z" "lastDatePrior=2014-02-20T03:00:00.000Z" "paymentDate=2014-02-19T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2014-04-21 custom "dividendo" "MGLU3" "0.10735864" "label=DIVIDENDO" "approvedOn=2014-04-17T03:00:00.000Z" "lastDatePrior=2014-04-22T03:00:00.000Z" "paymentDate=2014-04-21T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2015-01-13 custom "jcp" "MGLU3" "0.07816785" "label=JCP" "approvedOn=2014-12-30T03:00:00.000Z" "lastDatePrior=2015-01-14T03:00:00.000Z" "paymentDate=2015-01-13T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2015-04-26 custom "dividendo" "MGLU3" "0.10947154" "label=DIVIDENDO" "approvedOn=2015-04-27T03:00:00.000Z" "lastDatePrior=2015-04-27T03:00:00.000Z" "paymentDate=2015-04-26T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2015-10-01 custom "grupamento" "MGLU3" "0.125" "label=GRUPAMENTO" "approvedOn=" "lastDatePrior=2015-10-01T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2017-05-05 custom "dividendo" "MGLU3" "1.0172615" "label=DIVIDENDO" "approvedOn=2017-04-20T03:00:00.000Z" "lastDatePrior=2017-04-25T03:00:00.000Z" "paymentDate=2017-05-05T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2017-09-05 custom "desdobramento" "MGLU3" "8" "label=DESDOBRAMENTO" "approvedOn=" "lastDatePrior=2017-09-05T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2018-04-25 custom "dividendo" "MGLU3" "0.26446512" "label=DIVIDENDO" "approvedOn=2018-04-13T03:00:00.000Z" "lastDatePrior=2018-04-16T03:00:00.000Z" "paymentDate=2018-04-25T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2018-04-25 custom "jcp" "MGLU3" "0.39610305" "label=JCP" "approvedOn=2017-12-13T03:00:00.000Z" "lastDatePrior=2017-12-19T03:00:00.000Z" "paymentDate=2018-04-25T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2019-04-26 custom "dividendo" "MGLU3" "0.37025988" "label=DIVIDENDO" "approvedOn=2019-04-12T03:00:00.000Z" "lastDatePrior=2019-04-15T03:00:00.000Z" "paymentDate=2019-04-26T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2019-04-26 custom "jcp" "MGLU3" "0.5927049" "label=JCP" "approvedOn=2018-12-21T03:00:00.000Z" "lastDatePrior=2018-12-28T03:00:00.000Z" "paymentDate=2019-04-26T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2019-08-06 custom "desdobramento" "MGLU3" "8" "label=DESDOBRAMENTO" "approvedOn=" "lastDatePrior=2019-08-06T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2020-08-19 custom "dividendo" "MGLU3" "0.094165966" "label=DIVIDENDO" "approvedOn=2020-07-27T03:00:00.000Z" "lastDatePrior=2020-07-30T03:00:00.000Z" "paymentDate=2020-08-19T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2020-08-19 custom "jcp" "MGLU3" "0.03578916" "label=JCP" "approvedOn=2019-12-23T03:00:00.000Z" "lastDatePrior=2019-12-30T03:00:00.000Z" "paymentDate=2020-08-19T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2020-08-19 custom "jcp" "MGLU3" "0.0736066" "label=JCP" "approvedOn=2019-09-30T03:00:00.000Z" "lastDatePrior=2019-10-07T03:00:00.000Z" "paymentDate=2020-08-19T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2020-10-07 custom "desdobramento" "MGLU3" "4" "label=DESDOBRAMENTO" "approvedOn=2020-10-07T03:00:00.000Z" "lastDatePrior=2020-10-13T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2021-05-05 custom "jcp" "MGLU3" "0.026301999" "label=JCP" "approvedOn=2020-12-22T03:00:00.000Z" "lastDatePrior=2020-12-29T03:00:00.000Z" "paymentDate=2021-05-05T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2022-05-06 custom "jcp" "MGLU3" "0.015494258" "label=JCP" "approvedOn=2021-06-30T03:00:00.000Z" "lastDatePrior=2021-07-05T03:00:00.000Z" "paymentDate=2022-05-06T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2024-04-24 custom "grupamento" "MGLU3" "0.1" "label=GRUPAMENTO" "approvedOn=2024-04-24T03:00:00.000Z" "lastDatePrior=2024-05-24T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2025-05-05 custom "dividendo" "MGLU3" "0.30517548" "label=DIVIDENDO" "approvedOn=2025-04-24T03:00:00.000Z" "lastDatePrior=2025-04-25T03:00:00.000Z" "paymentDate=2025-05-05T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2025-12-22 custom "bonificacao" "MGLU3" "1.05" "label=BONIFICACAO" "approvedOn=2025-12-22T03:00:00.000Z" "lastDatePrior=2025-12-29T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi
+2026-05-08 custom "dividendo" "MGLU3" "0.0813" "label=DIVIDENDO" "approvedOn=" "lastDatePrior=2026-04-24T03:00:00.000Z" "paymentDate=2026-05-08T03:00:00.000Z" "isinCode=BRMGLUACNOR2"  ^brapi

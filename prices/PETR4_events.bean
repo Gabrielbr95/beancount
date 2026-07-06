@@ -2,175 +2,175 @@
 ; asset: PETR4
 ; quote_currency: BRL
 ; last_update: 2026-08-20
-; generated_at: 2026-06-15T15:21:29-03:00
+; generated_at: 2026-07-05T22:26:05-03:00
 
-1994-03-25 custom "brapi-stock-dividend" "BRPETRACNPR6" "1.3333334" "label=BONIFICACAO" "approvedOn=1994-03-25T03:00:00.000Z" "lastDatePrior=1994-03-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1996-03-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "5.1471" "label=DIVIDENDO" "paymentDate=1996-03-21T03:00:00.000Z" "approvedOn=1996-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1997-03-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.1263" "label=DIVIDENDO" "paymentDate=1997-03-21T03:00:00.000Z" "approvedOn=1997-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1997-03-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "2" "label=DIVIDENDO" "paymentDate=1997-03-21T03:00:00.000Z" "approvedOn=1997-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1998-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.66937023" "label=DIVIDENDO" "paymentDate=1998-03-24T03:00:00.000Z" "approvedOn=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1998-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "3.2078092" "label=DIVIDENDO" "paymentDate=1998-03-24T03:00:00.000Z" "approvedOn=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1998-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.0702488" "label=DIVIDENDO" "paymentDate=1998-03-24T03:00:00.000Z" "approvedOn=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1998-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2048716" "label=DIVIDENDO" "paymentDate=1998-03-24T03:00:00.000Z" "approvedOn=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1999-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "4.5515" "label=JCP" "paymentDate=1999-03-24T03:00:00.000Z" "approvedOn=1999-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-1999-03-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.8893" "label=DIVIDENDO" "paymentDate=1999-03-24T03:00:00.000Z" "approvedOn=1999-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2000-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.17" "label=RENDIMENTO" "paymentDate=2000-03-23T03:00:00.000Z" "approvedOn=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2000-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "4.27" "label=JCP" "paymentDate=2000-03-23T03:00:00.000Z" "approvedOn=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2000-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "3.58" "label=DIVIDENDO" "paymentDate=2000-03-23T03:00:00.000Z" "approvedOn=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2000-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.14" "label=RENDIMENTO" "paymentDate=2000-03-23T03:00:00.000Z" "approvedOn=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2000-05-23 custom "brapi-stock-dividend" "BRPETRACNPR6" "0.01" "label=GRUPAMENTO" "approvedOn=2000-05-23T03:00:00.000Z" "lastDatePrior=2000-06-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2001-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.57" "label=DIVIDENDO" "paymentDate=2001-03-23T03:00:00.000Z" "approvedOn=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2001-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.67" "label=JCP" "paymentDate=2001-03-23T03:00:00.000Z" "approvedOn=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2001-03-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.07" "label=RENDIMENTO" "paymentDate=2001-03-23T03:00:00.000Z" "approvedOn=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2001-08-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.03" "label=DIVIDENDO" "paymentDate=2001-08-22T03:00:00.000Z" "approvedOn=2001-08-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2001-08-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.02" "label=JCP" "paymentDate=2001-08-22T03:00:00.000Z" "approvedOn=2001-06-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2002-03-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.89" "label=JCP" "paymentDate=2002-03-22T03:00:00.000Z" "approvedOn=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2002-03-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.3" "label=DIVIDENDO" "paymentDate=2002-03-22T03:00:00.000Z" "approvedOn=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2002-03-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.09" "label=RENDIMENTO" "paymentDate=2002-03-22T03:00:00.000Z" "approvedOn=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-01-13 custom "brapi-cash-dividend" "BRPETRACNPR6" "1" "label=JCP" "paymentDate=2003-01-13T03:00:00.000Z" "approvedOn=2002-10-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-03-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.03" "label=RENDIMENTO" "paymentDate=2003-03-27T03:00:00.000Z" "approvedOn=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-03-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "1" "label=JCP" "paymentDate=2003-03-27T03:00:00.000Z" "approvedOn=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-03-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.53" "label=DIVIDENDO" "paymentDate=2003-03-27T03:00:00.000Z" "approvedOn=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-03-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.06" "label=RENDIMENTO" "paymentDate=2003-03-27T03:00:00.000Z" "approvedOn=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-11-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.99" "label=JCP" "paymentDate=2003-11-25T03:00:00.000Z" "approvedOn=2003-11-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2003-11-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01" "label=RENDIMENTO" "paymentDate=2003-11-25T03:00:00.000Z" "approvedOn=2003-11-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2004-03-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "1" "label=DIVIDENDO" "paymentDate=2004-03-29T03:00:00.000Z" "approvedOn=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2004-03-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.15" "label=JCP" "paymentDate=2004-03-29T03:00:00.000Z" "approvedOn=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2004-03-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.04" "label=RENDIMENTO" "paymentDate=2004-03-29T03:00:00.000Z" "approvedOn=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2004-09-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.99" "label=JCP" "paymentDate=2004-09-30T03:00:00.000Z" "approvedOn=2004-09-17T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2004-09-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01" "label=RENDIMENTO" "paymentDate=2004-09-30T03:00:00.000Z" "approvedOn=2004-09-17T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2005-03-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0681" "label=RENDIMENTO" "paymentDate=2005-03-31T03:00:00.000Z" "approvedOn=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2005-03-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "1" "label=JCP" "paymentDate=2005-03-31T03:00:00.000Z" "approvedOn=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2005-03-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.6" "label=DIVIDENDO" "paymentDate=2005-03-31T03:00:00.000Z" "approvedOn=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2005-06-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "1e-10" "label=RENDIMENTO" "paymentDate=2005-06-30T03:00:00.000Z" "approvedOn=2005-06-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2005-12-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "1e-10" "label=RENDIMENTO" "paymentDate=2005-12-29T03:00:00.000Z" "approvedOn=2005-12-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-01-05 custom "brapi-cash-dividend" "BRPETRACNPR6" "2" "label=JCP" "paymentDate=2006-01-05T03:00:00.000Z" "approvedOn=2005-06-17T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-03-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.5" "label=JCP" "paymentDate=2006-03-22T03:00:00.000Z" "approvedOn=2005-12-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-04-03 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.35" "label=DIVIDENDO" "paymentDate=2006-04-03T03:00:00.000Z" "approvedOn=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-04-03 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.25" "label=JCP" "paymentDate=2006-04-03T03:00:00.000Z" "approvedOn=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-04-03 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0247" "label=RENDIMENTO" "paymentDate=2006-04-03T03:00:00.000Z" "approvedOn=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2006-12-28 custom "brapi-cash-dividend" "BRPETRACNPR6" "1e-10" "label=RENDIMENTO" "paymentDate=2006-12-28T03:00:00.000Z" "approvedOn=2006-12-15T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2007-01-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "1" "label=JCP" "paymentDate=2007-01-04T03:00:00.000Z" "approvedOn=2006-10-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2007-03-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.45" "label=JCP" "paymentDate=2007-03-30T03:00:00.000Z" "approvedOn=2006-12-15T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2007-04-02 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0106" "label=RENDIMENTO" "paymentDate=2007-04-02T03:00:00.000Z" "approvedOn=2007-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2007-04-02 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.35" "label=DIVIDENDO" "paymentDate=2007-04-02T03:00:00.000Z" "approvedOn=2007-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-01-11 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.3" "label=JCP" "paymentDate=2008-01-11T03:00:00.000Z" "approvedOn=2007-12-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-01-11 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.001" "label=RENDIMENTO" "paymentDate=2008-01-11T03:00:00.000Z" "approvedOn=2007-12-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-01-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.5" "label=JCP" "paymentDate=2008-01-23T03:00:00.000Z" "approvedOn=2007-07-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-03-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.5" "label=JCP" "paymentDate=2008-03-31T03:00:00.000Z" "approvedOn=2007-09-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-04-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0039" "label=RENDIMENTO" "paymentDate=2008-04-04T03:00:00.000Z" "approvedOn=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-04-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.15" "label=JCP" "paymentDate=2008-04-04T03:00:00.000Z" "approvedOn=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-04-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.05" "label=DIVIDENDO" "paymentDate=2008-04-04T03:00:00.000Z" "approvedOn=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-04-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0013" "label=RENDIMENTO" "paymentDate=2008-04-04T03:00:00.000Z" "approvedOn=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-04-25 custom "brapi-stock-dividend" "BRPETRACNPR6" "2" "label=DESDOBRAMENTO" "approvedOn=2008-04-25T03:00:00.000Z" "lastDatePrior=2008-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2008-12-26 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.8" "label=JCP" "paymentDate=2008-12-26T03:00:00.000Z" "approvedOn=2008-12-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2009-04-07 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.33" "label=DIVIDENDO" "paymentDate=2009-04-07T03:00:00.000Z" "approvedOn=2009-04-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2009-04-08 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0104" "label=RENDIMENTO" "paymentDate=2009-04-08T03:00:00.000Z" "approvedOn=2009-04-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2009-11-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.3" "label=JCP" "paymentDate=2009-11-30T03:00:00.000Z" "approvedOn=2009-06-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2009-12-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2009-12-21T03:00:00.000Z" "approvedOn=2009-09-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2009-12-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2009-12-29T03:00:00.000Z" "approvedOn=2009-12-17T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-04-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.13" "label=DIVIDENDO" "paymentDate=2010-04-21T03:00:00.000Z" "approvedOn=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-04-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1172" "label=JCP" "paymentDate=2010-04-21T03:00:00.000Z" "approvedOn=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-04-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0032" "label=RENDIMENTO" "paymentDate=2010-04-22T03:00:00.000Z" "approvedOn=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-04-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0029" "label=RENDIMENTO" "paymentDate=2010-04-22T03:00:00.000Z" "approvedOn=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-05-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2010-05-31T03:00:00.000Z" "approvedOn=2010-05-14T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-08-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2010-08-31T03:00:00.000Z" "approvedOn=2010-07-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-11-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.14" "label=JCP" "paymentDate=2010-11-30T03:00:00.000Z" "approvedOn=2010-10-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2010-12-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2010-12-30T03:00:00.000Z" "approvedOn=2010-12-10T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1493" "label=JCP" "paymentDate=2011-03-20T03:00:00.000Z" "approvedOn=2011-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-03-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.00342" "label=RENDIMENTO" "paymentDate=2011-03-21T03:00:00.000Z" "approvedOn=2011-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-03-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1527" "label=JCP" "paymentDate=2011-03-31T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2011-04-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.12" "label=DIVIDENDO" "paymentDate=2011-04-27T03:00:00.000Z" "approvedOn=2011-04-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-04-28 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.0042" "label=RENDIMENTO" "paymentDate=2011-04-28T03:00:00.000Z" "approvedOn=2011-04-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-05-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2011-05-31T03:00:00.000Z" "approvedOn=2011-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-06-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1242" "label=DIVIDENDO" "paymentDate=2011-06-27T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2011-08-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2011-08-31T03:00:00.000Z" "approvedOn=2011-07-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2011-11-30 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2011-11-30T03:00:00.000Z" "approvedOn=2011-10-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2012-02-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2012-02-29T03:00:00.000Z" "approvedOn=2011-12-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2012-03-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.12" "label=DIVIDENDO" "paymentDate=2012-03-19T03:00:00.000Z" "approvedOn=2012-03-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2012-03-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.00267" "label=RENDIMENTO" "paymentDate=2012-03-19T03:00:00.000Z" "approvedOn=2012-03-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2012-05-18 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1227" "label=DIVIDENDO" "paymentDate=2012-05-18T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2012-05-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2012-05-31T03:00:00.000Z" "approvedOn=2012-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2013-04-28 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.38" "label=JCP" "paymentDate=2013-04-28T03:00:00.000Z" "approvedOn=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2013-04-28 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.37566" "label=JCP" "paymentDate=2013-04-28T03:00:00.000Z" "approvedOn=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2013-04-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01877" "label=RENDIMENTO" "paymentDate=2013-04-29T03:00:00.000Z" "approvedOn=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2013-04-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.00854" "label=RENDIMENTO" "paymentDate=2013-04-29T03:00:00.000Z" "approvedOn=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2014-04-01 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.9672" "label=JCP" "paymentDate=2014-04-01T03:00:00.000Z" "approvedOn=2014-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2014-04-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.9976" "label=JCP" "paymentDate=2014-04-25T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2014-05-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.03037" "label=RENDIMENTO" "paymentDate=2014-05-25T03:00:00.000Z" "approvedOn=2014-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2018-05-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.05" "label=JCP" "paymentDate=2018-05-25T03:00:00.000Z" "approvedOn=2018-05-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2018-08-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.05" "label=JCP" "paymentDate=2018-08-23T03:00:00.000Z" "approvedOn=2018-08-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2018-12-03 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1" "label=JCP" "paymentDate=2018-12-03T03:00:00.000Z" "approvedOn=2018-11-05T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2019-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.019043" "label=DIVIDENDO" "paymentDate=2019-05-20T03:00:00.000Z" "approvedOn=2019-02-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2019-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.000451" "label=RENDIMENTO" "paymentDate=2019-05-20T03:00:00.000Z" "approvedOn=2019-02-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2019-06-24 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.7" "label=JCP" "paymentDate=2019-06-24T03:00:00.000Z" "approvedOn=2018-12-18T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2019-07-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1" "label=JCP" "paymentDate=2019-07-04T03:00:00.000Z" "approvedOn=2019-05-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2019-10-04 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2019-10-04T03:00:00.000Z" "approvedOn=2019-08-01T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2020-02-07 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.42" "label=JCP" "paymentDate=2020-02-07T03:00:00.000Z" "approvedOn=2019-12-18T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2020-02-07 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2" "label=JCP" "paymentDate=2020-02-07T03:00:00.000Z" "approvedOn=2019-10-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2020-07-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.2e-05" "label=RENDIMENTO" "paymentDate=2020-07-22T03:00:00.000Z" "approvedOn=2020-07-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2020-12-14 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.000449" "label=DIVIDENDO" "paymentDate=2020-12-14T03:00:00.000Z" "approvedOn=2020-07-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2021-04-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.787446" "label=DIVIDENDO" "paymentDate=2021-04-29T03:00:00.000Z" "approvedOn=2021-04-14T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2021-04-29 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.005388" "label=RENDIMENTO" "paymentDate=2021-04-29T03:00:00.000Z" "approvedOn=2021-04-14T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2021-08-25 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.609911" "label=DIVIDENDO" "paymentDate=2021-08-25T03:00:00.000Z" "approvedOn=2021-08-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2021-12-15 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.055361" "label=JCP" "paymentDate=2021-12-15T03:00:00.000Z" "approvedOn=2021-10-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2021-12-15 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.195126" "label=DIVIDENDO" "paymentDate=2021-12-15T03:00:00.000Z" "approvedOn=2021-10-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-05-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1091725" "label=RENDIMENTO" "paymentDate=2022-05-16T03:00:00.000Z" "approvedOn=2022-04-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-05-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.861076" "label=DIVIDENDO" "paymentDate=2022-05-16T03:00:00.000Z" "approvedOn=2022-04-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-06-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.427568" "label=DIVIDENDO" "paymentDate=2022-06-20T03:00:00.000Z" "approvedOn=2022-05-05T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-06-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.430177" "label=JCP" "paymentDate=2022-06-20T03:00:00.000Z" "approvedOn=2022-05-05T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-07-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.857745" "label=DIVIDENDO" "paymentDate=2022-07-20T03:00:00.000Z" "approvedOn=2022-05-05T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-08-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.427141" "label=JCP" "paymentDate=2022-08-31T03:00:00.000Z" "approvedOn=2022-07-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-08-31 custom "brapi-cash-dividend" "BRPETRACNPR6" "2.938861" "label=DIVIDENDO" "paymentDate=2022-08-31T03:00:00.000Z" "approvedOn=2022-07-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-09-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "3.366001" "label=DIVIDENDO" "paymentDate=2022-09-20T03:00:00.000Z" "approvedOn=2022-07-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-12-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.518627" "label=JCP" "paymentDate=2022-12-20T03:00:00.000Z" "approvedOn=2022-11-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2022-12-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.155823" "label=DIVIDENDO" "paymentDate=2022-12-20T03:00:00.000Z" "approvedOn=2022-11-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-01-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.600192" "label=DIVIDENDO" "paymentDate=2023-01-19T03:00:00.000Z" "approvedOn=2022-11-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-01-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.074258" "label=JCP" "paymentDate=2023-01-19T03:00:00.000Z" "approvedOn=2022-11-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-05-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.3728669" "label=DIVIDENDO" "paymentDate=2023-05-19T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-05-19 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.06784528" "label=RENDIMENTO" "paymentDate=2023-05-19T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-06-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.06445329" "label=RENDIMENTO" "paymentDate=2023-06-16T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-06-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.8747986" "label=DIVIDENDO" "paymentDate=2023-06-16T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-06-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.05213075" "label=RENDIMENTO" "paymentDate=2023-06-16T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-08-18 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.278179" "label=DIVIDENDO" "paymentDate=2023-08-18T03:00:00.000Z" "approvedOn=2023-05-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-08-18 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.668609" "label=JCP" "paymentDate=2023-08-18T03:00:00.000Z" "approvedOn=2023-05-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-09-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.946789" "label=DIVIDENDO" "paymentDate=2023-09-20T03:00:00.000Z" "approvedOn=2023-05-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-11-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.365476" "label=JCP" "paymentDate=2023-11-21T03:00:00.000Z" "approvedOn=2023-08-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-11-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.209176" "label=DIVIDENDO" "paymentDate=2023-11-21T03:00:00.000Z" "approvedOn=2023-08-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-12-15 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.574652" "label=DIVIDENDO" "paymentDate=2023-12-15T03:00:00.000Z" "approvedOn=2023-08-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-12-26 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.49806827" "label=DIVIDENDO" "paymentDate=2023-12-26T03:00:00.000Z" "approvedOn=2023-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2023-12-27 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.5625" "label=DIVIDENDO" "paymentDate=2023-12-27T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2024-02-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.4293868" "label=JCP" "paymentDate=2024-02-20T03:00:00.000Z" "approvedOn=2023-11-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-02-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.2432872" "label=DIVIDENDO" "paymentDate=2024-02-20T03:00:00.000Z" "approvedOn=2023-11-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.6726735" "label=DIVIDENDO" "paymentDate=2024-03-20T03:00:00.000Z" "approvedOn=2023-11-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.8496284" "label=DIVIDENDO" "paymentDate=2024-05-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.03454767" "label=RENDIMENTO" "paymentDate=2024-05-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.02237057" "label=RENDIMENTO" "paymentDate=2024-05-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.55015785" "label=DIVIDENDO" "paymentDate=2024-05-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-06-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.04221792" "label=RENDIMENTO" "paymentDate=2024-06-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-06-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.02733727" "label=RENDIMENTO" "paymentDate=2024-06-20T03:00:00.000Z" "approvedOn=2024-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-08-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.5216211" "label=JCP" "paymentDate=2024-08-20T03:00:00.000Z" "approvedOn=2024-05-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-09-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.07355446" "label=JCP" "paymentDate=2024-09-20T03:00:00.000Z" "approvedOn=2024-05-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-09-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.44806668" "label=DIVIDENDO" "paymentDate=2024-09-20T03:00:00.000Z" "approvedOn=2024-05-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-11-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.4127517" "label=JCP" "paymentDate=2024-11-21T03:00:00.000Z" "approvedOn=2024-08-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-11-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.11384838" "label=DIVIDENDO" "paymentDate=2024-11-21T03:00:00.000Z" "approvedOn=2024-08-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-12-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.52660006" "label=DIVIDENDO" "paymentDate=2024-12-20T03:00:00.000Z" "approvedOn=2024-08-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2024-12-23 custom "brapi-cash-dividend" "BRPETRACNPR6" "1.5517429" "label=DIVIDENDO" "paymentDate=2024-12-23T03:00:00.000Z" "approvedOn=2024-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-02-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.6641033" "label=JCP" "paymentDate=2025-02-20T03:00:00.000Z" "approvedOn=2024-12-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.6535651" "label=DIVIDENDO" "paymentDate=2025-03-20T03:00:00.000Z" "approvedOn=2024-12-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01053822" "label=JCP" "paymentDate=2025-03-20T03:00:00.000Z" "approvedOn=2024-12-09T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-04-16 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01706013" "label=RENDIMENTO" "paymentDate=2025-04-16T03:00:00.000Z" "approvedOn=2025-02-26T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.3547726" "label=DIVIDENDO" "paymentDate=2025-05-20T03:00:00.000Z" "approvedOn=2025-02-26T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.02152467" "label=RENDIMENTO" "paymentDate=2025-05-20T03:00:00.000Z" "approvedOn=2025-02-26T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-08-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.4545831" "label=JCP" "paymentDate=2025-08-20T03:00:00.000Z" "approvedOn=2025-05-12T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-09-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.1461356" "label=JCP" "paymentDate=2025-09-22T03:00:00.000Z" "approvedOn=2025-05-12T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-09-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.30844748" "label=DIVIDENDO" "paymentDate=2025-09-22T03:00:00.000Z" "approvedOn=2025-05-12T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-11-21 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.33596206" "label=JCP" "paymentDate=2025-11-21T03:00:00.000Z" "approvedOn=2025-08-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-12-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.13504028" "label=JCP" "paymentDate=2025-12-22T03:00:00.000Z" "approvedOn=2025-08-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2025-12-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.20092174" "label=DIVIDENDO" "paymentDate=2025-12-22T03:00:00.000Z" "approvedOn=2025-08-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2026-02-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.47160378" "label=JCP" "paymentDate=2026-02-20T03:00:00.000Z" "approvedOn=2025-12-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2026-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.29642144" "label=DIVIDENDO" "paymentDate=2026-03-20T03:00:00.000Z" "approvedOn=2025-12-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2026-03-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.17518233" "label=JCP" "paymentDate=2026-03-20T03:00:00.000Z" "approvedOn=2025-12-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"
-2026-05-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.313115" "label=JCP" "paymentDate=2026-05-20T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2026-06-22 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.01314955" "label=RENDIMENTO" "paymentDate=2026-06-22T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
-2026-08-20 custom "brapi-cash-dividend" "BRPETRACNPR6" "0.350486" "label=JCP" "paymentDate=2026-08-20T03:00:00.000Z" "approvedOn=" "isinCode=BRPETRACNPR6"
+1994-03-25 custom "bonificacao" "PETR4" "1.3333334" "label=BONIFICACAO" "approvedOn=1994-03-25T03:00:00.000Z" "lastDatePrior=1994-03-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1996-03-21 custom "dividendo" "PETR4" "5.1471" "label=DIVIDENDO" "approvedOn=1996-03-21T03:00:00.000Z" "lastDatePrior=1996-03-21T03:00:00.000Z" "paymentDate=1996-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1997-03-21 custom "dividendo" "PETR4" "2.1263" "label=DIVIDENDO" "approvedOn=1997-03-21T03:00:00.000Z" "lastDatePrior=1997-03-21T03:00:00.000Z" "paymentDate=1997-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1997-03-21 custom "dividendo" "PETR4" "2" "label=DIVIDENDO" "approvedOn=1997-03-21T03:00:00.000Z" "lastDatePrior=1997-03-21T03:00:00.000Z" "paymentDate=1997-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1998-03-24 custom "dividendo" "PETR4" "0.66937023" "label=DIVIDENDO" "approvedOn=1998-03-24T03:00:00.000Z" "lastDatePrior=1998-03-24T03:00:00.000Z" "paymentDate=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1998-03-24 custom "dividendo" "PETR4" "3.2078092" "label=DIVIDENDO" "approvedOn=1998-03-24T03:00:00.000Z" "lastDatePrior=1998-03-24T03:00:00.000Z" "paymentDate=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1998-03-24 custom "dividendo" "PETR4" "2.0702488" "label=DIVIDENDO" "approvedOn=1998-03-24T03:00:00.000Z" "lastDatePrior=1998-03-24T03:00:00.000Z" "paymentDate=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1998-03-24 custom "dividendo" "PETR4" "0.2048716" "label=DIVIDENDO" "approvedOn=1998-03-24T03:00:00.000Z" "lastDatePrior=1998-03-24T03:00:00.000Z" "paymentDate=1998-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1999-03-24 custom "jcp" "PETR4" "4.5515" "label=JCP" "approvedOn=1999-03-24T03:00:00.000Z" "lastDatePrior=1999-03-24T03:00:00.000Z" "paymentDate=1999-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+1999-03-24 custom "dividendo" "PETR4" "1.8893" "label=DIVIDENDO" "approvedOn=1999-03-24T03:00:00.000Z" "lastDatePrior=1999-03-24T03:00:00.000Z" "paymentDate=1999-03-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2000-03-23 custom "rendimento" "PETR4" "0.17" "label=RENDIMENTO" "approvedOn=2000-03-23T03:00:00.000Z" "lastDatePrior=2000-03-23T03:00:00.000Z" "paymentDate=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2000-03-23 custom "jcp" "PETR4" "4.27" "label=JCP" "approvedOn=2000-03-23T03:00:00.000Z" "lastDatePrior=2000-03-23T03:00:00.000Z" "paymentDate=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2000-03-23 custom "dividendo" "PETR4" "3.58" "label=DIVIDENDO" "approvedOn=2000-03-23T03:00:00.000Z" "lastDatePrior=2000-03-23T03:00:00.000Z" "paymentDate=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2000-03-23 custom "rendimento" "PETR4" "0.14" "label=RENDIMENTO" "approvedOn=2000-03-23T03:00:00.000Z" "lastDatePrior=2000-03-23T03:00:00.000Z" "paymentDate=2000-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2000-05-23 custom "grupamento" "PETR4" "0.01" "label=GRUPAMENTO" "approvedOn=2000-05-23T03:00:00.000Z" "lastDatePrior=2000-06-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2001-03-23 custom "dividendo" "PETR4" "0.57" "label=DIVIDENDO" "approvedOn=2001-03-23T03:00:00.000Z" "lastDatePrior=2001-03-23T03:00:00.000Z" "paymentDate=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2001-03-23 custom "jcp" "PETR4" "1.67" "label=JCP" "approvedOn=2001-03-23T03:00:00.000Z" "lastDatePrior=2001-03-23T03:00:00.000Z" "paymentDate=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2001-03-23 custom "rendimento" "PETR4" "0.07" "label=RENDIMENTO" "approvedOn=2001-03-23T03:00:00.000Z" "lastDatePrior=2001-03-23T03:00:00.000Z" "paymentDate=2001-03-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2001-08-22 custom "dividendo" "PETR4" "0.03" "label=DIVIDENDO" "approvedOn=2001-08-03T03:00:00.000Z" "lastDatePrior=2001-08-03T03:00:00.000Z" "paymentDate=2001-08-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2001-08-22 custom "jcp" "PETR4" "1.02" "label=JCP" "approvedOn=2001-06-29T03:00:00.000Z" "lastDatePrior=2001-06-29T03:00:00.000Z" "paymentDate=2001-08-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2002-03-22 custom "jcp" "PETR4" "0.89" "label=JCP" "approvedOn=2002-03-22T03:00:00.000Z" "lastDatePrior=2002-03-22T03:00:00.000Z" "paymentDate=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2002-03-22 custom "dividendo" "PETR4" "1.3" "label=DIVIDENDO" "approvedOn=2002-03-22T03:00:00.000Z" "lastDatePrior=2002-03-22T03:00:00.000Z" "paymentDate=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2002-03-22 custom "rendimento" "PETR4" "0.09" "label=RENDIMENTO" "approvedOn=2002-03-22T03:00:00.000Z" "lastDatePrior=2002-03-22T03:00:00.000Z" "paymentDate=2002-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-01-13 custom "jcp" "PETR4" "1" "label=JCP" "approvedOn=2002-10-31T03:00:00.000Z" "lastDatePrior=2002-11-12T03:00:00.000Z" "paymentDate=2003-01-13T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-03-27 custom "rendimento" "PETR4" "0.03" "label=RENDIMENTO" "approvedOn=2003-03-27T03:00:00.000Z" "lastDatePrior=2003-03-27T03:00:00.000Z" "paymentDate=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-03-27 custom "jcp" "PETR4" "1" "label=JCP" "approvedOn=2003-03-27T03:00:00.000Z" "lastDatePrior=2003-03-27T03:00:00.000Z" "paymentDate=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-03-27 custom "dividendo" "PETR4" "0.53" "label=DIVIDENDO" "approvedOn=2003-03-27T03:00:00.000Z" "lastDatePrior=2003-03-27T03:00:00.000Z" "paymentDate=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-03-27 custom "rendimento" "PETR4" "0.06" "label=RENDIMENTO" "approvedOn=2003-03-27T03:00:00.000Z" "lastDatePrior=2003-03-27T03:00:00.000Z" "paymentDate=2003-03-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-11-25 custom "jcp" "PETR4" "2.99" "label=JCP" "approvedOn=2003-11-13T03:00:00.000Z" "lastDatePrior=2003-11-25T03:00:00.000Z" "paymentDate=2003-11-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2003-11-25 custom "rendimento" "PETR4" "0.01" "label=RENDIMENTO" "approvedOn=2003-11-13T03:00:00.000Z" "lastDatePrior=2003-11-25T03:00:00.000Z" "paymentDate=2003-11-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2004-03-29 custom "dividendo" "PETR4" "1" "label=DIVIDENDO" "approvedOn=2004-03-29T03:00:00.000Z" "lastDatePrior=2004-03-29T03:00:00.000Z" "paymentDate=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2004-03-29 custom "jcp" "PETR4" "1.15" "label=JCP" "approvedOn=2004-03-29T03:00:00.000Z" "lastDatePrior=2004-03-29T03:00:00.000Z" "paymentDate=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2004-03-29 custom "rendimento" "PETR4" "0.04" "label=RENDIMENTO" "approvedOn=2004-03-29T03:00:00.000Z" "lastDatePrior=2004-03-29T03:00:00.000Z" "paymentDate=2004-03-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2004-09-30 custom "jcp" "PETR4" "2.99" "label=JCP" "approvedOn=2004-09-17T03:00:00.000Z" "lastDatePrior=2004-09-30T03:00:00.000Z" "paymentDate=2004-09-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2004-09-30 custom "rendimento" "PETR4" "0.01" "label=RENDIMENTO" "approvedOn=2004-09-17T03:00:00.000Z" "lastDatePrior=2004-09-30T03:00:00.000Z" "paymentDate=2004-09-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2005-03-31 custom "rendimento" "PETR4" "0.0681" "label=RENDIMENTO" "approvedOn=2005-03-31T03:00:00.000Z" "lastDatePrior=2005-03-31T03:00:00.000Z" "paymentDate=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2005-03-31 custom "jcp" "PETR4" "1" "label=JCP" "approvedOn=2005-03-31T03:00:00.000Z" "lastDatePrior=2005-03-31T03:00:00.000Z" "paymentDate=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2005-03-31 custom "dividendo" "PETR4" "0.6" "label=DIVIDENDO" "approvedOn=2005-03-31T03:00:00.000Z" "lastDatePrior=2005-03-31T03:00:00.000Z" "paymentDate=2005-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2005-06-30 custom "rendimento" "PETR4" "1e-10" "label=RENDIMENTO" "approvedOn=2005-06-30T03:00:00.000Z" "lastDatePrior=2005-06-30T03:00:00.000Z" "paymentDate=2005-06-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2005-12-29 custom "rendimento" "PETR4" "1e-10" "label=RENDIMENTO" "approvedOn=2005-12-16T03:00:00.000Z" "lastDatePrior=2005-12-29T03:00:00.000Z" "paymentDate=2005-12-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-01-05 custom "jcp" "PETR4" "2" "label=JCP" "approvedOn=2005-06-17T03:00:00.000Z" "lastDatePrior=2005-06-30T03:00:00.000Z" "paymentDate=2006-01-05T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-03-22 custom "jcp" "PETR4" "0.5" "label=JCP" "approvedOn=2005-12-16T03:00:00.000Z" "lastDatePrior=2005-12-29T03:00:00.000Z" "paymentDate=2006-03-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-04-03 custom "dividendo" "PETR4" "0.35" "label=DIVIDENDO" "approvedOn=2006-04-03T03:00:00.000Z" "lastDatePrior=2006-04-03T03:00:00.000Z" "paymentDate=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-04-03 custom "jcp" "PETR4" "0.25" "label=JCP" "approvedOn=2006-04-03T03:00:00.000Z" "lastDatePrior=2006-04-03T03:00:00.000Z" "paymentDate=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-04-03 custom "rendimento" "PETR4" "0.0247" "label=RENDIMENTO" "approvedOn=2006-04-03T03:00:00.000Z" "lastDatePrior=2006-04-03T03:00:00.000Z" "paymentDate=2006-04-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2006-12-28 custom "rendimento" "PETR4" "1e-10" "label=RENDIMENTO" "approvedOn=2006-12-15T03:00:00.000Z" "lastDatePrior=2006-12-28T03:00:00.000Z" "paymentDate=2006-12-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2007-01-04 custom "jcp" "PETR4" "1" "label=JCP" "approvedOn=2006-10-20T03:00:00.000Z" "lastDatePrior=2006-10-31T03:00:00.000Z" "paymentDate=2007-01-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2007-03-30 custom "jcp" "PETR4" "0.45" "label=JCP" "approvedOn=2006-12-15T03:00:00.000Z" "lastDatePrior=2006-12-28T03:00:00.000Z" "paymentDate=2007-03-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2007-04-02 custom "rendimento" "PETR4" "0.0106" "label=RENDIMENTO" "approvedOn=2007-04-02T03:00:00.000Z" "lastDatePrior=2007-04-02T03:00:00.000Z" "paymentDate=2007-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2007-04-02 custom "dividendo" "PETR4" "0.35" "label=DIVIDENDO" "approvedOn=2007-04-02T03:00:00.000Z" "lastDatePrior=2007-04-02T03:00:00.000Z" "paymentDate=2007-04-02T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-01-11 custom "jcp" "PETR4" "0.3" "label=JCP" "approvedOn=2007-12-27T03:00:00.000Z" "lastDatePrior=2008-01-11T03:00:00.000Z" "paymentDate=2008-01-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-01-11 custom "rendimento" "PETR4" "0.001" "label=RENDIMENTO" "approvedOn=2007-12-27T03:00:00.000Z" "lastDatePrior=2008-01-11T03:00:00.000Z" "paymentDate=2008-01-11T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-01-23 custom "jcp" "PETR4" "0.5" "label=JCP" "approvedOn=2007-07-25T03:00:00.000Z" "lastDatePrior=2007-08-17T03:00:00.000Z" "paymentDate=2008-01-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-03-31 custom "jcp" "PETR4" "0.5" "label=JCP" "approvedOn=2007-09-21T03:00:00.000Z" "lastDatePrior=2007-10-05T03:00:00.000Z" "paymentDate=2008-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-04-04 custom "rendimento" "PETR4" "0.0039" "label=RENDIMENTO" "approvedOn=2008-04-04T03:00:00.000Z" "lastDatePrior=2008-04-04T03:00:00.000Z" "paymentDate=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-04-04 custom "jcp" "PETR4" "0.15" "label=JCP" "approvedOn=2008-04-04T03:00:00.000Z" "lastDatePrior=2008-04-04T03:00:00.000Z" "paymentDate=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-04-04 custom "dividendo" "PETR4" "0.05" "label=DIVIDENDO" "approvedOn=2008-04-04T03:00:00.000Z" "lastDatePrior=2008-04-04T03:00:00.000Z" "paymentDate=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-04-04 custom "rendimento" "PETR4" "0.0013" "label=RENDIMENTO" "approvedOn=2008-04-04T03:00:00.000Z" "lastDatePrior=2008-04-04T03:00:00.000Z" "paymentDate=2008-04-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-04-25 custom "desdobramento" "PETR4" "2" "label=DESDOBRAMENTO" "approvedOn=2008-04-25T03:00:00.000Z" "lastDatePrior=2008-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2008-12-26 custom "jcp" "PETR4" "0.8" "label=JCP" "approvedOn=2008-12-19T03:00:00.000Z" "lastDatePrior=2008-12-26T03:00:00.000Z" "paymentDate=2008-12-26T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2009-04-07 custom "dividendo" "PETR4" "0.33" "label=DIVIDENDO" "approvedOn=2009-04-08T03:00:00.000Z" "lastDatePrior=2009-04-08T03:00:00.000Z" "paymentDate=2009-04-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2009-04-08 custom "rendimento" "PETR4" "0.0104" "label=RENDIMENTO" "approvedOn=2009-04-08T03:00:00.000Z" "lastDatePrior=2009-04-08T03:00:00.000Z" "paymentDate=2009-04-08T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2009-11-30 custom "jcp" "PETR4" "0.3" "label=JCP" "approvedOn=2009-06-24T03:00:00.000Z" "lastDatePrior=2009-07-03T03:00:00.000Z" "paymentDate=2009-11-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2009-12-21 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2009-09-21T03:00:00.000Z" "lastDatePrior=2009-09-30T03:00:00.000Z" "paymentDate=2009-12-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2009-12-29 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2009-12-17T03:00:00.000Z" "lastDatePrior=2009-12-18T03:00:00.000Z" "paymentDate=2009-12-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-04-21 custom "dividendo" "PETR4" "0.13" "label=DIVIDENDO" "approvedOn=2010-04-22T03:00:00.000Z" "lastDatePrior=2010-04-22T03:00:00.000Z" "paymentDate=2010-04-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-04-21 custom "jcp" "PETR4" "0.1172" "label=JCP" "approvedOn=2010-04-22T03:00:00.000Z" "lastDatePrior=2010-04-22T03:00:00.000Z" "paymentDate=2010-04-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-04-22 custom "rendimento" "PETR4" "0.0032" "label=RENDIMENTO" "approvedOn=2010-04-22T03:00:00.000Z" "lastDatePrior=2010-04-22T03:00:00.000Z" "paymentDate=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-04-22 custom "rendimento" "PETR4" "0.0029" "label=RENDIMENTO" "approvedOn=2010-04-22T03:00:00.000Z" "lastDatePrior=2010-04-22T03:00:00.000Z" "paymentDate=2010-04-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-05-31 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2010-05-14T03:00:00.000Z" "lastDatePrior=2010-05-21T03:00:00.000Z" "paymentDate=2010-05-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-08-31 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2010-07-16T03:00:00.000Z" "lastDatePrior=2010-07-30T03:00:00.000Z" "paymentDate=2010-08-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-11-30 custom "jcp" "PETR4" "0.14" "label=JCP" "approvedOn=2010-10-22T03:00:00.000Z" "lastDatePrior=2010-11-01T03:00:00.000Z" "paymentDate=2010-11-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2010-12-30 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2010-12-10T03:00:00.000Z" "lastDatePrior=2010-12-21T03:00:00.000Z" "paymentDate=2010-12-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-03-20 custom "jcp" "PETR4" "0.1493" "label=JCP" "approvedOn=2011-03-21T03:00:00.000Z" "lastDatePrior=2011-03-21T03:00:00.000Z" "paymentDate=2011-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-03-21 custom "rendimento" "PETR4" "0.00342" "label=RENDIMENTO" "approvedOn=2011-03-21T03:00:00.000Z" "lastDatePrior=2011-03-21T03:00:00.000Z" "paymentDate=2011-03-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-03-31 custom "jcp" "PETR4" "0.1527" "label=JCP" "approvedOn=" "lastDatePrior=2011-03-21T03:00:00.000Z" "paymentDate=2011-03-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-04-27 custom "dividendo" "PETR4" "0.12" "label=DIVIDENDO" "approvedOn=2011-04-28T03:00:00.000Z" "lastDatePrior=2011-04-28T03:00:00.000Z" "paymentDate=2011-04-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-04-28 custom "rendimento" "PETR4" "0.0042" "label=RENDIMENTO" "approvedOn=2011-04-28T03:00:00.000Z" "lastDatePrior=2011-04-28T03:00:00.000Z" "paymentDate=2011-04-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-05-31 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2011-04-29T03:00:00.000Z" "lastDatePrior=2011-05-11T03:00:00.000Z" "paymentDate=2011-05-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-06-27 custom "dividendo" "PETR4" "0.1242" "label=DIVIDENDO" "approvedOn=" "lastDatePrior=2011-04-28T03:00:00.000Z" "paymentDate=2011-06-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-08-31 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2011-07-22T03:00:00.000Z" "lastDatePrior=2011-08-02T03:00:00.000Z" "paymentDate=2011-08-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2011-11-30 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2011-10-28T03:00:00.000Z" "lastDatePrior=2011-11-11T03:00:00.000Z" "paymentDate=2011-11-30T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2012-02-29 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2011-12-22T03:00:00.000Z" "lastDatePrior=2012-01-02T03:00:00.000Z" "paymentDate=2012-02-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2012-03-19 custom "dividendo" "PETR4" "0.12" "label=DIVIDENDO" "approvedOn=2012-03-19T03:00:00.000Z" "lastDatePrior=2012-03-19T03:00:00.000Z" "paymentDate=2012-03-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2012-03-19 custom "rendimento" "PETR4" "0.00267" "label=RENDIMENTO" "approvedOn=2012-03-19T03:00:00.000Z" "lastDatePrior=2012-03-19T03:00:00.000Z" "paymentDate=2012-03-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2012-05-18 custom "dividendo" "PETR4" "0.1227" "label=DIVIDENDO" "approvedOn=" "lastDatePrior=2012-03-19T03:00:00.000Z" "paymentDate=2012-05-18T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2012-05-31 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2012-04-27T03:00:00.000Z" "lastDatePrior=2012-05-11T03:00:00.000Z" "paymentDate=2012-05-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2013-04-28 custom "jcp" "PETR4" "0.38" "label=JCP" "approvedOn=2013-04-29T03:00:00.000Z" "lastDatePrior=2013-04-29T03:00:00.000Z" "paymentDate=2013-04-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2013-04-28 custom "jcp" "PETR4" "0.37566" "label=JCP" "approvedOn=2013-04-29T03:00:00.000Z" "lastDatePrior=2013-04-29T03:00:00.000Z" "paymentDate=2013-04-28T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2013-04-29 custom "rendimento" "PETR4" "0.01877" "label=RENDIMENTO" "approvedOn=2013-04-29T03:00:00.000Z" "lastDatePrior=2013-04-29T03:00:00.000Z" "paymentDate=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2013-04-29 custom "rendimento" "PETR4" "0.00854" "label=RENDIMENTO" "approvedOn=2013-04-29T03:00:00.000Z" "lastDatePrior=2013-04-29T03:00:00.000Z" "paymentDate=2013-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2014-04-01 custom "jcp" "PETR4" "0.9672" "label=JCP" "approvedOn=2014-04-02T03:00:00.000Z" "lastDatePrior=2014-04-02T03:00:00.000Z" "paymentDate=2014-04-01T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2014-04-25 custom "jcp" "PETR4" "0.9976" "label=JCP" "approvedOn=" "lastDatePrior=2014-04-02T03:00:00.000Z" "paymentDate=2014-04-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2014-05-25 custom "rendimento" "PETR4" "0.03037" "label=RENDIMENTO" "approvedOn=2014-04-02T03:00:00.000Z" "lastDatePrior=2014-04-02T03:00:00.000Z" "paymentDate=2014-05-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2018-05-25 custom "jcp" "PETR4" "0.05" "label=JCP" "approvedOn=2018-05-07T03:00:00.000Z" "lastDatePrior=2018-05-21T03:00:00.000Z" "paymentDate=2018-05-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2018-08-23 custom "jcp" "PETR4" "0.05" "label=JCP" "approvedOn=2018-08-02T03:00:00.000Z" "lastDatePrior=2018-08-13T03:00:00.000Z" "paymentDate=2018-08-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2018-12-03 custom "jcp" "PETR4" "0.1" "label=JCP" "approvedOn=2018-11-05T03:00:00.000Z" "lastDatePrior=2018-11-21T03:00:00.000Z" "paymentDate=2018-12-03T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2019-05-20 custom "dividendo" "PETR4" "0.019043" "label=DIVIDENDO" "approvedOn=2019-02-27T03:00:00.000Z" "lastDatePrior=2019-04-25T03:00:00.000Z" "paymentDate=2019-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2019-05-20 custom "rendimento" "PETR4" "0.000451" "label=RENDIMENTO" "approvedOn=2019-02-27T03:00:00.000Z" "lastDatePrior=2019-04-25T03:00:00.000Z" "paymentDate=2019-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2019-06-24 custom "jcp" "PETR4" "0.7" "label=JCP" "approvedOn=2018-12-18T03:00:00.000Z" "lastDatePrior=2018-12-21T03:00:00.000Z" "paymentDate=2019-06-24T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2019-07-04 custom "jcp" "PETR4" "0.1" "label=JCP" "approvedOn=2019-05-07T03:00:00.000Z" "lastDatePrior=2019-05-21T03:00:00.000Z" "paymentDate=2019-07-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2019-10-04 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2019-08-01T03:00:00.000Z" "lastDatePrior=2019-08-12T03:00:00.000Z" "paymentDate=2019-10-04T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2020-02-07 custom "jcp" "PETR4" "0.42" "label=JCP" "approvedOn=2019-12-18T03:00:00.000Z" "lastDatePrior=2019-12-26T03:00:00.000Z" "paymentDate=2020-02-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2020-02-07 custom "jcp" "PETR4" "0.2" "label=JCP" "approvedOn=2019-10-24T03:00:00.000Z" "lastDatePrior=2019-11-11T03:00:00.000Z" "paymentDate=2020-02-07T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2020-07-22 custom "rendimento" "PETR4" "1.2e-05" "label=RENDIMENTO" "approvedOn=2020-07-22T03:00:00.000Z" "lastDatePrior=2020-07-22T03:00:00.000Z" "paymentDate=2020-07-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2020-12-14 custom "dividendo" "PETR4" "0.000449" "label=DIVIDENDO" "approvedOn=2020-07-22T03:00:00.000Z" "lastDatePrior=2020-07-22T03:00:00.000Z" "paymentDate=2020-12-14T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2021-04-29 custom "dividendo" "PETR4" "0.787446" "label=DIVIDENDO" "approvedOn=2021-04-14T03:00:00.000Z" "lastDatePrior=2021-04-14T03:00:00.000Z" "paymentDate=2021-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2021-04-29 custom "rendimento" "PETR4" "0.005388" "label=RENDIMENTO" "approvedOn=2021-04-14T03:00:00.000Z" "lastDatePrior=2021-04-14T03:00:00.000Z" "paymentDate=2021-04-29T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2021-08-25 custom "dividendo" "PETR4" "1.609911" "label=DIVIDENDO" "approvedOn=2021-08-04T03:00:00.000Z" "lastDatePrior=2021-08-16T03:00:00.000Z" "paymentDate=2021-08-25T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2021-12-15 custom "jcp" "PETR4" "1.055361" "label=JCP" "approvedOn=2021-10-28T03:00:00.000Z" "lastDatePrior=2021-12-01T03:00:00.000Z" "paymentDate=2021-12-15T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2021-12-15 custom "dividendo" "PETR4" "2.195126" "label=DIVIDENDO" "approvedOn=2021-10-28T03:00:00.000Z" "lastDatePrior=2021-12-01T03:00:00.000Z" "paymentDate=2021-12-15T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-05-16 custom "rendimento" "PETR4" "0.1091725" "label=RENDIMENTO" "approvedOn=2022-04-13T03:00:00.000Z" "lastDatePrior=2022-04-13T03:00:00.000Z" "paymentDate=2022-05-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-05-16 custom "dividendo" "PETR4" "2.861076" "label=DIVIDENDO" "approvedOn=2022-04-13T03:00:00.000Z" "lastDatePrior=2022-04-13T03:00:00.000Z" "paymentDate=2022-05-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-06-20 custom "dividendo" "PETR4" "1.427568" "label=DIVIDENDO" "approvedOn=2022-05-05T03:00:00.000Z" "lastDatePrior=2022-05-23T03:00:00.000Z" "paymentDate=2022-06-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-06-20 custom "jcp" "PETR4" "0.430177" "label=JCP" "approvedOn=2022-05-05T03:00:00.000Z" "lastDatePrior=2022-05-23T03:00:00.000Z" "paymentDate=2022-06-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-07-20 custom "dividendo" "PETR4" "1.857745" "label=DIVIDENDO" "approvedOn=2022-05-05T03:00:00.000Z" "lastDatePrior=2022-05-23T03:00:00.000Z" "paymentDate=2022-07-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-08-31 custom "jcp" "PETR4" "0.427141" "label=JCP" "approvedOn=2022-07-28T03:00:00.000Z" "lastDatePrior=2022-08-11T03:00:00.000Z" "paymentDate=2022-08-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-08-31 custom "dividendo" "PETR4" "2.938861" "label=DIVIDENDO" "approvedOn=2022-07-28T03:00:00.000Z" "lastDatePrior=2022-08-11T03:00:00.000Z" "paymentDate=2022-08-31T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-09-20 custom "dividendo" "PETR4" "3.366001" "label=DIVIDENDO" "approvedOn=2022-07-28T03:00:00.000Z" "lastDatePrior=2022-08-11T03:00:00.000Z" "paymentDate=2022-09-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-12-20 custom "jcp" "PETR4" "0.518627" "label=JCP" "approvedOn=2022-11-03T03:00:00.000Z" "lastDatePrior=2022-11-21T03:00:00.000Z" "paymentDate=2022-12-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2022-12-20 custom "dividendo" "PETR4" "1.155823" "label=DIVIDENDO" "approvedOn=2022-11-03T03:00:00.000Z" "lastDatePrior=2022-11-21T03:00:00.000Z" "paymentDate=2022-12-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-01-19 custom "dividendo" "PETR4" "1.600192" "label=DIVIDENDO" "approvedOn=2022-11-03T03:00:00.000Z" "lastDatePrior=2022-11-21T03:00:00.000Z" "paymentDate=2023-01-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-01-19 custom "jcp" "PETR4" "0.074258" "label=JCP" "approvedOn=2022-11-03T03:00:00.000Z" "lastDatePrior=2022-11-21T03:00:00.000Z" "paymentDate=2023-01-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-05-19 custom "dividendo" "PETR4" "1.3728669" "label=DIVIDENDO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-05-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-05-19 custom "rendimento" "PETR4" "0.06784528" "label=RENDIMENTO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-05-19T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-06-16 custom "rendimento" "PETR4" "0.06445329" "label=RENDIMENTO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-06-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-06-16 custom "dividendo" "PETR4" "0.8747986" "label=DIVIDENDO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-06-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-06-16 custom "rendimento" "PETR4" "0.05213075" "label=RENDIMENTO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-06-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-08-18 custom "dividendo" "PETR4" "0.278179" "label=DIVIDENDO" "approvedOn=2023-05-11T03:00:00.000Z" "lastDatePrior=2023-06-12T03:00:00.000Z" "paymentDate=2023-08-18T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-08-18 custom "jcp" "PETR4" "0.668609" "label=JCP" "approvedOn=2023-05-11T03:00:00.000Z" "lastDatePrior=2023-06-12T03:00:00.000Z" "paymentDate=2023-08-18T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-09-20 custom "dividendo" "PETR4" "0.946789" "label=DIVIDENDO" "approvedOn=2023-05-11T03:00:00.000Z" "lastDatePrior=2023-06-12T03:00:00.000Z" "paymentDate=2023-09-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-11-21 custom "jcp" "PETR4" "0.365476" "label=JCP" "approvedOn=2023-08-03T03:00:00.000Z" "lastDatePrior=2023-08-21T03:00:00.000Z" "paymentDate=2023-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-11-21 custom "dividendo" "PETR4" "0.209176" "label=DIVIDENDO" "approvedOn=2023-08-03T03:00:00.000Z" "lastDatePrior=2023-08-21T03:00:00.000Z" "paymentDate=2023-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-12-15 custom "dividendo" "PETR4" "0.574652" "label=DIVIDENDO" "approvedOn=2023-08-03T03:00:00.000Z" "lastDatePrior=2023-08-21T03:00:00.000Z" "paymentDate=2023-12-15T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-12-26 custom "dividendo" "PETR4" "0.49806827" "label=DIVIDENDO" "approvedOn=2023-04-27T03:00:00.000Z" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-12-26T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2023-12-27 custom "dividendo" "PETR4" "0.5625" "label=DIVIDENDO" "approvedOn=" "lastDatePrior=2023-04-27T03:00:00.000Z" "paymentDate=2023-12-27T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-02-20 custom "jcp" "PETR4" "0.4293868" "label=JCP" "approvedOn=2023-11-09T03:00:00.000Z" "lastDatePrior=2023-11-21T03:00:00.000Z" "paymentDate=2024-02-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-02-20 custom "dividendo" "PETR4" "0.2432872" "label=DIVIDENDO" "approvedOn=2023-11-09T03:00:00.000Z" "lastDatePrior=2023-11-21T03:00:00.000Z" "paymentDate=2024-02-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-03-20 custom "dividendo" "PETR4" "0.6726735" "label=DIVIDENDO" "approvedOn=2023-11-09T03:00:00.000Z" "lastDatePrior=2023-11-21T03:00:00.000Z" "paymentDate=2024-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-05-20 custom "dividendo" "PETR4" "0.8496284" "label=DIVIDENDO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-05-02T03:00:00.000Z" "paymentDate=2024-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-05-20 custom "rendimento" "PETR4" "0.03454767" "label=RENDIMENTO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-05-02T03:00:00.000Z" "paymentDate=2024-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-05-20 custom "rendimento" "PETR4" "0.02237057" "label=RENDIMENTO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-04-25T03:00:00.000Z" "paymentDate=2024-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-05-20 custom "dividendo" "PETR4" "0.55015785" "label=DIVIDENDO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-04-25T03:00:00.000Z" "paymentDate=2024-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-06-20 custom "rendimento" "PETR4" "0.04221792" "label=RENDIMENTO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-05-02T03:00:00.000Z" "paymentDate=2024-06-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-06-20 custom "rendimento" "PETR4" "0.02733727" "label=RENDIMENTO" "approvedOn=2024-04-25T03:00:00.000Z" "lastDatePrior=2024-04-25T03:00:00.000Z" "paymentDate=2024-06-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-08-20 custom "jcp" "PETR4" "0.5216211" "label=JCP" "approvedOn=2024-05-13T03:00:00.000Z" "lastDatePrior=2024-06-11T03:00:00.000Z" "paymentDate=2024-08-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-09-20 custom "jcp" "PETR4" "0.07355446" "label=JCP" "approvedOn=2024-05-13T03:00:00.000Z" "lastDatePrior=2024-06-11T03:00:00.000Z" "paymentDate=2024-09-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-09-20 custom "dividendo" "PETR4" "0.44806668" "label=DIVIDENDO" "approvedOn=2024-05-13T03:00:00.000Z" "lastDatePrior=2024-06-11T03:00:00.000Z" "paymentDate=2024-09-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-11-21 custom "jcp" "PETR4" "0.4127517" "label=JCP" "approvedOn=2024-08-08T03:00:00.000Z" "lastDatePrior=2024-08-21T03:00:00.000Z" "paymentDate=2024-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-11-21 custom "dividendo" "PETR4" "0.11384838" "label=DIVIDENDO" "approvedOn=2024-08-08T03:00:00.000Z" "lastDatePrior=2024-08-21T03:00:00.000Z" "paymentDate=2024-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-12-20 custom "dividendo" "PETR4" "0.52660006" "label=DIVIDENDO" "approvedOn=2024-08-08T03:00:00.000Z" "lastDatePrior=2024-08-21T03:00:00.000Z" "paymentDate=2024-12-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2024-12-23 custom "dividendo" "PETR4" "1.5517429" "label=DIVIDENDO" "approvedOn=2024-11-21T03:00:00.000Z" "lastDatePrior=2024-12-11T03:00:00.000Z" "paymentDate=2024-12-23T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-02-20 custom "jcp" "PETR4" "0.6641033" "label=JCP" "approvedOn=2024-12-09T03:00:00.000Z" "lastDatePrior=2024-12-23T03:00:00.000Z" "paymentDate=2025-02-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-03-20 custom "dividendo" "PETR4" "0.6535651" "label=DIVIDENDO" "approvedOn=2024-12-09T03:00:00.000Z" "lastDatePrior=2024-12-23T03:00:00.000Z" "paymentDate=2025-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-03-20 custom "jcp" "PETR4" "0.01053822" "label=JCP" "approvedOn=2024-12-09T03:00:00.000Z" "lastDatePrior=2024-12-23T03:00:00.000Z" "paymentDate=2025-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-04-16 custom "rendimento" "PETR4" "0.01706013" "label=RENDIMENTO" "approvedOn=2025-02-26T03:00:00.000Z" "lastDatePrior=2025-04-16T03:00:00.000Z" "paymentDate=2025-04-16T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-05-20 custom "dividendo" "PETR4" "0.3547726" "label=DIVIDENDO" "approvedOn=2025-02-26T03:00:00.000Z" "lastDatePrior=2025-04-16T03:00:00.000Z" "paymentDate=2025-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-05-20 custom "rendimento" "PETR4" "0.02152467" "label=RENDIMENTO" "approvedOn=2025-02-26T03:00:00.000Z" "lastDatePrior=2025-04-16T03:00:00.000Z" "paymentDate=2025-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-08-20 custom "jcp" "PETR4" "0.4545831" "label=JCP" "approvedOn=2025-05-12T03:00:00.000Z" "lastDatePrior=2025-06-02T03:00:00.000Z" "paymentDate=2025-08-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-09-22 custom "jcp" "PETR4" "0.1461356" "label=JCP" "approvedOn=2025-05-12T03:00:00.000Z" "lastDatePrior=2025-06-02T03:00:00.000Z" "paymentDate=2025-09-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-09-22 custom "dividendo" "PETR4" "0.30844748" "label=DIVIDENDO" "approvedOn=2025-05-12T03:00:00.000Z" "lastDatePrior=2025-06-02T03:00:00.000Z" "paymentDate=2025-09-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-11-21 custom "jcp" "PETR4" "0.33596206" "label=JCP" "approvedOn=2025-08-07T03:00:00.000Z" "lastDatePrior=2025-08-21T03:00:00.000Z" "paymentDate=2025-11-21T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-12-22 custom "jcp" "PETR4" "0.13504028" "label=JCP" "approvedOn=2025-08-07T03:00:00.000Z" "lastDatePrior=2025-08-21T03:00:00.000Z" "paymentDate=2025-12-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2025-12-22 custom "dividendo" "PETR4" "0.20092174" "label=DIVIDENDO" "approvedOn=2025-08-07T03:00:00.000Z" "lastDatePrior=2025-08-21T03:00:00.000Z" "paymentDate=2025-12-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-02-20 custom "jcp" "PETR4" "0.47160378" "label=JCP" "approvedOn=2025-12-11T03:00:00.000Z" "lastDatePrior=2025-12-22T03:00:00.000Z" "paymentDate=2026-02-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-03-20 custom "dividendo" "PETR4" "0.29642144" "label=DIVIDENDO" "approvedOn=2025-12-11T03:00:00.000Z" "lastDatePrior=2025-12-22T03:00:00.000Z" "paymentDate=2026-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-03-20 custom "jcp" "PETR4" "0.17518233" "label=JCP" "approvedOn=2025-12-11T03:00:00.000Z" "lastDatePrior=2025-12-22T03:00:00.000Z" "paymentDate=2026-03-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-05-20 custom "jcp" "PETR4" "0.313115" "label=JCP" "approvedOn=" "lastDatePrior=2026-04-22T03:00:00.000Z" "paymentDate=2026-05-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-06-22 custom "rendimento" "PETR4" "0.01314955" "label=RENDIMENTO" "approvedOn=" "lastDatePrior=2026-04-22T03:00:00.000Z" "paymentDate=2026-06-22T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi
+2026-08-20 custom "jcp" "PETR4" "0.350486" "label=JCP" "approvedOn=" "lastDatePrior=2026-06-01T03:00:00.000Z" "paymentDate=2026-08-20T03:00:00.000Z" "isinCode=BRPETRACNPR6"  ^brapi

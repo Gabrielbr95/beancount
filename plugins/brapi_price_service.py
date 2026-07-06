@@ -36,6 +36,7 @@ class EventRecord:
     event_date: date
     directive: str
     values: list[str]
+    tags: set[str] = field(default_factory=set)
 
 
 @dataclass(slots=True)
@@ -300,10 +301,18 @@ class BrapiPriceUpdater:
             if item.get("date") is not None and item.get("close") is not None
         ]
         prices.sort(key=lambda point: point.price_date)
-        events = self._extract_events(result) if include_dividends else []
+        events = self._extract_events(result, ticker) if include_dividends else []
         return {"currency": currency, "prices": prices, "events": events}
 
-    def _extract_events(self, result: dict[str, Any]) -> list[EventRecord]:
+    def _extract_events(self, result: dict[str, Any], ticker: str) -> list[EventRecord]:
+        _LABEL_MAP = {
+            "DESDOBRAMENTO": "desdobramento",
+            "GRUPAMENTO": "grupamento",
+            "BONIFICACAO": "bonificacao",
+            "DIVIDENDO": "dividendo",
+            "JCP": "jcp",
+            "RENDIMENTO": "rendimento",
+        }
         dividend_data = result.get("dividendsData") or {}
         events: list[EventRecord] = []
 
@@ -311,18 +320,24 @@ class BrapiPriceUpdater:
             event_date = _parse_date(item.get("paymentDate")) or _parse_date(item.get("lastDatePrior"))
             if event_date is None:
                 continue
+            label = item.get("label") or ""
+            directive = _LABEL_MAP.get(label.upper(), "brapi-cash-dividend")
+            values = [
+                _quote(ticker),
+                _quote(item.get("rate")),
+                _quote(f"label={label}"),
+                _quote(f"approvedOn={item.get('approvedOn') or ''}"),
+            ]
+            if "lastDatePrior" in item:
+                values.append(_quote(f"lastDatePrior={item.get('lastDatePrior') or ''}"))
+            values.append(_quote(f"paymentDate={item.get('paymentDate') or ''}"))
+            values.append(_quote(f"isinCode={item.get('isinCode') or ''}"))
             events.append(
                 EventRecord(
                     event_date=event_date,
-                    directive="brapi-cash-dividend",
-                    values=[
-                        _quote(item.get("assetIssued")),
-                        _quote(item.get("rate")),
-                        _quote(f"label={item.get('label') or ''}"),
-                        _quote(f"paymentDate={item.get('paymentDate') or ''}"),
-                        _quote(f"approvedOn={item.get('approvedOn') or ''}"),
-                        _quote(f"isinCode={item.get('isinCode') or ''}"),
-                    ],
+                    directive=directive,
+                    values=values,
+                    tags={"brapi"},
                 )
             )
 
@@ -330,18 +345,24 @@ class BrapiPriceUpdater:
             event_date = _parse_date(item.get("approvedOn")) or _parse_date(item.get("lastDatePrior"))
             if event_date is None:
                 continue
+            label = item.get("label") or ""
+            directive = _LABEL_MAP.get(label.upper(), "brapi-stock-dividend")
+            values = [
+                _quote(ticker),
+                _quote(item.get("factor")),
+                _quote(f"label={label}"),
+                _quote(f"approvedOn={item.get('approvedOn') or ''}"),
+                _quote(f"lastDatePrior={item.get('lastDatePrior') or ''}"),
+            ]
+            if "paymentDate" in item:
+                values.append(_quote(f"paymentDate={item.get('paymentDate') or ''}"))
+            values.append(_quote(f"isinCode={item.get('isinCode') or ''}"))
             events.append(
                 EventRecord(
                     event_date=event_date,
-                    directive="brapi-stock-dividend",
-                    values=[
-                        _quote(item.get("assetIssued")),
-                        _quote(item.get("factor")),
-                        _quote(f"label={item.get('label') or ''}"),
-                        _quote(f"approvedOn={item.get('approvedOn') or ''}"),
-                        _quote(f"lastDatePrior={item.get('lastDatePrior') or ''}"),
-                        _quote(f"isinCode={item.get('isinCode') or ''}"),
-                    ],
+                    directive=directive,
+                    values=values,
+                    tags={"brapi"},
                 )
             )
 
@@ -378,7 +399,11 @@ class BrapiPriceUpdater:
         if events:
             lines.append("")
             for event in events:
-                lines.append(f'{event.event_date.isoformat()} custom "{event.directive}" ' + " ".join(event.values))
+                tag_str = " ".join(f"^{t}" for t in sorted(event.tags)) if event.tags else ""
+                line = f'{event.event_date.isoformat()} custom "{event.directive}" ' + " ".join(event.values)
+                if tag_str:
+                    line += f"  {tag_str}"
+                lines.append(line)
         else:
             lines.append("; no corporate events available for current BRAPI plan")
 
@@ -393,5 +418,4 @@ class BrapiPriceUpdater:
         ]
         for ticker in tickers:
             lines.append(f'include "{ticker}.bean"')
-            lines.append(f'include "{ticker}_events.bean"')
         (self.prices_dir / "prices.bean").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

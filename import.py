@@ -35,6 +35,9 @@ def configure_logging() -> None:
 
 
 if __name__ == "__main__":
+    # Windows defaults stdout to cp1252 when redirected. Force UTF-8 so the
+    # output bean file is valid for beancount and Fava.
+    sys.stdout.reconfigure(encoding="utf-8")
     configure_logging()
     ingest = beangulp.Ingest(CONFIG, HOOKS)
     ingest()
