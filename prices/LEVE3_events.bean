@@ -1,6 +1,53 @@
-; source: BRAPI
+; source: Yahoo Finance
 ; asset: LEVE3
 ; quote_currency: BRL
-; last_update: 
-; generated_at: 2026-07-05T22:26:01-03:00
-; no corporate events available for current BRAPI plan
+; last_update: 2026-04-30
+; generated_at: 2026-07-09T21:09:28-03:00
+
+2005-09-22 custom "grupamento" "LEVE3" 0.0033333333 "source=yahoo-splits"  ^yahoo
+2009-12-16 custom "dividendo" "LEVE3" 0.284645 "source=yahoo-dividends"  ^yahoo
+2010-11-11 custom "dividendo" "LEVE3" 0.786236 "source=yahoo-dividends"  ^yahoo
+2011-08-16 custom "dividendo" "LEVE3" 0.320075 "source=yahoo-dividends"  ^yahoo
+2011-12-12 custom "dividendo" "LEVE3" 1.059919 "source=yahoo-dividends"  ^yahoo
+2012-01-02 custom "dividendo" "LEVE3" 0.048656 "source=yahoo-dividends"  ^yahoo
+2012-04-11 custom "dividendo" "LEVE3" 0.128227 "source=yahoo-dividends"  ^yahoo
+2012-05-15 custom "desdobramento" "LEVE3" 3 "source=yahoo-splits"  ^yahoo
+2012-08-02 custom "dividendo" "LEVE3" 0.167861 "source=yahoo-dividends"  ^yahoo
+2012-12-05 custom "dividendo" "LEVE3" 0.271264 "source=yahoo-dividends"  ^yahoo
+2013-01-02 custom "dividendo" "LEVE3" 0.059402 "source=yahoo-dividends"  ^yahoo
+2013-08-08 custom "dividendo" "LEVE3" 0.12805 "source=yahoo-dividends"  ^yahoo
+2014-04-24 custom "dividendo" "LEVE3" 0.123511 "source=yahoo-dividends"  ^yahoo
+2014-08-11 custom "dividendo" "LEVE3" 0.158503 "source=yahoo-dividends"  ^yahoo
+2014-12-08 custom "dividendo" "LEVE3" 0.956662 "source=yahoo-dividends"  ^yahoo
+2014-12-30 custom "dividendo" "LEVE3" 0.040685 "source=yahoo-dividends"  ^yahoo
+2015-04-30 custom "dividendo" "LEVE3" 0.13224 "source=yahoo-dividends"  ^yahoo
+2015-08-04 custom "dividendo" "LEVE3" 0.194163 "source=yahoo-dividends"  ^yahoo
+2015-12-09 custom "dividendo" "LEVE3" 0.938726 "source=yahoo-dividends"  ^yahoo
+2015-12-30 custom "dividendo" "LEVE3" 0.057403 "source=yahoo-dividends"  ^yahoo
+2016-04-28 custom "dividendo" "LEVE3" 0.377462 "source=yahoo-dividends"  ^yahoo
+2016-08-15 custom "dividendo" "LEVE3" 0.237685 "source=yahoo-dividends"  ^yahoo
+2017-08-14 custom "dividendo" "LEVE3" 0.391337 "source=yahoo-dividends"  ^yahoo
+2017-11-22 custom "dividendo" "LEVE3" 0.169802 "source=yahoo-dividends"  ^yahoo
+2018-01-04 custom "dividendo" "LEVE3" 0.114193 "source=yahoo-dividends"  ^yahoo
+2018-05-07 custom "dividendo" "LEVE3" 1.102765 "source=yahoo-dividends"  ^yahoo
+2018-11-21 custom "dividendo" "LEVE3" 0.550204 "source=yahoo-dividends"  ^yahoo
+2019-01-03 custom "dividendo" "LEVE3" 0.111672 "source=yahoo-dividends"  ^yahoo
+2019-05-07 custom "dividendo" "LEVE3" 1.475851 "source=yahoo-dividends"  ^yahoo
+2019-11-22 custom "dividendo" "LEVE3" 0.537437 "source=yahoo-dividends"  ^yahoo
+2020-01-03 custom "dividendo" "LEVE3" 0.091529 "source=yahoo-dividends"  ^yahoo
+2021-01-05 custom "dividendo" "LEVE3" 0.542202 "source=yahoo-dividends"  ^yahoo
+2021-04-30 custom "dividendo" "LEVE3" 0.372983 "source=yahoo-dividends"  ^yahoo
+2022-01-03 custom "dividendo" "LEVE3" 0.53684 "source=yahoo-dividends"  ^yahoo
+2022-04-28 custom "dividendo" "LEVE3" 3.603208 "source=yahoo-dividends"  ^yahoo
+2023-01-02 custom "dividendo" "LEVE3" 0.822594 "source=yahoo-dividends"  ^yahoo
+2023-04-28 custom "dividendo" "LEVE3" 3.469874 "source=yahoo-dividends"  ^yahoo
+2023-11-03 custom "dividendo" "LEVE3" 5.54 "source=yahoo-dividends"  ^yahoo
+2023-11-13 custom "dividendo" "LEVE3" 0.650993 "source=yahoo-dividends"  ^yahoo
+2023-12-22 custom "dividendo" "LEVE3" 0.168138 "source=yahoo-dividends"  ^yahoo
+2024-04-30 custom "dividendo" "LEVE3" 1.632479 "source=yahoo-dividends"  ^yahoo
+2024-11-11 custom "dividendo" "LEVE3" 0.539198 "source=yahoo-dividends"  ^yahoo
+2024-12-20 custom "dividendo" "LEVE3" 0.190647 "source=yahoo-dividends"  ^yahoo
+2025-04-30 custom "dividendo" "LEVE3" 1.906841 "source=yahoo-dividends"  ^yahoo
+2025-11-17 custom "dividendo" "LEVE3" 0.608935 "source=yahoo-dividends"  ^yahoo
+2025-12-17 custom "dividendo" "LEVE3" 0.206159 "source=yahoo-dividends"  ^yahoo
+2026-04-30 custom "dividendo" "LEVE3" 2.036268 "source=yahoo-dividends"  ^yahoo

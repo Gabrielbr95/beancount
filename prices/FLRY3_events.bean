@@ -1,6 +1,48 @@
-; source: BRAPI
+; source: Yahoo Finance
 ; asset: FLRY3
 ; quote_currency: BRL
-; last_update: 
-; generated_at: 2026-07-05T22:25:54-03:00
-; no corporate events available for current BRAPI plan
+; last_update: 2025-12-03
+; generated_at: 2026-07-09T21:09:20-03:00
+
+2010-08-12 custom "dividendo" "FLRY3" 0.029137 "source=yahoo-dividends"  ^yahoo
+2010-12-20 custom "dividendo" "FLRY3" 0.072561 "source=yahoo-dividends"  ^yahoo
+2011-08-22 custom "dividendo" "FLRY3" 0.064638 "source=yahoo-dividends"  ^yahoo
+2011-12-20 custom "dividendo" "FLRY3" 0.030185 "source=yahoo-dividends"  ^yahoo
+2012-08-06 custom "dividendo" "FLRY3" 0.060334 "source=yahoo-dividends"  ^yahoo
+2012-12-18 custom "dividendo" "FLRY3" 0.048268 "source=yahoo-dividends"  ^yahoo
+2013-08-08 custom "dividendo" "FLRY3" 0.131667 "source=yahoo-dividends"  ^yahoo
+2013-11-06 custom "dividendo" "FLRY3" 0.055163 "source=yahoo-dividends"  ^yahoo
+2013-12-10 custom "dividendo" "FLRY3" 0.060334 "source=yahoo-dividends"  ^yahoo
+2014-04-29 custom "dividendo" "FLRY3" 0.301673 "source=yahoo-dividends"  ^yahoo
+2014-11-07 custom "dividendo" "FLRY3" 0.301672 "source=yahoo-dividends"  ^yahoo
+2015-06-15 custom "dividendo" "FLRY3" 0.019609 "source=yahoo-dividends"  ^yahoo
+2015-08-19 custom "dividendo" "FLRY3" 0.029289 "source=yahoo-dividends"  ^yahoo
+2016-04-11 custom "dividendo" "FLRY3" 0.064441 "source=yahoo-dividends"  ^yahoo
+2016-08-03 custom "dividendo" "FLRY3" 0.095832 "source=yahoo-dividends"  ^yahoo
+2016-12-13 custom "dividendo" "FLRY3" 0.994107 "source=yahoo-dividends"  ^yahoo
+2017-03-15 custom "dividendo" "FLRY3" 0.213465 "source=yahoo-dividends"  ^yahoo
+2017-06-27 custom "desdobramento" "FLRY3" 2 "source=yahoo-splits"  ^yahoo
+2017-08-02 custom "dividendo" "FLRY3" 0.176563 "source=yahoo-dividends"  ^yahoo
+2018-01-03 custom "dividendo" "FLRY3" 0.123836 "source=yahoo-dividends"  ^yahoo
+2018-03-07 custom "dividendo" "FLRY3" 0.610806 "source=yahoo-dividends"  ^yahoo
+2018-08-01 custom "dividendo" "FLRY3" 0.17216 "source=yahoo-dividends"  ^yahoo
+2019-01-03 custom "dividendo" "FLRY3" 0.119722 "source=yahoo-dividends"  ^yahoo
+2019-03-07 custom "dividendo" "FLRY3" 0.648239 "source=yahoo-dividends"  ^yahoo
+2019-07-31 custom "dividendo" "FLRY3" 0.188852 "source=yahoo-dividends"  ^yahoo
+2020-01-03 custom "dividendo" "FLRY3" 0.106066 "source=yahoo-dividends"  ^yahoo
+2020-02-27 custom "dividendo" "FLRY3" 0.588691 "source=yahoo-dividends"  ^yahoo
+2021-01-07 custom "dividendo" "FLRY3" 0.221341 "source=yahoo-dividends"  ^yahoo
+2021-03-03 custom "dividendo" "FLRY3" 0.466177 "source=yahoo-dividends"  ^yahoo
+2021-08-04 custom "dividendo" "FLRY3" 0.126228 "source=yahoo-dividends"  ^yahoo
+2021-12-21 custom "dividendo" "FLRY3" 0.089389 "source=yahoo-dividends"  ^yahoo
+2022-03-23 custom "dividendo" "FLRY3" 0.669344 "source=yahoo-dividends"  ^yahoo
+2022-12-20 custom "dividendo" "FLRY3" 0.280457 "source=yahoo-dividends"  ^yahoo
+2023-06-13 custom "bonificacao" "FLRY3" 1.05 "source=yahoo-splits"  ^yahoo
+2023-09-05 custom "dividendo" "FLRY3" 0.169221 "source=yahoo-dividends"  ^yahoo
+2023-12-18 custom "dividendo" "FLRY3" 0.26558 "source=yahoo-dividends"  ^yahoo
+2024-03-20 custom "dividendo" "FLRY3" 0.147614 "source=yahoo-dividends"  ^yahoo
+2024-08-15 custom "dividendo" "FLRY3" 0.337384 "source=yahoo-dividends"  ^yahoo
+2024-12-16 custom "dividendo" "FLRY3" 0.213913 "source=yahoo-dividends"  ^yahoo
+2025-03-07 custom "dividendo" "FLRY3" 0.46614 "source=yahoo-dividends"  ^yahoo
+2025-08-13 custom "dividendo" "FLRY3" 0.310099 "source=yahoo-dividends"  ^yahoo
+2025-12-03 custom "dividendo" "FLRY3" 0.899059 "source=yahoo-dividends"  ^yahoo

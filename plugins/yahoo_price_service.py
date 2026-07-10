@@ -27,7 +27,7 @@ import yfinance as yf
 from beancount.core.data import Transaction
 
 
-BR_TICKER_RE = re.compile(r"^[A-Z]{4}\d{1,2}$")
+BR_TICKER_RE = re.compile(r"^[A-Z0-9]{4,5}\d{1,2}$")
 PRICE_LINE_RE = re.compile(
     r"^(?P<date>\d{4}-\d{2}-\d{2})\s+price\s+(?P<ticker>[A-Z0-9]+)"
     r"\s+(?P<price>-?\d+(?:\.\d+)?)\s+(?P<currency>[A-Z0-9]+)\s*$"
@@ -144,6 +144,12 @@ class YahooPriceUpdater:
         self.prices_dir = self.base_dir / "prices"
         self.overlap_days = int(self.config.get("overlap_days", 7))
         self.max_assets = self.config.get("max_assets")
+        # all_history: when True, fetch prices+events for every ticker that ever
+        # appeared in Assets:Investment:* postings (including fully-sold ones),
+        # not just currently-held tickers. Needed because historical corporate
+        # actions (splits/bonuses) affect past lot cost-basis forever, so a
+        # fully-sold ticker like B3SA3 still needs its _events.bean generated.
+        self.all_history = bool(self.config.get("all_history", False))
 
     def run(self) -> RunSummary:
         summary = RunSummary()
@@ -152,14 +158,25 @@ class YahooPriceUpdater:
         if self.max_assets is not None:
             holdings = dict(sorted(holdings.items())[: int(self.max_assets)])
 
-        target_assets = {ticker: units for ticker, units in holdings.items() if units > 0}
+        # Select tickers to update. Default (all_history=False): only currently
+        # held tickers (units > 0). all_history=True: every ticker that ever
+        # appeared in investment postings (net balance may be 0 for sold ones),
+        # so historical corporate-action events get generated for past lots.
+        target_assets: dict[str, Decimal] = {}
         for ticker, units in holdings.items():
-            if units <= 0:
+            # all_history: include any ticker that ever had a posting (key
+            # present in holdings), even if net balance is 0 (fully sold).
+            # _extract_holdings only adds keys for tickers with real postings,
+            # so key existence is sufficient evidence of trade history.
+            include = True if self.all_history else units > 0
+            if not include:
                 summary.skipped.append(ticker)
-            elif not _is_b3_ticker(ticker):
+                continue
+            if not _is_b3_ticker(ticker):
                 summary.skipped.append(ticker)
                 summary.warnings.append(f"Skipped unsupported ticker: {ticker}")
-                target_assets.pop(ticker, None)
+                continue
+            target_assets[ticker] = units
 
         self.prices_dir.mkdir(parents=True, exist_ok=True)
 
@@ -282,9 +299,11 @@ class YahooPriceUpdater:
                 events.append(EventRecord(
                     event_date=event_date,
                     directive=directive,
+                    # Values: ticker (string), ratio (number — bare), source (string).
+                    # Per beancount custom-directive syntax, numbers are bare, strings quoted.
                     values=[
                         _quote(ticker),
-                        _quote(_decimal_to_text(ratio)),
+                        _decimal_to_text(ratio),
                         _quote("source=yahoo-splits"),
                     ],
                     tags={"yahoo"},
@@ -305,9 +324,11 @@ class YahooPriceUpdater:
                 events.append(EventRecord(
                     event_date=event_date,
                     directive="dividendo",
+                    # Values: ticker (string), amount (number — bare), source (string).
+                    # Per beancount custom-directive syntax, numbers are bare, strings quoted.
                     values=[
                         _quote(ticker),
-                        _quote(_decimal_to_text(amount)),
+                        _decimal_to_text(amount),
                         _quote("source=yahoo-dividends"),
                     ],
                     tags={"yahoo"},

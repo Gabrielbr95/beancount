@@ -324,7 +324,7 @@ class BrapiPriceUpdater:
             directive = _LABEL_MAP.get(label.upper(), "brapi-cash-dividend")
             values = [
                 _quote(ticker),
-                _quote(item.get("rate")),
+                _decimal_to_text(Decimal(str(item.get("rate") or "0"))),
                 _quote(f"label={label}"),
                 _quote(f"approvedOn={item.get('approvedOn') or ''}"),
             ]
@@ -349,7 +349,7 @@ class BrapiPriceUpdater:
             directive = _LABEL_MAP.get(label.upper(), "brapi-stock-dividend")
             values = [
                 _quote(ticker),
-                _quote(item.get("factor")),
+                _decimal_to_text(Decimal(str(item.get("factor") or "0"))),
                 _quote(f"label={label}"),
                 _quote(f"approvedOn={item.get('approvedOn') or ''}"),
                 _quote(f"lastDatePrior={item.get('lastDatePrior') or ''}"),

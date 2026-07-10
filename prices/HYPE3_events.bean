@@ -1,6 +1,54 @@
-; source: BRAPI
+; source: Yahoo Finance
 ; asset: HYPE3
 ; quote_currency: BRL
-; last_update: 
-; generated_at: 2026-07-05T22:25:57-03:00
-; no corporate events available for current BRAPI plan
+; last_update: 2026-06-29
+; generated_at: 2026-07-09T21:09:22-03:00
+
+2010-01-04 custom "desdobramento" "HYPE3" 2 "source=yahoo-splits"  ^yahoo
+2011-05-02 custom "dividendo" "HYPE3" 0.119344 "source=yahoo-dividends"  ^yahoo
+2013-05-02 custom "dividendo" "HYPE3" 0.161353 "source=yahoo-dividends"  ^yahoo
+2016-04-15 custom "dividendo" "HYPE3" 0.038996 "source=yahoo-dividends"  ^yahoo
+2016-05-03 custom "dividendo" "HYPE3" 0.208459 "source=yahoo-dividends"  ^yahoo
+2016-07-28 custom "dividendo" "HYPE3" 0.247455 "source=yahoo-dividends"  ^yahoo
+2017-02-16 custom "dividendo" "HYPE3" 0.593891 "source=yahoo-dividends"  ^yahoo
+2017-04-20 custom "dividendo" "HYPE3" 0.050379 "source=yahoo-dividends"  ^yahoo
+2018-01-02 custom "dividendo" "HYPE3" 0.910633 "source=yahoo-dividends"  ^yahoo
+2018-04-06 custom "dividendo" "HYPE3" 0.20985 "source=yahoo-dividends"  ^yahoo
+2018-07-04 custom "dividendo" "HYPE3" 0.203338 "source=yahoo-dividends"  ^yahoo
+2018-10-03 custom "dividendo" "HYPE3" 0.197627 "source=yahoo-dividends"  ^yahoo
+2018-12-26 custom "dividendo" "HYPE3" 0.347595 "source=yahoo-dividends"  ^yahoo
+2019-04-12 custom "dividendo" "HYPE3" 0.252127 "source=yahoo-dividends"  ^yahoo
+2019-07-03 custom "dividendo" "HYPE3" 0.253017 "source=yahoo-dividends"  ^yahoo
+2019-10-03 custom "dividendo" "HYPE3" 0.25277 "source=yahoo-dividends"  ^yahoo
+2019-12-26 custom "dividendo" "HYPE3" 0.301142 "source=yahoo-dividends"  ^yahoo
+2020-03-30 custom "dividendo" "HYPE3" 0.290947 "source=yahoo-dividends"  ^yahoo
+2020-06-29 custom "dividendo" "HYPE3" 0.290502 "source=yahoo-dividends"  ^yahoo
+2020-10-26 custom "dividendo" "HYPE3" 0.289918 "source=yahoo-dividends"  ^yahoo
+2020-12-29 custom "dividendo" "HYPE3" 0.289868 "source=yahoo-dividends"  ^yahoo
+2021-03-29 custom "dividendo" "HYPE3" 0.305666 "source=yahoo-dividends"  ^yahoo
+2021-07-23 custom "dividendo" "HYPE3" 0.305032 "source=yahoo-dividends"  ^yahoo
+2021-09-28 custom "dividendo" "HYPE3" 0.304943 "source=yahoo-dividends"  ^yahoo
+2021-12-29 custom "dividendo" "HYPE3" 0.305666 "source=yahoo-dividends"  ^yahoo
+2022-03-29 custom "dividendo" "HYPE3" 0.305666 "source=yahoo-dividends"  ^yahoo
+2022-06-28 custom "dividendo" "HYPE3" 0.304627 "source=yahoo-dividends"  ^yahoo
+2022-09-29 custom "dividendo" "HYPE3" 0.304537 "source=yahoo-dividends"  ^yahoo
+2022-12-23 custom "dividendo" "HYPE3" 0.304597 "source=yahoo-dividends"  ^yahoo
+2023-03-30 custom "dividendo" "HYPE3" 0.304775 "source=yahoo-dividends"  ^yahoo
+2023-07-04 custom "dividendo" "HYPE3" 0.304795 "source=yahoo-dividends"  ^yahoo
+2023-09-28 custom "dividendo" "HYPE3" 0.304726 "source=yahoo-dividends"  ^yahoo
+2023-12-27 custom "dividendo" "HYPE3" 0.304607 "source=yahoo-dividends"  ^yahoo
+2024-02-02 custom "dividendo" "HYPE3" 0.09626 "source=yahoo-dividends"  ^yahoo
+2024-02-23 custom "dividendo" "HYPE3" 0.09626 "source=yahoo-dividends"  ^yahoo
+2024-03-22 custom "dividendo" "HYPE3" 0.09623 "source=yahoo-dividends"  ^yahoo
+2024-04-24 custom "dividendo" "HYPE3" 0.09625 "source=yahoo-dividends"  ^yahoo
+2024-05-24 custom "dividendo" "HYPE3" 0.096359 "source=yahoo-dividends"  ^yahoo
+2024-06-24 custom "dividendo" "HYPE3" 0.096676 "source=yahoo-dividends"  ^yahoo
+2024-07-25 custom "dividendo" "HYPE3" 0.096676 "source=yahoo-dividends"  ^yahoo
+2024-09-24 custom "dividendo" "HYPE3" 0.193351 "source=yahoo-dividends"  ^yahoo
+2024-12-30 custom "dividendo" "HYPE3" 0.287849 "source=yahoo-dividends"  ^yahoo
+2025-03-28 custom "dividendo" "HYPE3" 0.289522 "source=yahoo-dividends"  ^yahoo
+2025-06-27 custom "dividendo" "HYPE3" 0.289522 "source=yahoo-dividends"  ^yahoo
+2025-09-29 custom "dividendo" "HYPE3" 0.289522 "source=yahoo-dividends"  ^yahoo
+2025-12-29 custom "dividendo" "HYPE3" 0.289522 "source=yahoo-dividends"  ^yahoo
+2026-04-01 custom "dividendo" "HYPE3" 0.26304 "source=yahoo-dividends"  ^yahoo
+2026-06-29 custom "dividendo" "HYPE3" 0.26304 "source=yahoo-dividends"  ^yahoo

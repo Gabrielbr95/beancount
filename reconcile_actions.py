@@ -121,8 +121,10 @@ def parse_tmp_bean(path):
 
 # Strip tags (^yahoo, ^brapi, etc.) before matching the event regex
 _TAG_SUFFIX_RE = re.compile(r"\s+\^\S+(\s+\^\S+)*\s*$")
+# Ratio may be quoted ("4") in legacy Yahoo events or bare (4) after the
+# beancount-syntax fix. Accept either.
 _EVENT_RE = re.compile(
-    r'^(\d{4}-\d{2}-\d{2})\s+custom\s+"(\w+)"\s+"([^"]+)"\s+"([^"]+)"'
+    r'^(\d{4}-\d{2}-\d{2})\s+custom\s+"(\w+)"\s+"([^"]+)"\s+"?([^"\s]+)"?'
 )
 
 CORPORATE_ACTION_TYPES = {"desdobramento", "grupamento", "bonificacao"}
@@ -169,7 +171,8 @@ def load_events_bean(prices_dir):
 # ---------------------------------------------------------------------------
 
 _CORP_DIRECTIVE_RE = re.compile(
-    r'^(\d{4}-\d{2}-\d{2})\s+custom\s+"(\w+)"\s+"([^"]+)"\s+"([^"]+)"'
+    # Ratio may be quoted ("0") in Yahoo events or unquoted (0) in B3 extract.
+    r'^(\d{4}-\d{2}-\d{2})\s+custom\s+"(\w+)"\s+"([^"]+)"\s+"?([^"\s]+)"?'
 )
 _DATE_WINDOW = 5  # days
 
@@ -209,7 +212,7 @@ def enrich_corporate_actions(corp_blocks, events):
             continue
 
         directive = lines[dir_idx]
-        m = _CORP_DIRECTIVE_RE.match(directive.strip())
+        m = _CORP_DIRECTIVE_RE.match(directive)
         if not m:
             enriched.append(block)
             continue
@@ -236,13 +239,21 @@ def enrich_corporate_actions(corp_blocks, events):
                     f"{ticker} {ctype} {entry_date}: date drift {drift} days vs Yahoo {ev['date']}"
                 )
 
-            # Replace ratio "0" sentinel
+            # Replace ratio "0" sentinel with Yahoo value, bare (per beancount
+            # custom-directive syntax: numbers are unquoted).
             if current_ratio == "0" and ev["ratio"] != "0":
-                directive = directive.replace(f'"{current_ratio}"', f'"{ev["ratio"]}"', 1)
+                directive = (
+                    directive[: m.start(4)]
+                    + ev["ratio"]
+                    + directive[m.end(4):]
+                )
 
-            # Append enriched tag if not already present
-            if "^b3-yahoo-enriched" not in directive:
-                directive = directive.rstrip() + "  ^b3-yahoo-enriched"
+            # Mark enrichment via beancount-valid metadata. NOTE: `^link` tags
+            # are NOT valid grammar on custom directives (bean-check rejects
+            # them as "unexpected LINK"), so we use a metadata key instead.
+            if not any(ln.strip().startswith("yahoo-enriched:") for ln in lines):
+                # Insert metadata right after the directive line.
+                lines.insert(dir_idx + 1, '  yahoo-enriched: TRUE')
 
         lines[dir_idx] = directive
 

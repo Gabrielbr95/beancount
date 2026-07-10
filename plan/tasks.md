@@ -37,3 +37,16 @@
 ## Slice 6: End-to-end verification
 - [x] 16. Run full pipeline on real exports: extract → reconcile → bean-check. Confirm zero "Not enough lots" errors for the 7 target tickers (WEGE3, B3SA3, BBDC3, BBAS3, FLRY3, MGLU3, ITSA3). (Verification: `bean-check main.bean` output — no split-related errors for target tickers)
 - [x] 17. Update `activeContext.md` with new pipeline flow and any remaining open items. (Verification: file updated and readable)
+
+## Slice 9: B3SA3 / regex / all_history fixes (2026-07-09)
+- [x] 23. Fix `BR_TICKER_RE` in `plugins/yahoo_price_service.py:30` — was `^[A-Z]{4}\d{1,2}$`, rejected B3SA3 (digit in prefix). Changed to `^[A-Z0-9]{4,5}\d{1,2}$`. (Verification: `_is_b3_ticker("B3SA3")` returns True; USD/BRL/CASH still rejected)
+- [x] 24. Add `all_history` config flag to `YahooPriceUpdater` (default False). When True, includes every ticker that ever appeared in `Assets:Investment:*` (including fully-sold), not just `units > 0`. (Verification: behavioral test — B3SA3 included in all_history mode, skipped in default mode)
+- [x] 25. Generate `prices/B3SA3_events.bean` via live Yahoo fetch to confirm the split lands. (Verification: file created, `desdobramento B3SA3 3` on 2021-05-17 present, matches corporate_actions.bean entry within ±5 day window)
+- [ ] 26. Fill B3SA3 ratio in `corporate_actions.bean:23` — either re-run `reconcile_actions.py` against fresh tmp.bean containing B3SA3 entry, OR manually set ratio to `3` (optionally fix date to 2021-05-17). (Verification: bean-check no longer reports "Ratio is 0" for B3SA3)
+- [ ] 27. Add `include "B3SA3.bean"` to `prices/prices.bean` — will be auto-added on next updater run with all_history=True. (Verification: `prices/prices.bean` contains the B3SA3 line, `bean-check` no longer reports missing glob)
+
+## Slice 10: Fix "Not enough lots" — pre-booking split application (DEFERRED)
+- [!] 28. Decide between Option B (bake splits into source .bean) vs Option C (standalone `scripts/apply_splits.py` pre-processor). Option C is leading candidate. See decision [011] for full research notes. User will return to this.
+- [ ] 29. Scope the chosen approach against the 20 affected errors and the existing pipeline (import.py → reconcile_actions.py → bean-check).
+- [ ] 30. Implement the chosen approach. (Verification: `bean-check main.bean` "Not enough lots" errors drop from 20 toward 0)
+

@@ -1,6 +1,61 @@
-; source: BRAPI
+; source: Yahoo Finance
 ; asset: ETER3
 ; quote_currency: BRL
-; last_update: 
-; generated_at: 2026-07-05T22:25:53-03:00
-; no corporate events available for current BRAPI plan
+; last_update: 2026-03-31
+; generated_at: 2026-07-09T21:09:19-03:00
+
+2004-06-14 custom "grupamento" "ETER3" 0.01 "source=yahoo-splits"  ^yahoo
+2005-06-01 custom "desdobramento" "ETER3" 4 "source=yahoo-splits"  ^yahoo
+2007-04-26 custom "desdobramento" "ETER3" 2 "source=yahoo-splits"  ^yahoo
+2008-02-28 custom "dividendo" "ETER3" 0.550318 "source=yahoo-dividends"  ^yahoo
+2008-04-25 custom "dividendo" "ETER3" 0.128407 "source=yahoo-dividends"  ^yahoo
+2008-12-12 custom "dividendo" "ETER3" 0.131028 "source=yahoo-dividends"  ^yahoo
+2009-03-05 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2009-05-12 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2009-08-06 custom "dividendo" "ETER3" 0.288262 "source=yahoo-dividends"  ^yahoo
+2009-10-30 custom "dividendo" "ETER3" 0.558179 "source=yahoo-dividends"  ^yahoo
+2009-12-28 custom "dividendo" "ETER3" 0.107443 "source=yahoo-dividends"  ^yahoo
+2010-03-08 custom "dividendo" "ETER3" 0.416669 "source=yahoo-dividends"  ^yahoo
+2010-04-28 custom "dividendo" "ETER3" 0.499741 "source=yahoo-dividends"  ^yahoo
+2010-08-17 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2010-11-04 custom "dividendo" "ETER3" 0.499741 "source=yahoo-dividends"  ^yahoo
+2011-03-15 custom "dividendo" "ETER3" 0.621073 "source=yahoo-dividends"  ^yahoo
+2011-05-10 custom "dividendo" "ETER3" 0.445495 "source=yahoo-dividends"  ^yahoo
+2011-08-17 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2011-11-08 custom "dividendo" "ETER3" 0.602729 "source=yahoo-dividends"  ^yahoo
+2011-12-27 custom "dividendo" "ETER3" 0.172957 "source=yahoo-dividends"  ^yahoo
+2012-03-20 custom "dividendo" "ETER3" 0.351155 "source=yahoo-dividends"  ^yahoo
+2012-05-08 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2012-08-21 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2012-11-06 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2012-12-27 custom "dividendo" "ETER3" 0.167716 "source=yahoo-dividends"  ^yahoo
+2013-03-19 custom "dividendo" "ETER3" 0.356396 "source=yahoo-dividends"  ^yahoo
+2013-04-30 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2013-08-20 custom "dividendo" "ETER3" 0.356396 "source=yahoo-dividends"  ^yahoo
+2013-11-05 custom "dividendo" "ETER3" 0.353776 "source=yahoo-dividends"  ^yahoo
+2013-12-26 custom "dividendo" "ETER3" 0.159854 "source=yahoo-dividends"  ^yahoo
+2014-03-25 custom "dividendo" "ETER3" 0.364258 "source=yahoo-dividends"  ^yahoo
+2014-05-20 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2014-08-19 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2014-09-26 custom "desdobramento" "ETER3" 2 "source=yahoo-splits"  ^yahoo
+2014-11-18 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2014-12-30 custom "dividendo" "ETER3" 0.172957 "source=yahoo-dividends"  ^yahoo
+2015-03-24 custom "dividendo" "ETER3" 0.351155 "source=yahoo-dividends"  ^yahoo
+2015-05-26 custom "dividendo" "ETER3" 0.524112 "source=yahoo-dividends"  ^yahoo
+2015-08-06 custom "dividendo" "ETER3" 0.262056 "source=yahoo-dividends"  ^yahoo
+2015-11-05 custom "dividendo" "ETER3" 0.230609 "source=yahoo-dividends"  ^yahoo
+2015-12-17 custom "dividendo" "ETER3" 0.230609 "source=yahoo-dividends"  ^yahoo
+2018-10-29 custom "grupamento" "ETER3" 0.1666666667 "source=yahoo-splits"  ^yahoo
+2021-12-22 custom "dividendo" "ETER3" 0.241525 "source=yahoo-dividends"  ^yahoo
+2022-03-31 custom "dividendo" "ETER3" 0.39373 "source=yahoo-dividends"  ^yahoo
+2022-08-15 custom "dividendo" "ETER3" 0.297903 "source=yahoo-dividends"  ^yahoo
+2022-11-14 custom "dividendo" "ETER3" 0.140066 "source=yahoo-dividends"  ^yahoo
+2022-12-20 custom "dividendo" "ETER3" 0.171122 "source=yahoo-dividends"  ^yahoo
+2023-05-15 custom "dividendo" "ETER3" 0.077984 "source=yahoo-dividends"  ^yahoo
+2023-11-13 custom "dividendo" "ETER3" 0.076616 "source=yahoo-dividends"  ^yahoo
+2023-12-26 custom "dividendo" "ETER3" 0.181371 "source=yahoo-dividends"  ^yahoo
+2024-03-05 custom "dividendo" "ETER3" 0.163162 "source=yahoo-dividends"  ^yahoo
+2024-08-12 custom "dividendo" "ETER3" 0.036805 "source=yahoo-dividends"  ^yahoo
+2024-11-11 custom "dividendo" "ETER3" 0.052023 "source=yahoo-dividends"  ^yahoo
+2025-03-18 custom "dividendo" "ETER3" 0.03685 "source=yahoo-dividends"  ^yahoo
+2026-03-31 custom "dividendo" "ETER3" 0.170717 "source=yahoo-dividends"  ^yahoo
