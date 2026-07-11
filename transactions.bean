@@ -18,7 +18,7 @@
   id: "b3-neg-20181018-11"
   source: "b3_negociacoes"
   asset: "WEGE3"
-  Assets:Investment:XP:WEGE3        400 WEGE3 {9.15 BRL, 2018-10-18}
+  Assets:Investment:XP:WEGE3        200 WEGE3 {18.30 BRL, 2018-10-18}
   Assets:Investment:XP:Cash    -3682.63 BRL
   Expenses:Investment:XP:Fees     22.63 BRL
 
@@ -658,14 +658,6 @@
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {28 BRL, 2021-11-26}
   Assets:Investment:XP:Cash   -2800 BRL
-
-2021-02-11 * "Asset Transfer CVCB11"
-  id: "b3-mov-20210211-313"
-  source: "b3_movimentacoes"
-  asset: "CVCB11"
-  warning: "unmatched_transfer"
-  Assets:Investment:XP:CVCB11  -15 CVCB11 {}
-  Equity:Transfers              15 CVCB11 {}
 
 2021-12-10 * "XPBR31 Fraction Auction"
   id: "b3-mov-20211210-24"
@@ -2391,12 +2383,12 @@
   Assets:Investment:XP:VALE3   -200 VALE3 {} @ 87.99 BRL
   Income:Investment:XP:Gains
 
-2026-01-14 * "IRIM15 Fraction Auction"
+2026-01-14 * "IRIM11 Fraction Auction"
   id: "b3-mov-20260114-104"
   source: "b3_movimentacoes"
-  asset: "IRIM15"
+  asset: "IRIM11"
   Assets:Investment:XP:Cash      30.99 BRL
-  Assets:Investment:XP:IRIM15    -0.46 IRIM15 {} @ 67.979 BRL
+  Assets:Investment:XP:IRIM11    -0.46 IRIM11 {} @ 67.979 BRL
   Expenses:Investment:XP:Fees  0.28034 BRL
   Income:Investment:XP:Gains
 
@@ -2433,12 +2425,12 @@
   Assets:Investment:BB:CDB-CDB526CSFDK    2473459 CDB-CDB526CSFDK {0.01 BRL, 2026-05-27}
   Assets:Investment:BB:Cash             -24734.59 BRL
 
-2026-06-01 * "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A Redemption"
+2026-06-01 * "CDB-CDB526CSFDK Redemption"
   id: "b3-mov-20260601-6"
   source: "b3_movimentacoes"
-  asset: "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A"
+  asset: "CDB-CDB526CSFDK"
   Assets:Investment:BB:Cash                                         50 BRL
-  Assets:Investment:BB:CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A       -5000 CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A {} @ 0.01000032 BRL
+  Assets:Investment:BB:CDB-CDB526CSFDK       -5000 CDB-CDB526CSFDK {} @ 0.01000032 BRL
   Expenses:Investment:BB:Fees                               0.00160000 BRL
   Income:Investment:BB:Gains
 
@@ -2449,11 +2441,11 @@
   Assets:Investment:BB:CDB-CDB6260FY9K    2404334 CDB-CDB6260FY9K {0.01 BRL, 2026-06-01}
   Assets:Investment:BB:Cash             -24043.34 BRL
 
-2026-06-05 * "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A Redemption"
+2026-06-05 * "CDB-CDB526CSFDK Redemption"
   id: "b3-mov-20260605-2"
   source: "b3_movimentacoes"
-  asset: "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A"
+  asset: "CDB-CDB526CSFDK"
   Assets:Investment:BB:Cash                                       80.01 BRL
-  Assets:Investment:BB:CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A        -8000 CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A {} @ 0.01000064 BRL
+  Assets:Investment:BB:CDB-CDB526CSFDK        -8000 CDB-CDB526CSFDK {} @ 0.01000064 BRL
   Expenses:Investment:BB:Fees                               -0.00488000 BRL
   Income:Investment:BB:Gains

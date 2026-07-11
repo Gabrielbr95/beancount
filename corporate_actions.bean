@@ -12,13 +12,6 @@
   asset: "WEGE3"
   quantity: "200"
 
-2021-04-29 custom "desdobramento" "WEGE3" 2
-  yahoo-enriched: TRUE
-  id: "b3-mov-20210429-238"
-  source: "b3_movimentacoes"
-  asset: "WEGE3"
-  quantity: "200"
-
 2021-05-18 custom "desdobramento" "B3SA3" 3
   yahoo-enriched: TRUE
   id: "b3-mov-20210518-213"
@@ -68,7 +61,7 @@
   asset: "ITUB3"
   quantity: "20"
 
-2025-11-28 custom "bonificacao" "EGIE3" 1.1
+2025-11-28 custom "bonificacao" "EGIE3" 1.4
   yahoo-enriched: TRUE
   id: "b3-mov-20251128-54"
   source: "b3_movimentacoes"
