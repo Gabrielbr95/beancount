@@ -277,6 +277,10 @@ def booking_method_NONE(entry, posting, matches):
 def booking_method_AVERAGE(entry, posting, matches):
     """AVERAGE booking method implementation.
 
+    When there are multiple matching lots, they are merged into a single lot
+    at weighted-average cost before applying the reduction. The merged lot
+    uses the newest date among the matched lots.
+
     Args:
       entry: The parent Transaction instance.
       posting: An instance of Posting, the reducing posting which we're
@@ -287,90 +291,73 @@ def booking_method_AVERAGE(entry, posting, matches):
     """
     booked_reductions = []
     booked_matches = []
-    errors = [AmbiguousMatchError(entry.meta, "AVERAGE method is not supported", entry)]
-    return booked_reductions, booked_matches, errors, False
+    errors = []
+    insufficient = False
 
-    # FIXME: Future implementation here.
+    if len(matches) == 1:
+        # Simple reduction against a single lot; no merging needed.
+        match = matches[0]
+        sign = -1 if posting.units.number < ZERO else 1
+        number = min(abs(match.units.number), abs(posting.units.number))
+        match_units = Amount(number * sign, match.units.currency)
+        booked_reductions.append(
+            posting._replace(units=match_units, cost=match.cost)
+        )
+        booked_matches.append(match)
+        insufficient = match_units.number != posting.units.number
+    else:
+        # Multiple matches: merge all lots into a single average-cost lot.
+        # Aggregate total units and total cost weight across all matches.
+        merged_units_inv = inventory.Inventory()
+        merged_cost_inv = inventory.Inventory()
+        for match in matches:
+            merged_units_inv.add_amount(match.units)
+            merged_cost_inv.add_amount(convert.get_weight(match))
 
-    if False:
-        # DISABLED - This is the code for AVERAGE, which is currently disabled.
-
-        # If there is more than a single match we need to ultimately merge the
-        # postings. Also, if the reducing posting provides a specific cost, we
-        # need to update the cost basis as well. Both of these cases are carried
-        # out by removing all the matches and readding them later on.
-        if len(matches) == 1 and (
-            not isinstance(posting.cost.number_per, Decimal)
-            and not isinstance(posting.cost.number_total, Decimal)
-        ):
-            # There is no cost. Just reduce the one leg. This should be the
-            # normal case if we always merge augmentations and the user lets
-            # Beancount deal with the cost.
-            match = matches[0]
-            sign = -1 if posting.units.number < ZERO else 1
-            number = min(abs(match.units.number), abs(posting.units.number))
-            match_units = Amount(number * sign, match.units.currency)
-            booked_reductions.append(posting._replace(units=match_units, cost=match.cost))
-            _insufficient = match_units.number != posting.units.number
-        else:
-            # Merge the matching postings to a single one.
-            merged_units = inventory.Inventory()
-            merged_cost = inventory.Inventory()
-            for match in matches:
-                merged_units.add_amount(match.units)
-                merged_cost.add_amount(convert.get_weight(match))
-            if len(merged_units) != 1 or len(merged_cost) != 1:
-                errors.append(
-                    AmbiguousMatchError(
-                        entry.meta,
-                        "Cannot merge positions in multiple currencies: {}".format(
-                            ", ".join(
-                                position.to_string(match_posting)
-                                for match_posting in matches
-                            )
-                        ),
-                        entry,
-                    )
+        # Verify that all matches share a single currency (both units and
+        # cost). If not, we cannot merge them.
+        if len(merged_units_inv) != 1 or len(merged_cost_inv) != 1:
+            errors.append(
+                AmbiguousMatchError(
+                    entry.meta,
+                    "Cannot merge positions in multiple currencies: {}".format(
+                        ", ".join(
+                            position.to_string(match_posting)
+                            for match_posting in matches
+                        )
+                    ),
+                    entry,
                 )
-            else:
-                if isinstance(posting.cost.number_per, Decimal) or isinstance(
-                    posting.cost.number_total, Decimal
-                ):
-                    errors.append(
-                        AmbiguousMatchError(
-                            entry.meta,
-                            "Explicit cost reductions aren't supported yet: {}".format(
-                                position.to_string(posting)
-                            ),
-                            entry,
-                        )
-                    )
-                else:
-                    # Insert postings to remove all the matches.
-                    booked_reductions.extend(
-                        posting._replace(
-                            units=-match.units, cost=match.cost, flag=flags.FLAG_MERGING
-                        )
-                        for match in matches
-                    )
-                    units = merged_units[0].units
-                    date = matches[0].cost.date  ## FIXME: Select which one,
-                    ## oldest or latest.
-                    cost_units = merged_cost[0].units
-                    cost = Cost(
-                        cost_units.number / units.number, cost_units.currency, date, None
-                    )
+            )
+            return booked_reductions, booked_matches, errors, False
 
-                    # Insert a posting to refill those with a replacement match.
-                    booked_reductions.append(
-                        posting._replace(units=units, cost=cost, flag=flags.FLAG_MERGING)
-                    )
+        # Build the merged lot at weighted-average cost.
+        units = next(iter(merged_units_inv)).units
+        cost_units = next(iter(merged_cost_inv)).units
+        merged_date = max(match.cost.date for match in matches)
+        merged_cost = Cost(
+            cost_units.number / units.number, cost_units.currency, merged_date, None
+        )
 
-                    # Now, match the reducing request against this lot.
-                    booked_reductions.append(
-                        posting._replace(units=posting.units, cost=cost)
-                    )
-                    _insufficient = abs(posting.units.number) > abs(units.number)
+        # Remove all matching lots.
+        booked_reductions.extend(
+            posting._replace(
+                units=-match.units, cost=match.cost, flag=flags.FLAG_MERGING
+            )
+            for match in matches
+        )
+
+        # Re-add the merged replacement lot.
+        booked_reductions.append(
+            posting._replace(units=units, cost=merged_cost, flag=flags.FLAG_MERGING)
+        )
+
+        # Reduce against the merged lot.
+        booked_reductions.append(posting._replace(cost=merged_cost))
+        booked_matches.extend(matches)
+        insufficient = abs(posting.units.number) > abs(units.number)
+
+    return booked_reductions, booked_matches, errors, insufficient
 
 
 _BOOKING_METHODS = {
