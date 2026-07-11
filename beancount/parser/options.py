@@ -294,7 +294,13 @@ OUTPUT_OPTION_GROUPS = [
                 [],
                 "beancount.plugins.module_name",
                 converter=options_validate_plugin,
-            )
+            ),
+            Opt(
+                "pre_booking_plugins",
+                [],
+                "beancount.plugins.module_name",
+                converter=options_validate_plugin,
+            ),
         ],
     ),
 ]

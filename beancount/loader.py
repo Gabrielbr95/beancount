@@ -601,23 +601,35 @@ def _load(
         )
         entries.sort(key=data.entry_sortkey)
 
-    # Run interpolation on incomplete entries.
-    with misc_utils.log_time("booking", log_timings, indent=1):
-        entries, balance_errors = booking.book(entries, options_map)
-        parse_errors.extend(balance_errors)
+    # Insert the user PYTHONPATH entries before processing the plugins.
+    # This covers both pre-booking and post-booking plugin phases.
+    saved_pythonpath = list(sys.path)
+    try:
+        if "pythonpath" in options_map:
+            sys.path[0:0] = options_map["pythonpath"]
 
-    # Transform the entries.
-    with misc_utils.log_time("run_transformations", log_timings, indent=1):
-        # Insert the user PYTHONPATH entries before processing the plugins.
-        saved_pythonpath = list(sys.path)
-        try:
-            if "pythonpath" in options_map:
-                sys.path[0:0] = options_map["pythonpath"]
+        # Run pre-booking plugins (before lot booking).
+        with misc_utils.log_time("pre_booking_plugins", log_timings, indent=1):
+            entries, parse_errors = _run_plugin_functions(
+                options_map["pre_booking_plugins"],
+                entries,
+                parse_errors,
+                options_map,
+                log_timings,
+            )
+
+        # Run interpolation on incomplete entries.
+        with misc_utils.log_time("booking", log_timings, indent=1):
+            entries, balance_errors = booking.book(entries, options_map)
+            parse_errors.extend(balance_errors)
+
+        # Transform the entries.
+        with misc_utils.log_time("run_transformations", log_timings, indent=1):
             entries, errors = run_transformations(
                 entries, parse_errors, options_map, log_timings
             )
-        finally:
-            sys.path[:] = saved_pythonpath
+    finally:
+        sys.path[:] = saved_pythonpath
 
     # Validate the list of entries.
     with misc_utils.log_time("beancount.ops.validate", log_timings, indent=1):
@@ -670,6 +682,36 @@ def run_transformations(
             options_map["plugin_processing_mode"]
         )
 
+    entries, errors = _run_plugin_functions(
+        plugins_iter, entries, errors, options_map, log_timings
+    )
+
+    return entries, errors
+
+
+def _run_plugin_functions(
+    plugins_iter,
+    entries: data.Directives,
+    errors: list[data.BeancountError],
+    options_map: OptionsMap,
+    log_timings: Any,
+) -> tuple[data.Directives, list[data.BeancountError]]:
+    """Run a sequence of plugin functions over the entries.
+
+    This is the shared implementation used by both the pre-booking and
+    post-booking plugin phases. Each plugin is imported, its ``__plugins__``
+    functions are invoked with ``(entries, options_map, *args)``, and errors
+    are collected. Entries are re-sorted after each plugin.
+
+    Args:
+      plugins_iter: An iterable of ``(plugin_name, plugin_config)`` tuples.
+      entries: A list of directives.
+      errors: A list of errors to extend (modified in place and returned).
+      options_map: An options dict as read from the parser.
+      log_timings: A function to write timing log entries to, or None.
+    Returns:
+      A tuple of ``(entries, errors)``.
+    """
     for plugin_name, plugin_config in plugins_iter:
         # Issue a warning on a renamed module.
         renamed_name = RENAMED_MODULES.get(plugin_name, None)

@@ -1,6 +1,7 @@
 __copyright__ = "Copyright (C) 2014-2025  Martin Blais"
 __license__ = "GNU GPLv2"
 
+import collections
 import functools
 import importlib
 import logging
@@ -13,6 +14,7 @@ from pathlib import Path
 from unittest import mock
 
 from beancount import loader
+from beancount.core import data
 from beancount.parser import parser
 from beancount.utils import test_utils
 
@@ -160,6 +162,122 @@ class TestLoader(unittest.TestCase):
                 dedent=True,
             )
         self.assertTrue(warn.called)
+        self.assertFalse(errors)
+
+
+def get_marker_plugin_module():
+    """Return a plugin module that tags entries with a meta key.
+
+    Used to verify pre-booking plugins run before booking.
+    """
+
+    class MarkerModule:
+        pass
+
+    def mark_entries(entries, options_map):
+        new_entries = []
+        for entry in entries:
+            new_meta = dict(entry.meta) if entry.meta else {}
+            new_meta["pre_booking_marker"] = True
+            new_entries.append(entry._replace(meta=new_meta))
+        return new_entries, []
+
+    MarkerModule.__plugins__ = (mark_entries,)
+    return MarkerModule
+
+
+def get_error_plugin_module():
+    """Return a plugin module that produces an error."""
+
+    class ErrorModule:
+        pass
+
+    PluginError = collections.namedtuple("PluginError", "source message entry")
+
+    def emit_error(entries, options_map):
+        error = PluginError(
+            source=data.new_metadata("<test>", 0),
+            message="Pre-booking plugin error",
+            entry=None,
+        )
+        return entries, [error]
+
+    ErrorModule.__plugins__ = (emit_error,)
+    return ErrorModule
+
+
+def mock_pre_booking_import(module_name):
+    """Mock import_module for pre-booking plugin tests."""
+    if module_name == "marker_plugin":
+        return get_marker_plugin_module()
+    elif module_name == "error_plugin":
+        return get_error_plugin_module()
+    else:
+        return real_import_module(module_name)
+
+
+class TestPreBookingPlugins(unittest.TestCase):
+    """Tests for the pre_booking_plugins option and phase."""
+
+    @mock.patch(
+        "importlib.import_module", side_effect=mock_pre_booking_import
+    )
+    def test_pre_booking_plugin_runs_before_booking(self, _):
+        # A pre-booking plugin modifies entries; booking must see the
+        # modified entries (proving the plugin ran before booking).
+        with mock.patch("beancount.loader.booking.book") as mock_book:
+            captured_entries = []
+
+            def capture_book(entries, options_map):
+                # Snapshot the entries booking receives.
+                captured_entries.extend(entries)
+                return entries, []
+
+            mock_book.side_effect = capture_book
+
+            entries, errors, options_map = loader.load_string(
+                'option "pre_booking_plugins" "marker_plugin"\n\n' + TEST_INPUT
+            )
+
+        # Booking received entries tagged by the pre-booking plugin.
+        self.assertTrue(captured_entries)
+        for entry in captured_entries:
+            self.assertIn("pre_booking_marker", entry.meta)
+
+    @mock.patch(
+        "importlib.import_module", side_effect=mock_pre_booking_import
+    )
+    def test_pre_booking_plugin_option_registers(self, _):
+        # End-to-end: the option syntax registers a pre-booking plugin
+        # that modifies entries before booking.
+        entries, errors, options_map = loader.load_string(
+            'option "pre_booking_plugins" "marker_plugin"\n\n' + TEST_INPUT
+        )
+        self.assertFalse(errors)
+        # All entries should be tagged by the marker plugin.
+        for entry in entries:
+            self.assertIn("pre_booking_marker", entry.meta)
+        # Verify the option was parsed correctly.
+        self.assertEqual(
+            [("marker_plugin", None)],
+            options_map["pre_booking_plugins"],
+        )
+
+    @mock.patch(
+        "importlib.import_module", side_effect=mock_pre_booking_import
+    )
+    def test_pre_booking_plugin_errors_collected(self, _):
+        # Pre-booking plugin errors are collected and returned to the user.
+        entries, errors, options_map = loader.load_string(
+            'option "pre_booking_plugins" "error_plugin"\n\n' + TEST_INPUT
+        )
+        self.assertTrue(errors)
+        self.assertTrue(any("Pre-booking plugin error" in e.message for e in errors))
+
+    def test_pre_booking_plugins_default_empty(self):
+        # Without the option, pre_booking_plugins defaults to [].
+        entries, errors, options_map = loader.load_string(TEST_INPUT)
+        self.assertEqual([], options_map["pre_booking_plugins"])
         self.assertFalse(errors)
 
 
