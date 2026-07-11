@@ -2734,8 +2734,7 @@ class TestBookCrossover(_BookingTestBase):
         """
 
 
-@unittest.skip("Booking.AVERAGE is disabled.")
-class _TestBookAmbiguousAVERAGE(_BookingTestBase):
+class TestBookAmbiguousAVERAGE(_BookingTestBase):
     @book_test(Booking.AVERAGE)
     def test_ambiguous__AVERAGE__trivial1(self, _, __):
         """
@@ -2819,11 +2818,11 @@ class _TestBookAmbiguousAVERAGE(_BookingTestBase):
         2015-06-01 * #booked
           M Assets:Account      -60 HOOL {100.00 USD, 2015-10-01}
           M Assets:Account      -40 HOOL {110.00 USD, 2015-10-02}
-          M Assets:Account      100 HOOL {104.00 USD, 2015-10-01}
-          Assets:Account        -20 HOOL {104.00 USD, 2015-10-01}
+          M Assets:Account      100 HOOL {104.00 USD, 2015-10-02}
+          Assets:Account        -20 HOOL {104.00 USD, 2015-10-02}
 
         2015-01-01 * #ex
-          Assets:Account         80 HOOL {104.00 USD, 2015-10-01}
+          Assets:Account         80 HOOL {104.00 USD, 2015-10-02}
         """
 
     @book_test(Booking.AVERAGE)
