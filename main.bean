@@ -7,15 +7,17 @@ option "operating_currency" "USD"
 option "inferred_tolerance_default" "BRL:0.01"
 ; Beancount 3.2.3 has Booking.AVERAGE disabled; use NONE as the supported
 ; workaround for imported stock trades.
-;option "booking_method" "AVERAGE"
-option "booking_method" "FIFO"
+option "booking_method" "AVERAGE"
+;option "booking_method" "FIFO"
 
 option "insert_pythonpath" "True"
+
+option "pre_booking_plugins" "plugins.stock_split"
 
 plugin "beancount.plugins.auto_accounts"
 plugin "beancount.plugins.implicit_prices"
 plugin "beancount.plugins.check_average_cost"
-plugin "plugins.stock_split"
+;plugin "plugins.stock_split"
 
 
 ; Fava Import Configuration

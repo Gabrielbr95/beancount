@@ -1,7 +1,7 @@
 """Plugin to adjust historical transactions for stock splits based on ledger entries.
 
 Usage in beancount:
-    plugin "plugins.stock_split"
+    option "pre_booking_plugins" "plugins.stock_split"
 
 Inside your journal:
     2026-05-20 custom "desdobramento" "PETR4" "4"
@@ -14,6 +14,8 @@ from typing import Optional
 
 from beancount.core.amount import Amount
 from beancount.core.data import Custom, Entries, Transaction
+from beancount.core.number import MISSING
+from beancount.core.position import Cost, CostSpec
 
 __plugins__ = ["stock_split"]
 
@@ -71,7 +73,12 @@ def stock_split(entries: Entries, _: dict, plugin_config: Optional[str] = None):
         for posting in entry.postings:
             modified_posting = posting
 
-            if posting.units is not None:
+            if (
+                posting.units is not None
+                and posting.units is not MISSING
+                and posting.units.number is not None
+                and posting.units.number is not MISSING
+            ):
                 for split in splits:
                     if (
                         modified_posting.units.currency == split["ticker"]
@@ -81,12 +88,39 @@ def stock_split(entries: Entries, _: dict, plugin_config: Optional[str] = None):
 
                         new_cost = modified_posting.cost
                         if new_cost is not None:
-                            new_cost = new_cost._replace(
-                                number=new_cost.number / split["ratio"]
-                            )
+                            if isinstance(new_cost, CostSpec):
+                                # Only divide when the value is an actual number.
+                                # If it's None or MISSING, leave it untouched so
+                                # interpolation can fill it in later.
+                                replacements = {}
+                                if (
+                                    new_cost.number_per is not None
+                                    and new_cost.number_per is not MISSING
+                                ):
+                                    replacements["number_per"] = (
+                                        new_cost.number_per / split["ratio"]
+                                    )
+                                if (
+                                    new_cost.number_total is not None
+                                    and new_cost.number_total is not MISSING
+                                ):
+                                    replacements["number_total"] = (
+                                        new_cost.number_total / split["ratio"]
+                                    )
+                                if replacements:
+                                    new_cost = new_cost._replace(**replacements)
+                            elif isinstance(new_cost, Cost):
+                                if new_cost.number is not None:
+                                    new_cost = new_cost._replace(
+                                        number=new_cost.number / split["ratio"]
+                                    )
 
                         new_price = modified_posting.price
-                        if new_price is not None:
+                        if (
+                            new_price is not None
+                            and new_price.number is not None
+                            and new_price.number is not MISSING
+                        ):
                             new_price = new_price._replace(
                                 number=new_price.number / split["ratio"]
                             )

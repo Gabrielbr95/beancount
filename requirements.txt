@@ -1,4 +1,4 @@
-beancount>=2.3.5
+#beancount>=2.3.5
 beangulp>=0.2.0
 openpyxl>=3.1.2
 pyyaml>=6.0.0
@@ -7,3 +7,4 @@ git+https://github.com/beancount/beanprice.git#egg=beanprice
 git+https://github.com/PhracturedBlue/fava-portfolio-summary
 fava-portfolio-returns
 yfinance>=0.2.0
+git+ssh://git@github.com/Gabrielbr95/beancount.git@master
