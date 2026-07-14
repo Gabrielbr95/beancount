@@ -36,7 +36,6 @@ class EventRecord:
     event_date: date
     directive: str
     values: list[str]
-    tags: set[str] = field(default_factory=set)
 
 
 @dataclass(slots=True)
@@ -168,7 +167,7 @@ class BrapiPriceUpdater:
         self.ledger = ledger
         self.config = config or {}
         self.base_dir = Path(self.ledger.beancount_file_path).parent
-        self.prices_dir = self.base_dir / "prices"
+        self.prices_dir = self.base_dir / "beans" / "prices"
         self.overlap_days = int(self.config.get("overlap_days", 7))
         self.initial_range = str(self.config.get("initial_range", "3mo"))
         self.full_history_range = str(self.config.get("full_history_range", "10y"))
@@ -337,7 +336,6 @@ class BrapiPriceUpdater:
                     event_date=event_date,
                     directive=directive,
                     values=values,
-                    tags={"brapi"},
                 )
             )
 
@@ -362,7 +360,6 @@ class BrapiPriceUpdater:
                     event_date=event_date,
                     directive=directive,
                     values=values,
-                    tags={"brapi"},
                 )
             )
 
@@ -399,10 +396,7 @@ class BrapiPriceUpdater:
         if events:
             lines.append("")
             for event in events:
-                tag_str = " ".join(f"^{t}" for t in sorted(event.tags)) if event.tags else ""
                 line = f'{event.event_date.isoformat()} custom "{event.directive}" ' + " ".join(event.values)
-                if tag_str:
-                    line += f"  {tag_str}"
                 lines.append(line)
         else:
             lines.append("; no corporate events available for current BRAPI plan")

@@ -37,7 +37,7 @@ from decimal import Decimal, InvalidOperation
 # ---------------------------------------------------------------------------
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAIN_BEAN = os.path.join(REPO_ROOT, "main.bean")
-PRICES_DIR = os.path.join(REPO_ROOT, "prices")
+PRICES_DIR = os.path.join(REPO_ROOT, "beans", "prices")
 
 logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.WARNING)
 log = logging.getLogger(__name__)

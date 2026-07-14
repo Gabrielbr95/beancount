@@ -1,0 +1,20 @@
+; source: Yahoo Finance
+; asset: CXSE3
+; quote_currency: BRL
+; last_update: 2026-05-04
+; generated_at: 2026-07-13T22:21:28-03:00
+
+2021-11-05 custom "dividendo" "CXSE3" 0.244612 "source=yahoo-dividends"
+2022-04-22 custom "dividendo" "CXSE3" 0.29579 "source=yahoo-dividends"
+2022-11-04 custom "dividendo" "CXSE3" 0.35278 "source=yahoo-dividends"
+2023-04-28 custom "dividendo" "CXSE3" 0.510369 "source=yahoo-dividends"
+2023-10-25 custom "dividendo" "CXSE3" 0.5 "source=yahoo-dividends"
+2024-04-29 custom "dividendo" "CXSE3" 0.566339 "source=yahoo-dividends"
+2024-08-02 custom "dividendo" "CXSE3" 0.28 "source=yahoo-dividends"
+2024-11-05 custom "dividendo" "CXSE3" 0.234 "source=yahoo-dividends"
+2025-01-06 custom "dividendo" "CXSE3" 0.311697 "source=yahoo-dividends"
+2025-05-02 custom "dividendo" "CXSE3" 0.320175 "source=yahoo-dividends"
+2025-08-04 custom "dividendo" "CXSE3" 0.31 "source=yahoo-dividends"
+2025-11-04 custom "dividendo" "CXSE3" 0.32 "source=yahoo-dividends"
+2026-01-05 custom "dividendo" "CXSE3" 0.352128 "source=yahoo-dividends"
+2026-05-04 custom "dividendo" "CXSE3" 0.33 "source=yahoo-dividends"

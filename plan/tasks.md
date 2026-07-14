@@ -45,6 +45,16 @@
 - [ ] 26. Fill B3SA3 ratio in `corporate_actions.bean:23` — either re-run `reconcile_actions.py` against fresh tmp.bean containing B3SA3 entry, OR manually set ratio to `3` (optionally fix date to 2021-05-17). (Verification: bean-check no longer reports "Ratio is 0" for B3SA3)
 - [ ] 27. Add `include "B3SA3.bean"` to `prices/prices.bean` — will be auto-added on next updater run with all_history=True. (Verification: `prices/prices.bean` contains the B3SA3 line, `bean-check` no longer reports missing glob)
 
+## Slice 11: Repo reorganization — beans/ and scripts/ (2026-07-13)
+- [x] 31. `git mv` root-level .bean files to `beans/`: accounts, commodities, transactions, corporate_actions, splits, income_events, manual_corrections. Leave `main.bean` and `tmp.bean` at root. (Verification: `ls beans/*.bean` shows 7 files; `ls *.bean` shows only main.bean, tmp.bean)
+- [x] 32. `git mv prices/ beans/prices/`. (Verification: `ls beans/prices/prices.bean` exists; old `prices/` dir gone)
+- [x] 33. Update `main.bean:49-55` include paths: `X.bean` → `beans/X.bean` (6 files) and `prices/prices.bean` → `beans/prices/prices.bean`. (Verification: `bean-check main.bean` finds all includes)
+- [x] 34. Make yahoo prices_dir configurable: in `plugins/yahoo_price_service.py:144`, read `self.config.get("prices_dir", "prices")` instead of hardcoded `"prices"`. In `main.bean:28`, add config string to the fava-extension directive: `"{ 'prices_dir': 'beans/prices' }"`. Update brapi_price_service.py:171 hardcoded path to `"beans" / "prices"` (dormant, but don't let it silently break). (Verification: grep shows config key in yahoo; main.bean has config string; brapi hardcoded to beans/prices)
+- [x] 35. `git mv reconcile_actions.py scripts/reconcile_actions.py`. Hardcode new paths (no REPO_ROOT refactor — user will refactor later): `base_dir / "prices"` → `base_dir / "beans" / "prices"`; output files → `base_dir / "beans" / "X.bean"`. Fix usage docstring to `python scripts/reconcile_actions.py`. (Verification: `python scripts/reconcile_actions.py --help` runs from repo root)
+- [x] 36. Update `scripts/check_dividends.py:40`: `PRICES_DIR = os.path.join(REPO_ROOT, "prices")` → `os.path.join(REPO_ROOT, "beans", "prices")`. (Verification: script's startup print shows new path)
+- [x] 37. Run `bean-check main.bean` (Verification: zero errors). Smoke-test `python scripts/check_dividends.py` and `python scripts/reconcile_actions.py --help`.
+- [ ] 38. Commit and push. (Verification: `git log --oneline -1` shows the refactor commit on origin/main)
+
 ## Slice 10: Fix "Not enough lots" — pre-booking split application (DEFERRED)
 - [!] 28. Decide between Option B (bake splits into source .bean) vs Option C (standalone `scripts/apply_splits.py` pre-processor). Option C is leading candidate. See decision [011] for full research notes. User will return to this.
 - [ ] 29. Scope the chosen approach against the 20 affected errors and the existing pipeline (import.py → reconcile_actions.py → bean-check).

@@ -1,0 +1,94 @@
+2020-09-02 * "HGLG11 Subscricao"
+  id: "cusom_1"
+  source: "Custom"
+  asset: "HGLG11"
+  Assets:Investment:XP:HGLG11       4 HGLG11 {  0.1 BRL, 2020-09-02}
+  Assets:Investment:XP:Cash                    -0.4 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-09-02 * "HGLG11 Subscricao"
+  id: "cusom_2"
+  source: "Custom"
+  asset: "HGLG11"
+  Assets:Investment:XP:HGLG11       3 HGLG11 {  0.1 BRL, 2021-09-02}
+  Assets:Investment:XP:Cash                    -0.3 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-02-03 * "XPLG11 Subscricao"
+  id: "cusom_3"
+  source: "Custom"
+  asset: "XPLG11"
+  Assets:Investment:XP:XPLG11       5 XPLG11 {  0.1 BRL, 2021-02-03}
+  Assets:Investment:XP:Cash                    -0.5 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2020-12-02 * "HGRU11 Subscricao"
+  id: "cusom_4"
+  source: "Custom"
+  asset: "HGRU11"
+  Assets:Investment:XP:HGRU11       8 HGRU11 {  0.1 BRL, 2020-12-02}
+  Assets:Investment:XP:Cash                    -0.8 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-05-18 * "IRDM11 Subscricao"
+  id: "cusom_5"
+  source: "Custom"
+  asset: "IRDM11"
+  Assets:Investment:XP:IRDM11       7 IRDM11 {  0.1 BRL, 2021-05-18}
+  Assets:Investment:XP:Cash                    -0.7 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-09-16 * "IRDM11 Subscricao"
+  id: "cusom_6"
+  source: "Custom"
+  asset: "IRDM11"
+  Assets:Investment:XP:IRDM11       9 IRDM11 {  0.1 BRL, 2021-09-16}
+  Assets:Investment:XP:Cash                    -0.9 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2020-12-16 * "MCCI11 Subscricao"
+  id: "cusom_7"
+  source: "Custom"
+  asset: "MCCI11"
+  Assets:Investment:XP:MCCI11       12 MCCI11 {  0.1 BRL, 2020-12-16}
+  Assets:Investment:XP:Cash                    -1.2 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-11-24 * "XPML11 Subscricao"
+  id: "cusom_8"
+  source: "Custom"
+  asset: "XPML11"
+  Assets:Investment:XP:XPML11       8 XPML11 {  0.1 BRL, 2021-11-24}
+  Assets:Investment:XP:Cash                    -0.8 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2021-10-05 * "XPBR31 Incorporacao"
+  id: "cusom_9"
+  source: "Custom"
+  asset: "XPBR31"
+  Assets:Investment:XP:XPBR31                   7 XPBR31 {  0.1 BRL, 2021-10-05}
+  Assets:Investment:XP:Cash                    -0.7 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2025-12-01 * "IRDM11 -> IRIM11 merger conversion"
+  id: "cusom_10"
+  source: "Custom"
+  asset: "IRIM11"
+  Assets:Investment:XP:IRDM11  -187 IRDM11 {}
+  Assets:Investment:XP:IRIM11   165.46 IRIM11 { 101.43986462 BRL, 2025-12-01 }
+  Expenses:Investment:XP:Fees     0 BRL
+
+2020-07-16 * "CVCB3 Incorporacao"
+  id: "cusom_11"
+  source: "Custom"
+  asset: "CVCB3"
+  Assets:Investment:XP:CVCB3                   15 CVCB3 {  0.1 BRL, 2020-07-16}
+  Assets:Investment:XP:Cash                    -1.5 BRL
+  Expenses:Investment:XP:Fees     0 BRL
+
+2025-07-22 * "Ticker rename MALL11 > PMLL11"
+  id: "cusom_12"
+  source: "Custom"
+  asset: "PMLL11"
+  Assets:Investment:XP:MALL11   -153 MALL11 {}
+  Assets:Investment:XP:PMLL11    153 PMLL11 {}

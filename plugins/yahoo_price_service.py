@@ -4,12 +4,10 @@ Mirrors brapi_price_service.py structure exactly.
 Primary source for prices, splits, and dividends.
 BRAPI is retained as a dormant reference (see brapi_price_service.py).
 
-Output files:
-  prices/TICKER.bean         — daily close prices
-  prices/TICKER_events.bean  — splits (desdobramento/grupamento/bonificacao)
-                               and dividends (dividendo, reference only)
-
-Tags: ^yahoo on all event entries.
+Output files (prices_dir configurable via main.bean, default 'prices'):
+  <prices_dir>/TICKER.bean         — daily close prices
+  <prices_dir>/TICKER_events.bean  — splits (desdobramento/grupamento/bonificacao)
+                                and dividends (dividendo, reference only)
 """
 
 from __future__ import annotations
@@ -57,7 +55,6 @@ class EventRecord:
     event_date: date
     directive: str
     values: list[str]
-    tags: set[str] = field(default_factory=set)
 
 
 @dataclass(slots=True)
@@ -141,7 +138,7 @@ class YahooPriceUpdater:
         self.ledger = ledger
         self.config = config or {}
         self.base_dir = Path(self.ledger.beancount_file_path).parent
-        self.prices_dir = self.base_dir / "prices"
+        self.prices_dir = self.base_dir / self.config.get("prices_dir", "prices")
         self.overlap_days = int(self.config.get("overlap_days", 7))
         self.max_assets = self.config.get("max_assets")
         # all_history: when True, fetch prices+events for every ticker that ever
@@ -306,7 +303,6 @@ class YahooPriceUpdater:
                         _decimal_to_text(ratio),
                         _quote("source=yahoo-splits"),
                     ],
-                    tags={"yahoo"},
                 ))
 
         # --- Dividends (reference only — not used in reconcile enrichment) ---
@@ -331,7 +327,6 @@ class YahooPriceUpdater:
                         _decimal_to_text(amount),
                         _quote("source=yahoo-dividends"),
                     ],
-                    tags={"yahoo"},
                 ))
 
         events.sort(key=lambda e: e.event_date)
@@ -374,13 +369,10 @@ class YahooPriceUpdater:
         if events:
             lines.append("")
             for event in events:
-                tag_str = " ".join(f"^{t}" for t in sorted(event.tags))
                 line = (
                     f'{event.event_date.isoformat()} custom "{event.directive}" '
                     + " ".join(event.values)
                 )
-                if tag_str:
-                    line += f"  {tag_str}"
                 lines.append(line)
         else:
             lines.append("; no events found")

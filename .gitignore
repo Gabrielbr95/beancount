@@ -139,3 +139,5 @@ api_keys.txt
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+*.picklecache

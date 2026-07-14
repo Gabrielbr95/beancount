@@ -24,8 +24,11 @@ plugin "beancount.plugins.check_average_cost"
 ; Importer configuration is managed in `import.py` via the `CONFIG` and `HOOKS` variables.
 2016-04-01 custom "fava-option" "import-config" "import.py"
 2016-04-01 custom "fava-option" "import-dirs" "export"
+2016-04-01 custom "fava-option" "default-file" "tmp.bean"
 2010-01-01 custom "fava-extension" "fava_dashboards"
-2010-01-01 custom "fava-extension" "plugins.price_updater"
+2010-01-01 custom "fava-extension" "plugins.price_updater" "{
+  'prices_dir': 'beans/prices'
+}"
 
 2010-01-01 custom "fava-extension" "fava_portfolio_returns" "{
   'beangrow_config': 'beangrow.pbtxt'
@@ -46,10 +49,10 @@ plugin "beancount.plugins.check_average_cost"
     'twr': False,
     }"
 
-include "accounts.bean"
-include "commodities.bean"
-include "transactions.bean"
-include "prices/prices.bean"
-include "corporate_actions.bean"
-include "income_events.bean"
-include "manual_corrections.bean"
+include "beans/accounts.bean"
+include "beans/commodities.bean"
+include "beans/transactions.bean"
+include "beans/prices/prices.bean"
+include "beans/corporate_actions.bean"
+include "beans/income_events.bean"
+include "beans/manual_corrections.bean"
