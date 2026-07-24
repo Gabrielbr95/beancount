@@ -9,6 +9,7 @@
 1900-01-01 open Assets:Investment:Clear:Cash BRL
 1900-01-01 open Assets:Investment:IBKR:Cash USD
 1900-01-01 open Assets:Investment:Inter:Cash BRL
+1900-01-01 open Assets:Investment:XP:Cash BRL
 
 ; Equity
 1900-01-01 open Equity:Portfolio:BB:Opening BRL
@@ -51,3 +52,11 @@
 
 ; Liabilities
 1900-01-01 open Liabilities:Credit:BB:Card BRL
+1900-01-01 open Liabilities:Credit:BB:Card:EloGrafite BRL
+1900-01-01 open Liabilities:Credit:BB:Card:PlatinumVisa
+1900-01-01 open Liabilities:Credit:Inter:Card BRL
+
+; TODO placeholder accounts (Pluggy importer — replace with real categories)
+1900-01-01 open Expenses:TODO BRL
+1900-01-01 open Income:TODO BRL
+1900-01-01 open Assets:TODO BRL

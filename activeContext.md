@@ -1,31 +1,28 @@
 # Active Context
 
 ## Resume Here
-- **Tier:** Application
-- **Current Slice:** N/A — pre-booking plugins feature is complete and merged to master
-- **Current Task:** N/A
-- **Next Action:** In `my_beancount`, commit the uncommitted changes (`stock_split.py` fix, `requirements.txt` pointing to `@master`, ledger changes). Then reinstall beancount from `@master` in the new venv: `pip install -r requirements.txt --upgrade`. Verify with `python -c "from beancount.parser.options import OPTIONS_DEFAULTS; print('pre_booking_plugins' in OPTIONS_DEFAULTS)"`. After that, test `stock_split` end-to-end with a real ledger using `option "pre_booking_plugins" "plugins.stock_split"`.
+- **Tier:** Script
+- **Current Slice:** Slice 5 — End-to-end verification (Pluggy importer)
+- **Current Task:** N/A — all 19 tasks done except activeContext update
+- **Next Action:** Commit changes. Then manually review Pluggy entries in tmp.bean and replace `Expenses:TODO` / `Income:TODO` / `Assets:TODO` counterparts with real accounts. Consider `smart_importer` hooks for automated categorization.
 
 ## Completed This Session
-- Implemented pre-booking plugins feature (all 4 slices, 9 tasks) on branch `feature/pre-booking-plugins` in the `beancount` fork.
-- Extracted `_run_plugin_functions` helper from `run_transformations` in `loader.py`.
-- Added `pre_booking_plugins` option to `options.py` (reuses `options_validate_plugin`).
-- Wired pre-booking phase into `_load()` between `entries.sort()` and `booking.book()`.
-- Added 4 tests in `loader_test.py` (`TestPreBookingPlugins`). Full suite: 1135 tests pass.
-- **Design correction (Decision [004]):** `pre_booking_plugins` must NOT be in `READ_ONLY_OPTIONS` — that set blocks the `option` directive in the parser. Reversed and documented.
-- Fixed `stock_split.py` for pre-booking compatibility: handles `CostSpec` (pre-booking) vs `Cost` (post-booking), guards against `units.number is None`, updated usage docstring.
-- Merged both feature branches (`feature/average-booking-method` and `feature/pre-booking-plugins`) into `master` with `--no-ff` merge commits. Pushed to `origin/master`.
-- Updated `my_beancount/requirements.txt` to point to `@master` instead of `@feature/average-booking-method`.
+- Probed Pluggy API — confirmed personal access works via Meu Pluggy proxy.
+- Discovered correct endpoint: `GET /v2/transactions?accountId=` (cursor-paginated). Old `/transactions` returns 410, `/v1/transactions` returns 403.
+- Identified 3 item IDs → 8 accounts across Banco Inter, XP, and Banco do Brasil.
+- Implemented `importers/pluggy.py` — `PluggyImporter` (beangulp.Importer subclass) with trigger-file pattern.
+- Wired into `import.py` CONFIG with full account mapping.
+- Added new accounts to `beans/accounts.bean`: `Assets:Investment:XP:Cash`, `Liabilities:Credit:BB:Card:EloGrafite`, `Liabilities:Credit:BB:Card:PlatinumVisa`, `Liabilities:Credit:Inter:Card`, `Expenses:TODO`, `Income:TODO`, `Assets:TODO`.
+- Added `pluggy_item_ids` to `api_keys.txt`.
+- Verified: 1546 Pluggy entries extracted, all balanced, zero Pluggy-related errors. Dedup confirmed (all 1546 marked duplicate on second run).
 
 ## Blockers / Open Questions
-- `my_beancount` repo has uncommitted changes: `plugins/stock_split.py`, `requirements.txt`, `main.bean`, `.main.bean.picklecache`. Need to commit before migrating.
-- End-to-end test of `stock_split` with a real ledger not yet done.
+- XP duplicate transactions: both XP checking accounts return separate Pluggy txn IDs for the same underlying transaction. Within-batch dedup by Pluggy txn ID doesn't catch these. beangulp's comparator-based dedup handles it on subsequent runs against existing entries.
+- Credit card transactions are mostly `PENDING` — only `POSTED` imported. Some accounts (Inter CC) have zero POSTED transactions.
 
 ## Read These First
-- `plan/tasks.md`: All 9 tasks marked `[x]` (Task 2 notes the READ_ONLY_OPTIONS reversal)
-- `plan/decisions.md`: Decision [004] explains why `pre_booking_plugins` is NOT in `READ_ONLY_OPTIONS`
-- `plan/architecture.md`: Pipeline diagram and component hierarchy
-- `beancount/loader.py:604-632`: The pre-booking phase in `_load()`
-- `beancount/loader.py:680-762`: The extracted `_run_plugin_functions` helper
-- `my_beancount/plugins/stock_split.py`: The consumer plugin (fixed for CostSpec compatibility, uncommitted)
-- `my_beancount/requirements.txt`: Now points to `@master` (uncommitted)
+- `plan/spec_pluggy.md`: Full specification of the Pluggy importer
+- `plan/decisions_pluggy.md`: 6 decisions (trigger file, account mapping, two-posting TODO, fetch-all, credentials location, POSTED-only)
+- `plan/tasks_pluggy.md`: 19 tasks, 18 done (task 19 is this update)
+- `importers/pluggy.py`: The importer implementation
+- `import.py`: CONFIG wiring with account mapping

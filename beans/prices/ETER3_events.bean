@@ -2,7 +2,7 @@
 ; asset: ETER3
 ; quote_currency: BRL
 ; last_update: 2026-03-31
-; generated_at: 2026-07-13T22:21:29-03:00
+; generated_at: 2026-07-23T21:08:10-03:00
 
 2004-06-14 custom "grupamento" "ETER3" 0.01 "source=yahoo-splits"
 2005-06-01 custom "desdobramento" "ETER3" 4 "source=yahoo-splits"

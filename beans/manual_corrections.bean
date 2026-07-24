@@ -91,4 +91,4 @@
   source: "Custom"
   asset: "PMLL11"
   Assets:Investment:XP:MALL11   -153 MALL11 {}
-  Assets:Investment:XP:PMLL11    153 PMLL11 {}
+  Assets:Investment:XP:PMLL11    153 PMLL11 { 100.7992 BRL, 2025-07-22 }

@@ -2,7 +2,7 @@
 ; asset: TAEE11
 ; quote_currency: BRL
 ; last_update: 2026-05-12
-; generated_at: 2026-07-13T22:21:43-03:00
+; generated_at: 2026-07-23T21:08:25-03:00
 
 2008-07-31 custom "dividendo" "TAEE11" 0.321393 "source=yahoo-dividends"
 2009-03-11 custom "dividendo" "TAEE11" 0.034538 "source=yahoo-dividends"

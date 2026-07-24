@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: MGLU3
 ; quote_currency: BRL
-; last_update: 2026-07-10
-; generated_at: 2026-07-13T22:21:40-03:00
+; last_update: 2026-07-22
+; generated_at: 2026-07-23T21:08:17-03:00
 
 2011-05-02 price MGLU3 4.579187 BRL
 2011-05-03 price MGLU3 4.537431 BRL
@@ -3781,3 +3781,11 @@
 2026-07-08 price MGLU3 4.51 BRL
 2026-07-09 price MGLU3 4.86 BRL
 2026-07-10 price MGLU3 5.22 BRL
+2026-07-13 price MGLU3 5.06 BRL
+2026-07-14 price MGLU3 5.05 BRL
+2026-07-15 price MGLU3 5.03 BRL
+2026-07-16 price MGLU3 4.92 BRL
+2026-07-17 price MGLU3 4.92 BRL
+2026-07-20 price MGLU3 4.86 BRL
+2026-07-21 price MGLU3 4.82 BRL
+2026-07-22 price MGLU3 4.91 BRL

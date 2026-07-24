@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: ETER3
 ; quote_currency: BRL
-; last_update: 2026-07-10
-; generated_at: 2026-07-13T22:21:29-03:00
+; last_update: 2026-07-22
+; generated_at: 2026-07-23T21:08:10-03:00
 
 2000-01-03 price ETER3 11.792522 BRL
 2000-01-04 price ETER3 11.301167 BRL
@@ -6661,3 +6661,11 @@
 2026-07-08 price ETER3 3.65 BRL
 2026-07-09 price ETER3 3.64 BRL
 2026-07-10 price ETER3 3.72 BRL
+2026-07-13 price ETER3 3.75 BRL
+2026-07-14 price ETER3 3.77 BRL
+2026-07-15 price ETER3 3.73 BRL
+2026-07-16 price ETER3 3.81 BRL
+2026-07-17 price ETER3 3.8 BRL
+2026-07-20 price ETER3 3.76 BRL
+2026-07-21 price ETER3 3.76 BRL
+2026-07-22 price ETER3 3.74 BRL

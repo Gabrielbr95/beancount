@@ -2,7 +2,7 @@
 ; asset: HYPE3
 ; quote_currency: BRL
 ; last_update: 2026-06-29
-; generated_at: 2026-07-13T22:21:32-03:00
+; generated_at: 2026-07-23T21:08:13-03:00
 
 2010-01-04 custom "desdobramento" "HYPE3" 2 "source=yahoo-splits"
 2011-05-02 custom "dividendo" "HYPE3" 0.119344 "source=yahoo-dividends"

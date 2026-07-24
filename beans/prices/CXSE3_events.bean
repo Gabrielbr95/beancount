@@ -2,7 +2,7 @@
 ; asset: CXSE3
 ; quote_currency: BRL
 ; last_update: 2026-05-04
-; generated_at: 2026-07-13T22:21:28-03:00
+; generated_at: 2026-07-23T21:08:07-03:00
 
 2021-11-05 custom "dividendo" "CXSE3" 0.244612 "source=yahoo-dividends"
 2022-04-22 custom "dividendo" "CXSE3" 0.29579 "source=yahoo-dividends"

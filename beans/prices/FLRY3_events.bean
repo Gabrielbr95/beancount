@@ -2,7 +2,7 @@
 ; asset: FLRY3
 ; quote_currency: BRL
 ; last_update: 2025-12-03
-; generated_at: 2026-07-13T22:21:30-03:00
+; generated_at: 2026-07-23T21:08:11-03:00
 
 2010-08-12 custom "dividendo" "FLRY3" 0.029137 "source=yahoo-dividends"
 2010-12-20 custom "dividendo" "FLRY3" 0.072561 "source=yahoo-dividends"

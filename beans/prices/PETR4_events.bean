@@ -2,7 +2,7 @@
 ; asset: PETR4
 ; quote_currency: BRL
 ; last_update: 2026-06-02
-; generated_at: 2026-07-13T22:21:42-03:00
+; generated_at: 2026-07-23T21:08:22-03:00
 
 2005-07-01 custom "dividendo" "PETR4" 0.250663 "source=yahoo-dividends"
 2005-09-01 custom "desdobramento" "PETR4" 4 "source=yahoo-splits"
