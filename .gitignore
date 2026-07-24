@@ -131,6 +131,9 @@ dmypy.json
 # Secrets
 api_keys.txt
 
+# Office lock files
+.~lock.*
+
 # OS generated files
 .DS_Store
 .DS_Store?
