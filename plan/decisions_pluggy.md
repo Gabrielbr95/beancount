@@ -97,3 +97,31 @@
 - **Rationale:** Pending transactions are unreliable. Importing only posted
   transactions ensures the ledger is stable. Skipped pending transactions will
   appear on the next run once they post. Loud log message for skipped count.
+
+## [018] Switch to single-leg postings + PredictPostings for Pluggy
+- **Date:** 2026-07-27
+- **Status:** Supersedes [014].
+- **Context:** Decision [014] chose two-leg postings with `Expenses:TODO` /
+  `Income:TODO` counterparts. This blocked Pluggy/B3 dedup: the heuristic
+  comparator rejected pairs because Pluggy's generic `Income:Investment:Interest`
+  (mapped from `CATEGORY_MAP`) was not a subset of B3's broker-specific
+  `Income:Investment:XP:Rendimento`. Two-leg account sets never matched.
+  Separately, `smart_importer`'s `PredictPostings` requires single-leg postings
+  to predict the counterpart — it cannot augment an existing two-leg txn.
+- **Options Considered:**
+  - A: Keep two-leg TODO, fix dedup comparator to ignore TODO accounts —
+    fragile, doesn't enable auto-categorization.
+  - B: Switch to single-leg; let `PredictPostings` predict the counterpart
+    from existing ledger classifications (narration, payee, day-of-month).
+    Requires training data: existing ~1546 Pluggy entries in `tmp.bean` must
+    be manually reclassified away from `Expenses:TODO`/`Income:TODO` first,
+    or the hook will learn to predict TODO accounts.
+  - C: Use Pluggy `category` field to map directly — brittle, doesn't match
+    Beancount account granularity, requires manual `CATEGORY_MAP` maintenance.
+- **Decision:** Option B — single-leg + PredictPostings.
+- **Rationale:** Removes the dedup blocker (single-leg Pluggy posting is a
+  subset of any B3 two-leg posting). Auto-categorizes future imports once
+  training data is clean. Pluggy `category`/`merchant` metadata retained as
+  provenance only — the default `PredictPostings` hook does not consume
+  custom metadata fields. `CATEGORY_MAP` and `_map_category` removed from
+  `importers/pluggy.py` as dead code post-refactor.

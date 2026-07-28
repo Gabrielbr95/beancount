@@ -28,3 +28,10 @@
 - [x] 17. Run `bean-check` on a ledger including tmp.bean. Confirm zero errors. (Verification: `bean-check main.bean` exits 0)
 - [x] 18. Run extract twice — confirm beangulp dedup marks second run's entries as duplicates. (Verification: second extract output shows dedup warnings, no duplicate entries)
 - [x] 19. Update `activeContext.md` with Pluggy importer summary and remaining open items. (Verification: file updated and readable)
+
+## Slice 6: Refactor to single-leg + PredictPostings (post-Pluggy, Decision [018])
+- [x] 20. Modify `_build_transaction` to emit single-leg postings (bank/CC side only). Supersedes task 11's two-posting design. (Verification: extract output shows 1 posting per Pluggy txn)
+- [x] 21. Wire `PredictPostings().hook` into `import.py` HOOKS. Add `smart_importer>=1.2` to `requirements.txt`. (Verification: `bean-check main.bean` CLEAN)
+- [x] 22. Remove dead code post-refactor: `CATEGORY_MAP` dict, `_map_category` method, unused `urlencode` import, unreachable POSTED guard in `_build_transaction`. Reword misleading "ML features" comments (PredictPostings does not consume custom metadata). (Verification: grep `CATEGORY_MAP|_map_category` in `importers/` returns no hits)
+- [x] 23. Update durable artifacts: append Decision [018] superseding [014]; amend `spec_pluggy.md` §4 (single posting) and Out-of-Scope (smart_importer DONE). Add `# TODO: reclassify tmp.bean` near HOOKS in `import.py`. (Verification: plan files match code state)
+- [ ] 24. Manually reclassify existing ~1546 Pluggy entries in `tmp.bean` away from `Expenses:TODO` / `Income:TODO` counterparts so `PredictPostings` has clean training data. (Verification: `grep -c 'Expenses:TODO\|Income:TODO' tmp.bean` trends toward 0; future imports get auto-categorized)

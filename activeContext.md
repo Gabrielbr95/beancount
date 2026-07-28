@@ -2,27 +2,25 @@
 
 ## Resume Here
 - **Tier:** Script
-- **Current Slice:** Slice 5 — End-to-end verification (Pluggy importer)
-- **Current Task:** N/A — all 19 tasks done except activeContext update
-- **Next Action:** Commit changes. Then manually review Pluggy entries in tmp.bean and replace `Expenses:TODO` / `Income:TODO` / `Assets:TODO` counterparts with real accounts. Consider `smart_importer` hooks for automated categorization.
+- **Current Slice:** pluggy.py refactor (Slice 6, Decision [018]) — complete, uncommitted
+- **Current Task:** N/A — refactor done per reviewer's prioritized sequence (steps 1–5)
+- **Next Action:** Commit pending changes then push. Files: `importers/pluggy.py`, `import.py`, `plan/decisions_pluggy.md`, `plan/spec_pluggy.md`, `plan/tasks_pluggy.md`, `activeContext.md`. After that, do task 24: manually reclassify existing `tmp.bean` Pluggy entries (replace `Expenses:TODO` / `Income:TODO` counterparts with real accounts) so `PredictPostings` has clean training data.
 
 ## Completed This Session
-- Probed Pluggy API — confirmed personal access works via Meu Pluggy proxy.
-- Discovered correct endpoint: `GET /v2/transactions?accountId=` (cursor-paginated). Old `/transactions` returns 410, `/v1/transactions` returns 403.
-- Identified 3 item IDs → 8 accounts across Banco Inter, XP, and Banco do Brasil.
-- Implemented `importers/pluggy.py` — `PluggyImporter` (beangulp.Importer subclass) with trigger-file pattern.
-- Wired into `import.py` CONFIG with full account mapping.
-- Added new accounts to `beans/accounts.bean`: `Assets:Investment:XP:Cash`, `Liabilities:Credit:BB:Card:EloGrafite`, `Liabilities:Credit:BB:Card:PlatinumVisa`, `Liabilities:Credit:Inter:Card`, `Expenses:TODO`, `Income:TODO`, `Assets:TODO`.
-- Added `pluggy_item_ids` to `api_keys.txt`.
-- Verified: 1546 Pluggy entries extracted, all balanced, zero Pluggy-related errors. Dedup confirmed (all 1546 marked duplicate on second run).
+- Called adversarial reviewer on `importers/pluggy.py`. Verdict FAIL: functionally correct, but carried dead code, misleading comments, and un-tracked plan drift.
+- Refactor step 1: deleted unused `from urllib.parse import urlencode` import.
+- Refactor step 2: deleted `CATEGORY_MAP` dict (~70 lines) and `_map_category` static method — both unreachable post single-leg refactor. No external callers (grep-confirmed).
+- Refactor step 3: removed unreachable `if status != "POSTED": return None` guard in `_build_transaction` (caller `extract` already filters); docstring rewritten — "Returns None if no amount" + "Caller is responsible for filtering on status=POSTED".
+- Refactor step 4: reworded misleading "ML features" comments. `PredictPostings` default hook trains on narration/payee/day-of-month only; `pluggy_category_id` / `pluggy_category` / `pluggy_merchant` are provenance, not features. Added `# TODO: reclassify tmp.bean` near `HOOKS` in `import.py`.
+- Refactor step 5: appended Decision `[018]` superseding `[014]` in `plan/decisions_pluggy.md`; amended `plan/spec_pluggy.md` §4 (single posting) and Out-of-Scope (smart_importer DONE); added Slice 6 tasks 20–24 to `plan/tasks_pluggy.md`.
 
 ## Blockers / Open Questions
-- XP duplicate transactions: both XP checking accounts return separate Pluggy txn IDs for the same underlying transaction. Within-batch dedup by Pluggy txn ID doesn't catch these. beangulp's comparator-based dedup handles it on subsequent runs against existing entries.
-- Credit card transactions are mostly `PENDING` — only `POSTED` imported. Some accounts (Inter CC) have zero POSTED transactions.
+- Task 24 (pending): existing ~1546 Pluggy entries in `tmp.bean` carry two-leg `Expenses:TODO` / `Income:TODO` counterparts. `PredictPostings` will learn to predict TODO accounts until these are reclassified. Unblocks trustworthy auto-categorization.
+- Reviewer-flagged low-probability items NOT addressed (deferred): `_parse_date("")` raises `ValueError` (POSTED txns always have a date in practice); synthetic `id` collision risk if Pluggy omits `id` for same-date txns across accounts (Pluggy almost always sends `id`); `_parse_amount`/`_parse_date` one-line wrappers (kept for parity with `importers/b3.py`); `except Exception: log + raise` in `extract` (kept — log aids 11pm debugging); cursor-pagination 3-branch handling (kept until proven speculative against real API behavior); `load_credentials` typo tolerance (kept until `api_keys.txt` typo fixed at source).
 
 ## Read These First
-- `plan/spec_pluggy.md`: Full specification of the Pluggy importer
-- `plan/decisions_pluggy.md`: 6 decisions (trigger file, account mapping, two-posting TODO, fetch-all, credentials location, POSTED-only)
-- `plan/tasks_pluggy.md`: 19 tasks, 18 done (task 19 is this update)
-- `importers/pluggy.py`: The importer implementation
-- `import.py`: CONFIG wiring with account mapping
+- `importers/pluggy.py`: `_build_transaction` (single-leg, docstring honest about PredictPostings scope), `extract` (status filter at line 321)
+- `import.py`: HOOKS with `# TODO: reclassify tmp.bean` comment, CONFIG order rationale
+- `plan/decisions_pluggy.md`: Decision `[018]` (single-leg + PredictPostings, supersedes `[014]`)
+- `plan/tasks_pluggy.md`: Slice 6 tasks 20–24 (20–23 done, 24 pending manual reclassification)
+- `tmp.bean`: existing entries needing manual classification (task 24)

@@ -2,6 +2,7 @@ import logging
 import os
 import sys
 import beangulp
+from smart_importer import PredictPostings
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from importers.b3 import B3Importer
@@ -40,8 +41,19 @@ CONFIG = [
     ),
 ]
 
-# Hooks to process entries after extraction (e.g., deduplication)
-HOOKS = []
+# Hooks to process entries after extraction.
+# PredictPostings trains on existing ledger entries and predicts the missing
+# counterpart posting for single-leg Pluggy transactions. Order matters: B3
+# runs before Pluggy in CONFIG, so B3 entries are in existing_entries when
+# Pluggy's dedup runs, and both feed the training set for PredictPostings.
+#
+# TODO: existing tmp.bean Pluggy entries still carry two-leg
+# Expenses:TODO / Income:TODO counterparts. PredictPostings will learn to
+# predict TODO accounts until those are manually reclassified. See
+# activeContext.md and Decision [018].
+HOOKS = [
+    PredictPostings().hook,
+]
 
 
 def configure_logging() -> None:

@@ -7,4 +7,5 @@ git+https://github.com/beancount/beanprice.git#egg=beanprice
 git+https://github.com/PhracturedBlue/fava-portfolio-summary
 fava-portfolio-returns
 yfinance>=0.2.0
+smart_importer>=1.2
 git+ssh://git@github.com/Gabrielbr95/beancount.git@master

@@ -36,13 +36,16 @@ extract` and Fava's import UI.
 
 ### 4. Transaction Mapping
 - Each Pluggy transaction → one Beancount `data.Transaction`.
-- **Posting 1**: the mapped Beancount account, with the Pluggy `amount` (signed).
+- **Single posting only**: the mapped Beancount account, with the Pluggy
+  `amount` (signed).
   - CREDIT (positive) → increases bank account / increases credit card liability.
   - DEBIT (negative) → decreases bank account / decreases credit card liability.
-- **Posting 2**: counterpart account — `Expenses:TODO` for debits, `Income:TODO`
-  for credits. Explicit, passes bean-check, easy to find and recategorize.
-- **Metadata**: `id` (pluggy txn ID for dedup), `source: "pluggy"`, `pluggy_category`,
-  `pluggy_merchant` (if present).
+  - The counterpart posting is NOT emitted here — it is predicted by
+    `smart_importer`'s `PredictPostings` hook (see Decision [018], which
+    supersedes the original two-leg TODO pattern from Decision [014]).
+- **Metadata**: `id` (pluggy txn ID for dedup), `source: "pluggy"`,
+  `pluggy_category`, `pluggy_merchant` (if present) — retained as provenance;
+  the default `PredictPostings` hook does not consume custom metadata.
 - **Narration**: Pluggy `description` (cleaned).
 - **Payee**: Pluggy `merchant.name` (if present).
 - **Date**: date part of Pluggy `date` field (ISO string, take first 10 chars).
@@ -61,9 +64,11 @@ extract` and Fava's import UI.
   the `auto_accounts` plugin already active in `main.bean`).
 
 ## Out of Scope
-- **smart_importer integration** — future enhancement. The two-posting TODO
-  pattern is a clean baseline; switching to single-posting for smart_importer
-  is a one-line change per transaction.
+- **smart_importer integration** — DONE (Decision [018]). Pluggy emits
+  single-leg postings; `PredictPostings().hook` predicts the counterpart
+  from narration/payee/day-of-month. Existing `tmp.bean` Pluggy entries
+  must be manually reclassified away from `Expenses:TODO`/`Income:TODO`
+  before auto-categorization is trustworthy.
 - **Installment tracking** for credit card transactions (`creditCardMetadata`).
   All credit card txns treated as single postings.
 - **Automatic expense categorization** — Pluggy `category` field stored in

@@ -18,7 +18,6 @@ import os
 from datetime import date, datetime
 from decimal import Decimal
 from typing import Any, Optional
-from urllib.parse import urlencode
 
 import beangulp
 import requests
@@ -27,87 +26,6 @@ from beancount.core import amount, data
 logger = logging.getLogger(__name__)
 
 PLUGGY_API_BASE = "https://api.pluggy.ai"
-
-
-# ---------------------------------------------------------------------------
-# Category → Beancount account mapping
-# ---------------------------------------------------------------------------
-# Hierarchical prefix lookup: tries exact categoryId, then 6, 4, 2 digit prefixes.
-# Categories not found here fall back to Expenses:TODO / Income:TODO.
-# This mapping feeds smart_importer training data — consistency matters more
-# than perfection. The user can refine accounts later.
-CATEGORY_MAP: dict[str, str] = {
-    # 01 — Income
-    "01": "Income:Salary",
-    # 02 — Loans and financing
-    "02": "Expenses:Loans",
-    # 03 — Investments
-    "03060000": "Income:Investment:Interest",   # Proceeds interests and dividends
-    "03010000": "Equity:Transfers",             # Automatic investment
-    "03020000": "Equity:Transfers",             # Fixed income
-    "03": "Equity:Transfers",
-    # 04 — Same person transfer
-    "04": "Equity:Transfers",
-    # 05 — Transfers (PIX, TED, internal, CC payment)
-    "05": "Equity:Transfers",
-    # 06 — Legal obligations
-    "06": "Expenses:Legal",
-    # 07 — Services
-    "07010000": "Expenses:Telecom",
-    "07020000": "Expenses:Education",
-    "07030000": "Expenses:Health:Fitness",
-    "07040000": "Expenses:Leisure:Tickets",
-    "07": "Expenses:Services",
-    # 08 — Shopping
-    "08030000": "Expenses:Pets",
-    "08040000": "Expenses:Clothing",
-    "08060000": "Expenses:Books",
-    "08": "Expenses:Shopping",
-    # 09 — Digital services
-    "09020000": "Expenses:Streaming:Video",
-    "09030000": "Expenses:Streaming:Music",
-    "09": "Expenses:Digital",
-    # 10 — Groceries
-    "10": "Expenses:Groceries",
-    # 11 — Food and drinks
-    "11010000": "Expenses:Food:Restaurant",
-    "11020000": "Expenses:Food:Delivery",
-    "11": "Expenses:Food",
-    # 12 — Travel
-    "12010000": "Expenses:Travel:Flights",
-    "12020000": "Expenses:Travel:Accommodation",
-    "12": "Expenses:Travel",
-    # 13 — Donations
-    "13": "Expenses:Donations",
-    # 14 — Gambling
-    "14": "Expenses:Gambling",
-    # 15 — Taxes
-    "15": "Expenses:Taxes",
-    # 16 — Bank fees
-    "16": "Expenses:Bank:Fees",
-    # 17 — Housing
-    "17010000": "Expenses:Housing:Rent",
-    "17020000": "Expenses:Housing:Utilities",
-    "17": "Expenses:Housing",
-    # 18 — Healthcare
-    "18020000": "Expenses:Health:Pharmacy",
-    "18040000": "Expenses:Health:Medical",
-    "18": "Expenses:Health",
-    # 19 — Transportation
-    "19010000": "Expenses:Transport:Ride",
-    "19020000": "Expenses:Transport:Public",
-    "19050001": "Expenses:Transport:Fuel",
-    "19050002": "Expenses:Transport:Parking",
-    "19050005": "Expenses:Transport:Maintenance",
-    "19050006": "Expenses:Transport:Fines",
-    "19": "Expenses:Transport",
-    # 20 — Insurance (note: some IDs are 9 digits in Pluggy)
-    "20": "Expenses:Insurance",
-    # 21 — Leisure
-    "21": "Expenses:Leisure",
-    # 99 — Other
-    "99": "Expenses:Other",
-}
 
 
 # ---------------------------------------------------------------------------
@@ -378,27 +296,6 @@ class PluggyImporter(beangulp.Importer):
         """Convert Pluggy amount (float/int/str) to Decimal."""
         return Decimal(str(value))
 
-    @staticmethod
-    def _map_category(category_id: Optional[str], amount_dec: Decimal, is_credit_card: bool) -> str:
-        """Map a Pluggy categoryId to a Beancount counterpart account.
-
-        Uses hierarchical prefix lookup on CATEGORY_MAP (exact → 6 → 4 → 2 digits).
-        Falls back to Expenses:TODO / Income:TODO based on amount direction.
-        """
-        if category_id:
-            for prefix_len in (len(category_id), 6, 4, 2):
-                if prefix_len > len(category_id):
-                    continue
-                prefix = category_id[:prefix_len]
-                if prefix in CATEGORY_MAP:
-                    return CATEGORY_MAP[prefix]
-
-        # Fallback: direction-based TODO accounts
-        if is_credit_card:
-            return "Expenses:TODO" if amount_dec > 0 else "Equity:Transfers"
-        else:
-            return "Expenses:TODO" if amount_dec < 0 else "Income:TODO"
-
     def _build_transaction(
         self,
         txn: dict[str, Any],
@@ -408,21 +305,24 @@ class PluggyImporter(beangulp.Importer):
         filepath: str,
         lineno: int,
     ) -> Optional[data.Transaction]:
-        """Construct a Beancount Transaction from a Pluggy transaction dict.
+        """Construct a single-leg Beancount Transaction from a Pluggy transaction dict.
+
+        Emits only the bank/credit-card posting. The counterpart posting is
+        predicted by smart_importer's PredictPostings hook (see import.py HOOKS),
+        trained on existing ledger classifications (narration, payee,
+        day-of-month). Pluggy category and merchant metadata are retained as
+        provenance — the default PredictPostings hook does not consume custom
+        metadata fields.
 
         Sign convention:
           - Bank accounts: Pluggy amount used as-is (negative=debit, positive=credit)
           - Credit cards:  Pluggy amount NEGATED for the CC posting (positive purchase
             → negative liability posting = more debt; negative payment → positive
             liability posting = less debt)
-          - Counterpart posting: always the negation of the account posting (balances to 0)
-          - Counterpart account: determined by Pluggy categoryId mapping
 
-        Returns None if the transaction cannot be mapped (pending, no amount).
+        Returns None if the transaction has no amount. Caller is responsible
+        for filtering on status=POSTED before invoking this method.
         """
-        if txn.get("status") != "POSTED":
-            return None
-
         raw_amount = txn.get("amount")
         if raw_amount is None:
             logger.warning("Transaction without amount, skipping: %s", txn.get("id"))
@@ -435,15 +335,13 @@ class PluggyImporter(beangulp.Importer):
         txn_id = txn.get("id", "")
         category_id = txn.get("categoryId")
 
-        # Determine counterpart account from category
-        counterpart_acct = self._map_category(category_id, amount_dec, is_credit_card)
-
         # Sign convention: credit card postings are negated (Pluggy CC perspective
         # is inverted relative to beancount liability accounts)
         acct_amount = -amount_dec if is_credit_card else amount_dec
-        counterpart_amount = -acct_amount  # always balances to zero
 
-        # Build metadata
+        # Build metadata. pluggy_category_id / pluggy_category / pluggy_merchant
+        # are retained as provenance — the default PredictPostings hook trains
+        # on narration/payee/day-of-month only, not custom metadata.
         meta: data.Meta = data.new_metadata(filepath, lineno)
         meta["id"] = f"pluggy-{txn_id}" if txn_id else f"pluggy-{txn_date}-{lineno}"
         meta["source"] = "pluggy"
@@ -467,16 +365,13 @@ class PluggyImporter(beangulp.Importer):
         if merchant and isinstance(merchant, dict):
             payee = merchant.get("name")
 
-        # Postings
+        # Single-leg posting: only the bank/credit-card side is emitted. The
+        # counterpart is predicted by smart_importer's PredictPostings hook
+        # (configured in import.py HOOKS), trained on existing ledger entries.
         postings = [
             data.Posting(
                 bc_account,
                 amount.Amount(acct_amount, currency),
-                None, None, None, None,
-            ),
-            data.Posting(
-                counterpart_acct,
-                amount.Amount(counterpart_amount, currency),
                 None, None, None, None,
             ),
         ]
