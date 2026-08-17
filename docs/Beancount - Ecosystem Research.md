@@ -63,6 +63,25 @@ beancount (core language/library)
 **Validate**: `bean-check file.beancount`
 **Query**: `bean-query file.beancount "SELECT date, narration, amount WHERE account ~ 'Expenses'"`
 
+### Programmatic parsing: loader vs. parser
+
+- Use `beancount.loader.load_file()` to load and validate a ledger, including
+  its includes and configured plugins.
+- For a fresh, direct parse of a single file—for example, comparing
+  transactions by `id:` after editing a standalone extract—use:
+  ```python
+  from beancount.parser import parser
+
+  entries, errors, options = parser.parse_file("file.bean")
+  ```
+- Project lesson: `loader.load_file()` returned stale cached results during an
+  ad-hoc comparison of recently edited standalone files. Do not use it as the
+  sole source for that kind of comparison without confirming it reflects the
+  current file contents.
+- The parser returns parser-level objects such as `CostSpec`; the loader may
+  return transformed/loaded entries. Do not mix the two representations in one
+  comparison.
+
 **Key URLs**: [github.com/beancount/beancount](https://github.com/beancount/beancount) · [pypi.org/project/beancount](https://pypi.org/project/beancount) · [beancount.github.io/docs](https://beancount.github.io/docs/)
 
 ---
@@ -168,6 +187,16 @@ HOOKS = [PredictPostings().hook]
 | `bean-report`, `bean-web`, `bean-bake` | — | Removed/deprecated in v3 |
 | `bean-price` | beanprice | Split out in v3 |
 | `beancount2ledger` | separate repo | Ledger-syntax converter |
+
+### fava-edit-replay
+
+**What it is**: A Fava extension for replaying and reviewing ledger edits. It
+is useful for manual bulk-edit workflows, but it does not replace a
+transaction-aware bulk transformation tool.
+
+**This project**: Installed from
+[`paulsc/fava-edit-replay`](https://github.com/paulsc/fava-edit-replay) and
+configured in `main.bean`. Its local replay database is `edit_replays.yaml`.
 
 ---
 
