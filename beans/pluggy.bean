@@ -7000,7 +7000,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash           -7633.04 BRL
-  Equity:Transfers:Investments   7633.04 BRL
+  Equity:Transfers:XP:Cash   7633.04 BRL
 
 2025-12-26 * "ANUIDADE DIFERENCIADA ADC-PARC 02/12 BR"
   id: "pluggy-06030107-dac1-469f-8d04-a9fb013b4685"
@@ -7270,7 +7270,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash           -21019.03 BRL
-  Equity:Transfers:Investments   21019.03 BRL
+  Equity:Transfers:XP:Cash   21019.03 BRL
 
 2026-01-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/             65"
   id: "pluggy-599d1402-55d7-40a8-bf28-851c0c12afd6"
@@ -7621,7 +7621,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash           -24914.33 BRL
-  Equity:Transfers:Investments   24914.33 BRL
+  Equity:Transfers:XP:Cash   24914.33 BRL
 
 2026-01-23 * "TED BCO 001 AGE 3836  CTA 162876  - RECEBIMENTO DE TED - SPB" ^auto-transfer-20260123-606da0179b
   id: "pluggy-f8af159a-c2c2-43bc-af2b-82045dbd999b"
@@ -8751,7 +8751,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash            17592.74 BRL
-  Equity:Transfers:Investments  -17592.74 BRL
+  Equity:Transfers:XP:Cash  -17592.74 BRL
 
 2026-02-23 * "58524488Mariele        RIO DE JANEIR BR"
   id: "pluggy-59304430-6f48-449b-9475-b10d70cba54d"
