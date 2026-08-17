@@ -125,3 +125,34 @@
   provenance only — the default `PredictPostings` hook does not consume
   custom metadata fields. `CATEGORY_MAP` and `_map_category` removed from
   `importers/pluggy.py` as dead code post-refactor.
+
+## [019] Internal-transfer identification requires a conservative heuristic
+- **Date:** 2026-08-15
+- **Context:** Pluggy imports both sides when money moves between configured
+  accounts, but `PluggyImporter` currently emits both as separate single-leg
+  transactions. A live API probe on 2025-07-10 found a matching transfer of
+  BRL 2,000.00: BB checking carried `categoryId: 04000000` (Same person
+  transfer), `operationType: TRANSFERENCIA`, and amount -2000; BB savings
+  carried `categoryId: 03000000` (Investments), `operationType: DEPOSITO`, and
+  amount +2000. Both were POSTED on the same date/currency and their
+  `paymentData` showed the same CPF/routing institution. No direct counterpart
+  account ID or shared transaction/transfer/reference ID was supplied:
+  `receiverReferenceId`, `authenticationCode`, `referenceNumber`, and
+  `providerCode` were null.
+- **Options Considered:**
+  - A: Pair records using a provider-issued relationship ID.
+  - B: Pair only unique, high-confidence candidates using account, date,
+    currency, normalized amount, and transfer indicators.
+  - C: Continue importing every record independently.
+- **Decision:** Option A is unavailable. Do not change importer behavior from
+  this research task. If the user approves transfer detection, use Option B:
+  pair only when exactly one candidate has the same posting date/currency and
+  absolute amount, the opposite normalized Beancount amount, and transfer
+  evidence (same-person/transfer category, transfer operation, or recognised
+  card-payment description). Leave collisions and weak matches independent.
+- **Rationale:** The target pair provides enough data for a useful heuristic,
+  including card payments once their amount is normalized to the Beancount
+  liability sign. It is not a deterministic API relationship: two unrelated
+  transfers may share a date and amount, and the savings-side category alone is
+  too broad. Requiring uniqueness and multiple signals prevents silent,
+  incorrect merger of ledger entries.

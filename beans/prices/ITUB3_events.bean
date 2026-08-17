@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: ITUB3
 ; quote_currency: BRL
-; last_update: 2026-07-01
-; generated_at: 2026-07-23T21:08:15-03:00
+; last_update: 2026-08-03
+; generated_at: 2026-08-16T23:13:25-03:00
 
 2004-10-20 custom "grupamento" "ITUB3" 0.001 "source=yahoo-splits"
 2005-10-03 custom "desdobramento" "ITUB3" 10 "source=yahoo-splits"
@@ -294,3 +294,4 @@
 2026-06-01 custom "dividendo" "ITUB3" 0.018182 "source=yahoo-dividends"
 2026-06-19 custom "dividendo" "ITUB3" 0.36188 "source=yahoo-dividends"
 2026-07-01 custom "dividendo" "ITUB3" 0.018182 "source=yahoo-dividends"
+2026-08-03 custom "dividendo" "ITUB3" 0.018182 "source=yahoo-dividends"

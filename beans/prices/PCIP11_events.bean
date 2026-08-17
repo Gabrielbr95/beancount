@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: PCIP11
 ; quote_currency: BRL
-; last_update: 2026-07-09
-; generated_at: 2026-07-23T21:08:18-03:00
+; last_update: 2026-08-11
+; generated_at: 2026-08-16T23:13:29-03:00
 
 2022-04-11 custom "dividendo" "PCIP11" 1.119873 "source=yahoo-dividends"
 2022-05-10 custom "dividendo" "PCIP11" 1.5 "source=yahoo-dividends"
@@ -54,3 +54,4 @@
 2026-05-12 custom "dividendo" "PCIP11" 0.89 "source=yahoo-dividends"
 2026-06-10 custom "dividendo" "PCIP11" 0.89 "source=yahoo-dividends"
 2026-07-09 custom "dividendo" "PCIP11" 1.07 "source=yahoo-dividends"
+2026-08-11 custom "dividendo" "PCIP11" 1 "source=yahoo-dividends"

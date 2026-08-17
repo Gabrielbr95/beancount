@@ -144,3 +144,6 @@ ehthumbs.db
 Thumbs.db
 
 *.picklecache
+
+# Disposable working files and CSV/Beancount round-trip outputs
+scratch/

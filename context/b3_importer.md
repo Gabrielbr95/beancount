@@ -63,11 +63,25 @@ Supported mappings:
 Broker-specific accounts are constructed as:
 
 ```text
-Assets:Investment:B3:<BROKER>:<TICKER>
-Assets:Investment:B3:<BROKER>:Cash
+Assets:Investment:<BROKER>:<TICKER>
 Income:Investment:<BROKER>:<CATEGORY>
 Expenses:Investment:<BROKER>:<CATEGORY>
 ```
+
+BRL settlement legs are not posted to an investment cash account. They are
+routed through broker-specific transfer accounts so the matching external cash
+report can supply the other side:
+
+```text
+Equity:Transfers:XP:Rendimento
+Equity:Transfers:XP:Dividend
+Equity:Transfers:XP:JCP
+Equity:Transfers:<BROKER>:Cash
+```
+
+`Equity:Transfers:<BROKER>:Cash` is used for trades and all other cash-settled
+events. The three dedicated XP routes are used only for their corresponding
+income event types.
 
 ---
 
@@ -159,8 +173,8 @@ The importer reads the first non-empty row in each `NEGOCIACAO` sheet to determi
 
 Produces a purchase transaction:
 
-- asset posting to `Assets:Investment:B3:<BROKER>:<TICKER>`
-- cash posting to `Assets:Investment:B3:<BROKER>:Cash`
+- asset posting to `Assets:Investment:<BROKER>:<TICKER>`
+- settlement posting to `Equity:Transfers:<BROKER>:Cash`
 - optional fee posting to `Expenses:Investment:<BROKER>:Fees`
 
 If the price is missing, it is derived from `abs(value) / abs(quantity)`.
@@ -169,7 +183,7 @@ If the price is missing, it is derived from `abs(value) / abs(quantity)`.
 
 Produces a sale transaction:
 
-- cash posting to `Assets:Investment:B3:<BROKER>:Cash`
+- settlement posting to `Equity:Transfers:<BROKER>:Cash`
 - asset posting with empty cost spec `{}`
 - optional fee posting to `Expenses:Investment:<BROKER>:Fees`
 
@@ -218,7 +232,9 @@ Supported movements:
 
 Behavior:
 
-- creates a cash receipt in the broker cash account
+- XP creates a receipt in `Equity:Transfers:XP:Rendimento` or
+  `Equity:Transfers:XP:Dividend`, based on the movement type; other brokers
+  use `Equity:Transfers:<BROKER>:Cash`
 - books the offset to `Income:Investment:<BROKER>:Rendimento` or `Income:Investment:<BROKER>:Dividend`
 - if the movement contains `TRANSFERIDO`, metadata includes `warning: "needs_review"`
 
@@ -231,7 +247,8 @@ Supported movements:
 
 Behavior:
 
-- cash goes to the broker cash account
+- XP cash goes to `Equity:Transfers:XP:JCP`; other brokers use
+  `Equity:Transfers:<BROKER>:Cash`
 - offset goes to `Income:Investment:<BROKER>:JCP`
 - transferred variants add `warning: "needs_review"`
 
@@ -243,7 +260,7 @@ Supported movement:
 
 Behavior:
 
-- cash goes to the broker cash account
+- cash goes to `Equity:Transfers:<BROKER>:Cash`
 - offset goes to `Income:Investment:<BROKER>:Interest`
 
 ### Corporate actions
@@ -258,10 +275,9 @@ Behavior:
 
 - the importer requires a non-zero quantity
 - zero-quantity events are skipped
-- the importer emits a `Custom` directive with:
-  - type: `split`
-  - values: `[ticker, 1]`
-- the importer logs a warning that the split ratio is a placeholder and must be updated manually
+- the importer emits a `Custom` directive named `bonificacao`, `desdobramento`,
+  or `grupamento`, with values `[ticker, 0]`
+- ratio `0` is a sentinel: the event must be enriched before it can be applied
 
 This is a placeholder implementation rather than a full accounting of the split ratio.
 
@@ -273,7 +289,7 @@ Supported movement:
 
 Behavior:
 
-- cash goes to the broker cash account
+- cash goes to `Equity:Transfers:<BROKER>:Cash`
 - asset posting uses the quantity in the report
 - if `unit_price` is missing, it is derived from `abs(value) / abs(quantity)`
 - optional fee posting is created when `abs(value)` differs from gross proceeds
@@ -305,7 +321,7 @@ Behavior:
 - quantity and value are required
 - zero quantity is rejected
 - if `unit_price` is missing, it is derived from `abs(value) / abs(quantity)`
-- cash goes to the broker cash account
+- cash goes to `Equity:Transfers:<BROKER>:Cash`
 - asset posting uses negative quantity and the computed price
 - optional fee posting is created when gross proceeds differ from reported value
 
@@ -321,7 +337,7 @@ Behavior:
 - quantity and value are required
 - if `unit_price` is missing, it is derived from `abs(value) / abs(quantity)`
 - asset posting uses the reported quantity and computed cost
-- cash goes to the broker cash account
+- cash goes to `Equity:Transfers:<BROKER>:Cash`
 - optional fee posting is created when reported value differs from gross value
 
 ### Buy/sell hybrid
@@ -348,7 +364,7 @@ Any movement whose normalized name contains either:
 is treated as a fee event:
 
 - expense goes to `Expenses:Investment:<BROKER>:Fees`
-- cash is reduced from the broker cash account
+- settlement is posted to `Equity:Transfers:<BROKER>:Cash`
 
 ### Unsupported movements
 

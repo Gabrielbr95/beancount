@@ -5,6 +5,7 @@ pyyaml>=6.0.0
 fava-dashboards>=0.1.0
 git+https://github.com/beancount/beanprice.git#egg=beanprice
 git+https://github.com/PhracturedBlue/fava-portfolio-summary
+git+https://github.com/paulsc/fava-edit-replay
 fava-portfolio-returns
 yfinance>=0.2.0
 smart_importer>=1.2

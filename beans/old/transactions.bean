@@ -3,74 +3,74 @@
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4        100 PETR4 {17.6 BRL, 2018-05-28}
-  Assets:Investment:XP:Cash    -1782.01 BRL
-  Expenses:Investment:XP:Fees     22.01 BRL
+  Equity:Transfers:Investments    -1782.01 BRL
+  Expenses:Expenses:XP:Fees     22.01 BRL
 
 2018-06-07 * "PETR4 Buy"
   id: "b3-neg-20180607-12"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4        100 PETR4 {15.5 BRL, 2018-06-07}
-  Assets:Investment:XP:Cash    -1571.93 BRL
-  Expenses:Investment:XP:Fees     21.93 BRL
+  Equity:Transfers:Investments    -1571.93 BRL
+  Expenses:Expenses:XP:Fees     21.93 BRL
 
 2018-10-18 * "WEGE3 Buy"
   id: "b3-neg-20181018-11"
   source: "b3_negociacoes"
   asset: "WEGE3"
   Assets:Investment:XP:WEGE3        200 WEGE3 {18.30 BRL, 2018-10-18}
-  Assets:Investment:XP:Cash    -3682.63 BRL
-  Expenses:Investment:XP:Fees     22.63 BRL
+  Equity:Transfers:Investments    -3682.63 BRL
+  Expenses:Expenses:XP:Fees     22.63 BRL
 
 2019-03-19 * "EGIE3 Buy"
   id: "b3-neg-20190319-9"
   source: "b3_negociacoes"
   asset: "EGIE3"
   Assets:Investment:XP:EGIE3        100 EGIE3 {43.2 BRL, 2019-03-19}
-  Assets:Investment:XP:Cash    -4323.68 BRL
-  Expenses:Investment:XP:Fees      3.68 BRL
+  Equity:Transfers:Investments    -4323.68 BRL
+  Expenses:Expenses:XP:Fees      3.68 BRL
 
 2019-03-19 * "ITUB3 Buy"
   id: "b3-neg-20190319-10"
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3        100 ITUB3 {31.82 BRL, 2019-03-19}
-  Assets:Investment:XP:Cash    -3185.68 BRL
-  Expenses:Investment:XP:Fees      3.68 BRL
+  Equity:Transfers:Investments    -3185.68 BRL
+  Expenses:Expenses:XP:Fees      3.68 BRL
 
 2019-04-15 * "PETR4 Buy"
   id: "b3-neg-20190415-8"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4         95 PETR4 {25.87 BRL, 2019-04-15}
-  Assets:Investment:XP:Cash    -2461.14 BRL
-  Expenses:Investment:XP:Fees      3.49 BRL
+  Equity:Transfers:Investments    -2461.14 BRL
+  Expenses:Expenses:XP:Fees      3.49 BRL
 
 2019-07-10 * "PETR4 Sell"
   id: "b3-neg-20190710-7"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash    5576.43 BRL
+  Equity:Transfers:Investments    5576.43 BRL
   Assets:Investment:XP:PETR4      -200 PETR4 {} @ 28 BRL
-  Expenses:Investment:XP:Fees    23.57 BRL
+  Expenses:Expenses:XP:Fees    23.57 BRL
   Income:Investment:XP:Gains
 
 2019-07-15 * "PETR4 Sell"
   id: "b3-neg-20190715-5"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash    2670.56 BRL
+  Equity:Transfers:Investments    2670.56 BRL
   Assets:Investment:XP:PETR4       -94 PETR4 {} @ 28.44 BRL
-  Expenses:Investment:XP:Fees     2.80 BRL
+  Expenses:Expenses:XP:Fees     2.80 BRL
   Income:Investment:XP:Gains
 
 2019-07-15 * "PETR4 Sell"
   id: "b3-neg-20190715-6"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash    27.73 BRL
+  Equity:Transfers:Investments    27.73 BRL
   Assets:Investment:XP:PETR4      -1 PETR4 {} @ 28.43 BRL
-  Expenses:Investment:XP:Fees   0.70 BRL
+  Expenses:Expenses:XP:Fees   0.70 BRL
   Income:Investment:XP:Gains
 
 2019-08-05 * "PETR4 Buy"
@@ -78,275 +78,275 @@
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4        100 PETR4 {25.6 BRL, 2019-08-05}
-  Assets:Investment:XP:Cash    -2563.47 BRL
-  Expenses:Investment:XP:Fees      3.47 BRL
+  Equity:Transfers:Investments    -2563.47 BRL
+  Expenses:Expenses:XP:Fees      3.47 BRL
 
 2019-08-05 * "PETR4 Buy"
   id: "b3-neg-20190805-4"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4        100 PETR4 {25.8 BRL, 2019-08-05}
-  Assets:Investment:XP:Cash    -2583.47 BRL
-  Expenses:Investment:XP:Fees      3.47 BRL
+  Equity:Transfers:Investments    -2583.47 BRL
+  Expenses:Expenses:XP:Fees      3.47 BRL
 
 2019-08-07 * "PETR4 Buy"
   id: "b3-neg-20190807-2"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4        100 PETR4 {25.2 BRL, 2019-08-07}
-  Assets:Investment:XP:Cash    -2523.44 BRL
-  Expenses:Investment:XP:Fees      3.44 BRL
+  Equity:Transfers:Investments    -2523.44 BRL
+  Expenses:Expenses:XP:Fees      3.44 BRL
 
 2020-03-09 * "B3SA3 Buy"
   id: "b3-neg-20200309-33"
   source: "b3_negociacoes"
   asset: "B3SA3"
   Assets:Investment:XP:B3SA3    100 B3SA3 {42.6 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -4260 BRL
+  Equity:Transfers:Investments   -4260 BRL
 
 2020-03-09 * "EGIE3 Buy"
   id: "b3-neg-20200309-34"
   source: "b3_negociacoes"
   asset: "EGIE3"
   Assets:Investment:XP:EGIE3    100 EGIE3 {45.3 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -4530 BRL
+  Equity:Transfers:Investments   -4530 BRL
 
 2020-03-09 * "ITUB3 Buy"
   id: "b3-neg-20200309-35"
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    100 ITUB3 {25.8 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -2580 BRL
+  Equity:Transfers:Investments   -2580 BRL
 
 2020-03-09 * "PETR4 Buy"
   id: "b3-neg-20200309-36"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {17.4 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -1740 BRL
+  Equity:Transfers:Investments   -1740 BRL
 
 2020-03-09 * "PETR4 Buy"
   id: "b3-neg-20200309-37"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {16.14 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -1614 BRL
+  Equity:Transfers:Investments   -1614 BRL
 
 2020-03-09 * "WEGE3 Buy"
   id: "b3-neg-20200309-38"
   source: "b3_negociacoes"
   asset: "WEGE3"
   Assets:Investment:XP:WEGE3    100 WEGE3 {41.2 BRL, 2020-03-09}
-  Assets:Investment:XP:Cash   -4120 BRL
+  Equity:Transfers:Investments   -4120 BRL
 
 2020-03-12 * "PETR4 Buy"
   id: "b3-neg-20200312-30"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {12.9 BRL, 2020-03-12}
-  Assets:Investment:XP:Cash   -1290 BRL
+  Equity:Transfers:Investments   -1290 BRL
 
 2020-03-12 * "PETR4 Buy"
   id: "b3-neg-20200312-31"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    1300 PETR4 {11.3 BRL, 2020-03-12}
-  Assets:Investment:XP:Cash   -14690 BRL
+  Equity:Transfers:Investments   -14690 BRL
 
 2020-03-12 * "PETR4 Buy"
   id: "b3-neg-20200312-32"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    500 PETR4 {12.61 BRL, 2020-03-12}
-  Assets:Investment:XP:Cash   -6305 BRL
+  Equity:Transfers:Investments   -6305 BRL
 
 2020-03-13 * "FLRY3 Buy"
   id: "b3-neg-20200313-22"
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    100 FLRY3 {23.1 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -2310 BRL
+  Equity:Transfers:Investments   -2310 BRL
 
 2020-03-13 * "HGLG11 Buy"
   id: "b3-neg-20200313-23"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11     10 HGLG11 {155.5 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash    -1555 BRL
+  Equity:Transfers:Investments    -1555 BRL
 
 2020-03-13 * "ITUB3 Buy"
   id: "b3-neg-20200313-24"
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    100 ITUB3 {22.99 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -2299 BRL
+  Equity:Transfers:Investments   -2299 BRL
 
 2020-03-13 * "KNRI11 Buy"
   id: "b3-neg-20200313-25"
   source: "b3_negociacoes"
   asset: "KNRI11"
   Assets:Investment:XP:KNRI11       10 KNRI11 {152.98 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash    -1529.8 BRL
+  Equity:Transfers:Investments    -1529.8 BRL
 
 2020-03-13 * "MGLU3 Buy"
   id: "b3-neg-20200313-26"
   source: "b3_negociacoes"
   asset: "MGLU3"
   Assets:Investment:XP:MGLU3    100 MGLU3 {36.34 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -3634 BRL
+  Equity:Transfers:Investments   -3634 BRL
 
 2020-03-13 * "ODPV3 Buy"
   id: "b3-neg-20200313-27"
   source: "b3_negociacoes"
   asset: "ODPV3"
   Assets:Investment:XP:ODPV3    100 ODPV3 {13.5 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -1350 BRL
+  Equity:Transfers:Investments   -1350 BRL
 
 2020-03-13 * "ODPV3 Buy"
   id: "b3-neg-20200313-28"
   source: "b3_negociacoes"
   asset: "ODPV3"
   Assets:Investment:XP:ODPV3    100 ODPV3 {13.5 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -1350 BRL
+  Equity:Transfers:Investments   -1350 BRL
 
 2020-03-13 * "WEGE3 Buy"
   id: "b3-neg-20200313-29"
   source: "b3_negociacoes"
   asset: "WEGE3"
   Assets:Investment:XP:WEGE3    100 WEGE3 {32.97 BRL, 2020-03-13}
-  Assets:Investment:XP:Cash   -3297 BRL
+  Equity:Transfers:Investments   -3297 BRL
 
 2020-03-16 * "ITSA3 Buy"
   id: "b3-neg-20200316-21"
   source: "b3_negociacoes"
   asset: "ITSA3"
   Assets:Investment:XP:ITSA3    300 ITSA3 {10.99 BRL, 2020-03-16}
-  Assets:Investment:XP:Cash   -3297 BRL
+  Equity:Transfers:Investments   -3297 BRL
 
 2020-03-24 * "LEVE3 Buy"
   id: "b3-neg-20200324-20"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {16.7 BRL, 2020-03-24}
-  Assets:Investment:XP:Cash   -1670 BRL
+  Equity:Transfers:Investments   -1670 BRL
 
 2020-03-30 * "CVCB3 Buy"
   id: "b3-neg-20200330-18"
   source: "b3_negociacoes"
   asset: "CVCB3"
   Assets:Investment:XP:CVCB3    100 CVCB3 {12.89 BRL, 2020-03-30}
-  Assets:Investment:XP:Cash   -1289 BRL
+  Equity:Transfers:Investments   -1289 BRL
 
 2020-03-30 * "MDIA3 Buy"
   id: "b3-neg-20200330-19"
   source: "b3_negociacoes"
   asset: "MDIA3"
   Assets:Investment:XP:MDIA3    100 MDIA3 {30.5 BRL, 2020-03-30}
-  Assets:Investment:XP:Cash   -3050 BRL
+  Equity:Transfers:Investments   -3050 BRL
 
 2020-04-03 * "PETR4 Buy"
   id: "b3-neg-20200403-17"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    200 PETR4 {16.34 BRL, 2020-04-03}
-  Assets:Investment:XP:Cash   -3268 BRL
+  Equity:Transfers:Investments   -3268 BRL
 
 2020-08-10 * "HGRU11 Buy"
   id: "b3-neg-20200810-6"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        23 HGRU11 {129.48 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2978.04 BRL
+  Equity:Transfers:Investments    -2978.04 BRL
 
 2020-08-10 * "HSML11 Buy"
   id: "b3-neg-20200810-7"
   source: "b3_negociacoes"
   asset: "HSML11"
   Assets:Investment:XP:HSML11        34 HSML11 {90.49 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -3076.66 BRL
+  Equity:Transfers:Investments    -3076.66 BRL
 
 2020-08-10 * "IRDM11 Buy"
   id: "b3-neg-20200810-8"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11       19 IRDM11 {116.8 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2219.2 BRL
+  Equity:Transfers:Investments    -2219.2 BRL
 
 2020-08-10 * "IRDM11 Buy"
   id: "b3-neg-20200810-9"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11        6 IRDM11 {116.44 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -698.64 BRL
+  Equity:Transfers:Investments    -698.64 BRL
 
 2020-08-10 * "MALL11 Buy"
   id: "b3-neg-20200810-10"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11     34 MALL11 {87.5 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2975 BRL
+  Equity:Transfers:Investments    -2975 BRL
 
 2020-08-10 * "MCCI11 Buy"
   id: "b3-neg-20200810-11"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11       30 MCCI11 {100.15 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -3004.5 BRL
+  Equity:Transfers:Investments    -3004.5 BRL
 
 2020-08-10 * "RBRP11 Buy"
   id: "b3-neg-20200810-12"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11        34 RBRP11 {87.93 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2989.62 BRL
+  Equity:Transfers:Investments    -2989.62 BRL
 
 2020-08-10 * "VILG11 Buy"
   id: "b3-neg-20200810-13"
   source: "b3_negociacoes"
   asset: "VILG11"
   Assets:Investment:XP:VILG11        25 VILG11 {122.41 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -3060.25 BRL
+  Equity:Transfers:Investments    -3060.25 BRL
 
 2020-08-10 * "VISC11 Buy"
   id: "b3-neg-20200810-14"
   source: "b3_negociacoes"
   asset: "VISC11"
   Assets:Investment:XP:VISC11        28 VISC11 {105.46 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2952.88 BRL
+  Equity:Transfers:Investments    -2952.88 BRL
 
 2020-08-10 * "XPLG11 Buy"
   id: "b3-neg-20200810-15"
   source: "b3_negociacoes"
   asset: "XPLG11"
   Assets:Investment:XP:XPLG11        23 XPLG11 {126.78 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2915.94 BRL
+  Equity:Transfers:Investments    -2915.94 BRL
 
 2020-08-10 * "XPML11 Buy"
   id: "b3-neg-20200810-16"
   source: "b3_negociacoes"
   asset: "XPML11"
   Assets:Investment:XP:XPML11        28 XPML11 {106.06 BRL, 2020-08-10}
-  Assets:Investment:XP:Cash    -2969.68 BRL
+  Equity:Transfers:Investments    -2969.68 BRL
 
 2020-10-19 * "PETR4 Buy"
   id: "b3-neg-20201019-5"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    300 PETR4 {19.6 BRL, 2020-10-19}
-  Assets:Investment:XP:Cash   -5880 BRL
+  Equity:Transfers:Investments   -5880 BRL
 
 2020-10-26 * "PETR4 Buy"
   id: "b3-neg-20201026-4"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4     700 PETR4 {20.07 BRL, 2020-10-26}
-  Assets:Investment:XP:Cash   -14049 BRL
+  Equity:Transfers:Investments   -14049 BRL
 
 2020-11-06 * "PETR4 Sell"
   id: "b3-neg-20201106-3"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   19800 BRL
+  Equity:Transfers:Investments   19800 BRL
   Assets:Investment:XP:PETR4  -1000 PETR4 {} @ 19.8 BRL
   Income:Investment:XP:Gains
 
@@ -354,7 +354,7 @@
   id: "b3-neg-20201215-2"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   19453 BRL
+  Equity:Transfers:Investments   19453 BRL
   Assets:Investment:XP:PETR4   -700 PETR4 {} @ 27.79 BRL
   Income:Investment:XP:Gains
 
@@ -363,13 +363,13 @@
   source: "b3_negociacoes"
   asset: "AERI3"
   Assets:Investment:XP:AERI3    400 AERI3 {10.32 BRL, 2021-01-08}
-  Assets:Investment:XP:Cash   -4128 BRL
+  Equity:Transfers:Investments   -4128 BRL
 
 2021-01-19 * "PETR4 Sell"
   id: "b3-neg-20210119-42"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   8541 BRL
+  Equity:Transfers:Investments   8541 BRL
   Assets:Investment:XP:PETR4  -300 PETR4 {} @ 28.47 BRL
   Income:Investment:XP:Gains
 
@@ -378,27 +378,27 @@
   source: "b3_negociacoes"
   asset: "IRBR3"
   Assets:Investment:XP:IRBR3    500 IRBR3 {7.9 BRL, 2021-01-29}
-  Assets:Investment:XP:Cash   -3950 BRL
+  Equity:Transfers:Investments   -3950 BRL
 
 2021-02-24 * "ENBR3 Buy"
   id: "b3-neg-20210224-40"
   source: "b3_negociacoes"
   asset: "ENBR3"
   Assets:Investment:XP:ENBR3    400 ENBR3 {18.24 BRL, 2021-02-24}
-  Assets:Investment:XP:Cash   -7296 BRL
+  Equity:Transfers:Investments   -7296 BRL
 
 2021-03-01 * "TAEE11 Buy"
   id: "b3-neg-20210301-39"
   source: "b3_negociacoes"
   asset: "TAEE11"
   Assets:Investment:XP:TAEE11    200 TAEE11 {30.33 BRL, 2021-03-01}
-  Assets:Investment:XP:Cash    -6066 BRL
+  Equity:Transfers:Investments    -6066 BRL
 
 2021-03-12 * "IRBR3 Sell"
   id: "b3-neg-20210312-38"
   source: "b3_negociacoes"
   asset: "IRBR3"
-  Assets:Investment:XP:Cash   3085 BRL
+  Equity:Transfers:Investments   3085 BRL
   Assets:Investment:XP:IRBR3  -500 IRBR3 {} @ 6.17 BRL
   Income:Investment:XP:Gains
 
@@ -406,7 +406,7 @@
   id: "b3-neg-20210419-37"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   19704 BRL
+  Equity:Transfers:Investments   19704 BRL
   Assets:Investment:XP:PETR4   -800 PETR4 {} @ 24.63 BRL
   Income:Investment:XP:Gains
 
@@ -415,195 +415,195 @@
   source: "b3_negociacoes"
   asset: "ETER3"
   Assets:Investment:XP:ETER3    200 ETER3 {22.91 BRL, 2021-04-28}
-  Assets:Investment:XP:Cash   -4582 BRL
+  Equity:Transfers:Investments   -4582 BRL
 
 2021-04-28 * "VALE3 Buy"
   id: "b3-neg-20210428-36"
   source: "b3_negociacoes"
   asset: "VALE3"
   Assets:Investment:XP:VALE3     50 VALE3 {112.1 BRL, 2021-04-28}
-  Assets:Investment:XP:Cash   -5605 BRL
+  Equity:Transfers:Investments   -5605 BRL
 
 2021-05-04 * "EGIE3 Buy"
   id: "b3-neg-20210504-33"
   source: "b3_negociacoes"
   asset: "EGIE3"
   Assets:Investment:XP:EGIE3    100 EGIE3 {40.28 BRL, 2021-05-04}
-  Assets:Investment:XP:Cash   -4028 BRL
+  Equity:Transfers:Investments   -4028 BRL
 
 2021-05-04 * "MDIA3 Buy"
   id: "b3-neg-20210504-34"
   source: "b3_negociacoes"
   asset: "MDIA3"
   Assets:Investment:XP:MDIA3    100 MDIA3 {25.97 BRL, 2021-05-04}
-  Assets:Investment:XP:Cash   -2597 BRL
+  Equity:Transfers:Investments   -2597 BRL
 
 2021-05-07 * "AERI3 Buy"
   id: "b3-neg-20210507-32"
   source: "b3_negociacoes"
   asset: "AERI3"
   Assets:Investment:XP:AERI3    400 AERI3 {8.58 BRL, 2021-05-07}
-  Assets:Investment:XP:Cash   -3432 BRL
+  Equity:Transfers:Investments   -3432 BRL
 
 2021-06-28 * "HGRU11 Buy"
   id: "b3-neg-20210628-25"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11         9 HGRU11 {114.88 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -1033.92 BRL
+  Equity:Transfers:Investments    -1033.92 BRL
 
 2021-06-28 * "IRDM11 Buy"
   id: "b3-neg-20210628-26"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11         9 IRDM11 {119.05 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -1071.45 BRL
+  Equity:Transfers:Investments    -1071.45 BRL
 
 2021-06-28 * "MALL11 Buy"
   id: "b3-neg-20210628-27"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        6 MALL11 {91.99 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -551.94 BRL
+  Equity:Transfers:Investments    -551.94 BRL
 
 2021-06-28 * "MALL11 Buy"
   id: "b3-neg-20210628-28"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11       5 MALL11 {91.98 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -459.9 BRL
+  Equity:Transfers:Investments    -459.9 BRL
 
 2021-06-28 * "MCCI11 Buy"
   id: "b3-neg-20210628-29"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11      10 MCCI11 {99.06 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -990.6 BRL
+  Equity:Transfers:Investments    -990.6 BRL
 
 2021-06-28 * "RBRP11 Buy"
   id: "b3-neg-20210628-30"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11      12 RBRP11 {75.1 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -901.2 BRL
+  Equity:Transfers:Investments    -901.2 BRL
 
 2021-06-28 * "RBRP11 Buy"
   id: "b3-neg-20210628-31"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11        2 RBRP11 {75.11 BRL, 2021-06-28}
-  Assets:Investment:XP:Cash    -150.22 BRL
+  Equity:Transfers:Investments    -150.22 BRL
 
 2021-08-24 * "ETER3 Buy"
   id: "b3-neg-20210824-23"
   source: "b3_negociacoes"
   asset: "ETER3"
   Assets:Investment:XP:ETER3    200 ETER3 {19.51 BRL, 2021-08-24}
-  Assets:Investment:XP:Cash   -3902 BRL
+  Equity:Transfers:Investments   -3902 BRL
 
 2021-08-24 * "VALE3 Buy"
   id: "b3-neg-20210824-24"
   source: "b3_negociacoes"
   asset: "VALE3"
   Assets:Investment:XP:VALE3       50 VALE3 {99.55 BRL, 2021-08-24}
-  Assets:Investment:XP:Cash   -4977.5 BRL
+  Equity:Transfers:Investments   -4977.5 BRL
 
 2021-09-22 * "B3SA3 Buy"
   id: "b3-neg-20210922-15"
   source: "b3_negociacoes"
   asset: "B3SA3"
   Assets:Investment:XP:B3SA3    100 B3SA3 {13.64 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash   -1364 BRL
+  Equity:Transfers:Investments   -1364 BRL
 
 2021-09-22 * "BBSE3 Buy"
   id: "b3-neg-20210922-16"
   source: "b3_negociacoes"
   asset: "BBSE3"
   Assets:Investment:XP:BBSE3    200 BBSE3 {19.35 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash   -3870 BRL
+  Equity:Transfers:Investments   -3870 BRL
 
 2021-09-22 * "HGLG11 Buy"
   id: "b3-neg-20210922-17"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        5 HGLG11 {162.49 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -812.45 BRL
+  Equity:Transfers:Investments    -812.45 BRL
 
 2021-09-22 * "HGRU11 Buy"
   id: "b3-neg-20210922-18"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11      9 HGRU11 {113 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -1017 BRL
+  Equity:Transfers:Investments    -1017 BRL
 
 2021-09-22 * "IRDM11 Buy"
   id: "b3-neg-20210922-19"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11        7 IRDM11 {110.56 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -773.92 BRL
+  Equity:Transfers:Investments    -773.92 BRL
 
 2021-09-22 * "MALL11 Buy"
   id: "b3-neg-20210922-20"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        16 MALL11 {95.59 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -1529.44 BRL
+  Equity:Transfers:Investments    -1529.44 BRL
 
 2021-09-22 * "MCCI11 Buy"
   id: "b3-neg-20210922-21"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11     10 MCCI11 {101.4 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -1014 BRL
+  Equity:Transfers:Investments    -1014 BRL
 
 2021-09-22 * "XPLG11 Buy"
   id: "b3-neg-20210922-22"
   source: "b3_negociacoes"
   asset: "XPLG11"
   Assets:Investment:XP:XPLG11       20 XPLG11 {100.33 BRL, 2021-09-22}
-  Assets:Investment:XP:Cash    -2006.6 BRL
+  Equity:Transfers:Investments    -2006.6 BRL
 
 2021-10-20 * "B3SA3 Buy"
   id: "b3-neg-20211020-11"
   source: "b3_negociacoes"
   asset: "B3SA3"
   Assets:Investment:XP:B3SA3    100 B3SA3 {12.87 BRL, 2021-10-20}
-  Assets:Investment:XP:Cash   -1287 BRL
+  Equity:Transfers:Investments   -1287 BRL
 
 2021-10-20 * "ETER3 Buy"
   id: "b3-neg-20211020-12"
   source: "b3_negociacoes"
   asset: "ETER3"
   Assets:Investment:XP:ETER3    100 ETER3 {17.02 BRL, 2021-10-20}
-  Assets:Investment:XP:Cash   -1702 BRL
+  Equity:Transfers:Investments   -1702 BRL
 
 2021-10-20 * "FLRY3 Buy"
   id: "b3-neg-20211020-13"
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    100 FLRY3 {20.83 BRL, 2021-10-20}
-  Assets:Investment:XP:Cash   -2083 BRL
+  Equity:Transfers:Investments   -2083 BRL
 
 2021-10-20 * "MGLU3 Buy"
   id: "b3-neg-20211020-14"
   source: "b3_negociacoes"
   asset: "MGLU3"
   Assets:Investment:XP:MGLU3    100 MGLU3 {13.77 BRL, 2021-10-20}
-  Assets:Investment:XP:Cash   -1377 BRL
+  Equity:Transfers:Investments   -1377 BRL
 
 2021-10-29 * "BBDC3 Buy"
   id: "b3-neg-20211029-10"
   source: "b3_negociacoes"
   asset: "BBDC3"
   Assets:Investment:XP:BBDC3    500 BBDC3 {17.33 BRL, 2021-10-29}
-  Assets:Investment:XP:Cash   -8665 BRL
+  Equity:Transfers:Investments   -8665 BRL
 
 2021-11-22 * "CVCB3 Sell"
   id: "b3-neg-20211122-4"
   source: "b3_negociacoes"
   asset: "CVCB3"
-  Assets:Investment:XP:Cash   1527 BRL
+  Equity:Transfers:Investments   1527 BRL
   Assets:Investment:XP:CVCB3  -100 CVCB3 {} @ 15.27 BRL
   Income:Investment:XP:Gains
 
@@ -611,7 +611,7 @@
   id: "b3-neg-20211122-5"
   source: "b3_negociacoes"
   asset: "CVCB3"
-  Assets:Investment:XP:Cash   228.9 BRL
+  Equity:Transfers:Investments   228.9 BRL
   Assets:Investment:XP:CVCB3    -15 CVCB3 {} @ 15.26 BRL
   Income:Investment:XP:Gains
 
@@ -620,13 +620,13 @@
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    100 FLRY3 {19.08 BRL, 2021-11-22}
-  Assets:Investment:XP:Cash   -1908 BRL
+  Equity:Transfers:Investments   -1908 BRL
 
 2021-11-22 * "ITUB3 Sell"
   id: "b3-neg-20211122-7"
   source: "b3_negociacoes"
   asset: "ITUB3"
-  Assets:Investment:XP:Cash   6075 BRL
+  Equity:Transfers:Investments   6075 BRL
   Assets:Investment:XP:ITUB3  -300 ITUB3 {} @ 20.25 BRL
   Income:Investment:XP:Gains
 
@@ -635,13 +635,13 @@
   source: "b3_negociacoes"
   asset: "MGLU3"
   Assets:Investment:XP:MGLU3    200 MGLU3 {9.25 BRL, 2021-11-22}
-  Assets:Investment:XP:Cash   -1850 BRL
+  Equity:Transfers:Investments   -1850 BRL
 
 2021-11-22 * "ODPV3 Sell"
   id: "b3-neg-20211122-9"
   source: "b3_negociacoes"
   asset: "ODPV3"
-  Assets:Investment:XP:Cash   2654 BRL
+  Equity:Transfers:Investments   2654 BRL
   Assets:Investment:XP:ODPV3  -200 ODPV3 {} @ 13.27 BRL
   Income:Investment:XP:Gains
 
@@ -650,22 +650,22 @@
   source: "b3_negociacoes"
   asset: "CRFB3"
   Assets:Investment:XP:CRFB3    100 CRFB3 {15.83 BRL, 2021-11-26}
-  Assets:Investment:XP:Cash   -1583 BRL
+  Equity:Transfers:Investments   -1583 BRL
 
 2021-11-26 * "HYPE3 Buy"
   id: "b3-neg-20211126-3"
   source: "b3_negociacoes"
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {28 BRL, 2021-11-26}
-  Assets:Investment:XP:Cash   -2800 BRL
+  Equity:Transfers:Investments   -2800 BRL
 
 2021-12-10 * "XPBR31 Fraction Auction"
   id: "b3-mov-20211210-24"
   source: "b3_movimentacoes"
   asset: "XPBR31"
-  Assets:Investment:XP:Cash    154.05 BRL
+  Equity:Transfers:Investments    154.05 BRL
   Assets:Investment:XP:XPBR31      -1 XPBR31 {} @ 166.36 BRL
-  Expenses:Investment:XP:Fees   12.31 BRL
+  Expenses:Expenses:XP:Fees   12.31 BRL
   Income:Investment:XP:Gains
 
 2022-04-04 * "FLRY3 Buy"
@@ -673,62 +673,62 @@
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    200 FLRY3 {16.69 BRL, 2022-04-04}
-  Assets:Investment:XP:Cash   -3338 BRL
+  Equity:Transfers:Investments   -3338 BRL
 
 2022-04-04 * "MGLU3 Buy"
   id: "b3-neg-20220404-49"
   source: "b3_negociacoes"
   asset: "MGLU3"
   Assets:Investment:XP:MGLU3    400 MGLU3 {7.15 BRL, 2022-04-04}
-  Assets:Investment:XP:Cash   -2860 BRL
+  Equity:Transfers:Investments   -2860 BRL
 
 2022-05-13 * "HGRU11 Buy"
   id: "b3-neg-20220513-42"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        6 HGRU11 {114.96 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -689.76 BRL
+  Equity:Transfers:Investments    -689.76 BRL
 
 2022-05-13 * "IRDM11 Buy"
   id: "b3-neg-20220513-43"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11        9 IRDM11 {102.59 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -923.31 BRL
+  Equity:Transfers:Investments    -923.31 BRL
 
 2022-05-13 * "MALL11 Buy"
   id: "b3-neg-20220513-44"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        6 MALL11 {101.84 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -611.04 BRL
+  Equity:Transfers:Investments    -611.04 BRL
 
 2022-05-13 * "MCCI11 Buy"
   id: "b3-neg-20220513-45"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11       6 MCCI11 {98.55 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -591.3 BRL
+  Equity:Transfers:Investments    -591.3 BRL
 
 2022-05-13 * "RBRP11 Buy"
   id: "b3-neg-20220513-46"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11        19 RBRP11 {62.67 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -1190.73 BRL
+  Equity:Transfers:Investments    -1190.73 BRL
 
 2022-05-13 * "XPLG11 Buy"
   id: "b3-neg-20220513-47"
   source: "b3_negociacoes"
   asset: "XPLG11"
   Assets:Investment:XP:XPLG11      10 XPLG11 {94.11 BRL, 2022-05-13}
-  Assets:Investment:XP:Cash    -941.1 BRL
+  Equity:Transfers:Investments    -941.1 BRL
 
 2022-05-26 * "AERI3 Sell"
   id: "b3-neg-20220526-30"
   source: "b3_negociacoes"
   asset: "AERI3"
-  Assets:Investment:XP:Cash   2976 BRL
+  Equity:Transfers:Investments   2976 BRL
   Assets:Investment:XP:AERI3  -800 AERI3 {} @ 3.72 BRL
   Income:Investment:XP:Gains
 
@@ -737,20 +737,20 @@
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        12 HGLG11 {162.69 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -1952.28 BRL
+  Equity:Transfers:Investments    -1952.28 BRL
 
 2022-05-26 * "HGRU11 Buy"
   id: "b3-neg-20220526-32"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        6 HGRU11 {115.88 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -695.28 BRL
+  Equity:Transfers:Investments    -695.28 BRL
 
 2022-05-26 * "HSML11 Sell"
   id: "b3-neg-20220526-33"
   source: "b3_negociacoes"
   asset: "HSML11"
-  Assets:Investment:XP:Cash    2636.7 BRL
+  Equity:Transfers:Investments    2636.7 BRL
   Assets:Investment:XP:HSML11     -34 HSML11 {} @ 77.55 BRL
   Income:Investment:XP:Gains
 
@@ -759,13 +759,13 @@
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11        14 IRDM11 {103.37 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -1447.18 BRL
+  Equity:Transfers:Investments    -1447.18 BRL
 
 2022-05-26 * "KNRI11 Sell"
   id: "b3-neg-20220526-35"
   source: "b3_negociacoes"
   asset: "KNRI11"
-  Assets:Investment:XP:Cash    1322.5 BRL
+  Equity:Transfers:Investments    1322.5 BRL
   Assets:Investment:XP:KNRI11     -10 KNRI11 {} @ 132.25 BRL
   Income:Investment:XP:Gains
 
@@ -774,27 +774,27 @@
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11       5 MALL11 {101.04 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -505.2 BRL
+  Equity:Transfers:Investments    -505.2 BRL
 
 2022-05-26 * "MCCI11 Buy"
   id: "b3-neg-20220526-37"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        5 MCCI11 {97.69 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -488.45 BRL
+  Equity:Transfers:Investments    -488.45 BRL
 
 2022-05-26 * "RBRP11 Buy"
   id: "b3-neg-20220526-38"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11        34 RBRP11 {61.66 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -2096.44 BRL
+  Equity:Transfers:Investments    -2096.44 BRL
 
 2022-05-26 * "VILG11 Sell"
   id: "b3-neg-20220526-39"
   source: "b3_negociacoes"
   asset: "VILG11"
-  Assets:Investment:XP:Cash    2462 BRL
+  Equity:Transfers:Investments    2462 BRL
   Assets:Investment:XP:VILG11   -25 VILG11 {} @ 98.48 BRL
   Income:Investment:XP:Gains
 
@@ -802,7 +802,7 @@
   id: "b3-neg-20220526-40"
   source: "b3_negociacoes"
   asset: "VISC11"
-  Assets:Investment:XP:Cash    2805.04 BRL
+  Equity:Transfers:Investments    2805.04 BRL
   Assets:Investment:XP:VISC11      -28 VISC11 {} @ 100.18 BRL
   Income:Investment:XP:Gains
 
@@ -811,27 +811,27 @@
   source: "b3_negociacoes"
   asset: "XPLG11"
   Assets:Investment:XP:XPLG11        14 XPLG11 {94.56 BRL, 2022-05-26}
-  Assets:Investment:XP:Cash    -1323.84 BRL
+  Equity:Transfers:Investments    -1323.84 BRL
 
 2022-06-01 * "B3SA3 Buy"
   id: "b3-neg-20220601-26"
   source: "b3_negociacoes"
   asset: "B3SA3"
   Assets:Investment:XP:B3SA3    200 B3SA3 {12.58 BRL, 2022-06-01}
-  Assets:Investment:XP:Cash   -2516 BRL
+  Equity:Transfers:Investments   -2516 BRL
 
 2022-06-01 * "BBAS3 Buy"
   id: "b3-neg-20220601-27"
   source: "b3_negociacoes"
   asset: "BBAS3"
   Assets:Investment:XP:BBAS3    100 BBAS3 {36.44 BRL, 2022-06-01}
-  Assets:Investment:XP:Cash   -3644 BRL
+  Equity:Transfers:Investments   -3644 BRL
 
 2022-06-01 * "ITSA3 Sell"
   id: "b3-neg-20220601-28"
   source: "b3_negociacoes"
   asset: "ITSA3"
-  Assets:Investment:XP:Cash   9.7 BRL
+  Equity:Transfers:Investments   9.7 BRL
   Assets:Investment:XP:ITSA3   -1 ITSA3 {} @ 9.7 BRL
   Income:Investment:XP:Gains
 
@@ -840,20 +840,20 @@
   source: "b3_negociacoes"
   asset: "TAEE11"
   Assets:Investment:XP:TAEE11    100 TAEE11 {40.17 BRL, 2022-06-01}
-  Assets:Investment:XP:Cash    -4017 BRL
+  Equity:Transfers:Investments    -4017 BRL
 
 2022-06-10 * "BBAS3 Buy"
   id: "b3-neg-20220610-21"
   source: "b3_negociacoes"
   asset: "BBAS3"
   Assets:Investment:XP:BBAS3    100 BBAS3 {34.7 BRL, 2022-06-10}
-  Assets:Investment:XP:Cash   -3470 BRL
+  Equity:Transfers:Investments   -3470 BRL
 
 2022-06-10 * "BBSE3 Sell"
   id: "b3-neg-20220610-22"
   source: "b3_negociacoes"
   asset: "BBSE3"
-  Assets:Investment:XP:Cash   4958 BRL
+  Equity:Transfers:Investments   4958 BRL
   Assets:Investment:XP:BBSE3  -200 BBSE3 {} @ 24.79 BRL
   Income:Investment:XP:Gains
 
@@ -861,7 +861,7 @@
   id: "b3-neg-20220610-23"
   source: "b3_negociacoes"
   asset: "ITSA3"
-  Assets:Investment:XP:Cash   2769 BRL
+  Equity:Transfers:Investments   2769 BRL
   Assets:Investment:XP:ITSA3  -300 ITSA3 {} @ 9.23 BRL
   Income:Investment:XP:Gains
 
@@ -869,7 +869,7 @@
   id: "b3-neg-20220610-24"
   source: "b3_negociacoes"
   asset: "ITSA3"
-  Assets:Investment:XP:Cash   129.22 BRL
+  Equity:Transfers:Investments   129.22 BRL
   Assets:Investment:XP:ITSA3     -14 ITSA3 {} @ 9.23 BRL
   Income:Investment:XP:Gains
 
@@ -878,90 +878,90 @@
   source: "b3_negociacoes"
   asset: "TAEE11"
   Assets:Investment:XP:TAEE11    100 TAEE11 {40.49 BRL, 2022-06-10}
-  Assets:Investment:XP:Cash    -4049 BRL
+  Equity:Transfers:Investments    -4049 BRL
 
 2022-06-15 * "BBAS3 Buy"
   id: "b3-neg-20220615-19"
   source: "b3_negociacoes"
   asset: "BBAS3"
   Assets:Investment:XP:BBAS3    100 BBAS3 {34.2 BRL, 2022-06-15}
-  Assets:Investment:XP:Cash   -3420 BRL
+  Equity:Transfers:Investments   -3420 BRL
 
 2022-06-15 * "FLRY3 Buy"
   id: "b3-neg-20220615-20"
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    100 FLRY3 {14.75 BRL, 2022-06-15}
-  Assets:Investment:XP:Cash   -1475 BRL
+  Equity:Transfers:Investments   -1475 BRL
 
 2022-07-26 * "HGLG11 Buy"
   id: "b3-neg-20220726-16"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11         9 HGLG11 {166.01 BRL, 2022-07-26}
-  Assets:Investment:XP:Cash    -1494.09 BRL
+  Equity:Transfers:Investments    -1494.09 BRL
 
 2022-07-26 * "RBRP11 Buy"
   id: "b3-neg-20220726-17"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11       34 RBRP11 {51.85 BRL, 2022-07-26}
-  Assets:Investment:XP:Cash    -1762.9 BRL
+  Equity:Transfers:Investments    -1762.9 BRL
 
 2022-07-26 * "XPLG11 Buy"
   id: "b3-neg-20220726-18"
   source: "b3_negociacoes"
   asset: "XPLG11"
   Assets:Investment:XP:XPLG11        4 XPLG11 {95.19 BRL, 2022-07-26}
-  Assets:Investment:XP:Cash    -380.76 BRL
+  Equity:Transfers:Investments    -380.76 BRL
 
 2022-08-09 * "HGLG11 Buy"
   id: "b3-neg-20220809-8"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        12 HGLG11 {168.24 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -2018.88 BRL
+  Equity:Transfers:Investments    -2018.88 BRL
 
 2022-08-09 * "HGRU11 Buy"
   id: "b3-neg-20220809-9"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11     17 HGRU11 {119 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -2023 BRL
+  Equity:Transfers:Investments    -2023 BRL
 
 2022-08-09 * "IRDM11 Buy"
   id: "b3-neg-20220809-10"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11       10 IRDM11 {102.09 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -1020.9 BRL
+  Equity:Transfers:Investments    -1020.9 BRL
 
 2022-08-09 * "MALL11 Buy"
   id: "b3-neg-20220809-11"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        19 MALL11 {102.75 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -1952.25 BRL
+  Equity:Transfers:Investments    -1952.25 BRL
 
 2022-08-09 * "MCCI11 Buy"
   id: "b3-neg-20220809-12"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        22 MCCI11 {97.82 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -2152.04 BRL
+  Equity:Transfers:Investments    -2152.04 BRL
 
 2022-08-09 * "RBRP11 Buy"
   id: "b3-neg-20220809-13"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11       36 RBRP11 {54.55 BRL, 2022-08-09}
-  Assets:Investment:XP:Cash    -1963.8 BRL
+  Equity:Transfers:Investments    -1963.8 BRL
 
 2022-08-09 * "XPLG11 Sell"
   id: "b3-neg-20220809-14"
   source: "b3_negociacoes"
   asset: "XPLG11"
-  Assets:Investment:XP:Cash    7429.76 BRL
+  Equity:Transfers:Investments    7429.76 BRL
   Assets:Investment:XP:XPLG11      -76 XPLG11 {} @ 97.76 BRL
   Income:Investment:XP:Gains
 
@@ -969,7 +969,7 @@
   id: "b3-neg-20220809-15"
   source: "b3_negociacoes"
   asset: "XPML11"
-  Assets:Investment:XP:Cash    3547.44 BRL
+  Equity:Transfers:Investments    3547.44 BRL
   Assets:Investment:XP:XPML11      -36 XPML11 {} @ 98.54 BRL
   Income:Investment:XP:Gains
 
@@ -977,7 +977,7 @@
   id: "b3-neg-20220818-7"
   source: "b3_negociacoes"
   asset: "CRFB3"
-  Assets:Investment:XP:Cash   2039 BRL
+  Equity:Transfers:Investments   2039 BRL
   Assets:Investment:XP:CRFB3  -100 CRFB3 {} @ 20.39 BRL
   Income:Investment:XP:Gains
 
@@ -985,7 +985,7 @@
   id: "b3-neg-20220919-5"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   3042 BRL
+  Equity:Transfers:Investments   3042 BRL
   Assets:Investment:XP:PETR4  -100 PETR4 {} @ 30.42 BRL
   Income:Investment:XP:Gains
 
@@ -993,7 +993,7 @@
   id: "b3-neg-20220919-6"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   12144 BRL
+  Equity:Transfers:Investments   12144 BRL
   Assets:Investment:XP:PETR4   -400 PETR4 {} @ 30.36 BRL
   Income:Investment:XP:Gains
 
@@ -1002,20 +1002,20 @@
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {29.85 BRL, 2022-11-01}
-  Assets:Investment:XP:Cash   -2985 BRL
+  Equity:Transfers:Investments   -2985 BRL
 
 2022-11-01 * "PETR4 Buy"
   id: "b3-neg-20221101-4"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {29.84 BRL, 2022-11-01}
-  Assets:Investment:XP:Cash   -2984 BRL
+  Equity:Transfers:Investments   -2984 BRL
 
 2022-12-28 * "VALE3 Sell"
   id: "b3-neg-20221228-2"
   source: "b3_negociacoes"
   asset: "VALE3"
-  Assets:Investment:XP:Cash   8920 BRL
+  Equity:Transfers:Investments   8920 BRL
   Assets:Investment:XP:VALE3  -100 VALE3 {} @ 89.2 BRL
   Income:Investment:XP:Gains
 
@@ -1024,104 +1024,104 @@
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        3 HGLG11 {162.32 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -486.96 BRL
+  Equity:Transfers:Investments    -486.96 BRL
 
 2023-01-10 * "HGLG11 Buy"
   id: "b3-neg-20230110-35"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        6 HGLG11 {162.36 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -974.16 BRL
+  Equity:Transfers:Investments    -974.16 BRL
 
 2023-01-10 * "HGRU11 Buy"
   id: "b3-neg-20230110-36"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        11 HGRU11 {116.76 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -1284.36 BRL
+  Equity:Transfers:Investments    -1284.36 BRL
 
 2023-01-10 * "IRDM11 Buy"
   id: "b3-neg-20230110-37"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11       22 IRDM11 {93.1 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -2048.2 BRL
+  Equity:Transfers:Investments    -2048.2 BRL
 
 2023-01-10 * "MALL11 Buy"
   id: "b3-neg-20230110-38"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11       12 MALL11 {101.4 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -1216.8 BRL
+  Equity:Transfers:Investments    -1216.8 BRL
 
 2023-01-10 * "MCCI11 Buy"
   id: "b3-neg-20230110-39"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        19 MCCI11 {91.45 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -1737.55 BRL
+  Equity:Transfers:Investments    -1737.55 BRL
 
 2023-01-10 * "RBRP11 Buy"
   id: "b3-neg-20230110-40"
   source: "b3_negociacoes"
   asset: "RBRP11"
   Assets:Investment:XP:RBRP11      20 RBRP11 {47.76 BRL, 2023-01-10}
-  Assets:Investment:XP:Cash    -955.2 BRL
+  Equity:Transfers:Investments    -955.2 BRL
 
 2023-05-15 * "HGLG11 Buy"
   id: "b3-neg-20230515-28"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11     5 HGLG11 {165 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -825 BRL
+  Equity:Transfers:Investments    -825 BRL
 
 2023-05-15 * "HGRU11 Buy"
   id: "b3-neg-20230515-29"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        2 HGRU11 {124.97 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -249.94 BRL
+  Equity:Transfers:Investments    -249.94 BRL
 
 2023-05-15 * "IRDM11 Buy"
   id: "b3-neg-20230515-30"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11       18 IRDM11 {87.45 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -1574.1 BRL
+  Equity:Transfers:Investments    -1574.1 BRL
 
 2023-05-15 * "MALL11 Buy"
   id: "b3-neg-20230515-31"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        6 MALL11 {104.81 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -628.86 BRL
+  Equity:Transfers:Investments    -628.86 BRL
 
 2023-05-15 * "MCCI11 Buy"
   id: "b3-neg-20230515-32"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        4 MCCI11 {85.93 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -343.72 BRL
+  Equity:Transfers:Investments    -343.72 BRL
 
 2023-05-15 * "MCCI11 Buy"
   id: "b3-neg-20230515-33"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11       15 MCCI11 {85.94 BRL, 2023-05-15}
-  Assets:Investment:XP:Cash    -1289.1 BRL
+  Equity:Transfers:Investments    -1289.1 BRL
 
 2023-05-16 * "PETR4 Buy"
   id: "b3-neg-20230516-26"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4     500 PETR4 {26.37 BRL, 2023-05-16}
-  Assets:Investment:XP:Cash   -13185 BRL
+  Equity:Transfers:Investments   -13185 BRL
 
 2023-05-16 * "PETR4 Sell"
   id: "b3-neg-20230516-27"
   source: "b3_negociacoes"
   asset: "PETR4"
-  Assets:Investment:XP:Cash   13055 BRL
+  Equity:Transfers:Investments   13055 BRL
   Assets:Investment:XP:PETR4   -500 PETR4 {} @ 26.11 BRL
   Income:Investment:XP:Gains
 
@@ -1130,90 +1130,90 @@
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        27 HGLG11 {164.72 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -4447.44 BRL
+  Equity:Transfers:Investments    -4447.44 BRL
 
 2023-06-23 * "HGLG11 Buy"
   id: "b3-neg-20230623-15"
   source: "b3_negociacoes"
   asset: "HGLG11"
   Assets:Investment:XP:HGLG11        3 HGLG11 {164.71 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -494.13 BRL
+  Equity:Transfers:Investments    -494.13 BRL
 
 2023-06-23 * "HGRU11 Buy"
   id: "b3-neg-20230623-16"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11         9 HGRU11 {131.95 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -1187.55 BRL
+  Equity:Transfers:Investments    -1187.55 BRL
 
 2023-06-23 * "HGRU11 Buy"
   id: "b3-neg-20230623-17"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        18 HGRU11 {131.96 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -2375.28 BRL
+  Equity:Transfers:Investments    -2375.28 BRL
 
 2023-06-23 * "HGRU11 Buy"
   id: "b3-neg-20230623-18"
   source: "b3_negociacoes"
   asset: "HGRU11"
   Assets:Investment:XP:HGRU11        11 HGRU11 {131.94 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -1451.34 BRL
+  Equity:Transfers:Investments    -1451.34 BRL
 
 2023-06-23 * "IRDM11 Buy"
   id: "b3-neg-20230623-19"
   source: "b3_negociacoes"
   asset: "IRDM11"
   Assets:Investment:XP:IRDM11        57 IRDM11 {87.82 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -5005.74 BRL
+  Equity:Transfers:Investments    -5005.74 BRL
 
 2023-06-23 * "MALL11 Buy"
   id: "b3-neg-20230623-20"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        1 MALL11 {113.46 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -113.46 BRL
+  Equity:Transfers:Investments    -113.46 BRL
 
 2023-06-23 * "MALL11 Buy"
   id: "b3-neg-20230623-21"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        41 MALL11 {113.45 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -4651.45 BRL
+  Equity:Transfers:Investments    -4651.45 BRL
 
 2023-06-23 * "MALL11 Buy"
   id: "b3-neg-20230623-22"
   source: "b3_negociacoes"
   asset: "MALL11"
   Assets:Investment:XP:MALL11        2 MALL11 {113.47 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -226.94 BRL
+  Equity:Transfers:Investments    -226.94 BRL
 
 2023-06-23 * "MCCI11 Buy"
   id: "b3-neg-20230623-23"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11       11 MCCI11 {91.2 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -1003.2 BRL
+  Equity:Transfers:Investments    -1003.2 BRL
 
 2023-06-23 * "MCCI11 Buy"
   id: "b3-neg-20230623-24"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        11 MCCI11 {91.19 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -1003.09 BRL
+  Equity:Transfers:Investments    -1003.09 BRL
 
 2023-06-23 * "MCCI11 Buy"
   id: "b3-neg-20230623-25"
   source: "b3_negociacoes"
   asset: "MCCI11"
   Assets:Investment:XP:MCCI11        33 MCCI11 {91.18 BRL, 2023-06-23}
-  Assets:Investment:XP:Cash    -3008.94 BRL
+  Equity:Transfers:Investments    -3008.94 BRL
 
 2023-06-27 * "ENBR3 Sell"
   id: "b3-neg-20230627-7"
   source: "b3_negociacoes"
   asset: "ENBR3"
-  Assets:Investment:XP:Cash   9416 BRL
+  Equity:Transfers:Investments   9416 BRL
   Assets:Investment:XP:ENBR3  -400 ENBR3 {} @ 23.54 BRL
   Income:Investment:XP:Gains
 
@@ -1222,27 +1222,27 @@
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    200 FLRY3 {15.55 BRL, 2023-06-27}
-  Assets:Investment:XP:Cash   -3110 BRL
+  Equity:Transfers:Investments   -3110 BRL
 
 2023-06-27 * "HYPE3 Buy"
   id: "b3-neg-20230627-9"
   source: "b3_negociacoes"
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {42.95 BRL, 2023-06-27}
-  Assets:Investment:XP:Cash   -4295 BRL
+  Equity:Transfers:Investments   -4295 BRL
 
 2023-06-27 * "HYPE3 Buy"
   id: "b3-neg-20230627-10"
   source: "b3_negociacoes"
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {42.94 BRL, 2023-06-27}
-  Assets:Investment:XP:Cash   -4294 BRL
+  Equity:Transfers:Investments   -4294 BRL
 
 2023-06-27 * "HYPE3 Sell"
   id: "b3-neg-20230627-11"
   source: "b3_negociacoes"
   asset: "HYPE3"
-  Assets:Investment:XP:Cash   4269 BRL
+  Equity:Transfers:Investments   4269 BRL
   Assets:Investment:XP:HYPE3  -100 HYPE3 {} @ 42.69 BRL
   Income:Investment:XP:Gains
 
@@ -1251,20 +1251,20 @@
   source: "b3_negociacoes"
   asset: "TAEE11"
   Assets:Investment:XP:TAEE11    200 TAEE11 {37.21 BRL, 2023-06-27}
-  Assets:Investment:XP:Cash    -7442 BRL
+  Equity:Transfers:Investments    -7442 BRL
 
 2023-06-27 * "VALE3 Buy"
   id: "b3-neg-20230627-13"
   source: "b3_negociacoes"
   asset: "VALE3"
   Assets:Investment:XP:VALE3     200 VALE3 {66.75 BRL, 2023-06-27}
-  Assets:Investment:XP:Cash   -13350 BRL
+  Equity:Transfers:Investments   -13350 BRL
 
 2023-10-23 * "XPBR31 Sell"
   id: "b3-neg-20231023-6"
   source: "b3_negociacoes"
   asset: "XPBR31"
-  Assets:Investment:XP:Cash    629.22 BRL
+  Equity:Transfers:Investments    629.22 BRL
   Assets:Investment:XP:XPBR31      -6 XPBR31 {} @ 104.87 BRL
   Income:Investment:XP:Gains
 
@@ -1273,20 +1273,20 @@
   source: "b3_negociacoes"
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {33.86 BRL, 2023-12-01}
-  Assets:Investment:XP:Cash   -3386 BRL
+  Equity:Transfers:Investments   -3386 BRL
 
 2023-12-01 * "LEVE3 Buy"
   id: "b3-neg-20231201-3"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {31.57 BRL, 2023-12-01}
-  Assets:Investment:XP:Cash   -3157 BRL
+  Equity:Transfers:Investments   -3157 BRL
 
 2023-12-01 * "MDIA3 Sell"
   id: "b3-neg-20231201-4"
   source: "b3_negociacoes"
   asset: "MDIA3"
-  Assets:Investment:XP:Cash   7102 BRL
+  Equity:Transfers:Investments   7102 BRL
   Assets:Investment:XP:MDIA3  -200 MDIA3 {} @ 35.51 BRL
   Income:Investment:XP:Gains
 
@@ -1295,7 +1295,7 @@
   source: "b3_negociacoes"
   asset: "TAEE11"
   Assets:Investment:XP:TAEE11    100 TAEE11 {36.58 BRL, 2023-12-01}
-  Assets:Investment:XP:Cash    -3658 BRL
+  Equity:Transfers:Investments    -3658 BRL
 
 2023-02-16 * "Asset Transfer WEGE3"
   id: "b3-mov-20230216-232"
@@ -1470,16 +1470,16 @@
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2045"
   Assets:Investment:XP:TESOURO-IPCA-2045      10.01 TESOURO-IPCA-2045 {1246.25 BRL, 2023-06-22}
-  Assets:Investment:XP:Cash               -12474.96 BRL
-  Expenses:Investment:XP:Fees               -0.0025 BRL
+  Equity:Transfers:Investments               -12474.96 BRL
+  Expenses:Expenses:XP:Fees               -0.0025 BRL
 
 2023-06-22 * "TESOURO-PREFIXADO-2029 Purchase"
   id: "b3-mov-20230622-116"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2029"
   Assets:Investment:XP:TESOURO-PREFIXADO-2029      22.05 TESOURO-PREFIXADO-2029 {562.57 BRL, 2023-06-22}
-  Assets:Investment:XP:Cash                    -12404.67 BRL
-  Expenses:Investment:XP:Fees                     0.0015 BRL
+  Equity:Transfers:Investments                    -12404.67 BRL
+  Expenses:Expenses:XP:Fees                     0.0015 BRL
 
 2023-10-09 * "Asset Transfer XPBR31"
   id: "b3-mov-20231009-54"
@@ -1493,7 +1493,7 @@
   id: "b3-neg-20240219-9"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    231.08 BRL
+  Equity:Transfers:Investments    231.08 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.77 BRL
   Income:Investment:XP:Gains
 
@@ -1501,7 +1501,7 @@
   id: "b3-neg-20240219-10"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    8255.39 BRL
+  Equity:Transfers:Investments    8255.39 BRL
   Assets:Investment:XP:RBRP11     -143 RBRP11 {} @ 57.73 BRL
   Income:Investment:XP:Gains
 
@@ -1509,7 +1509,7 @@
   id: "b3-neg-20240219-11"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    231 BRL
+  Equity:Transfers:Investments    231 BRL
   Assets:Investment:XP:RBRP11   -4 RBRP11 {} @ 57.75 BRL
   Income:Investment:XP:Gains
 
@@ -1517,7 +1517,7 @@
   id: "b3-neg-20240219-12"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    231.12 BRL
+  Equity:Transfers:Investments    231.12 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.78 BRL
   Income:Investment:XP:Gains
 
@@ -1525,7 +1525,7 @@
   id: "b3-neg-20240219-13"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    1733.7 BRL
+  Equity:Transfers:Investments    1733.7 BRL
   Assets:Investment:XP:RBRP11     -30 RBRP11 {} @ 57.79 BRL
   Income:Investment:XP:Gains
 
@@ -1533,7 +1533,7 @@
   id: "b3-neg-20240219-14"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    230.96 BRL
+  Equity:Transfers:Investments    230.96 BRL
   Assets:Investment:XP:RBRP11      -4 RBRP11 {} @ 57.74 BRL
   Income:Investment:XP:Gains
 
@@ -1541,7 +1541,7 @@
   id: "b3-neg-20240219-15"
   source: "b3_negociacoes"
   asset: "RBRP11"
-  Assets:Investment:XP:Cash    115.52 BRL
+  Equity:Transfers:Investments    115.52 BRL
   Assets:Investment:XP:RBRP11      -2 RBRP11 {} @ 57.76 BRL
   Income:Investment:XP:Gains
 
@@ -1550,27 +1550,27 @@
   source: "b3_negociacoes"
   asset: "HYPE3"
   Assets:Investment:XP:HYPE3    100 HYPE3 {33.47 BRL, 2024-03-05}
-  Assets:Investment:XP:Cash   -3347 BRL
+  Equity:Transfers:Investments   -3347 BRL
 
 2024-03-05 * "LEVE3 Buy"
   id: "b3-neg-20240305-8"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {36.57 BRL, 2024-03-05}
-  Assets:Investment:XP:Cash   -3657 BRL
+  Equity:Transfers:Investments   -3657 BRL
 
 2024-05-09 * "BBAS3 Buy"
   id: "b3-neg-20240509-2"
   source: "b3_negociacoes"
   asset: "BBAS3"
   Assets:Investment:XP:BBAS3    100 BBAS3 {27.15 BRL, 2024-05-09}
-  Assets:Investment:XP:Cash   -2715 BRL
+  Equity:Transfers:Investments   -2715 BRL
 
 2024-05-09 * "BBDC3 Sell"
   id: "b3-neg-20240509-3"
   source: "b3_negociacoes"
   asset: "BBDC3"
-  Assets:Investment:XP:Cash   5990 BRL
+  Equity:Transfers:Investments   5990 BRL
   Assets:Investment:XP:BBDC3  -500 BBDC3 {} @ 11.98 BRL
   Income:Investment:XP:Gains
 
@@ -1578,7 +1578,7 @@
   id: "b3-neg-20240509-4"
   source: "b3_negociacoes"
   asset: "BBDC3"
-  Assets:Investment:XP:Cash   299.5 BRL
+  Equity:Transfers:Investments   299.5 BRL
   Assets:Investment:XP:BBDC3    -25 BBDC3 {} @ 11.98 BRL
   Income:Investment:XP:Gains
 
@@ -1586,7 +1586,7 @@
   id: "b3-neg-20240509-5"
   source: "b3_negociacoes"
   asset: "BBDC3"
-  Assets:Investment:XP:Cash   299.75 BRL
+  Equity:Transfers:Investments   299.75 BRL
   Assets:Investment:XP:BBDC3     -25 BBDC3 {} @ 11.99 BRL
   Income:Investment:XP:Gains
 
@@ -1595,92 +1595,92 @@
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    200 ITUB3 {28.16 BRL, 2024-05-09}
-  Assets:Investment:XP:Cash   -5632 BRL
+  Equity:Transfers:Investments   -5632 BRL
 
 2024-01-01 * "TESOURO-IPCA-2045 Fee"
   id: "b3-mov-20240101-179"
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2045"
-  Expenses:Investment:XP:Fees   12.9 BRL
-  Assets:Investment:XP:Cash    -12.9 BRL
+  Expenses:Expenses:XP:Fees   12.9 BRL
+  Equity:Transfers:Investments    -12.9 BRL
 
 2024-01-01 * "TESOURO-PREFIXADO-2029 Fee"
   id: "b3-mov-20240101-180"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2029"
-  Expenses:Investment:XP:Fees   13.39 BRL
-  Assets:Investment:XP:Cash    -13.39 BRL
+  Expenses:Expenses:XP:Fees   13.39 BRL
+  Equity:Transfers:Investments    -13.39 BRL
 
 2024-07-01 * "TESOURO-IPCA-2045 Fee"
   id: "b3-mov-20240701-85"
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2045"
-  Expenses:Investment:XP:Fees   12.31 BRL
-  Assets:Investment:XP:Cash    -12.31 BRL
+  Expenses:Expenses:XP:Fees   12.31 BRL
+  Equity:Transfers:Investments    -12.31 BRL
 
 2024-07-01 * "TESOURO-PREFIXADO-2029 Fee"
   id: "b3-mov-20240701-86"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2029"
-  Expenses:Investment:XP:Fees   13.35 BRL
-  Assets:Investment:XP:Cash    -13.35 BRL
+  Expenses:Expenses:XP:Fees   13.35 BRL
+  Equity:Transfers:Investments    -13.35 BRL
 
 2024-08-16 * "TESOURO-IPCA-2045 Purchase"
   id: "b3-mov-20240816-62"
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2045"
   Assets:Investment:XP:TESOURO-IPCA-2045      19.26 TESOURO-IPCA-2045 {1297.92 BRL, 2024-08-16}
-  Assets:Investment:XP:Cash               -24997.94 BRL
-  Expenses:Investment:XP:Fees                0.0008 BRL
+  Equity:Transfers:Investments               -24997.94 BRL
+  Expenses:Expenses:XP:Fees                0.0008 BRL
 
 2024-08-16 * "TESOURO-PREFIXADO-2031 Purchase"
   id: "b3-mov-20240816-63"
   source: "b3_movimentacoes"
   asset: "TESOURO-PREFIXADO-2031"
   Assets:Investment:XP:TESOURO-PREFIXADO-2031      20.04 TESOURO-PREFIXADO-2031 {499.02 BRL, 2024-08-16}
-  Assets:Investment:XP:Cash                    -10000.56 BRL
-  Expenses:Investment:XP:Fees                     0.1992 BRL
+  Equity:Transfers:Investments                    -10000.56 BRL
+  Expenses:Expenses:XP:Fees                     0.1992 BRL
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-2"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        23 AFHI11 {95.38 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -2193.74 BRL
+  Equity:Transfers:Investments    -2193.74 BRL
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-3"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        7 AFHI11 {95.39 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -667.73 BRL
+  Equity:Transfers:Investments    -667.73 BRL
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-4"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        19 AFHI11 {95.36 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1811.84 BRL
+  Equity:Transfers:Investments    -1811.84 BRL
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-5"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        19 AFHI11 {95.37 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1812.03 BRL
+  Equity:Transfers:Investments    -1812.03 BRL
 
 2025-12-26 * "AFHI11 Buy"
   id: "b3-neg-20251226-6"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11       8 AFHI11 {95.35 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -762.8 BRL
+  Equity:Transfers:Investments    -762.8 BRL
 
 2025-12-26 * "B3SA3 Sell"
   id: "b3-neg-20251226-7"
   source: "b3_negociacoes"
   asset: "B3SA3"
-  Assets:Investment:XP:Cash   4080 BRL
+  Equity:Transfers:Investments   4080 BRL
   Assets:Investment:XP:B3SA3  -300 B3SA3 {} @ 13.6 BRL
   Income:Investment:XP:Gains
 
@@ -1688,7 +1688,7 @@
   id: "b3-neg-20251226-8"
   source: "b3_negociacoes"
   asset: "BBAS3"
-  Assets:Investment:XP:Cash   6501 BRL
+  Equity:Transfers:Investments   6501 BRL
   Assets:Investment:XP:BBAS3  -300 BBAS3 {} @ 21.67 BRL
   Income:Investment:XP:Gains
 
@@ -1697,41 +1697,41 @@
   source: "b3_negociacoes"
   asset: "BBSE3"
   Assets:Investment:XP:BBSE3    200 BBSE3 {35.62 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -7124 BRL
+  Equity:Transfers:Investments   -7124 BRL
 
 2025-12-26 * "CXSE3 Buy"
   id: "b3-neg-20251226-10"
   source: "b3_negociacoes"
   asset: "CXSE3"
   Assets:Investment:XP:CXSE3    300 CXSE3 {16.4 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -4920 BRL
+  Equity:Transfers:Investments   -4920 BRL
 
 2025-12-26 * "EGIE3 Buy"
   id: "b3-neg-20251226-11"
   source: "b3_negociacoes"
   asset: "EGIE3"
   Assets:Investment:XP:EGIE3    100 EGIE3 {31.14 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -3114 BRL
+  Equity:Transfers:Investments   -3114 BRL
 
 2025-12-26 * "EGIE3 Buy"
   id: "b3-neg-20251226-12"
   source: "b3_negociacoes"
   asset: "EGIE3"
   Assets:Investment:XP:EGIE3    100 EGIE3 {31.15 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -3115 BRL
+  Equity:Transfers:Investments   -3115 BRL
 
 2025-12-26 * "FLRY3 Buy"
   id: "b3-neg-20251226-13"
   source: "b3_negociacoes"
   asset: "FLRY3"
   Assets:Investment:XP:FLRY3    300 FLRY3 {14.81 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -4443 BRL
+  Equity:Transfers:Investments   -4443 BRL
 
 2025-12-26 * "IRIM11 Sell"
   id: "b3-neg-20251226-14"
   source: "b3_negociacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash    5927.98 BRL
+  Equity:Transfers:Investments    5927.98 BRL
   Assets:Investment:XP:IRIM11      -86 IRIM11 {} @ 68.93 BRL
   Income:Investment:XP:Gains
 
@@ -1739,7 +1739,7 @@
   id: "b3-neg-20251226-15"
   source: "b3_negociacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash    620.46 BRL
+  Equity:Transfers:Investments    620.46 BRL
   Assets:Investment:XP:IRIM11      -9 IRIM11 {} @ 68.94 BRL
   Income:Investment:XP:Gains
 
@@ -1747,7 +1747,7 @@
   id: "b3-neg-20251226-16"
   source: "b3_negociacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash    3239.24 BRL
+  Equity:Transfers:Investments    3239.24 BRL
   Assets:Investment:XP:IRIM11      -47 IRIM11 {} @ 68.92 BRL
   Income:Investment:XP:Gains
 
@@ -1755,7 +1755,7 @@
   id: "b3-neg-20251226-17"
   source: "b3_negociacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash    1379.8 BRL
+  Equity:Transfers:Investments    1379.8 BRL
   Assets:Investment:XP:IRIM11     -20 IRIM11 {} @ 68.99 BRL
   Income:Investment:XP:Gains
 
@@ -1763,7 +1763,7 @@
   id: "b3-neg-20251226-18"
   source: "b3_negociacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash    206.85 BRL
+  Equity:Transfers:Investments    206.85 BRL
   Assets:Investment:XP:IRIM11      -3 IRIM11 {} @ 68.95 BRL
   Income:Investment:XP:Gains
 
@@ -1772,41 +1772,41 @@
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    100 ITUB3 {35.9 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -3590 BRL
+  Equity:Transfers:Investments   -3590 BRL
 
 2025-12-26 * "LEVE3 Buy"
   id: "b3-neg-20251226-20"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {33.97 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -3397 BRL
+  Equity:Transfers:Investments   -3397 BRL
 
 2025-12-26 * "LVBI11 Buy"
   id: "b3-neg-20251226-21"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11        7 LVBI11 {111.31 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -779.17 BRL
+  Equity:Transfers:Investments    -779.17 BRL
 
 2025-12-26 * "LVBI11 Buy"
   id: "b3-neg-20251226-22"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11       5 LVBI11 {111.32 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -556.6 BRL
+  Equity:Transfers:Investments    -556.6 BRL
 
 2025-12-26 * "LVBI11 Buy"
   id: "b3-neg-20251226-23"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11        53 LVBI11 {111.33 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -5900.49 BRL
+  Equity:Transfers:Investments    -5900.49 BRL
 
 2025-12-26 * "MCCI11 Sell"
   id: "b3-neg-20251226-24"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1480.8 BRL
+  Equity:Transfers:Investments    1480.8 BRL
   Assets:Investment:XP:MCCI11     -16 MCCI11 {} @ 92.55 BRL
   Income:Investment:XP:Gains
 
@@ -1814,7 +1814,7 @@
   id: "b3-neg-20251226-25"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1389.15 BRL
+  Equity:Transfers:Investments    1389.15 BRL
   Assets:Investment:XP:MCCI11      -15 MCCI11 {} @ 92.61 BRL
   Income:Investment:XP:Gains
 
@@ -1822,7 +1822,7 @@
   id: "b3-neg-20251226-26"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1480.64 BRL
+  Equity:Transfers:Investments    1480.64 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.54 BRL
   Income:Investment:XP:Gains
 
@@ -1830,7 +1830,7 @@
   id: "b3-neg-20251226-27"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    370.6 BRL
+  Equity:Transfers:Investments    370.6 BRL
   Assets:Investment:XP:MCCI11     -4 MCCI11 {} @ 92.65 BRL
   Income:Investment:XP:Gains
 
@@ -1838,7 +1838,7 @@
   id: "b3-neg-20251226-28"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    185.02 BRL
+  Equity:Transfers:Investments    185.02 BRL
   Assets:Investment:XP:MCCI11      -2 MCCI11 {} @ 92.51 BRL
   Income:Investment:XP:Gains
 
@@ -1846,7 +1846,7 @@
   id: "b3-neg-20251226-29"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1481.12 BRL
+  Equity:Transfers:Investments    1481.12 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.57 BRL
   Income:Investment:XP:Gains
 
@@ -1854,7 +1854,7 @@
   id: "b3-neg-20251226-30"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    462.65 BRL
+  Equity:Transfers:Investments    462.65 BRL
   Assets:Investment:XP:MCCI11      -5 MCCI11 {} @ 92.53 BRL
   Income:Investment:XP:Gains
 
@@ -1862,7 +1862,7 @@
   id: "b3-neg-20251226-31"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1481.44 BRL
+  Equity:Transfers:Investments    1481.44 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.59 BRL
   Income:Investment:XP:Gains
 
@@ -1870,7 +1870,7 @@
   id: "b3-neg-20251226-32"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    740.8 BRL
+  Equity:Transfers:Investments    740.8 BRL
   Assets:Investment:XP:MCCI11     -8 MCCI11 {} @ 92.6 BRL
   Income:Investment:XP:Gains
 
@@ -1878,7 +1878,7 @@
   id: "b3-neg-20251226-33"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1944.18 BRL
+  Equity:Transfers:Investments    1944.18 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.58 BRL
   Income:Investment:XP:Gains
 
@@ -1886,7 +1886,7 @@
   id: "b3-neg-20251226-34"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1945.44 BRL
+  Equity:Transfers:Investments    1945.44 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.64 BRL
   Income:Investment:XP:Gains
 
@@ -1894,7 +1894,7 @@
   id: "b3-neg-20251226-35"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    463.1 BRL
+  Equity:Transfers:Investments    463.1 BRL
   Assets:Investment:XP:MCCI11     -5 MCCI11 {} @ 92.62 BRL
   Income:Investment:XP:Gains
 
@@ -1902,7 +1902,7 @@
   id: "b3-neg-20251226-36"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1480.32 BRL
+  Equity:Transfers:Investments    1480.32 BRL
   Assets:Investment:XP:MCCI11      -16 MCCI11 {} @ 92.52 BRL
   Income:Investment:XP:Gains
 
@@ -1910,7 +1910,7 @@
   id: "b3-neg-20251226-37"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    1945.23 BRL
+  Equity:Transfers:Investments    1945.23 BRL
   Assets:Investment:XP:MCCI11      -21 MCCI11 {} @ 92.63 BRL
   Income:Investment:XP:Gains
 
@@ -1918,7 +1918,7 @@
   id: "b3-neg-20251226-38"
   source: "b3_negociacoes"
   asset: "MCCI11"
-  Assets:Investment:XP:Cash    555.36 BRL
+  Equity:Transfers:Investments    555.36 BRL
   Assets:Investment:XP:MCCI11      -6 MCCI11 {} @ 92.56 BRL
   Income:Investment:XP:Gains
 
@@ -1927,55 +1927,55 @@
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        18 PCIP11 {84.22 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1515.96 BRL
+  Equity:Transfers:Investments    -1515.96 BRL
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-40"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        18 PCIP11 {84.21 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1515.78 BRL
+  Equity:Transfers:Investments    -1515.78 BRL
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-41"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        6 PCIP11 {84.18 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -505.08 BRL
+  Equity:Transfers:Investments    -505.08 BRL
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-42"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        6 PCIP11 {84.23 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -505.38 BRL
+  Equity:Transfers:Investments    -505.38 BRL
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-43"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        18 PCIP11 {84.19 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1515.42 BRL
+  Equity:Transfers:Investments    -1515.42 BRL
 
 2025-12-26 * "PCIP11 Buy"
   id: "b3-neg-20251226-44"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11       18 PCIP11 {84.2 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash    -1515.6 BRL
+  Equity:Transfers:Investments    -1515.6 BRL
 
 2025-12-26 * "PETR4 Buy"
   id: "b3-neg-20251226-45"
   source: "b3_negociacoes"
   asset: "PETR4"
   Assets:Investment:XP:PETR4    100 PETR4 {30.15 BRL, 2025-12-26}
-  Assets:Investment:XP:Cash   -3015 BRL
+  Equity:Transfers:Investments   -3015 BRL
 
 2025-12-26 * "VALE3 Sell"
   id: "b3-neg-20251226-46"
   source: "b3_negociacoes"
   asset: "VALE3"
-  Assets:Investment:XP:Cash   7314 BRL
+  Equity:Transfers:Investments   7314 BRL
   Assets:Investment:XP:VALE3  -100 VALE3 {} @ 73.14 BRL
   Income:Investment:XP:Gains
 
@@ -2152,78 +2152,78 @@
   source: "b3_movimentacoes"
   asset: "CDB-CDB3257NOQI-BANCO-BMG-S-A"
   Assets:Investment:Inter:CDB-CDB3257NOQI-BANCO-BMG-S-A      9180 CDB-CDB3257NOQI-BANCO-BMG-S-A {1.08 BRL, 2025-12-26}
-  Assets:Investment:Inter:Cash                           -9999.43 BRL
-  Expenses:Investment:Inter:Fees                            85.03 BRL
+  Equity:Transfers:Investments                           -9999.43 BRL
+  Expenses:Expenses:Inter:Fees                            85.03 BRL
 
 2025-12-26 * "CRI-22B0004808-RIZA-SECURITIZADORA-S-A Purchase"
   id: "b3-mov-20251226-19"
   source: "b3_movimentacoes"
   asset: "CRI-22B0004808-RIZA-SECURITIZADORA-S-A"
   Assets:Investment:Inter:CRI-22B0004808-RIZA-SECURITIZADORA-S-A         7 CRI-22B0004808-RIZA-SECURITIZADORA-S-A {1048.64 BRL, 2025-12-26}
-  Assets:Investment:Inter:Cash                                    -7340.53 BRL
-  Expenses:Investment:Inter:Fees                                      0.05 BRL
+  Equity:Transfers:Investments                                    -7340.53 BRL
+  Expenses:Expenses:Inter:Fees                                      0.05 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-13"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        3 AFHI11 {95.75 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -287.25 BRL
+  Equity:Transfers:Investments    -287.25 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-14"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11       14 AFHI11 {95.8 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -1341.2 BRL
+  Equity:Transfers:Investments    -1341.2 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-15"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        4 AFHI11 {95.81 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -383.24 BRL
+  Equity:Transfers:Investments    -383.24 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-16"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        2 AFHI11 {95.77 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -191.54 BRL
+  Equity:Transfers:Investments    -191.54 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-17"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11       1 AFHI11 {95.78 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -95.78 BRL
+  Equity:Transfers:Investments    -95.78 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-18"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        2 AFHI11 {95.76 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -191.52 BRL
+  Equity:Transfers:Investments    -191.52 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-19"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        3 AFHI11 {95.74 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -287.22 BRL
+  Equity:Transfers:Investments    -287.22 BRL
 
 2026-01-08 * "AFHI11 Buy"
   id: "b3-neg-20260108-20"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11       1 AFHI11 {95.79 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -95.79 BRL
+  Equity:Transfers:Investments    -95.79 BRL
 
 2026-01-08 * "B3SA3 Sell"
   id: "b3-neg-20260108-21"
   source: "b3_negociacoes"
   asset: "B3SA3"
-  Assets:Investment:XP:Cash   5764 BRL
+  Equity:Transfers:Investments   5764 BRL
   Assets:Investment:XP:B3SA3  -400 B3SA3 {} @ 14.41 BRL
   Income:Investment:XP:Gains
 
@@ -2231,7 +2231,7 @@
   id: "b3-neg-20260108-22"
   source: "b3_negociacoes"
   asset: "BBAS3"
-  Assets:Investment:XP:Cash   8700 BRL
+  Equity:Transfers:Investments   8700 BRL
   Assets:Investment:XP:BBAS3  -400 BBAS3 {} @ 21.75 BRL
   Income:Investment:XP:Gains
 
@@ -2240,146 +2240,146 @@
   source: "b3_negociacoes"
   asset: "BBSE3"
   Assets:Investment:XP:BBSE3    200 BBSE3 {35.09 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash   -7018 BRL
+  Equity:Transfers:Investments   -7018 BRL
 
 2026-01-08 * "CXSE3 Buy"
   id: "b3-neg-20260108-24"
   source: "b3_negociacoes"
   asset: "CXSE3"
   Assets:Investment:XP:CXSE3    300 CXSE3 {16.19 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash   -4857 BRL
+  Equity:Transfers:Investments   -4857 BRL
 
 2026-01-08 * "ITUB3 Buy"
   id: "b3-neg-20260108-25"
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    100 ITUB3 {37.08 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash   -3708 BRL
+  Equity:Transfers:Investments   -3708 BRL
 
 2026-01-08 * "LEVE3 Buy"
   id: "b3-neg-20260108-26"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {33.65 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash   -3365 BRL
+  Equity:Transfers:Investments   -3365 BRL
 
 2026-01-08 * "LVBI11 Buy"
   id: "b3-neg-20260108-27"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11       10 LVBI11 {111.09 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -1110.9 BRL
+  Equity:Transfers:Investments    -1110.9 BRL
 
 2026-01-08 * "LVBI11 Buy"
   id: "b3-neg-20260108-28"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11        6 LVBI11 {111.08 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -666.48 BRL
+  Equity:Transfers:Investments    -666.48 BRL
 
 2026-01-08 * "LVBI11 Buy"
   id: "b3-neg-20260108-29"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11       11 LVBI11 {111.1 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -1222.1 BRL
+  Equity:Transfers:Investments    -1222.1 BRL
 
 2026-01-08 * "PCIP11 Buy"
   id: "b3-neg-20260108-30"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        3 PCIP11 {84.75 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -254.25 BRL
+  Equity:Transfers:Investments    -254.25 BRL
 
 2026-01-08 * "PCIP11 Buy"
   id: "b3-neg-20260108-31"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11       34 PCIP11 {84.7 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash    -2879.8 BRL
+  Equity:Transfers:Investments    -2879.8 BRL
 
 2026-01-08 * "VALE3 Buy"
   id: "b3-neg-20260108-32"
   source: "b3_negociacoes"
   asset: "VALE3"
   Assets:Investment:XP:VALE3    100 VALE3 {75.13 BRL, 2026-01-08}
-  Assets:Investment:XP:Cash   -7513 BRL
+  Equity:Transfers:Investments   -7513 BRL
 
 2026-01-23 * "AFHI11 Buy"
   id: "b3-neg-20260123-3"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        4 AFHI11 {95.58 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash    -382.32 BRL
+  Equity:Transfers:Investments    -382.32 BRL
 
 2026-01-23 * "AFHI11 Buy"
   id: "b3-neg-20260123-4"
   source: "b3_negociacoes"
   asset: "AFHI11"
   Assets:Investment:XP:AFHI11        22 AFHI11 {95.59 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash    -2102.98 BRL
+  Equity:Transfers:Investments    -2102.98 BRL
 
 2026-01-23 * "BBSE3 Buy"
   id: "b3-neg-20260123-5"
   source: "b3_negociacoes"
   asset: "BBSE3"
   Assets:Investment:XP:BBSE3    100 BBSE3 {36.55 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash   -3655 BRL
+  Equity:Transfers:Investments   -3655 BRL
 
 2026-01-23 * "CXSE3 Buy"
   id: "b3-neg-20260123-6"
   source: "b3_negociacoes"
   asset: "CXSE3"
   Assets:Investment:XP:CXSE3    300 CXSE3 {16.93 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash   -5079 BRL
+  Equity:Transfers:Investments   -5079 BRL
 
 2026-01-23 * "CXSE3 Buy"
   id: "b3-neg-20260123-7"
   source: "b3_negociacoes"
   asset: "CXSE3"
   Assets:Investment:XP:CXSE3    100 CXSE3 {17 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash   -1700 BRL
+  Equity:Transfers:Investments   -1700 BRL
 
 2026-01-23 * "ITUB3 Buy"
   id: "b3-neg-20260123-8"
   source: "b3_negociacoes"
   asset: "ITUB3"
   Assets:Investment:XP:ITUB3    100 ITUB3 {40.16 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash   -4016 BRL
+  Equity:Transfers:Investments   -4016 BRL
 
 2026-01-23 * "LEVE3 Buy"
   id: "b3-neg-20260123-9"
   source: "b3_negociacoes"
   asset: "LEVE3"
   Assets:Investment:XP:LEVE3    100 LEVE3 {33.89 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash   -3389 BRL
+  Equity:Transfers:Investments   -3389 BRL
 
 2026-01-23 * "LVBI11 Buy"
   id: "b3-neg-20260123-10"
   source: "b3_negociacoes"
   asset: "LVBI11"
   Assets:Investment:XP:LVBI11        21 LVBI11 {111.63 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash    -2344.23 BRL
+  Equity:Transfers:Investments    -2344.23 BRL
 
 2026-01-23 * "PCIP11 Buy"
   id: "b3-neg-20260123-11"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11      1 PCIP11 {86.1 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash    -86.1 BRL
+  Equity:Transfers:Investments    -86.1 BRL
 
 2026-01-23 * "PCIP11 Buy"
   id: "b3-neg-20260123-12"
   source: "b3_negociacoes"
   asset: "PCIP11"
   Assets:Investment:XP:PCIP11        25 PCIP11 {86.09 BRL, 2026-01-23}
-  Assets:Investment:XP:Cash    -2152.25 BRL
+  Equity:Transfers:Investments    -2152.25 BRL
 
 2026-02-23 * "VALE3 Sell"
   id: "b3-neg-20260223-2"
   source: "b3_negociacoes"
   asset: "VALE3"
-  Assets:Investment:XP:Cash   17598 BRL
+  Equity:Transfers:Investments   17598 BRL
   Assets:Investment:XP:VALE3   -200 VALE3 {} @ 87.99 BRL
   Income:Investment:XP:Gains
 
@@ -2387,9 +2387,9 @@
   id: "b3-mov-20260114-104"
   source: "b3_movimentacoes"
   asset: "IRIM11"
-  Assets:Investment:XP:Cash      30.99 BRL
+  Equity:Transfers:Investments      30.99 BRL
   Assets:Investment:XP:IRIM11    -0.46 IRIM11 {} @ 67.979 BRL
-  Expenses:Investment:XP:Fees  0.28034 BRL
+  Expenses:Expenses:XP:Fees  0.28034 BRL
   Income:Investment:XP:Gains
 
 2026-01-28 * "TESOURO-IPCA-2050 Purchase"
@@ -2397,55 +2397,55 @@
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2050"
   Assets:Investment:Inter:TESOURO-IPCA-2050      25.37 TESOURO-IPCA-2050 {906.25 BRL, 2026-01-28}
-  Assets:Investment:Inter:Cash               -22991.82 BRL
-  Expenses:Investment:Inter:Fees                0.2575 BRL
+  Equity:Transfers:Investments               -22991.82 BRL
+  Expenses:Expenses:Inter:Fees                0.2575 BRL
 
 2026-03-10 * "ITUB3 Fraction Auction"
   id: "b3-mov-20260310-59"
   source: "b3_movimentacoes"
   asset: "ITUB3"
-  Assets:Investment:XP:Cash     26.92 BRL
+  Equity:Transfers:Investments     26.92 BRL
   Assets:Investment:XP:ITUB3     -0.6 ITUB3 {} @ 44.873 BRL
-  Expenses:Investment:XP:Fees  0.0038 BRL
+  Expenses:Expenses:XP:Fees  0.0038 BRL
   Income:Investment:XP:Gains
 
 2026-03-25 * "MGLU3 Fraction Auction"
   id: "b3-mov-20260325-45"
   source: "b3_movimentacoes"
   asset: "MGLU3"
-  Assets:Investment:XP:Cash      4.57 BRL
+  Equity:Transfers:Investments      4.57 BRL
   Assets:Investment:XP:MGLU3     -0.5 MGLU3 {} @ 9.147 BRL
-  Expenses:Investment:XP:Fees  0.0035 BRL
+  Expenses:Expenses:XP:Fees  0.0035 BRL
   Income:Investment:XP:Gains
 
 2026-05-27 * "CDB-CDB526CSFDK Purchase"
   id: "b3-mov-20260527-14"
   source: "b3_movimentacoes"
   asset: "CDB-CDB526CSFDK"
-  Assets:Investment:BB:CDB-CDB526CSFDK    2473459 CDB-CDB526CSFDK {0.01 BRL, 2026-05-27}
-  Assets:Investment:BB:Cash             -24734.59 BRL
+  Assets:Investment:BB:CDB-BB    2473459 CDB-BB {0.01 BRL, 2026-05-27}
+  Equity:Transfers:Investments             -24734.59 BRL
 
 2026-06-01 * "CDB-CDB526CSFDK Redemption"
   id: "b3-mov-20260601-6"
   source: "b3_movimentacoes"
   asset: "CDB-CDB526CSFDK"
-  Assets:Investment:BB:Cash                                         50 BRL
-  Assets:Investment:BB:CDB-CDB526CSFDK       -5000 CDB-CDB526CSFDK {} @ 0.01000032 BRL
-  Expenses:Investment:BB:Fees                               0.00160000 BRL
+  Equity:Transfers:Investments                                         50 BRL
+  Assets:Investment:BB:CDB-BB       -5000 CDB-BB {} @ 0.01000032 BRL
+  Expenses:Expenses:BB:Fees                               0.00160000 BRL
   Income:Investment:BB:Gains
 
 2026-06-01 * "CDB-CDB6260FY9K Purchase"
   id: "b3-mov-20260601-7"
   source: "b3_movimentacoes"
   asset: "CDB-CDB6260FY9K"
-  Assets:Investment:BB:CDB-CDB6260FY9K    2404334 CDB-CDB6260FY9K {0.01 BRL, 2026-06-01}
-  Assets:Investment:BB:Cash             -24043.34 BRL
+  Assets:Investment:BB:CDB-BB    2404334 CDB-BB {0.01 BRL, 2026-06-01}
+  Equity:Transfers:Investments             -24043.34 BRL
 
 2026-06-05 * "CDB-CDB526CSFDK Redemption"
   id: "b3-mov-20260605-2"
   source: "b3_movimentacoes"
   asset: "CDB-CDB526CSFDK"
-  Assets:Investment:BB:Cash                                       80.01 BRL
-  Assets:Investment:BB:CDB-CDB526CSFDK        -8000 CDB-CDB526CSFDK {} @ 0.01000064 BRL
-  Expenses:Investment:BB:Fees                               -0.00488000 BRL
+  Equity:Transfers:Investments                                       80.01 BRL
+  Assets:Investment:BB:CDB-BB        -8000 CDB-BB {} @ 0.01000064 BRL
+  Expenses:Expenses:BB:Fees                               -0.00488000 BRL
   Income:Investment:BB:Gains

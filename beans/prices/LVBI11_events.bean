@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: LVBI11
 ; quote_currency: BRL
-; last_update: 2026-07-01
-; generated_at: 2026-07-23T21:08:17-03:00
+; last_update: 2026-08-03
+; generated_at: 2026-08-16T23:13:26-03:00
 
 2022-05-02 custom "dividendo" "LVBI11" 0.737879 "source=yahoo-dividends"
 2022-06-01 custom "dividendo" "LVBI11" 0.737879 "source=yahoo-dividends"
@@ -55,3 +55,4 @@
 2026-05-04 custom "dividendo" "LVBI11" 0.75 "source=yahoo-dividends"
 2026-06-01 custom "dividendo" "LVBI11" 0.75 "source=yahoo-dividends"
 2026-07-01 custom "dividendo" "LVBI11" 0.75 "source=yahoo-dividends"
+2026-08-03 custom "dividendo" "LVBI11" 0.75 "source=yahoo-dividends"

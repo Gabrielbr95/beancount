@@ -2,23 +2,22 @@
 """
 ledger_csv.py — Lossless round-trip between Beancount transactions and CSV.
 
-Designed for editing transaction legs (account names, amounts, metadata) in
-Excel, then re-importing the edited CSV back to a Beancount file. The schema
-is DISCOVERED from the input file, not hardcoded: any metadata keys present
-become columns, any optional posting fields used (cost, price, posting flag)
-become columns.
+Designed for editing transactions and their legs (account names, amounts,
+metadata) in Excel, then re-importing the edited CSV back to a Beancount file.
+The schema is DISCOVERED from the input file, not hardcoded: any metadata keys
+present become columns, any optional posting fields used (cost, price, posting
+flag) become columns.
 
 Usage:
     python scripts/ledger_csv.py to-csv   <in.bean> <out.csv>
     python scripts/ledger_csv.py from-csv <in.csv>  <out.bean>
 
-CSV shape: one row per posting. Txn-level fields repeat on every posting row
-of the same transaction. Two synthetic columns drive regrouping on reimport:
-    txn_id      — synthetic group id (1, 2, 3, ...). Excel may sort/filter rows
-                  freely as long as txn_id is preserved. Add a new txn by
-                  picking a fresh txn_id.
-    posting_idx — 0-based posting position within the txn. Determines posting
-                  order on reimport.
+CSV shape: one row per transaction. Transaction-level fields come first;
+postings are numbered groups of columns (`leg_1_account`, `leg_1_units_number`,
+...). The number of groups is the maximum number of postings in any exported
+transaction. Leave a leg's account blank to remove that leg. `txn_id` is a
+synthetic unique id (1, 2, 3, ...) which must remain unique; use a fresh id
+when adding a transaction.
 
 Losslessness:
     - Semantic round-trip (account names, amounts, metadata values, tags,
@@ -34,9 +33,9 @@ Losslessness:
 
 Editing workflow:
     1. python scripts/ledger_csv.py to-csv tmp.bean tmp.csv
-    2. Open tmp.csv in Excel. Edit the `account` column on counterpart rows
-       to reclassify (e.g. replace `Expenses:TODO` with `Expenses:Food`).
-       Leave `txn_id` and `posting_idx` alone. Save as CSV (UTF-8).
+    2. Open tmp.csv in Excel. Edit the relevant `leg_N_account` column to
+       reclassify (e.g. replace `Expenses:TODO` with `Expenses:Food`). Leave
+       `txn_id` unique. Save as CSV (UTF-8).
     3. python scripts/ledger_csv.py from-csv tmp.csv tmp_new.bean
     4. bean-check main.bean  # verify (after swapping tmp.bean → tmp_new.bean)
 """
@@ -44,7 +43,6 @@ Editing workflow:
 import argparse
 import csv
 import sys
-from collections import OrderedDict
 from datetime import date
 from decimal import Decimal, InvalidOperation
 
@@ -74,6 +72,7 @@ def discover_schema(entries):
     cost_types = set()
     has_price = False
     has_post_flag = False
+    max_postings = 0
 
     def add_seen(lst, key):
         if key not in lst:
@@ -99,6 +98,7 @@ def discover_schema(entries):
                 has_price = True
             if p.flag is not None:
                 has_post_flag = True
+        max_postings = max(max_postings, len(entry.postings))
 
     return {
         "txn_meta": txn_meta_keys,
@@ -106,30 +106,31 @@ def discover_schema(entries):
         "cost_types": cost_types,
         "has_price": has_price,
         "has_post_flag": has_post_flag,
+        # Keep one editable leg group even for an empty input file.
+        "max_postings": max(1, max_postings),
     }
 
 
 def build_columns(schema):
     """Stable column order. Always-present columns first, then discovered."""
-    cols = [
-        "txn_id", "posting_idx",
-        "date", "flag", "payee", "narration", "tags", "links",
-    ]
+    cols = ["txn_id", "date", "flag", "payee", "narration", "tags", "links"]
     cols += [f"txn_meta_{k}" for k in schema["txn_meta"]]
-    cols += ["account", "units_number", "units_currency"]
-    if schema["cost_types"]:
-        cols += [
-            "cost_type",
-            "cost_number",         # Cost.number | CostSpec.number_per
-            "cost_number_total",    # CostSpec.number_total only
-            "cost_currency", "cost_label", "cost_date",
-            "cost_mergeei",        # CostSpec.mergeei only
-        ]
-    if schema["has_price"]:
-        cols += ["price_number", "price_currency"]
-    if schema["has_post_flag"]:
-        cols += ["posting_flag"]
-    cols += [f"posting_meta_{k}" for k in schema["post_meta"]]
+    for leg_idx in range(1, schema["max_postings"] + 1):
+        prefix = f"leg_{leg_idx}_"
+        cols += [f"{prefix}account", f"{prefix}units_number", f"{prefix}units_currency"]
+        if schema["cost_types"]:
+            cols += [
+                f"{prefix}cost_type",
+                f"{prefix}cost_number",         # Cost.number | CostSpec.number_per
+                f"{prefix}cost_number_total",    # CostSpec.number_total only
+                f"{prefix}cost_currency", f"{prefix}cost_label", f"{prefix}cost_date",
+                f"{prefix}cost_mergeei",         # CostSpec.mergeei only
+            ]
+        if schema["has_price"]:
+            cols += [f"{prefix}price_number", f"{prefix}price_currency"]
+        if schema["has_post_flag"]:
+            cols += [f"{prefix}posting_flag"]
+        cols += [f"{prefix}posting_meta_{k}" for k in schema["post_meta"]]
     return cols
 
 
@@ -175,11 +176,10 @@ def format_cost(cost):
     return cells
 
 
-def build_row(txn, posting, txn_id, post_idx, cols, schema):
-    """Build one CSV row (dict) for a single posting."""
+def build_row(txn, txn_id, cols, schema):
+    """Build one CSV row (dict) for a transaction and all of its postings."""
     row = {c: "" for c in cols}
     row["txn_id"] = txn_id
-    row["posting_idx"] = post_idx
     row["date"] = txn.date.isoformat()
     row["flag"] = txn.flag or ""
     row["payee"] = txn.payee or ""
@@ -190,21 +190,23 @@ def build_row(txn, posting, txn_id, post_idx, cols, schema):
         if k in INTERNAL_META:
             continue
         row[f"txn_meta_{k}"] = format_meta_value(v)
-    row["account"] = posting.account
-    if posting.units is not None:
-        row["units_number"] = str(posting.units.number)
-        row["units_currency"] = posting.units.currency or ""
-    if schema["cost_types"]:
-        row.update(format_cost(posting.cost))
-    if schema["has_price"] and posting.price is not None:
-        row["price_number"] = str(posting.price.number)
-        row["price_currency"] = posting.price.currency or ""
-    if schema["has_post_flag"] and posting.flag is not None:
-        row["posting_flag"] = posting.flag
-    for k, v in (posting.meta or {}).items():
-        if k in INTERNAL_META:
-            continue
-        row[f"posting_meta_{k}"] = format_meta_value(v)
+    for leg_idx, posting in enumerate(txn.postings, start=1):
+        prefix = f"leg_{leg_idx}_"
+        row[f"{prefix}account"] = posting.account
+        if posting.units is not None:
+            row[f"{prefix}units_number"] = str(posting.units.number)
+            row[f"{prefix}units_currency"] = posting.units.currency or ""
+        if schema["cost_types"]:
+            row.update({f"{prefix}{k}": v for k, v in format_cost(posting.cost).items()})
+        if schema["has_price"] and posting.price is not None:
+            row[f"{prefix}price_number"] = str(posting.price.number)
+            row[f"{prefix}price_currency"] = posting.price.currency or ""
+        if schema["has_post_flag"] and posting.flag is not None:
+            row[f"{prefix}posting_flag"] = posting.flag
+        for k, v in (posting.meta or {}).items():
+            if k in INTERNAL_META:
+                continue
+            row[f"{prefix}posting_meta_{k}"] = format_meta_value(v)
     return row
 
 
@@ -235,8 +237,7 @@ def ledger2csv(in_path, out_path):
             if not isinstance(entry, data.Transaction):
                 continue
             txn_id += 1
-            for post_idx, posting in enumerate(entry.postings):
-                writer.writerow(build_row(entry, posting, txn_id, post_idx, cols, schema))
+            writer.writerow(build_row(entry, txn_id, cols, schema))
 
     sys.stderr.write(
         f"[ok] {txn_id} transactions → {out_path} ({len(cols)} columns)\n"
@@ -262,105 +263,80 @@ def parse_date_or_none(s):
     return date.fromisoformat(s)
 
 
-def build_posting(row):
-    """Reconstruct one data.Posting from a CSV row. Returns None if account empty."""
-    account = row.get("account", "")
+def build_posting(row, prefix):
+    """Reconstruct one numbered posting. Returns None if its account is empty."""
+    account = row.get(f"{prefix}account", "")
     if not account:
-        # Empty account = user deleted this posting in Excel. Skip.
+        # Empty account = user deleted this leg in Excel. Skip.
         return None
 
     units = None
-    num = row.get("units_number", "")
-    cur = row.get("units_currency", "")
+    num = row.get(f"{prefix}units_number", "")
+    cur = row.get(f"{prefix}units_currency", "")
     if num and cur:
         units = amount.Amount(Decimal(num), cur)
 
     cost = None
-    cost_type = row.get("cost_type", "")
+    cost_type = row.get(f"{prefix}cost_type", "")
     if cost_type == "Cost":
         cost = data.Cost(
-            parse_decimal_or_none(row.get("cost_number", "")),
-            row.get("cost_currency", "") or None,
-            row.get("cost_label", "") or None,
-            parse_date_or_none(row.get("cost_date", "")),
+            parse_decimal_or_none(row.get(f"{prefix}cost_number", "")),
+            row.get(f"{prefix}cost_currency", "") or None,
+            row.get(f"{prefix}cost_label", "") or None,
+            parse_date_or_none(row.get(f"{prefix}cost_date", "")),
         )
     elif cost_type == "CostSpec":
         cost = data.CostSpec(
-            parse_decimal_or_none(row.get("cost_number", "")),
-            parse_decimal_or_none(row.get("cost_number_total", "")),
-            row.get("cost_currency", "") or None,
-            row.get("cost_label", "") or None,
-            parse_date_or_none(row.get("cost_date", "")),
-            row.get("cost_mergeei", "") or None,
+            parse_decimal_or_none(row.get(f"{prefix}cost_number", "")),
+            parse_decimal_or_none(row.get(f"{prefix}cost_number_total", "")),
+            row.get(f"{prefix}cost_currency", "") or None,
+            row.get(f"{prefix}cost_label", "") or None,
+            parse_date_or_none(row.get(f"{prefix}cost_date", "")),
+            row.get(f"{prefix}cost_mergeei", "") or None,
         )
 
     price = None
-    pnum = row.get("price_number", "")
-    pcur = row.get("price_currency", "")
+    pnum = row.get(f"{prefix}price_number", "")
+    pcur = row.get(f"{prefix}price_currency", "")
     if pnum and pcur:
         price = amount.Amount(Decimal(pnum), pcur)
 
-    flag = row.get("posting_flag", "") or None
+    flag = row.get(f"{prefix}posting_flag", "") or None
 
     meta = None
     for k, v in row.items():
-        if k.startswith("posting_meta_") and v != "":
+        if k.startswith(f"{prefix}posting_meta_") and v != "":
             if meta is None:
                 meta = {}
-            meta[k[len("posting_meta_"):]] = v
+            meta[k[len(f"{prefix}posting_meta_"):]] = v
 
     return data.Posting(account, units, cost, price, flag, meta)
 
 
-def build_txn(rows):
-    """Reconstruct one data.Transaction from a list of CSV rows (same txn_id).
-
-    Txn-level fields (date, flag, payee, narration, tags, links, txn_meta_*)
-    must be identical across all rows of the same txn — that's the contract
-    established at export. If they diverge (user edited one row but not the
-    others), raise loudly rather than silently picking one.
-    """
-    rows = sorted(rows, key=lambda r: int(r["posting_idx"]))
-    first = rows[0]
-
-    # Validate txn-level field consistency across all rows of this txn.
-    txn_level_prefixes = ("date", "flag", "payee", "narration", "tags",
-                          "links", "txn_meta_")
-    for r in rows[1:]:
-        for k, v in r.items():
-            if not any(k.startswith(p) for p in txn_level_prefixes):
-                continue
-            if r[k] != first[k]:
-                raise ValueError(
-                    f"Txn-level field '{k}' differs between posting_idx "
-                    f"{first['posting_idx']} ({first[k]!r}) and posting_idx "
-                    f"{r['posting_idx']} ({r[k]!r}) for txn_id={first['txn_id']}. "
-                    f"Txn-level fields must be identical across all rows of a "
-                    f"txn. Use Excel 'fill down' to keep them in sync."
-                )
-
+def build_txn(row, leg_count):
+    """Reconstruct one data.Transaction from one CSV row and its leg columns."""
     txn_meta = data.new_metadata("<csv2ledger>", 1)
-    for k, v in first.items():
+    for k, v in row.items():
         if k.startswith("txn_meta_") and v != "":
             txn_meta[k[len("txn_meta_"):]] = v
 
-    d = parse_date_or_none(first.get("date", "")) or date.today()
-    flag = first.get("flag", "") or "*"
-    payee = first.get("payee", "") or None
-    narration = first.get("narration", "") or ""
-    tags = frozenset(t for t in (first.get("tags", "") or "").split("|") if t)
-    links = frozenset(l for l in (first.get("links", "") or "").split("|") if l)
+    d = parse_date_or_none(row.get("date", "")) or date.today()
+    flag = row.get("flag", "") or "*"
+    payee = row.get("payee", "") or None
+    narration = row.get("narration", "") or ""
+    tags = frozenset(t for t in (row.get("tags", "") or "").split("|") if t)
+    links = frozenset(l for l in (row.get("links", "") or "").split("|") if l)
 
     postings = []
-    for r in rows:
-        p = build_posting(r)
+    for leg_idx in range(1, leg_count + 1):
+        p = build_posting(row, f"leg_{leg_idx}_")
         if p is not None:
             postings.append(p)
 
     if not postings:
         raise ValueError(
-            f"Transaction txn_id={first.get('txn_id')} has no postings "
-            f"(all account cells empty). Restore an account or drop the txn_id."
+            f"Transaction txn_id={row.get('txn_id')} has no postings "
+            f"(all leg account cells empty). Restore an account or drop the row."
         )
 
     return data.Transaction(txn_meta, d, flag, payee, narration, tags, links, postings)
@@ -372,17 +348,37 @@ def csv2ledger(in_path, out_path):
         reader = csv.DictReader(f)
         rows = list(reader)
 
-    # Group by txn_id, preserving first-seen order (OrderedDict).
-    groups = OrderedDict()
-    for r in rows:
-        tid = r.get("txn_id", "")
-        if not tid:
-            raise ValueError(f"Row missing txn_id: {r}")
-        groups.setdefault(tid, []).append(r)
+    if not reader.fieldnames:
+        raise ValueError("CSV has no header row.")
+    if "posting_idx" in reader.fieldnames or "account" in reader.fieldnames:
+        raise ValueError(
+            "This CSV uses the old one-row-per-posting schema. "
+            "Re-export the Beancount file with 'to-csv' before importing."
+        )
 
-    entries = []
-    for tid, prows in groups.items():
-        entries.append(build_txn(prows))
+    leg_count = 0
+    for column in reader.fieldnames:
+        if column.startswith("leg_") and column.endswith("_account"):
+            suffix = column[len("leg_"):-len("_account")]
+            if suffix.isdigit():
+                leg_count = max(leg_count, int(suffix))
+    if leg_count == 0:
+        raise ValueError("CSV has no leg_N_account columns.")
+
+    # Each row is a complete transaction; txn_id remains a unique, editable id.
+    txn_ids = set()
+    for row_number, row in enumerate(rows, start=2):
+        tid = row.get("txn_id", "")
+        if not tid:
+            raise ValueError(f"Row {row_number} missing txn_id: {row}")
+        if tid in txn_ids:
+            raise ValueError(
+                f"Duplicate txn_id {tid!r} on row {row_number}. "
+                "Each CSV row must have a unique txn_id."
+            )
+        txn_ids.add(tid)
+
+    entries = [build_txn(row, leg_count) for row in rows]
 
     entries.sort(key=data.entry_sortkey)
 

@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: AFHI11
 ; quote_currency: BRL
-; last_update: 2026-06-16
-; generated_at: 2026-07-13T22:21:26-03:00
+; last_update: 2026-07-15
+; generated_at: 2026-08-16T23:13:16-03:00
 
 2024-02-19 custom "dividendo" "AFHI11" 0.944779 "source=yahoo-dividends"
 2024-03-15 custom "dividendo" "AFHI11" 0.944779 "source=yahoo-dividends"
@@ -33,3 +33,4 @@
 2026-04-16 custom "dividendo" "AFHI11" 0.979391 "source=yahoo-dividends"
 2026-05-18 custom "dividendo" "AFHI11" 1.02936 "source=yahoo-dividends"
 2026-06-16 custom "dividendo" "AFHI11" 1.03 "source=yahoo-dividends"
+2026-07-15 custom "dividendo" "AFHI11" 1.03 "source=yahoo-dividends"

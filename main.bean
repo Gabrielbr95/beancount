@@ -29,11 +29,9 @@ plugin "beancount.plugins.check_average_cost"
 2010-01-01 custom "fava-extension" "plugins.price_updater" "{
   'prices_dir': 'beans/prices'
 }"
-
 2010-01-01 custom "fava-extension" "fava_portfolio_returns" "{
   'beangrow_config': 'beangrow.pbtxt'
 }"
-
 2000-01-01 custom "fava-extension" "fava_portfolio_summary" "{
     'metadata-key': 'portfolio',
     'account-groups': (
@@ -48,12 +46,14 @@ plugin "beancount.plugins.check_average_cost"
     'mwr': 'children',
     'twr': False,
     }"
+2010-01-01 custom "fava-extension" "fava_edit_replay" "{ 'db': 'edit_replays.yaml' }"
 
 include "beans/accounts.bean"
 include "beans/commodities.bean"
-include "beans/transactions.bean"
 include "beans/prices/prices.bean"
-include "beans/corporate_actions.bean"
-include "beans/income_events.bean"
+;include "beans/transactions.bean"
+;include "beans/corporate_actions.bean"
+;include "beans/income_events.bean"
 include "beans/manual_corrections.bean"
-include "tmp.bean"
+include "beans/b3.bean"
+include "beans/pluggy.bean"

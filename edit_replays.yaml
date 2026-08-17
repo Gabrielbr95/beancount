@@ -1,0 +1,14 @@
+- account_filter: Income:Investment:XP:Rendimento
+  advanced_filter: ''
+  diff: '{"values_changed": {"root.postings[0].account": {"new_value": "Equity:Transfers:XP:Rendimento"}}}'
+  time_filter: ''
+
+- account_filter: Income:Investment:XP:Dividend
+  advanced_filter: ''
+  diff: '{"values_changed": {"root.postings[0].account": {"new_value": "Equity:Transfers:XP:Dividend"}}}'
+  time_filter: ''
+
+- account_filter: Income:Investment:XP:JCP
+  advanced_filter: ''
+  diff: '{"values_changed": {"root.postings[0].account": {"new_value": "Equity:Transfers:XP:JCP"}}}'
+  time_filter: ''

@@ -1,8 +1,8 @@
 ; source: Yahoo Finance
 ; asset: PMLL11
 ; quote_currency: BRL
-; last_update: 2026-07-01
-; generated_at: 2026-07-23T21:08:23-03:00
+; last_update: 2026-08-03
+; generated_at: 2026-08-16T23:13:31-03:00
 
 2022-04-01 custom "dividendo" "PMLL11" 0.719519 "source=yahoo-dividends"
 2022-05-02 custom "dividendo" "PMLL11" 0.719519 "source=yahoo-dividends"
@@ -54,3 +54,4 @@
 2026-05-04 custom "dividendo" "PMLL11" 1 "source=yahoo-dividends"
 2026-06-01 custom "dividendo" "PMLL11" 1 "source=yahoo-dividends"
 2026-07-01 custom "dividendo" "PMLL11" 1 "source=yahoo-dividends"
+2026-08-03 custom "dividendo" "PMLL11" 1 "source=yahoo-dividends"

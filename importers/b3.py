@@ -350,8 +350,9 @@ class B3Importer(beangulp.Importer):
     def _asset_account(self, broker: str, ticker: str) -> str:
         return f"{self.account_root}:{broker}:{ticker}"
 
-    def _cash_account(self, broker: str) -> str:
-        return f"{self.account_root}:{broker}:Cash"
+    def _transfer_account(self, broker: str, route: str) -> str:
+        """Return the Equity:Transfers route for a BRL B3 settlement."""
+        return f"Equity:Transfers:{broker}:{route}"
 
     def _income_account(self, broker: str, category: str) -> str:
         return f"Income:Investment:{broker}:{category}"
@@ -386,7 +387,7 @@ class B3Importer(beangulp.Importer):
                 "asset": ticker,
             }
 
-            cash_account = self._cash_account(institution)
+            settlement_account = self._transfer_account(institution, "Cash")
             asset_account = self._asset_account(institution, ticker)
 
             if trade_type == "COMPRA":
@@ -395,7 +396,7 @@ class B3Importer(beangulp.Importer):
                 fee_value = abs(value) - gross_value
                 postings = [
                     data.Posting(asset_account, self._amount(quantity, ticker), self._cost(price, txn_date), None, None, None),
-                    data.Posting(cash_account, self._amount(-abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, self._amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 if fee_value != 0:
                     postings.append(
@@ -413,7 +414,7 @@ class B3Importer(beangulp.Importer):
                 gross_value = abs(quantity) * price
                 fee_value = gross_value - abs(value)
                 postings = [
-                    data.Posting(cash_account, self._amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, self._amount(abs(value), "BRL"), None, None, None, None),
                     data.Posting(asset_account, self._amount(-abs(quantity), ticker), self._empty_costspec(), self._amount(price, "BRL"), None, None),
                 ]
                 if fee_value != 0:
@@ -458,7 +459,6 @@ class B3Importer(beangulp.Importer):
                 raise ValueError(f"{context}: missing movement type")
 
             ticker = normalize_ticker(product, movement)
-            cash_account = self._cash_account(institution)
             asset_account = self._asset_account(institution, ticker)
 
             meta = {
@@ -482,8 +482,10 @@ class B3Importer(beangulp.Importer):
                 if quantity and value:
                     meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported income: %s", context)
+                settlement_route = income_kind if institution == "XP" else "Cash"
+                settlement_account = self._transfer_account(institution, settlement_route)
                 postings = [
-                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
                     data.Posting(self._income_account(institution, income_kind), amount.Amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} {income_kind}", postings, **meta))
@@ -499,8 +501,10 @@ class B3Importer(beangulp.Importer):
                 if quantity and value:
                     meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported JCP: %s", context)
+                settlement_route = "JCP" if institution == "XP" else "Cash"
+                settlement_account = self._transfer_account(institution, settlement_route)
                 postings = [
-                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
                     data.Posting(self._income_account(institution, "JCP"), amount.Amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} JCP", postings, **meta))
@@ -514,8 +518,9 @@ class B3Importer(beangulp.Importer):
                 if quantity and value:
                     meta["unit_price"] = str((abs(value) / abs(quantity)).quantize(Decimal("0.000001")))
                 logger.info("Imported interest payment: %s", context)
+                settlement_account = self._transfer_account(institution, "Cash")
                 postings = [
-                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
                     data.Posting(self._income_account(institution, "Interest"), amount.Amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Interest", postings, **meta))
@@ -584,8 +589,9 @@ class B3Importer(beangulp.Importer):
                 gross_value = abs(quantity) * effective_unit_price
                 fee_value = gross_value - abs(value)
                 logger.info("Imported fraction auction: %s", context)
+                settlement_account = self._transfer_account(institution, "Cash")
                 postings = [
-                    data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
                     # FIX #1: use _empty_costspec() so Beancount can match and
                     # reduce an existing lot. None would create a new zero-cost
                     # position instead of reducing the one already in the books.
@@ -627,8 +633,9 @@ class B3Importer(beangulp.Importer):
                 gross_value = abs(quantity) * effective_price
                 fee_value = gross_value - abs(value)
                 logger.info("Imported redemption: %s", context)
+                settlement_account = self._transfer_account(institution, "Cash")
                 postings = [
-                    data.Posting(cash_account, self._amount(abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, self._amount(abs(value), "BRL"), None, None, None, None),
                     # FIX #1: same as LEILAO DE FRACAO above.
                     data.Posting(asset_account, self._amount(-abs(quantity), ticker), self._empty_costspec(), self._amount(effective_price, "BRL"), None, None),
                 ]
@@ -653,9 +660,10 @@ class B3Importer(beangulp.Importer):
                 gross_value = abs(quantity) * effective_price
                 fee_value = abs(value) - gross_value
                 logger.info("Imported fixed income purchase: %s", context)
+                settlement_account = self._transfer_account(institution, "Cash")
                 postings = [
                     data.Posting(asset_account, amount.Amount(quantity, ticker), self._cost(effective_price, txn_date), None, None, None),
-                    data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 if fee_value != 0:
                     postings.append(
@@ -676,8 +684,9 @@ class B3Importer(beangulp.Importer):
                     gross_value = abs(quantity) * effective_price
                     fee_value = gross_value - abs(value)
                     logger.info("Imported fixed income sale: %s", context)
+                    settlement_account = self._transfer_account(institution, "Cash")
                     postings = [
-                        data.Posting(cash_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
+                        data.Posting(settlement_account, amount.Amount(abs(value), "BRL"), None, None, None, None),
                         # FIX #1: same as LEILAO DE FRACAO above.
                         data.Posting(asset_account, amount.Amount(-abs(quantity), ticker), self._empty_costspec(), amount.Amount(effective_price, "BRL"), None, None),
                     ]
@@ -697,9 +706,10 @@ class B3Importer(beangulp.Importer):
                     gross_value = abs(quantity) * effective_price
                     fee_value = abs(value) - gross_value
                     logger.info("Imported fixed income purchase: %s", context)
+                    settlement_account = self._transfer_account(institution, "Cash")
                     postings = [
                         data.Posting(asset_account, amount.Amount(abs(quantity), ticker), self._cost(effective_price, txn_date), None, None, None),
-                        data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                        data.Posting(settlement_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
                     ]
                     if fee_value != 0:
                         postings.append(
@@ -716,9 +726,10 @@ class B3Importer(beangulp.Importer):
                 if value is None:
                     raise ValueError(f"{context}: missing value for fee")
                 logger.info("Imported fee: %s", context)
+                settlement_account = self._transfer_account(institution, "Cash")
                 postings = [
                     data.Posting(self._expense_account(institution, "Fees"), amount.Amount(abs(value), "BRL"), None, None, None, None),
-                    data.Posting(cash_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
+                    data.Posting(settlement_account, amount.Amount(-abs(value), "BRL"), None, None, None, None),
                 ]
                 entries.append(self._txn(filepath, lineno, txn_date, f"{ticker} Fee", postings, **meta))
                 continue
