@@ -1,6 +1,9 @@
 ; ===========================================================================
 ; Commodities and Currencies
 ; ===========================================================================
+; Only commodities/currencies with actual postings or price entries are
+; declared here. Anything else is treated as an undeclared commodity, which
+; Beancount accepts without a directive.
 
 ; Primary Currencies
 1900-01-01 commodity BRL
@@ -11,17 +14,8 @@
   name: "US Dollar"
   precision: 2
 
-; Secondary Currencies
-1900-01-01 commodity EUR
-  name: "Euro"
-  precision: 2
-
-1900-01-01 commodity GBP
-  name: "British Pound"
-  precision: 2
-
 ; ===========================================================================
-; Brazilian Stocks (B3) - Examples based on export samples
+; Brazilian Stocks (B3)
 ; ===========================================================================
 
 1900-01-01 commodity BBAS3
@@ -68,37 +62,13 @@
   name: "Petróleo Brasileiro S.A. - Petrobras"
   precision: 2
 
-1900-01-01 commodity BOVA11
-  name: "iShares Ibovespa Fundo de Índice"
-  precision: 2
-
 1900-01-01 commodity MGLU3
   name: "Magazine Luiza S.A."
   precision: 2
 
 ; ===========================================================================
-; US Stocks (IBKR)
+; Crypto
 ; ===========================================================================
-
-1900-01-01 commodity AAPL
-  name: "Apple Inc."
-  precision: 2
-
-1900-01-01 commodity VTI
-  name: "Vanguard Total Stock Market ETF"
-  precision: 2
-
-; ===========================================================================
-; Crypto (Binance)
-; ===========================================================================
-
-1900-01-01 commodity BTC
-  name: "Bitcoin"
-  precision: 8
-
-1900-01-01 commodity ETH
-  name: "Ethereum"
-  precision: 8
 
 1900-01-01 commodity USDT
   name: "Tether USD"
