@@ -11361,7 +11361,7 @@
   Equity:Transfers:XP:Rendimento    130.05 BRL
   Income:Investment:XP:Rendimento  -130.05 BRL
 
-2025-06-17 * "IRDM11 Rendimento"
+2025-06-17 * "IRDM11 Rendimento" ^auto-transfer-20250617-9bd5ffe330
   id: "b3-mov-20250617-123"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11370,7 +11370,7 @@
   Equity:Transfers:XP:Rendimento    153.34 BRL
   Income:Investment:XP:Rendimento  -153.34 BRL
 
-2025-06-18 * "MCCI11 Rendimento"
+2025-06-18 * "MCCI11 Rendimento" ^auto-transfer-20250618-41132e021c
   id: "b3-mov-20250618-121"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11379,7 +11379,7 @@
   Equity:Transfers:XP:Rendimento    169.2 BRL
   Income:Investment:XP:Rendimento  -169.2 BRL
 
-2025-06-20 * "PETR4 Dividend"
+2025-06-20 * "PETR4 Dividend" ^auto-transfer-20250620-60b8b8aac7
   id: "b3-mov-20250620-119"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11388,7 +11388,7 @@
   Equity:Transfers:XP:Dividend    177.38 BRL
   Income:Investment:XP:Dividend  -177.38 BRL
 
-2025-06-20 * "PETR4 Rendimento"
+2025-06-20 * "PETR4 Rendimento" ^auto-transfer-20250620-c21dac047c
   id: "b3-mov-20250620-120"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11397,7 +11397,7 @@
   Equity:Transfers:XP:Rendimento    8.34 BRL
   Income:Investment:XP:Rendimento  -8.34 BRL
 
-2025-07-01 * "ITUB3 JCP"
+2025-07-01 * "ITUB3 JCP" ^auto-transfer-20250701-3fdb0c0204
   id: "b3-mov-20250701-118"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11406,7 +11406,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-07-07 * "B3SA3 JCP"
+2025-07-07 * "B3SA3 JCP" ^auto-transfer-20250707-5de38af164
   id: "b3-mov-20250707-117"
   source: "b3_movimentacoes"
   asset: "B3SA3"
@@ -11415,7 +11415,7 @@
   Equity:Transfers:XP:JCP    43.33 BRL
   Income:Investment:XP:JCP  -43.33 BRL
 
-2025-07-14 * "HGLG11 Rendimento"
+2025-07-14 * "HGLG11 Rendimento" ^auto-transfer-20250714-9eb4ddf7fe
   id: "b3-mov-20250714-114"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11424,7 +11424,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-07-14 * "HGRU11 Rendimento"
+2025-07-14 * "HGRU11 Rendimento" ^auto-transfer-20250714-69e44ec77e
   id: "b3-mov-20250714-115"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11433,7 +11433,7 @@
   Equity:Transfers:XP:Rendimento    199.95 BRL
   Income:Investment:XP:Rendimento  -199.95 BRL
 
-2025-07-14 * "MALL11 Rendimento"
+2025-07-14 * "MALL11 Rendimento" ^auto-transfer-20250714-9975a4c86a
   id: "b3-mov-20250714-116"
   source: "b3_movimentacoes"
   asset: "MALL11"
@@ -11442,7 +11442,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-07-16 * "IRDM11 Rendimento"
+2025-07-16 * "IRDM11 Rendimento" ^auto-transfer-20250716-ce703329c7
   id: "b3-mov-20250716-113"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11451,7 +11451,7 @@
   Equity:Transfers:XP:Rendimento    157.08 BRL
   Income:Investment:XP:Rendimento  -157.08 BRL
 
-2025-07-17 * "MCCI11 Rendimento"
+2025-07-17 * "MCCI11 Rendimento" ^auto-transfer-20250717-0328f2597f
   id: "b3-mov-20250717-112"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11460,7 +11460,7 @@
   Equity:Transfers:XP:Rendimento    169.2 BRL
   Income:Investment:XP:Rendimento  -169.2 BRL
 
-2025-08-01 * "ITUB3 JCP"
+2025-08-01 * "ITUB3 JCP" ^auto-transfer-20250801-1f2550caa1
   id: "b3-mov-20250801-109"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11469,7 +11469,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-08-13 * "WEGE3 JCP"
+2025-08-13 * "WEGE3 JCP" ^auto-transfer-20250813-252572e171
   id: "b3-mov-20250813-104"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11478,7 +11478,7 @@
   Equity:Transfers:XP:JCP    54.88 BRL
   Income:Investment:XP:JCP  -54.88 BRL
 
-2025-08-13 * "WEGE3 Dividend"
+2025-08-13 * "WEGE3 Dividend" ^auto-transfer-20250813-46634eca50
   id: "b3-mov-20250813-105"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11487,7 +11487,7 @@
   Equity:Transfers:XP:Dividend    137.16 BRL
   Income:Investment:XP:Dividend  -137.16 BRL
 
-2025-08-13 * "WEGE3 JCP"
+2025-08-13 * "WEGE3 JCP" ^auto-transfer-20250813-0fb7bdb765
   id: "b3-mov-20250813-106"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11496,7 +11496,7 @@
   Equity:Transfers:XP:JCP    63.96 BRL
   Income:Investment:XP:JCP  -63.96 BRL
 
-2025-08-14 * "HGLG11 Rendimento"
+2025-08-14 * "HGLG11 Rendimento" ^auto-transfer-20250814-19e40a6427
   id: "b3-mov-20250814-100"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11505,7 +11505,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-08-14 * "HGRU11 Rendimento"
+2025-08-14 * "HGRU11 Rendimento" ^auto-transfer-20250814-d54628d484
   id: "b3-mov-20250814-101"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11514,7 +11514,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2025-08-14 * "PMLL11 Rendimento"
+2025-08-14 * "PMLL11 Rendimento" ^auto-transfer-20250814-b8a816c52c
   id: "b3-mov-20250814-102"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -11523,7 +11523,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-08-18 * "IRDM11 Rendimento"
+2025-08-18 * "IRDM11 Rendimento" ^auto-transfer-20250818-e92ff48c88
   id: "b3-mov-20250818-98"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11532,7 +11532,7 @@
   Equity:Transfers:XP:Rendimento    145.86 BRL
   Income:Investment:XP:Rendimento  -145.86 BRL
 
-2025-08-19 * "MCCI11 Rendimento"
+2025-08-19 * "MCCI11 Rendimento" ^auto-transfer-20250819-aeae73f00a
   id: "b3-mov-20250819-97"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11541,7 +11541,7 @@
   Equity:Transfers:XP:Rendimento    188 BRL
   Income:Investment:XP:Rendimento  -188 BRL
 
-2025-08-20 * "PETR4 JCP"
+2025-08-20 * "PETR4 JCP" ^auto-transfer-20250820-7c4f0df75f
   id: "b3-mov-20250820-96"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11550,7 +11550,7 @@
   Equity:Transfers:XP:JCP    193.2 BRL
   Income:Investment:XP:JCP  -193.2 BRL
 
-2025-08-27 * "TAEE11 JCP"
+2025-08-27 * "TAEE11 JCP" ^auto-transfer-20250827-399f479b01
   id: "b3-mov-20250827-95"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -11559,7 +11559,7 @@
   Equity:Transfers:XP:JCP    325.18 BRL
   Income:Investment:XP:JCP  -325.18 BRL
 
-2025-08-29 * "ITUB3 JCP"
+2025-08-29 * "ITUB3 JCP" ^auto-transfer-20250829-2fd30c959e
   id: "b3-mov-20250829-90"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11568,7 +11568,7 @@
   Equity:Transfers:XP:JCP    67.95 BRL
   Income:Investment:XP:JCP  -67.95 BRL
 
-2025-08-29 * "ITUB3 JCP"
+2025-08-29 * "ITUB3 JCP" ^auto-transfer-20250829-37faa10ad9
   id: "b3-mov-20250829-91"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11577,7 +11577,7 @@
   Equity:Transfers:XP:JCP    62.48 BRL
   Income:Investment:XP:JCP  -62.48 BRL
 
-2025-09-01 * "ITUB3 JCP"
+2025-09-01 * "ITUB3 JCP" ^auto-transfer-20250901-7041aa91cf
   id: "b3-mov-20250901-89"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11586,7 +11586,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-09-03 * "VALE3 JCP"
+2025-09-03 * "VALE3 JCP" ^auto-transfer-20250903-68aa5402d1
   id: "b3-mov-20250903-88"
   source: "b3_movimentacoes"
   asset: "VALE3"
@@ -11595,7 +11595,7 @@
   Equity:Transfers:XP:JCP    322.21 BRL
   Income:Investment:XP:JCP  -322.21 BRL
 
-2025-09-12 * "HGLG11 Rendimento"
+2025-09-12 * "HGLG11 Rendimento" ^auto-transfer-20250912-807e7c66f5
   id: "b3-mov-20250912-84"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11604,7 +11604,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-09-12 * "HGRU11 Rendimento"
+2025-09-12 * "HGRU11 Rendimento" ^auto-transfer-20250912-66a037458f
   id: "b3-mov-20250912-85"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11613,7 +11613,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2025-09-12 * "PMLL11 Rendimento"
+2025-09-12 * "PMLL11 Rendimento" ^auto-transfer-20250912-d289e9016d
   id: "b3-mov-20250912-86"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -11622,7 +11622,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-09-16 * "IRDM11 Rendimento"
+2025-09-16 * "IRDM11 Rendimento" ^auto-transfer-20250916-9324efb0cd
   id: "b3-mov-20250916-83"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11631,7 +11631,7 @@
   Equity:Transfers:XP:Rendimento    130.9 BRL
   Income:Investment:XP:Rendimento  -130.9 BRL
 
-2025-09-17 * "MCCI11 Rendimento"
+2025-09-17 * "MCCI11 Rendimento" ^auto-transfer-20250917-8b9b870bd2
   id: "b3-mov-20250917-82"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11640,7 +11640,7 @@
   Equity:Transfers:XP:Rendimento    188 BRL
   Income:Investment:XP:Rendimento  -188 BRL
 
-2025-09-22 * "PETR4 Dividend"
+2025-09-22 * "PETR4 Dividend" ^auto-transfer-20250922-39dd920aee
   id: "b3-mov-20250922-80"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11649,7 +11649,7 @@
   Equity:Transfers:XP:Dividend    154.22 BRL
   Income:Investment:XP:Dividend  -154.22 BRL
 
-2025-09-22 * "PETR4 JCP"
+2025-09-22 * "PETR4 JCP" ^auto-transfer-20250922-f3ab3a3824
   id: "b3-mov-20250922-81"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11658,7 +11658,7 @@
   Equity:Transfers:XP:JCP    62.11 BRL
   Income:Investment:XP:JCP  -62.11 BRL
 
-2025-09-30 * "ETER3 Dividend"
+2025-09-30 * "ETER3 Dividend" ^auto-transfer-20250930-cbea4026c8
   id: "b3-mov-20250930-79"
   source: "b3_movimentacoes"
   asset: "ETER3"
@@ -11667,7 +11667,7 @@
   Equity:Transfers:XP:Dividend    18.42 BRL
   Income:Investment:XP:Dividend  -18.42 BRL
 
-2025-10-01 * "ITUB3 JCP"
+2025-10-01 * "ITUB3 JCP" ^auto-transfer-20251001-91e37c9f30
   id: "b3-mov-20251001-78"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11676,7 +11676,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-10-03 * "FLRY3 JCP"
+2025-10-03 * "FLRY3 JCP" ^auto-transfer-20251003-5cf644b59f
   id: "b3-mov-20251003-76"
   source: "b3_movimentacoes"
   asset: "FLRY3"
@@ -11685,7 +11685,7 @@
   Equity:Transfers:XP:JCP    218.78 BRL
   Income:Investment:XP:JCP  -218.78 BRL
 
-2025-10-07 * "B3SA3 JCP"
+2025-10-07 * "B3SA3 JCP" ^auto-transfer-20251007-78574ac405
   id: "b3-mov-20251007-75"
   source: "b3_movimentacoes"
   asset: "B3SA3"
@@ -11694,7 +11694,7 @@
   Equity:Transfers:XP:JCP    46.58 BRL
   Income:Investment:XP:JCP  -46.58 BRL
 
-2025-10-14 * "HGLG11 Rendimento"
+2025-10-14 * "HGLG11 Rendimento" ^auto-transfer-20251014-11f0749ea8
   id: "b3-mov-20251014-69"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11703,7 +11703,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-10-14 * "HGRU11 Rendimento"
+2025-10-14 * "HGRU11 Rendimento" ^auto-transfer-20251014-fc91404e42
   id: "b3-mov-20251014-71"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11712,7 +11712,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2025-10-14 * "PMLL11 Rendimento"
+2025-10-14 * "PMLL11 Rendimento" ^auto-transfer-20251014-2534269018
   id: "b3-mov-20251014-72"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -11721,7 +11721,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-10-16 * "IRDM11 Rendimento"
+2025-10-16 * "IRDM11 Rendimento" ^auto-transfer-20251016-ee4c0d61c9
   id: "b3-mov-20251016-68"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11730,7 +11730,7 @@
   Equity:Transfers:XP:Rendimento    142.12 BRL
   Income:Investment:XP:Rendimento  -142.12 BRL
 
-2025-10-17 * "MCCI11 Rendimento"
+2025-10-17 * "MCCI11 Rendimento" ^auto-transfer-20251017-b6539a4d5d
   id: "b3-mov-20251017-67"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11739,7 +11739,7 @@
   Equity:Transfers:XP:Rendimento    188 BRL
   Income:Investment:XP:Rendimento  -188 BRL
 
-2025-11-03 * "ITUB3 JCP"
+2025-11-03 * "ITUB3 JCP" ^auto-transfer-20251103-21b67b4da2
   id: "b3-mov-20251103-65"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11748,7 +11748,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-11-14 * "HGLG11 Rendimento"
+2025-11-14 * "HGLG11 Rendimento" ^auto-transfer-20251114-97c7540a47
   id: "b3-mov-20251114-62"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11757,7 +11757,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-11-14 * "HGRU11 Rendimento"
+2025-11-14 * "HGRU11 Rendimento" ^auto-transfer-20251114-50ac37c49c
   id: "b3-mov-20251114-63"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11766,7 +11766,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2025-11-14 * "PMLL11 Rendimento"
+2025-11-14 * "PMLL11 Rendimento" ^auto-transfer-20251114-e5112dedb3
   id: "b3-mov-20251114-64"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -11775,7 +11775,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-11-18 * "IRDM11 Rendimento"
+2025-11-18 * "IRDM11 Rendimento" ^auto-transfer-20251118-86d097daad
   id: "b3-mov-20251118-60"
   source: "b3_movimentacoes"
   asset: "IRDM11"
@@ -11784,7 +11784,7 @@
   Equity:Transfers:XP:Rendimento    233.76 BRL
   Income:Investment:XP:Rendimento  -233.76 BRL
 
-2025-11-19 * "MCCI11 Rendimento"
+2025-11-19 * "MCCI11 Rendimento" ^auto-transfer-20251119-e2087c4e7f
   id: "b3-mov-20251119-59"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -11793,7 +11793,7 @@
   Equity:Transfers:XP:Rendimento    188 BRL
   Income:Investment:XP:Rendimento  -188 BRL
 
-2025-11-21 * "PETR4 JCP"
+2025-11-21 * "PETR4 JCP" ^auto-transfer-20251121-5283b24935
   id: "b3-mov-20251121-58"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -11802,7 +11802,7 @@
   Equity:Transfers:XP:JCP    142.79 BRL
   Income:Investment:XP:JCP  -142.79 BRL
 
-2025-11-27 * "TAEE11 Dividend"
+2025-11-27 * "TAEE11 Dividend" ^auto-transfer-20251127-366af30ea8
   id: "b3-mov-20251127-55"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -11811,7 +11811,7 @@
   Equity:Transfers:XP:Dividend    161.13 BRL
   Income:Investment:XP:Dividend  -161.13 BRL
 
-2025-11-27 * "TAEE11 Dividend"
+2025-11-27 * "TAEE11 Dividend" ^auto-transfer-20251127-cdc759ef4e
   id: "b3-mov-20251127-56"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -11820,7 +11820,7 @@
   Equity:Transfers:XP:Dividend    225.33 BRL
   Income:Investment:XP:Dividend  -225.33 BRL
 
-2025-11-27 * "TAEE11 JCP"
+2025-11-27 * "TAEE11 JCP" ^auto-transfer-20251127-83d9d5d5c2
   id: "b3-mov-20251127-57"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -11836,7 +11836,7 @@
   asset: "EGIE3"
   quantity: "120"
 
-2025-12-01 * "ITUB3 JCP"
+2025-12-01 * "ITUB3 JCP" ^auto-transfer-20251201-36291fb633
   id: "b3-mov-20251201-53"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -11845,7 +11845,7 @@
   Equity:Transfers:XP:JCP    3.3 BRL
   Income:Investment:XP:JCP  -3.3 BRL
 
-2025-12-11 * "BBAS3 JCP"
+2025-12-11 * "BBAS3 JCP" ^auto-transfer-20251211-a592780c97
   id: "b3-mov-20251211-48"
   source: "b3_movimentacoes"
   asset: "BBAS3"
@@ -11854,7 +11854,7 @@
   Equity:Transfers:XP:JCP    42.79 BRL
   Income:Investment:XP:JCP  -42.79 BRL
 
-2025-12-12 * "BBAS3 JCP"
+2025-12-12 * "BBAS3 JCP" ^auto-transfer-20251212-56c56bd575
   id: "b3-mov-20251212-40"
   source: "b3_movimentacoes"
   asset: "BBAS3"
@@ -11863,7 +11863,7 @@
   Equity:Transfers:XP:JCP    27.27 BRL
   Income:Investment:XP:JCP  -27.27 BRL
 
-2025-12-12 * "HGLG11 Rendimento"
+2025-12-12 * "HGLG11 Rendimento" ^auto-transfer-20251212-3f6604ece0
   id: "b3-mov-20251212-41"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -11872,7 +11872,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2025-12-12 * "HGRU11 Rendimento"
+2025-12-12 * "HGRU11 Rendimento" ^auto-transfer-20251212-bd99069cac
   id: "b3-mov-20251212-42"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -11881,7 +11881,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2025-12-12 * "PMLL11 Rendimento"
+2025-12-12 * "PMLL11 Rendimento" ^auto-transfer-20251212-ba32fb1f23
   id: "b3-mov-20251212-44"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -11890,7 +11890,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2025-12-12 * "WEGE3 Dividend"
+2025-12-12 * "WEGE3 Dividend" ^auto-transfer-20251212-cfd9bb664d
   id: "b3-mov-20251212-45"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11899,7 +11899,7 @@
   Equity:Transfers:XP:Dividend    273.36 BRL
   Income:Investment:XP:Dividend  -273.36 BRL
 
-2025-12-12 * "WEGE3 JCP"
+2025-12-12 * "WEGE3 JCP" ^auto-transfer-20251212-a5d9f959a6
   id: "b3-mov-20251212-46"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11908,7 +11908,7 @@
   Equity:Transfers:XP:JCP    74.96 BRL
   Income:Investment:XP:JCP  -74.96 BRL
 
-2025-12-12 * "WEGE3 JCP"
+2025-12-12 * "WEGE3 JCP" ^auto-transfer-20251212-0fb1e26f5d
   id: "b3-mov-20251212-47"
   source: "b3_movimentacoes"
   asset: "WEGE3"
@@ -11917,7 +11917,7 @@
   Equity:Transfers:XP:JCP    75.68 BRL
   Income:Investment:XP:JCP  -75.68 BRL
 
-2025-12-16 * "IRIM15 Rendimento"
+2025-12-16 * "IRIM15 Rendimento" ^auto-transfer-20251216-1bc12c26b4
   id: "b3-mov-20251216-39"
   source: "b3_movimentacoes"
   asset: "IRIM15"
@@ -11926,7 +11926,7 @@
   Equity:Transfers:XP:Rendimento    52.41 BRL
   Income:Investment:XP:Rendimento  -52.41 BRL
 
-2025-12-17 * "HYPE3 Dividend"
+2025-12-17 * "HYPE3 Dividend" ^auto-transfer-20251217-138cead44d
   id: "b3-mov-20251217-27"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11935,7 +11935,7 @@
   Equity:Transfers:XP:Dividend    48.68 BRL
   Income:Investment:XP:Dividend  -48.68 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-1fec77a623
   id: "b3-mov-20251217-28"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11944,7 +11944,7 @@
   Equity:Transfers:XP:JCP    33.05 BRL
   Income:Investment:XP:JCP  -33.05 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-4a4a8e2d6c
   id: "b3-mov-20251217-29"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11953,7 +11953,7 @@
   Equity:Transfers:XP:JCP    33.21 BRL
   Income:Investment:XP:JCP  -33.21 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-ee7cee6e1d
   id: "b3-mov-20251217-30"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11962,7 +11962,7 @@
   Equity:Transfers:XP:JCP    33.21 BRL
   Income:Investment:XP:JCP  -33.21 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-36ff2c15cf
   id: "b3-mov-20251217-31"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11971,7 +11971,7 @@
   Equity:Transfers:XP:JCP    33.06 BRL
   Income:Investment:XP:JCP  -33.06 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-845519de1f
   id: "b3-mov-20251217-32"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11980,7 +11980,7 @@
   Equity:Transfers:XP:JCP    24.8 BRL
   Income:Investment:XP:JCP  -24.8 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-02e7ec733f
   id: "b3-mov-20251217-33"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11989,7 +11989,7 @@
   Equity:Transfers:XP:JCP    24.8 BRL
   Income:Investment:XP:JCP  -24.8 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-30c0aeda85
   id: "b3-mov-20251217-34"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -11998,7 +11998,7 @@
   Equity:Transfers:XP:JCP    33.1 BRL
   Income:Investment:XP:JCP  -33.1 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-5568699e42
   id: "b3-mov-20251217-35"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -12007,7 +12007,7 @@
   Equity:Transfers:XP:JCP    66.42 BRL
   Income:Investment:XP:JCP  -66.42 BRL
 
-2025-12-17 * "HYPE3 JCP"
+2025-12-17 * "HYPE3 JCP" ^auto-transfer-20251217-d5ada1a0a7
   id: "b3-mov-20251217-36"
   source: "b3_movimentacoes"
   asset: "HYPE3"
@@ -12016,7 +12016,7 @@
   Equity:Transfers:XP:JCP    57.5 BRL
   Income:Investment:XP:JCP  -57.5 BRL
 
-2025-12-17 * "LEVE3 JCP"
+2025-12-17 * "LEVE3 JCP" ^auto-transfer-20251217-b79b4d564e
   id: "b3-mov-20251217-37"
   source: "b3_movimentacoes"
   asset: "LEVE3"
@@ -12025,7 +12025,7 @@
   Equity:Transfers:XP:JCP    155.28 BRL
   Income:Investment:XP:JCP  -155.28 BRL
 
-2025-12-17 * "MCCI11 Rendimento"
+2025-12-17 * "MCCI11 Rendimento" ^auto-transfer-20251217-7773a5645b
   id: "b3-mov-20251217-38"
   source: "b3_movimentacoes"
   asset: "MCCI11"
@@ -12034,7 +12034,7 @@
   Equity:Transfers:XP:Rendimento    188 BRL
   Income:Investment:XP:Rendimento  -188 BRL
 
-2025-12-19 * "FLRY3 JCP"
+2025-12-19 * "FLRY3 JCP" ^auto-transfer-20251219-75ba648bae
   id: "b3-mov-20251219-24"
   source: "b3_movimentacoes"
   asset: "FLRY3"
@@ -12043,7 +12043,7 @@
   Equity:Transfers:XP:JCP    165.7 BRL
   Income:Investment:XP:JCP  -165.7 BRL
 
-2025-12-19 * "ITUB3 Dividend"
+2025-12-19 * "ITUB3 Dividend" ^auto-transfer-20251219-4f26873ae1
   id: "b3-mov-20251219-25"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12052,7 +12052,7 @@
   Equity:Transfers:XP:Dividend    411 BRL
   Income:Investment:XP:Dividend  -411 BRL
 
-2025-12-22 * "PETR4 JCP"
+2025-12-22 * "PETR4 JCP" ^auto-transfer-20251222-88ef76289f
   id: "b3-mov-20251222-22"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12061,7 +12061,7 @@
   Equity:Transfers:XP:JCP    57.4 BRL
   Income:Investment:XP:JCP  -57.4 BRL
 
-2025-12-22 * "PETR4 Dividend"
+2025-12-22 * "PETR4 Dividend" ^auto-transfer-20251222-2ca15f87eb
   id: "b3-mov-20251222-23"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12070,7 +12070,7 @@
   Equity:Transfers:XP:Dividend    100.46 BRL
   Income:Investment:XP:Dividend  -100.46 BRL
 
-2025-12-23 * "EGIE3 Dividend"
+2025-12-23 * "EGIE3 Dividend" ^auto-transfer-20251223-c87610cb9a
   id: "b3-mov-20251223-20"
   source: "b3_movimentacoes"
   asset: "EGIE3"
@@ -12079,7 +12079,7 @@
   Equity:Transfers:XP:Dividend    264.42 BRL
   Income:Investment:XP:Dividend  -264.42 BRL
 
-2025-12-23 * "EGIE3 Dividend"
+2025-12-23 * "EGIE3 Dividend" ^auto-transfer-20251223-b174856937
   id: "b3-mov-20251223-21"
   source: "b3_movimentacoes"
   asset: "EGIE3"
@@ -12088,7 +12088,7 @@
   Equity:Transfers:XP:Dividend    262.94 BRL
   Income:Investment:XP:Dividend  -262.94 BRL
 
-2025-12-26 * "CDB-CDB3257NOQI-BANCO-BMG-S-A Purchase"
+2025-12-26 * "CDB-CDB3257NOQI-BANCO-BMG-S-A Purchase" ^auto-transfer-20251224-2f81098769
   id: "b3-mov-20251226-18"
   source: "b3_movimentacoes"
   asset: "CDB-CDB3257NOQI-BANCO-BMG-S-A"
@@ -12096,7 +12096,7 @@
   Equity:Transfers:Inter:Cash                            -9999.43 BRL
   Expenses:Investment:Inter:Fees                            85.03 BRL
 
-2025-12-26 * "CRI-22B0004808-RIZA-SECURITIZADORA-S-A Purchase"
+2025-12-26 * "CRI-22B0004808-RIZA-SECURITIZADORA-S-A Purchase" ^auto-transfer-20251224-e6b68bc18a
   id: "b3-mov-20251226-19"
   source: "b3_movimentacoes"
   asset: "CRI-22B0004808-RIZA-SECURITIZADORA-S-A"
@@ -12338,7 +12338,7 @@
 
 **** /home/gabriel/Documents/Projects/my_beancount/export_backlog/movimentacao-2026_parcial.xlsx
 
-2026-01-02 * "ITUB3 JCP"
+2026-01-02 * "ITUB3 JCP" ^auto-transfer-20260102-0bb397dcf7
   id: "b3-mov-20260102-119"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12355,7 +12355,7 @@
   asset: "MGLU3"
   quantity: "5.5"
 
-2026-01-07 * "VALE3 Dividend"
+2026-01-07 * "VALE3 Dividend" ^auto-transfer-20260107-febd92b53f
   id: "b3-mov-20260107-118"
   source: "b3_movimentacoes"
   asset: "VALE3"
@@ -12364,7 +12364,7 @@
   Equity:Transfers:XP:Dividend    248.82 BRL
   Income:Investment:XP:Dividend  -248.82 BRL
 
-2026-01-08 * "LVBI11 Rendimento"
+2026-01-08 * "LVBI11 Rendimento" ^auto-transfer-20260108-dcb899cee2
   id: "b3-mov-20260108-117"
   source: "b3_movimentacoes"
   asset: "LVBI11"
@@ -12373,7 +12373,7 @@
   Equity:Transfers:XP:Rendimento    48.75 BRL
   Income:Investment:XP:Rendimento  -48.75 BRL
 
-2026-01-12 * "B3SA3 JCP"
+2026-01-12 * "B3SA3 JCP" ^auto-transfer-20260112-7d39ffaf52
   id: "b3-mov-20260112-106"
   source: "b3_movimentacoes"
   asset: "B3SA3"
@@ -12382,7 +12382,7 @@
   Equity:Transfers:XP:JCP    28.06 BRL
   Income:Investment:XP:JCP  -28.06 BRL
 
-2026-01-12 * "B3SA3 JCP"
+2026-01-12 * "B3SA3 JCP" ^auto-transfer-20260112-037a92af63
   id: "b3-mov-20260112-107"
   source: "b3_movimentacoes"
   asset: "B3SA3"
@@ -12400,7 +12400,7 @@
   Expenses:Investment:XP:Fees  0.28034 BRL
   Income:Investment:XP:Gains
 
-2026-01-15 * "HGLG11 Rendimento"
+2026-01-15 * "HGLG11 Rendimento" ^auto-transfer-20260115-8678ab50b2
   id: "b3-mov-20260115-101"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -12409,7 +12409,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2026-01-15 * "HGRU11 Rendimento"
+2026-01-15 * "HGRU11 Rendimento" ^auto-transfer-20260115-9fd73a16b4
   id: "b3-mov-20260115-102"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -12418,7 +12418,7 @@
   Equity:Transfers:XP:Rendimento    187.05 BRL
   Income:Investment:XP:Rendimento  -187.05 BRL
 
-2026-01-15 * "PMLL11 Rendimento"
+2026-01-15 * "PMLL11 Rendimento" ^auto-transfer-20260115-0e6c6d995e
   id: "b3-mov-20260115-103"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -12427,7 +12427,7 @@
   Equity:Transfers:XP:Rendimento    131.58 BRL
   Income:Investment:XP:Rendimento  -131.58 BRL
 
-2026-01-16 * "CXSE3 Rendimento"
+2026-01-16 * "CXSE3 Rendimento" ^auto-transfer-20260116-67ee111bbb
   id: "b3-mov-20260116-98"
   source: "b3_movimentacoes"
   asset: "CXSE3"
@@ -12436,7 +12436,7 @@
   Equity:Transfers:XP:Rendimento    0.49 BRL
   Income:Investment:XP:Rendimento  -0.49 BRL
 
-2026-01-16 * "CXSE3 Dividend"
+2026-01-16 * "CXSE3 Dividend" ^auto-transfer-20260116-62059b4b2b
   id: "b3-mov-20260116-99"
   source: "b3_movimentacoes"
   asset: "CXSE3"
@@ -12445,7 +12445,7 @@
   Equity:Transfers:XP:Dividend    105 BRL
   Income:Investment:XP:Dividend  -105 BRL
 
-2026-01-16 * "PCIP11 Rendimento"
+2026-01-16 * "PCIP11 Rendimento" ^auto-transfer-20260116-86cd80ff0b
   id: "b3-mov-20260116-100"
   source: "b3_movimentacoes"
   asset: "PCIP11"
@@ -12454,7 +12454,7 @@
   Equity:Transfers:XP:Rendimento    106.48 BRL
   Income:Investment:XP:Rendimento  -106.48 BRL
 
-2026-01-22 * "AFHI11 Rendimento"
+2026-01-22 * "AFHI11 Rendimento" ^auto-transfer-20260122-73aef6292c
   id: "b3-mov-20260122-97"
   source: "b3_movimentacoes"
   asset: "AFHI11"
@@ -12463,7 +12463,7 @@
   Equity:Transfers:XP:Rendimento    107.06 BRL
   Income:Investment:XP:Rendimento  -107.06 BRL
 
-2026-01-28 * "TAEE11 JCP"
+2026-01-28 * "TAEE11 JCP" ^auto-transfer-20260128-ae629a8430
   id: "b3-mov-20260128-87"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -12472,7 +12472,7 @@
   Equity:Transfers:XP:JCP    249.55 BRL
   Income:Investment:XP:JCP  -249.55 BRL
 
-2026-01-28 * "TAEE11 Dividend"
+2026-01-28 * "TAEE11 Dividend" ^auto-transfer-20260128-890cc54d59
   id: "b3-mov-20260128-88"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -12481,15 +12481,15 @@
   Equity:Transfers:XP:Dividend    363.26 BRL
   Income:Investment:XP:Dividend  -363.26 BRL
 
-2026-01-28 * "TESOURO-IPCA-2050 Purchase"
+2026-01-28 * "TESOURO-IPCA-2050 Purchase" ^auto-transfer-20260127-c684030fb5
   id: "b3-mov-20260128-89"
   source: "b3_movimentacoes"
   asset: "TESOURO-IPCA-2050"
   Assets:Investment:Inter:TESOURO-IPCA-2050      25.37 TESOURO-IPCA-2050 {906.25 BRL, 2026-01-28}
-  Equity:Transfers:Inter:Cash                -22991.82 BRL
-  Expenses:Investment:Inter:Fees                0.2575 BRL
+  Equity:Transfers:Inter:Cash                -22991.81 BRL
+  Expenses:Investment:Inter:Fees                0.2475 BRL
 
-2026-02-02 * "ITUB3 JCP"
+2026-02-02 * "ITUB3 JCP" ^auto-transfer-20260202-6b865a0823
   id: "b3-mov-20260202-86"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12498,7 +12498,7 @@
   Equity:Transfers:XP:JCP    4.9 BRL
   Income:Investment:XP:JCP  -4.9 BRL
 
-2026-02-06 * "LVBI11 Rendimento"
+2026-02-06 * "LVBI11 Rendimento" ^auto-transfer-20260206-32ef19ed86
   id: "b3-mov-20260206-84"
   source: "b3_movimentacoes"
   asset: "LVBI11"
@@ -12507,7 +12507,7 @@
   Equity:Transfers:XP:Rendimento    84.75 BRL
   Income:Investment:XP:Rendimento  -84.75 BRL
 
-2026-02-13 * "HGLG11 Rendimento"
+2026-02-13 * "HGLG11 Rendimento" ^auto-transfer-20260213-57557c8c01
   id: "b3-mov-20260213-78"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -12516,7 +12516,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2026-02-13 * "HGRU11 Rendimento"
+2026-02-13 * "HGRU11 Rendimento" ^auto-transfer-20260213-eb36af93c4
   id: "b3-mov-20260213-79"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -12525,7 +12525,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2026-02-13 * "PMLL11 Rendimento"
+2026-02-13 * "PMLL11 Rendimento" ^auto-transfer-20260213-a37d926317
   id: "b3-mov-20260213-80"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -12543,7 +12543,7 @@
   Equity:Transfers:Inter:Cash        268.38 BRL
   Income:Investment:Inter:Interest  -268.38 BRL
 
-2026-02-18 * "PCIP11 Rendimento"
+2026-02-18 * "PCIP11 Rendimento" ^auto-transfer-20260218-1eeaf37bd7
   id: "b3-mov-20260218-77"
   source: "b3_movimentacoes"
   asset: "PCIP11"
@@ -12552,7 +12552,7 @@
   Equity:Transfers:XP:Rendimento    122.01 BRL
   Income:Investment:XP:Rendimento  -122.01 BRL
 
-2026-02-20 * "PETR4 Rendimento"
+2026-02-20 * "PETR4 Rendimento" ^auto-transfer-20260220-3cb0f3d51d
   id: "b3-mov-20260220-73"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12561,7 +12561,7 @@
   Equity:Transfers:XP:Rendimento    3.46 BRL
   Income:Investment:XP:Rendimento  -3.46 BRL
 
-2026-02-20 * "PETR4 JCP"
+2026-02-20 * "PETR4 JCP" ^auto-transfer-20260220-d8c9ddf73a
   id: "b3-mov-20260220-74"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12570,7 +12570,7 @@
   Equity:Transfers:XP:JCP    200.43 BRL
   Income:Investment:XP:JCP  -200.43 BRL
 
-2026-02-24 * "AFHI11 Rendimento"
+2026-02-24 * "AFHI11 Rendimento" ^auto-transfer-20260224-b9e5b9ef21
   id: "b3-mov-20260224-72"
   source: "b3_movimentacoes"
   asset: "AFHI11"
@@ -12579,7 +12579,7 @@
   Equity:Transfers:XP:Rendimento    128.04 BRL
   Income:Investment:XP:Rendimento  -128.04 BRL
 
-2026-03-02 * "BBSE3 Dividend"
+2026-03-02 * "BBSE3 Dividend" ^auto-transfer-20260302-3d3c7fb2ee
   id: "b3-mov-20260302-64"
   source: "b3_movimentacoes"
   asset: "BBSE3"
@@ -12588,7 +12588,7 @@
   Equity:Transfers:XP:Dividend    1274.98 BRL
   Income:Investment:XP:Dividend  -1274.98 BRL
 
-2026-03-02 * "BBSE3 Rendimento"
+2026-03-02 * "BBSE3 Rendimento" ^auto-transfer-20260302-a8a5292ca0
   id: "b3-mov-20260302-65"
   source: "b3_movimentacoes"
   asset: "BBSE3"
@@ -12597,7 +12597,7 @@
   Equity:Transfers:XP:Rendimento    22.03 BRL
   Income:Investment:XP:Rendimento  -22.03 BRL
 
-2026-03-02 * "ITUB3 JCP"
+2026-03-02 * "ITUB3 JCP" ^auto-transfer-20260302-35283b15a1
   id: "b3-mov-20260302-67"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12606,7 +12606,7 @@
   Equity:Transfers:XP:JCP    7.89 BRL
   Income:Investment:XP:JCP  -7.89 BRL
 
-2026-03-04 * "VALE3 Dividend"
+2026-03-04 * "VALE3 Dividend" ^auto-transfer-20260304-db0a4bde3b
   id: "b3-mov-20260304-62"
   source: "b3_movimentacoes"
   asset: "VALE3"
@@ -12615,7 +12615,7 @@
   Equity:Transfers:XP:Dividend    153.62 BRL
   Income:Investment:XP:Dividend  -153.62 BRL
 
-2026-03-04 * "VALE3 JCP"
+2026-03-04 * "VALE3 JCP" ^auto-transfer-20260304-bc9561a3a7
   id: "b3-mov-20260304-63"
   source: "b3_movimentacoes"
   asset: "VALE3"
@@ -12624,7 +12624,7 @@
   Equity:Transfers:XP:JCP    266.82 BRL
   Income:Investment:XP:JCP  -266.82 BRL
 
-2026-03-06 * "ITUB3 JCP"
+2026-03-06 * "ITUB3 JCP" ^auto-transfer-20260306-11a7d47b54
   id: "b3-mov-20260306-60"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12633,7 +12633,7 @@
   Equity:Transfers:XP:JCP    69.14 BRL
   Income:Investment:XP:JCP  -69.14 BRL
 
-2026-03-06 * "LVBI11 Rendimento"
+2026-03-06 * "LVBI11 Rendimento" ^auto-transfer-20260306-4080641b07
   id: "b3-mov-20260306-61"
   source: "b3_movimentacoes"
   asset: "LVBI11"
@@ -12651,7 +12651,7 @@
   Expenses:Investment:XP:Fees  0.0038 BRL
   Income:Investment:XP:Gains
 
-2026-03-13 * "HGLG11 Rendimento"
+2026-03-13 * "HGLG11 Rendimento" ^auto-transfer-20260313-307627d5d1
   id: "b3-mov-20260313-56"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -12660,7 +12660,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2026-03-13 * "HGRU11 Rendimento"
+2026-03-13 * "HGRU11 Rendimento" ^auto-transfer-20260313-ba98566cda
   id: "b3-mov-20260313-57"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -12669,7 +12669,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2026-03-13 * "PMLL11 Rendimento"
+2026-03-13 * "PMLL11 Rendimento" ^auto-transfer-20260313-8f74aa439f
   id: "b3-mov-20260313-58"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -12678,7 +12678,7 @@
   Equity:Transfers:XP:Rendimento    153 BRL
   Income:Investment:XP:Rendimento  -153 BRL
 
-2026-03-16 * "PCIP11 Rendimento"
+2026-03-16 * "PCIP11 Rendimento" ^auto-transfer-20260316-120dc42841
   id: "b3-mov-20260316-55"
   source: "b3_movimentacoes"
   asset: "PCIP11"
@@ -12687,7 +12687,7 @@
   Equity:Transfers:XP:Rendimento    117.6 BRL
   Income:Investment:XP:Rendimento  -117.6 BRL
 
-2026-03-20 * "AFHI11 Rendimento"
+2026-03-20 * "AFHI11 Rendimento" ^auto-transfer-20260320-265b6ea47d
   id: "b3-mov-20260320-47"
   source: "b3_movimentacoes"
   asset: "AFHI11"
@@ -12696,7 +12696,7 @@
   Equity:Transfers:XP:Rendimento    128.04 BRL
   Income:Investment:XP:Rendimento  -128.04 BRL
 
-2026-03-20 * "PETR4 Rendimento"
+2026-03-20 * "PETR4 Rendimento" ^auto-transfer-20260320-efacf16920
   id: "b3-mov-20260320-48"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12705,7 +12705,7 @@
   Equity:Transfers:XP:Rendimento    3.47 BRL
   Income:Investment:XP:Rendimento  -3.47 BRL
 
-2026-03-20 * "PETR4 Dividend"
+2026-03-20 * "PETR4 Dividend" ^auto-transfer-20260320-89c43cc129
   id: "b3-mov-20260320-49"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12714,7 +12714,7 @@
   Equity:Transfers:XP:Dividend    148.21 BRL
   Income:Investment:XP:Dividend  -148.21 BRL
 
-2026-03-20 * "PETR4 Rendimento"
+2026-03-20 * "PETR4 Rendimento" ^auto-transfer-20260320-5aee764b2e
   id: "b3-mov-20260320-50"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12723,7 +12723,7 @@
   Equity:Transfers:XP:Rendimento    2.05 BRL
   Income:Investment:XP:Rendimento  -2.05 BRL
 
-2026-03-20 * "PETR4 JCP"
+2026-03-20 * "PETR4 JCP" ^auto-transfer-20260320-d3b47d7147
   id: "b3-mov-20260320-51"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12741,7 +12741,7 @@
   Expenses:Investment:XP:Fees  0.0035 BRL
   Income:Investment:XP:Gains
 
-2026-04-01 * "ITUB3 JCP"
+2026-04-01 * "ITUB3 JCP" ^auto-transfer-20260401-ad82a859e6
   id: "b3-mov-20260401-44"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12750,7 +12750,7 @@
   Equity:Transfers:XP:JCP    7.89 BRL
   Income:Investment:XP:JCP  -7.89 BRL
 
-2026-04-08 * "LVBI11 Rendimento"
+2026-04-08 * "LVBI11 Rendimento" ^auto-transfer-20260408-8c9b51a32d
   id: "b3-mov-20260408-43"
   source: "b3_movimentacoes"
   asset: "LVBI11"
@@ -12759,7 +12759,7 @@
   Equity:Transfers:XP:Rendimento    84.75 BRL
   Income:Investment:XP:Rendimento  -84.75 BRL
 
-2026-04-13 * "B3SA3 JCP"
+2026-04-13 * "B3SA3 JCP" ^auto-transfer-20260413-6fd0fd5837
   id: "b3-mov-20260413-42"
   source: "b3_movimentacoes"
   asset: "B3SA3"
@@ -12768,7 +12768,7 @@
   Equity:Transfers:XP:JCP    25.33 BRL
   Income:Investment:XP:JCP  -25.33 BRL
 
-2026-04-15 * "HGLG11 Rendimento"
+2026-04-15 * "HGLG11 Rendimento" ^auto-transfer-20260415-da3027a1ae
   id: "b3-mov-20260415-39"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -12777,7 +12777,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2026-04-15 * "HGRU11 Rendimento"
+2026-04-15 * "HGRU11 Rendimento" ^auto-transfer-20260415-eb2cbf26cb
   id: "b3-mov-20260415-40"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -12786,7 +12786,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2026-04-15 * "PMLL11 Rendimento"
+2026-04-15 * "PMLL11 Rendimento" ^auto-transfer-20260415-d0b79e938b
   id: "b3-mov-20260415-41"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -12795,7 +12795,7 @@
   Equity:Transfers:XP:Rendimento    153 BRL
   Income:Investment:XP:Rendimento  -153 BRL
 
-2026-04-16 * "PCIP11 Rendimento"
+2026-04-16 * "PCIP11 Rendimento" ^auto-transfer-20260416-48dc2b981c
   id: "b3-mov-20260416-38"
   source: "b3_movimentacoes"
   asset: "PCIP11"
@@ -12804,7 +12804,7 @@
   Equity:Transfers:XP:Rendimento    124.95 BRL
   Income:Investment:XP:Rendimento  -124.95 BRL
 
-2026-04-23 * "AFHI11 Rendimento"
+2026-04-23 * "AFHI11 Rendimento" ^auto-transfer-20260423-4438215094
   id: "b3-mov-20260423-37"
   source: "b3_movimentacoes"
   asset: "AFHI11"
@@ -12813,7 +12813,7 @@
   Equity:Transfers:XP:Rendimento    129.36 BRL
   Income:Investment:XP:Rendimento  -129.36 BRL
 
-2026-05-04 * "ITUB3 JCP"
+2026-05-04 * "ITUB3 JCP" ^auto-transfer-20260504-c5ebd1a165
   id: "b3-mov-20260504-36"
   source: "b3_movimentacoes"
   asset: "ITUB3"
@@ -12822,7 +12822,7 @@
   Equity:Transfers:XP:JCP    7.89 BRL
   Income:Investment:XP:JCP  -7.89 BRL
 
-2026-05-05 * "FLRY3 Dividend"
+2026-05-05 * "FLRY3 Dividend" ^auto-transfer-20260505-515ccd9fa5
   id: "b3-mov-20260505-35"
   source: "b3_movimentacoes"
   asset: "FLRY3"
@@ -12831,7 +12831,7 @@
   Equity:Transfers:XP:Dividend    335.03 BRL
   Income:Investment:XP:Dividend  -335.03 BRL
 
-2026-05-08 * "LVBI11 Rendimento"
+2026-05-08 * "LVBI11 Rendimento" ^auto-transfer-20260508-f30d82a82c
   id: "b3-mov-20260508-33"
   source: "b3_movimentacoes"
   asset: "LVBI11"
@@ -12840,7 +12840,7 @@
   Equity:Transfers:XP:Rendimento    84.75 BRL
   Income:Investment:XP:Rendimento  -84.75 BRL
 
-2026-05-08 * "MGLU3 Dividend"
+2026-05-08 * "MGLU3 Dividend" ^auto-transfer-20260508-904814c796
   id: "b3-mov-20260508-34"
   source: "b3_movimentacoes"
   asset: "MGLU3"
@@ -12849,7 +12849,7 @@
   Equity:Transfers:XP:Dividend    9.34 BRL
   Income:Investment:XP:Dividend  -9.34 BRL
 
-2026-05-15 * "CXSE3 Dividend"
+2026-05-15 * "CXSE3 Dividend" ^auto-transfer-20260515-9e888805d8
   id: "b3-mov-20260515-29"
   source: "b3_movimentacoes"
   asset: "CXSE3"
@@ -12858,7 +12858,7 @@
   Equity:Transfers:XP:Dividend    330 BRL
   Income:Investment:XP:Dividend  -330 BRL
 
-2026-05-15 * "HGLG11 Rendimento"
+2026-05-15 * "HGLG11 Rendimento" ^auto-transfer-20260515-b0efbcda47
   id: "b3-mov-20260515-30"
   source: "b3_movimentacoes"
   asset: "HGLG11"
@@ -12867,7 +12867,7 @@
   Equity:Transfers:XP:Rendimento    108.9 BRL
   Income:Investment:XP:Rendimento  -108.9 BRL
 
-2026-05-15 * "HGRU11 Rendimento"
+2026-05-15 * "HGRU11 Rendimento" ^auto-transfer-20260515-99f9107b65
   id: "b3-mov-20260515-31"
   source: "b3_movimentacoes"
   asset: "HGRU11"
@@ -12876,7 +12876,7 @@
   Equity:Transfers:XP:Rendimento    122.55 BRL
   Income:Investment:XP:Rendimento  -122.55 BRL
 
-2026-05-15 * "PMLL11 Rendimento"
+2026-05-15 * "PMLL11 Rendimento" ^auto-transfer-20260515-cb4941f08c
   id: "b3-mov-20260515-32"
   source: "b3_movimentacoes"
   asset: "PMLL11"
@@ -12885,7 +12885,7 @@
   Equity:Transfers:XP:Rendimento    153 BRL
   Income:Investment:XP:Rendimento  -153 BRL
 
-2026-05-18 * "PCIP11 Rendimento"
+2026-05-18 * "PCIP11 Rendimento" ^auto-transfer-20260518-f09d3df91f
   id: "b3-mov-20260518-28"
   source: "b3_movimentacoes"
   asset: "PCIP11"
@@ -12894,7 +12894,7 @@
   Equity:Transfers:XP:Rendimento    130.83 BRL
   Income:Investment:XP:Rendimento  -130.83 BRL
 
-2026-05-20 * "EGIE3 JCP"
+2026-05-20 * "EGIE3 JCP" ^auto-transfer-20260520-eb98586d36
   id: "b3-mov-20260520-23"
   source: "b3_movimentacoes"
   asset: "EGIE3"
@@ -12903,7 +12903,7 @@
   Equity:Transfers:XP:JCP    31.25 BRL
   Income:Investment:XP:JCP  -31.25 BRL
 
-2026-05-20 * "EGIE3 Dividend"
+2026-05-20 * "EGIE3 Dividend" ^auto-transfer-20260520-b6d2c68115
   id: "b3-mov-20260520-24"
   source: "b3_movimentacoes"
   asset: "EGIE3"
@@ -12912,7 +12912,7 @@
   Equity:Transfers:XP:Dividend    302.73 BRL
   Income:Investment:XP:Dividend  -302.73 BRL
 
-2026-05-20 * "PETR4 JCP"
+2026-05-20 * "PETR4 JCP" ^auto-transfer-20260520-59eee7a43f
   id: "b3-mov-20260520-25"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12921,7 +12921,7 @@
   Equity:Transfers:XP:JCP    154.99 BRL
   Income:Investment:XP:JCP  -154.99 BRL
 
-2026-05-20 * "PETR4 Rendimento"
+2026-05-20 * "PETR4 Rendimento" ^auto-transfer-20260520-cd2b6e1cce
   id: "b3-mov-20260520-26"
   source: "b3_movimentacoes"
   asset: "PETR4"
@@ -12930,7 +12930,7 @@
   Equity:Transfers:XP:Rendimento    7.67 BRL
   Income:Investment:XP:Rendimento  -7.67 BRL
 
-2026-05-22 * "AFHI11 Rendimento"
+2026-05-22 * "AFHI11 Rendimento" ^auto-transfer-20260522-72c58e0647
   id: "b3-mov-20260522-21"
   source: "b3_movimentacoes"
   asset: "AFHI11"
@@ -12939,14 +12939,14 @@
   Equity:Transfers:XP:Rendimento    135.96 BRL
   Income:Investment:XP:Rendimento  -135.96 BRL
 
-2026-05-27 * "CDB-CDB526CSFDK Purchase"
+2026-05-27 * "CDB-CDB526CSFDK Purchase" ^auto-transfer-20260526-cd69b6c5cb
   id: "b3-mov-20260527-14"
   source: "b3_movimentacoes"
   asset: "CDB-BB"
   Assets:Investment:BB:CDB-BB    2473459 CDB-BB {0.01 BRL, 2026-05-27}
   Equity:Transfers:BB:Cash              -24734.59 BRL
 
-2026-05-27 * "LEVE3 Dividend"
+2026-05-27 * "LEVE3 Dividend" ^auto-transfer-20260527-1fd745d73a
   id: "b3-mov-20260527-15"
   source: "b3_movimentacoes"
   asset: "LEVE3"
@@ -12955,7 +12955,7 @@
   Equity:Transfers:XP:Dividend    152.01 BRL
   Income:Investment:XP:Dividend  -152.01 BRL
 
-2026-05-27 * "LEVE3 JCP"
+2026-05-27 * "LEVE3 JCP" ^auto-transfer-20260527-664d9c606a
   id: "b3-mov-20260527-16"
   source: "b3_movimentacoes"
   asset: "LEVE3"
@@ -12964,7 +12964,7 @@
   Equity:Transfers:XP:JCP    52.57 BRL
   Income:Investment:XP:JCP  -52.57 BRL
 
-2026-05-27 * "LEVE3 Dividend"
+2026-05-27 * "LEVE3 Dividend" ^auto-transfer-20260527-5dbc303097
   id: "b3-mov-20260527-17"
   source: "b3_movimentacoes"
   asset: "LEVE3"
@@ -12973,7 +12973,7 @@
   Equity:Transfers:XP:Dividend    1069.74 BRL
   Income:Investment:XP:Dividend  -1069.74 BRL
 
-2026-05-27 * "TAEE11 Dividend"
+2026-05-27 * "TAEE11 Dividend" ^auto-transfer-20260527-58f7aaff21
   id: "b3-mov-20260527-18"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -12982,7 +12982,7 @@
   Equity:Transfers:XP:Dividend    107.44 BRL
   Income:Investment:XP:Dividend  -107.44 BRL
 
-2026-05-27 * "TAEE11 Dividend"
+2026-05-27 * "TAEE11 Dividend" ^auto-transfer-20260527-ae6c06062b
   id: "b3-mov-20260527-19"
   source: "b3_movimentacoes"
   asset: "TAEE11"
@@ -12991,7 +12991,7 @@
   Equity:Transfers:XP:Dividend    528.76 BRL
   Income:Investment:XP:Dividend  -528.76 BRL
 
-2026-06-01 * "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A Redemption"
+2026-06-01 * "CDB-CDB526CSFDK-BANCO-DO-BRASIL-S-A Redemption" ^auto-transfer-20260529-03ef5c3a8c
   id: "b3-mov-20260601-6"
   source: "b3_movimentacoes"
   asset: "CDB-BB"
@@ -13000,14 +13000,14 @@
   Expenses:Investment:BB:Fees                               0.00160000 BRL
   Income:Investment:BB:Gains
 
-2026-06-01 * "CDB-CDB6260FY9K Purchase"
+2026-06-01 * "CDB-CDB6260FY9K Purchase" ^auto-transfer-20260530-badee66b5b
   id: "b3-mov-20260601-7"
   source: "b3_movimentacoes"
   asset: "CDB-BB"
   Assets:Investment:BB:CDB-BB    2404334 CDB-BB {0.01 BRL, 2026-06-01}
   Equity:Transfers:BB:Cash              -24043.34 BRL
 
-2026-06-01 * "ITUB3 JCP"
+2026-06-01 * "ITUB3 JCP" ^auto-transfer-20260601-667b2f921a
   id: "b3-mov-20260601-8"
   source: "b3_movimentacoes"
   asset: "ITUB3"

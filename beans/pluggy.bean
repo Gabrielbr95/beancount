@@ -27,7 +27,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa   391.56 BRL
   Equity:Transfers:Card                    -391.56 BRL
 
-2025-06-17 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-06-17 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20250617-9bd5ffe330
   id: "pluggy-768ece72-4615-4716-bffc-1bd8fd1545e9"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -72,7 +72,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -9.99 BRL
   Expenses:Mensalidades:Outras              9.99 BRL
 
-2025-06-18 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-06-18 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20250618-41132e021c
   id: "pluggy-788d2acc-2a4c-417b-a3d5-a8411501f225"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -117,7 +117,7 @@
   Liabilities:Credit:BB:Card:EloGrafite  -90.94 BRL
   Expenses:Transporte:Uber                90.94 BRL
 
-2025-06-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500"
+2025-06-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20250620-c21dac047c
   id: "pluggy-ce43b7ef-a054-41f2-8a8c-4cc3138d6600"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -126,7 +126,7 @@
   Assets:Bank:XP:Cash              8.34 BRL
   Equity:Transfers:XP:Rendimento  -8.34 BRL
 
-2025-06-20 * "DIVIDENDOS DE CLIENTES PETR4 S/            500"
+2025-06-20 * "DIVIDENDOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20250620-60b8b8aac7
   id: "pluggy-ca83feb3-89c8-4f1c-a53c-042c92421749"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -837,7 +837,7 @@
   Assets:Bank:BB:Cash  -850 BRL
   Expenses:Geral:Caol   850 BRL
 
-2025-07-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-07-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20250701-3fdb0c0204
   id: "pluggy-093d4e26-6020-4e4a-9c9c-a3076531e737"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -972,7 +972,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -171.95 BRL
   Expenses:Pessoal:Compras                  171.95 BRL
 
-2025-07-07 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            700"
+2025-07-07 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            700" ^auto-transfer-20250707-5de38af164
   id: "pluggy-d134d8a1-601d-4f3e-9efb-9a146d5000a6"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1125,7 +1125,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -34 BRL
   Expenses:Alimentação:Restaurante          34 BRL
 
-2025-07-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-07-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20250714-69e44ec77e
   id: "pluggy-f44f7684-a2c3-48b1-81cc-8fe6fe2d890e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1134,7 +1134,7 @@
   Assets:Bank:XP:Cash              199.95 BRL
   Equity:Transfers:XP:Rendimento  -199.95 BRL
 
-2025-07-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-07-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20250714-9eb4ddf7fe
   id: "pluggy-508d7397-7057-4b80-9f40-0bcaac8f1077"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1143,7 +1143,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-07-14 * "RENDIMENTOS DE CLIENTES MALL11 S/            153"
+2025-07-14 * "RENDIMENTOS DE CLIENTES MALL11 S/            153" ^auto-transfer-20250714-9975a4c86a
   id: "pluggy-47b96971-7c9b-48e8-8395-88d5dcf64e7e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1206,7 +1206,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -129.98 BRL
   Expenses:Alimentação:Mercado              129.98 BRL
 
-2025-07-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-07-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20250716-ce703329c7
   id: "pluggy-b5a05a77-2ec4-4118-ac4b-a86fbb0b7a27"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1242,7 +1242,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -41 BRL
   Expenses:Geral                            41 BRL
 
-2025-07-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-07-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20250717-0328f2597f
   id: "pluggy-0351fe8d-8ac3-4921-8552-3ff681e163ba"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -1566,7 +1566,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -7.92 BRL
   Expenses:Transporte:Uber                  7.92 BRL
 
-2025-08-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-08-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20250801-1f2550caa1
   id: "pluggy-69ea3928-f086-4775-b956-4183c4521841"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2025,7 +2025,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -245 BRL
   Expenses:Pessoal:Cabeleireiro             245 BRL
 
-2025-08-13 * "DIVIDENDOS DE CLIENTES WEGE3 S/            800"
+2025-08-13 * "DIVIDENDOS DE CLIENTES WEGE3 S/            800" ^auto-transfer-20250813-46634eca50
   id: "pluggy-d51a88a3-bb4b-4c9c-8b9c-47a275c76d93"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2034,7 +2034,7 @@
   Assets:Bank:XP:Cash            137.16 BRL
   Equity:Transfers:XP:Dividend  -137.16 BRL
 
-2025-08-13 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800"
+2025-08-13 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800" ^auto-transfer-20250813-252572e171
   id: "pluggy-cfb9ab7d-7ae4-48a3-86eb-83cfe2b0227d"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2043,7 +2043,7 @@
   Assets:Bank:XP:Cash       54.88 BRL
   Equity:Transfers:XP:JCP  -54.88 BRL
 
-2025-08-13 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800"
+2025-08-13 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800" ^auto-transfer-20250813-0fb7bdb765
   id: "pluggy-90d50587-ac4d-4a37-8d5e-7e45bfece3d1"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2070,7 +2070,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -21.5 BRL
   Expenses:Pet:Petshop                      21.5 BRL
 
-2025-08-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-08-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20250814-19e40a6427
   id: "pluggy-6cc0086c-cb3f-447c-b283-0906bbce4710"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2079,7 +2079,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-08-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2025-08-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20250814-b8a816c52c
   id: "pluggy-5b821369-fe35-4f05-8f7d-509d376e6266"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2088,7 +2088,7 @@
   Assets:Bank:XP:Cash              131.58 BRL
   Equity:Transfers:XP:Rendimento  -131.58 BRL
 
-2025-08-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-08-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20250814-d54628d484
   id: "pluggy-516878f5-b4a0-47ab-ac3f-d125eb6c3847"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2187,7 +2187,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -40.93 BRL
   Expenses:Pet:Petshop                      40.93 BRL
 
-2025-08-18 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-08-18 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20250818-e92ff48c88
   id: "pluggy-1166e406-5fa9-473e-8b8f-6466bcd33485"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2250,7 +2250,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -137.88 BRL
   Expenses:Saude:Farmacia                   137.88 BRL
 
-2025-08-19 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-08-19 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20250819-aeae73f00a
   id: "pluggy-463c7fae-4d49-4ee9-a48a-fd0fcc1a3a59"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2277,7 +2277,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -21 BRL
   Expenses:Pet:Petshop                      21 BRL
 
-2025-08-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2025-08-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20250820-7c4f0df75f
   id: "pluggy-948838ea-d81f-4f60-9bfe-11b81c29c9bf"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2511,7 +2511,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -6 BRL
   Expenses:Geral                            6 BRL
 
-2025-08-27 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700"
+2025-08-27 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700" ^auto-transfer-20250827-399f479b01
   id: "pluggy-edede6a2-4508-4ab5-9330-c2ff9278a9ab"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2583,7 +2583,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -65.41 BRL
   Expenses:Lazer:Streaming                  65.41 BRL
 
-2025-08-29 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-08-29 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20250829-2fd30c959e
   id: "pluggy-d14b8f04-90e9-449b-b61a-c5661fa90200"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2592,7 +2592,7 @@
   Assets:Bank:XP:Cash       67.95 BRL
   Equity:Transfers:XP:JCP  -67.95 BRL
 
-2025-08-29 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-08-29 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20250829-37faa10ad9
   id: "pluggy-b681e9dd-85d6-4c65-a322-1bb52d0109cb"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2664,7 +2664,7 @@
   Liabilities:Credit:BB:Card:EloGrafite  -60.89 BRL
   Expenses:Alimentação:Delivery           60.89 BRL
 
-2025-09-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-09-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20250901-7041aa91cf
   id: "pluggy-19e52a9b-c709-46e7-a111-a43bcfdabb99"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -2727,7 +2727,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -15.8 BRL
   Expenses:Transporte:TransportePublico     15.8 BRL
 
-2025-09-03 * "JUROS S/ CAPITAL DE CLIENTES VALE3 S/            200"
+2025-09-03 * "JUROS S/ CAPITAL DE CLIENTES VALE3 S/            200" ^auto-transfer-20250903-68aa5402d1
   id: "pluggy-c8a4f32c-1727-4f5b-bb36-4860e2f69903"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3249,7 +3249,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -3270 BRL
   Expenses:Viagens:Passeios                 3270 BRL
 
-2025-09-12 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-09-12 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20250912-807e7c66f5
   id: "pluggy-eb5d3a88-a8da-4cf5-bcb4-5d7017b89676"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3258,7 +3258,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-09-12 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2025-09-12 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20250912-d289e9016d
   id: "pluggy-a9c9ad8b-a224-44d0-9c6a-4c88f9bf19c1"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3267,7 +3267,7 @@
   Assets:Bank:XP:Cash              131.58 BRL
   Equity:Transfers:XP:Rendimento  -131.58 BRL
 
-2025-09-12 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-09-12 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20250912-66a037458f
   id: "pluggy-46251e98-e832-4c5d-8ce9-561007c198b1"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3348,7 +3348,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -15.34 BRL
   Expenses:Transporte:Uber                  15.34 BRL
 
-2025-09-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-09-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20250916-9324efb0cd
   id: "pluggy-370123ea-ddb5-4c7e-8cd3-9eddea2e65c8"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3366,7 +3366,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -106.06 BRL
   Expenses:Pessoal:Vestuario                106.06 BRL
 
-2025-09-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-09-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20250917-8b9b870bd2
   id: "pluggy-fda7e30f-eaff-4e33-9d9b-10ecfa88f14d"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3537,7 +3537,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -190.36 BRL
   Expenses:Saude:Farmacia                   190.36 BRL
 
-2025-09-22 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2025-09-22 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20250922-f3ab3a3824
   id: "pluggy-a9d515f7-b7cc-4551-b228-0ee3f5fc82a1"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -3546,7 +3546,7 @@
   Assets:Bank:XP:Cash       62.11 BRL
   Equity:Transfers:XP:JCP  -62.11 BRL
 
-2025-09-22 * "DIVIDENDOS DE CLIENTES PETR4 S/            500"
+2025-09-22 * "DIVIDENDOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20250922-39dd920aee
   id: "pluggy-6551b429-e322-41b1-bb35-bc801fa43eb8"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4041,7 +4041,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -110 BRL
   Expenses:Pessoal:Beleza                   110 BRL
 
-2025-09-30 * "DIVIDENDOS DE CLIENTES ETER3 S/            500"
+2025-09-30 * "DIVIDENDOS DE CLIENTES ETER3 S/            500" ^auto-transfer-20250930-cbea4026c8
   id: "pluggy-01c23a96-e1f5-476b-9e6c-9bed73f2f999"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4104,7 +4104,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -34.09 BRL
   Expenses:Saude:Farmacia                   34.09 BRL
 
-2025-10-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-10-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20251001-91e37c9f30
   id: "pluggy-ecbbf1c7-6faa-4732-9a65-b2fd16343030"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4194,7 +4194,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -119.97 BRL
   Expenses:Saude:Farmacia                   119.97 BRL
 
-2025-10-03 * "JUROS S/ CAPITAL DE CLIENTES FLRY3 S/            830"
+2025-10-03 * "JUROS S/ CAPITAL DE CLIENTES FLRY3 S/            830" ^auto-transfer-20251003-5cf644b59f
   id: "pluggy-4ab31bee-b0c9-475a-b021-07c448aa2dd7"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4302,7 +4302,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa   99 BRL
   Expenses:Saude:Farmacia                  -99 BRL
 
-2025-10-07 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            700"
+2025-10-07 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            700" ^auto-transfer-20251007-78574ac405
   id: "pluggy-add32149-8bbf-44d1-9aa5-4deda26ad235"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4518,7 +4518,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -70.5 BRL
   Expenses:Transporte:Uber                  70.5 BRL
 
-2025-10-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-10-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20251014-11f0749ea8
   id: "pluggy-f0eee7ed-4bae-4898-b3e7-558f8d12075b"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4527,7 +4527,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-10-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-10-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20251014-fc91404e42
   id: "pluggy-20d539df-7bf6-4a34-93de-3c12345019fa"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4536,7 +4536,7 @@
   Assets:Bank:XP:Cash              122.55 BRL
   Equity:Transfers:XP:Rendimento  -122.55 BRL
 
-2025-10-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2025-10-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20251014-2534269018
   id: "pluggy-1adb9569-a85c-4693-9cd8-e53c6e168ad0"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4626,7 +4626,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -40013 ARS
   Expenses:Transporte:Uber                  40013 ARS
 
-2025-10-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-10-16 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20251016-ee4c0d61c9
   id: "pluggy-d9edd7a5-890c-4d2b-bf44-1d39c7bd774e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4635,7 +4635,7 @@
   Assets:Bank:XP:Cash              142.12 BRL
   Equity:Transfers:XP:Rendimento  -142.12 BRL
 
-2025-10-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-10-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20251017-b6539a4d5d
   id: "pluggy-1a8c922b-8fc8-43eb-88d1-17d9c1b84c65"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -4959,7 +4959,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -77.95 BRL
   Expenses:Transporte:Uber                  77.95 BRL
 
-2025-11-03 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-11-03 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20251103-21b67b4da2
   id: "pluggy-b4407890-eb29-4971-8a4a-bd238e241255"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5283,7 +5283,7 @@
   Assets:Bank:BB:Savings    -2000 BRL
   Equity:Transfers:General   2000 BRL
 
-2025-11-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2025-11-14 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20251114-e5112dedb3
   id: "pluggy-ea67a011-49f5-4d2e-9459-a0bbb5fa93af"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5292,7 +5292,7 @@
   Assets:Bank:XP:Cash              131.58 BRL
   Equity:Transfers:XP:Rendimento  -131.58 BRL
 
-2025-11-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-11-14 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20251114-97c7540a47
   id: "pluggy-dd828001-8bdb-4bbc-b7a1-76ff166f09b0"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5301,7 +5301,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-11-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-11-14 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20251114-50ac37c49c
   id: "pluggy-2ddbc440-a2e6-40ff-a4ea-679437f8e3cb"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5445,7 +5445,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -9.99 BRL
   Expenses:Mensalidades:Outras              9.99 BRL
 
-2025-11-18 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187"
+2025-11-18 * "RENDIMENTOS DE CLIENTES IRDM11 S/            187" ^auto-transfer-20251118-86d097daad
   id: "pluggy-10db61d3-0019-40b9-bce9-1fc2080bc331"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5472,7 +5472,7 @@
   Assets:Bank:BB:Cash  -85 BRL
   Expenses:Geral:Caol   85 BRL
 
-2025-11-19 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-11-19 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20251119-e2087c4e7f
   id: "pluggy-dcb27565-120b-434c-9edd-98e5052565fe"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5517,7 +5517,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -79 BRL
   Expenses:Geral                            79 BRL
 
-2025-11-21 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2025-11-21 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20251121-5283b24935
   id: "pluggy-5f3b5fd3-5725-4d09-b14a-6a866f1111da"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5679,7 +5679,7 @@
   Assets:Bank:BB:Cash  -2000 BRL
   Expenses:Geral:Caol   2000 BRL
 
-2025-11-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700"
+2025-11-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700" ^auto-transfer-20251127-cdc759ef4e
   id: "pluggy-d1a78e9c-8a31-4f53-a32f-8202fd3a07de"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5688,7 +5688,7 @@
   Assets:Bank:XP:Cash            225.33 BRL
   Equity:Transfers:XP:Dividend  -225.33 BRL
 
-2025-11-27 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700"
+2025-11-27 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700" ^auto-transfer-20251127-83d9d5d5c2
   id: "pluggy-81428222-7bf6-4cdb-b82c-bcb60b0a7628"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5697,7 +5697,7 @@
   Assets:Bank:XP:Cash       380.19 BRL
   Equity:Transfers:XP:JCP  -380.19 BRL
 
-2025-11-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700"
+2025-11-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700" ^auto-transfer-20251127-366af30ea8
   id: "pluggy-341376f3-5c2f-41f8-933b-5605b21c698e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -5769,7 +5769,7 @@
   Assets:Bank:BB:Cash  -8 BRL
   Expenses:Geral        8 BRL
 
-2025-12-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2025-12-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20251201-36291fb633
   id: "pluggy-c0d17007-1381-49e5-96fb-f9ac5b8393fa"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6057,7 +6057,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -92.98 BRL
   Expenses:Alimentação:Restaurante          92.98 BRL
 
-2025-12-11 * "JUROS S/ CAPITAL DE CLIENTES BBAS3 S/            700"
+2025-12-11 * "JUROS S/ CAPITAL DE CLIENTES BBAS3 S/            700" ^auto-transfer-20251211-a592780c97
   id: "pluggy-60bd3223-fd13-491b-aa05-8e2d2bd15459"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6129,7 +6129,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -19.84 BRL
   Expenses:Transporte:Uber                  19.84 BRL
 
-2025-12-12 * "DIVIDENDOS DE CLIENTES WEGE3 S/            800"
+2025-12-12 * "DIVIDENDOS DE CLIENTES WEGE3 S/            800" ^auto-transfer-20251212-cfd9bb664d
   id: "pluggy-fd774a57-e9f3-45e5-a36c-017891f72b71"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6138,7 +6138,7 @@
   Assets:Bank:XP:Cash            273.36 BRL
   Equity:Transfers:XP:Dividend  -273.36 BRL
 
-2025-12-12 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2025-12-12 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20251212-bd99069cac
   id: "pluggy-f5cad5c2-9d97-43f0-bdab-d4c1d063a57b"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6147,7 +6147,7 @@
   Assets:Bank:XP:Cash              122.55 BRL
   Equity:Transfers:XP:Rendimento  -122.55 BRL
 
-2025-12-12 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2025-12-12 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20251212-ba32fb1f23
   id: "pluggy-bab51e49-9eb2-4534-8324-6671704bb707"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6156,7 +6156,7 @@
   Assets:Bank:XP:Cash              131.58 BRL
   Equity:Transfers:XP:Rendimento  -131.58 BRL
 
-2025-12-12 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2025-12-12 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20251212-3f6604ece0
   id: "pluggy-aa07093f-8ffa-4112-b5ef-ca4d7c0b3800"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6165,7 +6165,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800"
+2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800" ^auto-transfer-20251212-a5d9f959a6
   id: "pluggy-a6a9a69f-2c4e-4253-88d8-791d7214c656"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6174,7 +6174,7 @@
   Assets:Bank:XP:Cash       74.96 BRL
   Equity:Transfers:XP:JCP  -74.96 BRL
 
-2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800"
+2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES WEGE3 S/            800" ^auto-transfer-20251212-0fb1e26f5d
   id: "pluggy-59597839-d468-4424-aa16-238d80c1f642"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6183,7 +6183,7 @@
   Assets:Bank:XP:Cash       75.68 BRL
   Equity:Transfers:XP:JCP  -75.68 BRL
 
-2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES BBAS3 S/            700"
+2025-12-12 * "JUROS S/ CAPITAL DE CLIENTES BBAS3 S/            700" ^auto-transfer-20251212-56c56bd575
   id: "pluggy-1df803fa-789e-426d-b264-0c8dbf0ed333"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6372,7 +6372,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -350 BRL
   Expenses:Geral                            350 BRL
 
-2025-12-16 * "RENDIMENTOS DE CLIENTES IRIM15 S/            165"
+2025-12-16 * "RENDIMENTOS DE CLIENTES IRIM15 S/            165" ^auto-transfer-20251216-1bc12c26b4
   id: "pluggy-7492f669-5d1e-4f62-93d2-ad68c33a102f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6426,7 +6426,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -140.76 BRL
   Expenses:Saude:Farmacia                   140.76 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-1fec77a623
   id: "pluggy-f454c7c4-8451-4eae-b473-fca39272ee0d"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6435,7 +6435,7 @@
   Assets:Bank:XP:Cash       33.05 BRL
   Equity:Transfers:XP:JCP  -33.05 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-4a4a8e2d6c
   id: "pluggy-f2353ba0-a935-4230-85fe-a15a0dab7504"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6444,7 +6444,7 @@
   Assets:Bank:XP:Cash       33.21 BRL
   Equity:Transfers:XP:JCP  -33.21 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            300"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            300" ^auto-transfer-20251217-845519de1f
   id: "pluggy-e9aef764-7583-44a4-940c-d0c4d313516f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6453,7 +6453,7 @@
   Assets:Bank:XP:Cash       24.8 BRL
   Equity:Transfers:XP:JCP  -24.8 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-36ff2c15cf
   id: "pluggy-e5fc4309-f8cb-46ee-9bf3-931c3f13c5f5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6462,7 +6462,7 @@
   Assets:Bank:XP:Cash       33.06 BRL
   Equity:Transfers:XP:JCP  -33.06 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-30c0aeda85
   id: "pluggy-c5e6e6a1-a9f3-4f0d-aa60-766f3909970f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6471,7 +6471,7 @@
   Assets:Bank:XP:Cash       33.1 BRL
   Equity:Transfers:XP:JCP  -33.1 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-5568699e42
   id: "pluggy-c3d9e07e-1949-479e-a48a-0b2a804af436"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6480,7 +6480,7 @@
   Assets:Bank:XP:Cash       66.42 BRL
   Equity:Transfers:XP:JCP  -66.42 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES LEVE3 S/            300"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES LEVE3 S/            300" ^auto-transfer-20251217-b79b4d564e
   id: "pluggy-c16f0886-7470-487a-a48c-c283c15ebf25"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6489,7 +6489,7 @@
   Assets:Bank:XP:Cash       155.28 BRL
   Equity:Transfers:XP:JCP  -155.28 BRL
 
-2025-12-17 * "DIVIDENDOS DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "DIVIDENDOS DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-138cead44d
   id: "pluggy-b3cfe09d-3781-4a59-b7c1-ade0b5e55ddf"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6498,7 +6498,7 @@
   Assets:Bank:XP:Cash            48.68 BRL
   Equity:Transfers:XP:Dividend  -48.68 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            300"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            300" ^auto-transfer-20251217-02e7ec733f
   id: "pluggy-7a205950-0fa6-4e12-bd0e-f97a265126bc"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6507,7 +6507,7 @@
   Assets:Bank:XP:Cash       24.8 BRL
   Equity:Transfers:XP:JCP  -24.8 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-ee7cee6e1d
   id: "pluggy-6413054a-fb57-4d92-97a9-d1aceb947c60"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6516,7 +6516,7 @@
   Assets:Bank:XP:Cash       33.21 BRL
   Equity:Transfers:XP:JCP  -33.21 BRL
 
-2025-12-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188"
+2025-12-17 * "RENDIMENTOS DE CLIENTES MCCI11 S/            188" ^auto-transfer-20251217-7773a5645b
   id: "pluggy-3c04a281-b0f5-4966-8bee-0a1375d1e356"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6525,7 +6525,7 @@
   Assets:Bank:XP:Cash              188 BRL
   Equity:Transfers:XP:Rendimento  -188 BRL
 
-2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400"
+2025-12-17 * "JUROS S/ CAPITAL DE CLIENTES HYPE3 S/            400" ^auto-transfer-20251217-d5ada1a0a7
   id: "pluggy-13f567d7-e041-406e-9ec4-71c31e73b678"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6615,7 +6615,7 @@
   Assets:Bank:Inter:Cash         6115.87 BRL
   Equity:Transfers:Investments  -6115.87 BRL
 
-2025-12-19 * "JUROS S/ CAPITAL DE CLIENTES FLRY3 S/            830"
+2025-12-19 * "JUROS S/ CAPITAL DE CLIENTES FLRY3 S/            830" ^auto-transfer-20251219-75ba648bae
   id: "pluggy-804263a8-e844-4867-b8ec-d951e7c3ee9f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6624,7 +6624,7 @@
   Assets:Bank:XP:Cash       165.7 BRL
   Equity:Transfers:XP:JCP  -165.7 BRL
 
-2025-12-19 * "DIVIDENDOS DE CLIENTES ITUB3 S/            220"
+2025-12-19 * "DIVIDENDOS DE CLIENTES ITUB3 S/            220" ^auto-transfer-20251219-4f26873ae1
   id: "pluggy-07e15062-a6d5-4b38-9885-346e8d0ee000"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6732,7 +6732,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -133.99 BRL
   Expenses:Transporte:Uber                  133.99 BRL
 
-2025-12-22 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2025-12-22 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20251222-88ef76289f
   id: "pluggy-97f862e6-8a72-4920-b373-2230ee960934"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6741,7 +6741,7 @@
   Assets:Bank:XP:Cash       57.4 BRL
   Equity:Transfers:XP:JCP  -57.4 BRL
 
-2025-12-22 * "DIVIDENDOS DE CLIENTES PETR4 S/            500"
+2025-12-22 * "DIVIDENDOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20251222-2ca15f87eb
   id: "pluggy-29d9c398-4b58-49b3-8c6d-a5151e2cc298"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6804,7 +6804,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -20 BRL
   Expenses:Pessoal:Vestuario                20 BRL
 
-2025-12-23 * "DIVIDENDOS DE CLIENTES EGIE3 S/            300"
+2025-12-23 * "DIVIDENDOS DE CLIENTES EGIE3 S/            300" ^auto-transfer-20251223-c87610cb9a
   id: "pluggy-b64ba0c0-33a4-4e26-aa9c-184847c128b5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6813,7 +6813,7 @@
   Assets:Bank:XP:Cash            264.42 BRL
   Equity:Transfers:XP:Dividend  -264.42 BRL
 
-2025-12-23 * "DIVIDENDOS DE CLIENTES EGIE3 S/            300"
+2025-12-23 * "DIVIDENDOS DE CLIENTES EGIE3 S/            300" ^auto-transfer-20251223-b174856937
   id: "pluggy-730ef70f-3107-496c-b494-1c2cee451321"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -6849,7 +6849,7 @@
   Assets:Bank:Inter:Cash     30000 BRL
   Equity:Transfers:General  -30000 BRL
 
-2025-12-24 * "DEBITO RENDA FIXA - CRI CSN CIMENTO"
+2025-12-24 * "DEBITO RENDA FIXA - CRI CSN CIMENTO" ^auto-transfer-20251224-e6b68bc18a
   id: "pluggy-b64295f7-c81a-47f2-9e62-6a8ecd3761a9"
   source: "pluggy"
   pluggy_account: "0cdf88ca-4715-44e5-bec6-ba37a59b2ede"
@@ -6858,7 +6858,7 @@
   Assets:Bank:Inter:Cash        -7340.53 BRL
   Equity:Transfers:Inter:Cash   7340.53 BRL
 
-2025-12-24 * "DEBITO RENDA FIXA - CDB BMG"
+2025-12-24 * "DEBITO RENDA FIXA - CDB BMG" ^auto-transfer-20251224-2f81098769
   id: "pluggy-6fa3cb97-55b2-4ec6-b575-3ce4faf61113"
   source: "pluggy"
   pluggy_account: "0cdf88ca-4715-44e5-bec6-ba37a59b2ede"
@@ -7074,7 +7074,7 @@
   Assets:Bank:BB:Cash   134.9 BRL
   Expenses:Geral       -134.9 BRL
 
-2026-01-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2026-01-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20260102-0bb397dcf7
   id: "pluggy-e2efbdbf-e5ca-45be-9653-b891f1532d64"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7227,7 +7227,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -9.93 BRL
   Expenses:Transporte:Uber                  9.93 BRL
 
-2026-01-07 * "DIVIDENDOS DE CLIENTES VALE3 S/            200"
+2026-01-07 * "DIVIDENDOS DE CLIENTES VALE3 S/            200" ^auto-transfer-20260107-febd92b53f
   id: "pluggy-b020017f-9be7-4cf9-bc56-8f756118bf0c"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7272,7 +7272,7 @@
   Assets:Bank:XP:Cash           -21019.03 BRL
   Equity:Transfers:XP:Cash   21019.03 BRL
 
-2026-01-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/             65"
+2026-01-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/             65" ^auto-transfer-20260108-dcb899cee2
   id: "pluggy-599d1402-55d7-40a8-bf28-851c0c12afd6"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7353,7 +7353,7 @@
   Assets:Bank:BB:Cash  -130 BRL
   Expenses:Geral:Caol   130 BRL
 
-2026-01-12 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400"
+2026-01-12 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400" ^auto-transfer-20260112-037a92af63
   id: "pluggy-508acbb8-5187-4b12-9c95-40f52ad5d322"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7362,7 +7362,7 @@
   Assets:Bank:XP:Cash       25.33 BRL
   Equity:Transfers:XP:JCP  -25.33 BRL
 
-2026-01-12 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400"
+2026-01-12 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400" ^auto-transfer-20260112-7d39ffaf52
   id: "pluggy-3d15d307-638a-45a2-9565-bc6ed950f000"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7459,9 +7459,9 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash            30.99 BRL
-  Equity:Transfers:Investments  -30.99 BRL
+  Equity:Transfers:XP:Cash  -30.99 BRL
 
-2026-01-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2026-01-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20260115-9fd73a16b4
   id: "pluggy-8d32d304-3229-4cc5-81f4-d385f4127d29"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7470,7 +7470,7 @@
   Assets:Bank:XP:Cash              187.05 BRL
   Equity:Transfers:XP:Rendimento  -187.05 BRL
 
-2026-01-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2026-01-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20260115-8678ab50b2
   id: "pluggy-76545d98-e0c4-42e9-8425-d7d0cc82ba5c"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7479,7 +7479,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2026-01-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2026-01-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20260115-0e6c6d995e
   id: "pluggy-2a90521f-17fe-4de1-bfaa-d86ad99049ed"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7497,7 +7497,7 @@
   Assets:Bank:BB:Cash   122 BRL
   Income:Reembolso     -122 BRL
 
-2026-01-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            121"
+2026-01-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            121" ^auto-transfer-20260116-86cd80ff0b
   id: "pluggy-8d65b981-8f61-40aa-b05e-1fa26a9126a6"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7506,7 +7506,7 @@
   Assets:Bank:XP:Cash              106.48 BRL
   Equity:Transfers:XP:Rendimento  -106.48 BRL
 
-2026-01-16 * "DIVIDENDOS DE CLIENTES CXSE3 S/            300"
+2026-01-16 * "DIVIDENDOS DE CLIENTES CXSE3 S/            300" ^auto-transfer-20260116-62059b4b2b
   id: "pluggy-7c89d6c1-fed2-4bba-9b5c-6299386c4df3"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7515,7 +7515,7 @@
   Assets:Bank:XP:Cash            105 BRL
   Equity:Transfers:XP:Dividend  -105 BRL
 
-2026-01-16 * "RENDIMENTOS DE CLIENTES CXSE3 S/            300"
+2026-01-16 * "RENDIMENTOS DE CLIENTES CXSE3 S/            300" ^auto-transfer-20260116-67ee111bbb
   id: "pluggy-2a7ce636-808a-4a55-99d5-5b4f682f619e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7578,7 +7578,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -87.96 BRL
   Expenses:Transporte:Uber                  87.96 BRL
 
-2026-01-22 * "RENDIMENTOS DE CLIENTES AFHI11 S/            106"
+2026-01-22 * "RENDIMENTOS DE CLIENTES AFHI11 S/            106" ^auto-transfer-20260122-73aef6292c
   id: "pluggy-c8221bf1-9bd2-45a2-b799-2f019ebab50a"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7767,7 +7767,7 @@
   Assets:Bank:BB:Cash            -45 BRL
   Expenses:Pessoal:Cabeleireiro   45 BRL
 
-2026-01-27 * "DEBITO ONLINE TD - Prot.94776946 IPCA+ 2050"
+2026-01-27 * "DEBITO ONLINE TD - Prot.94776946 IPCA+ 2050" ^auto-transfer-20260127-c684030fb5
   id: "pluggy-983e0494-576b-42ab-b371-25d4a33230f4"
   source: "pluggy"
   pluggy_account: "0cdf88ca-4715-44e5-bec6-ba37a59b2ede"
@@ -7828,7 +7828,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -12.97 BRL
   Expenses:Transporte:Uber                  12.97 BRL
 
-2026-01-28 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700"
+2026-01-28 * "JUROS S/ CAPITAL DE CLIENTES TAEE11 S/            700" ^auto-transfer-20260128-ae629a8430
   id: "pluggy-f0430774-7834-42a8-ae75-e730ea7d429c"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7837,7 +7837,7 @@
   Assets:Bank:XP:Cash       249.55 BRL
   Equity:Transfers:XP:JCP  -249.55 BRL
 
-2026-01-28 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700"
+2026-01-28 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700" ^auto-transfer-20260128-890cc54d59
   id: "pluggy-30820e84-d668-47b8-b13a-123f51b8e2d8"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -7963,7 +7963,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -96.95 BRL
   Expenses:Transporte:Uber                  96.95 BRL
 
-2026-02-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            326"
+2026-02-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            326" ^auto-transfer-20260202-6b865a0823
   id: "pluggy-c4d6d813-0def-43f0-87dd-c80e7687be1a"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8125,7 +8125,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -5.25 BRL
   Expenses:Transporte:Uber                  5.25 BRL
 
-2026-02-06 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113"
+2026-02-06 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113" ^auto-transfer-20260206-32ef19ed86
   id: "pluggy-0915463e-844a-4cfe-b16b-133c8ff8533c"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8404,7 +8404,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -32.95 BRL
   Expenses:Transporte:Uber                  32.95 BRL
 
-2026-02-13 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2026-02-13 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20260213-57557c8c01
   id: "pluggy-c3473f27-b4cd-4711-abdc-96f1be44d86f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8413,7 +8413,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2026-02-13 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2026-02-13 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20260213-eb36af93c4
   id: "pluggy-a5120dde-70c1-4fb8-98a1-50fd34e54a07"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8422,7 +8422,7 @@
   Assets:Bank:XP:Cash              122.55 BRL
   Equity:Transfers:XP:Rendimento  -122.55 BRL
 
-2026-02-13 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2026-02-13 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20260213-a37d926317
   id: "pluggy-044294a9-0fb6-49bd-bbd1-913d116920f9"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8555,7 +8555,7 @@
   Assets:Bank:Inter:Cash       268.38 BRL
   Income:Investment:Interest  -268.38 BRL
 
-2026-02-18 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147"
+2026-02-18 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147" ^auto-transfer-20260218-1eeaf37bd7
   id: "pluggy-4ac46966-ed08-4615-9c34-376952bc45f5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8663,7 +8663,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -121.17 BRL
   Expenses:Saude:Farmacia                   121.17 BRL
 
-2026-02-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2026-02-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20260220-d8c9ddf73a
   id: "pluggy-5e864842-ec36-4685-a306-39a381bf42bb"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8672,7 +8672,7 @@
   Assets:Bank:XP:Cash       200.43 BRL
   Equity:Transfers:XP:JCP  -200.43 BRL
 
-2026-02-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500"
+2026-02-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20260220-3cb0f3d51d
   id: "pluggy-02d78ecd-9ca6-406e-b2ad-f5d12576946f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -8789,7 +8789,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -10.5 BRL
   Expenses:Pet:Petshop                      10.5 BRL
 
-2026-02-24 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132"
+2026-02-24 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132" ^auto-transfer-20260224-b9e5b9ef21
   id: "pluggy-7712d978-7302-4a89-907f-0ebf64a079c4"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9023,7 +9023,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -94.97 BRL
   Expenses:Transporte:Uber                  94.97 BRL
 
-2026-03-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526"
+2026-03-02 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526" ^auto-transfer-20260302-35283b15a1
   id: "pluggy-c8e47c6a-8095-49a0-85ed-edd810fa2d56"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9032,7 +9032,7 @@
   Assets:Bank:XP:Cash       7.89 BRL
   Equity:Transfers:XP:JCP  -7.89 BRL
 
-2026-03-02 * "RENDIMENTOS DE CLIENTES BBSE3 S/            500"
+2026-03-02 * "RENDIMENTOS DE CLIENTES BBSE3 S/            500" ^auto-transfer-20260302-a8a5292ca0
   id: "pluggy-52a5011b-2cd6-404f-9c77-a0c6745e025d"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9041,7 +9041,7 @@
   Assets:Bank:XP:Cash              22.03 BRL
   Equity:Transfers:XP:Rendimento  -22.03 BRL
 
-2026-03-02 * "DIVIDENDOS DE CLIENTES BBSE3 S/            500"
+2026-03-02 * "DIVIDENDOS DE CLIENTES BBSE3 S/            500" ^auto-transfer-20260302-3d3c7fb2ee
   id: "pluggy-40fad570-f8f5-417d-99ef-13c240839b29"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9068,7 +9068,7 @@
   Liabilities:Credit:BB:Card:EloGrafite  -7.9 BRL
   Expenses:Transporte:TransportePublico   7.9 BRL
 
-2026-03-04 * "JUROS S/ CAPITAL DE CLIENTES VALE3 S/            200"
+2026-03-04 * "JUROS S/ CAPITAL DE CLIENTES VALE3 S/            200" ^auto-transfer-20260304-bc9561a3a7
   id: "pluggy-aa8e55ac-6929-484d-be00-40e9b14a7646"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9077,7 +9077,7 @@
   Assets:Bank:XP:Cash       266.82 BRL
   Equity:Transfers:XP:JCP  -266.82 BRL
 
-2026-03-04 * "DIVIDENDOS DE CLIENTES VALE3 S/            200"
+2026-03-04 * "DIVIDENDOS DE CLIENTES VALE3 S/            200" ^auto-transfer-20260304-db0a4bde3b
   id: "pluggy-1fb786c2-a2e7-41b9-b091-6e4ba1bb9100"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9131,7 +9131,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -90 BRL
   Expenses:Saude:Academia                   90 BRL
 
-2026-03-06 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220"
+2026-03-06 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            220" ^auto-transfer-20260306-11a7d47b54
   id: "pluggy-77e3de20-65d1-424f-b5bb-a594596c70a5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9140,7 +9140,7 @@
   Assets:Bank:XP:Cash       69.14 BRL
   Equity:Transfers:XP:JCP  -69.14 BRL
 
-2026-03-06 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113"
+2026-03-06 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113" ^auto-transfer-20260306-4080641b07
   id: "pluggy-6ce0b651-d9e5-4dcd-b76e-49f439067cb1"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9228,7 +9228,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash            26.92 BRL
-  Equity:Transfers:Investments  -26.92 BRL
+  Equity:Transfers:XP:Cash  -26.92 BRL
 
 2026-03-10 * "PLANEJADA" ^auto-transfer-20260310-54dea89e13
   id: "pluggy-3a68bdec-8f26-4da4-9673-705181efb59a"
@@ -9365,7 +9365,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -300.51 BRL
   Expenses:Saude:Farmacia                   300.51 BRL
 
-2026-03-13 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2026-03-13 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20260313-307627d5d1
   id: "pluggy-8e8885e2-1f78-4ee5-b40d-dc495ad1519f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9374,7 +9374,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2026-03-13 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2026-03-13 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20260313-8f74aa439f
   id: "pluggy-484c6f6f-9dfa-4fea-bcc5-b0d7a04325a7"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9383,7 +9383,7 @@
   Assets:Bank:XP:Cash              153 BRL
   Equity:Transfers:XP:Rendimento  -153 BRL
 
-2026-03-13 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2026-03-13 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20260313-ba98566cda
   id: "pluggy-17c9656a-4d7d-468d-b192-2997303fdf48"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9419,7 +9419,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -5.25 BRL
   Expenses:Transporte:Uber                  5.25 BRL
 
-2026-03-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147"
+2026-03-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147" ^auto-transfer-20260316-120dc42841
   id: "pluggy-b36e3cb8-64ea-45d5-875b-9e4df737e6c0"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9536,7 +9536,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -150.25 BRL
   Expenses:Pessoal:Vestuario                150.25 BRL
 
-2026-03-20 * "DIVIDENDOS DE CLIENTES PETR4 S/            500"
+2026-03-20 * "DIVIDENDOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20260320-89c43cc129
   id: "pluggy-fc2ef6f1-af00-46d6-854a-8a173c6749ac"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9545,7 +9545,7 @@
   Assets:Bank:XP:Cash            148.21 BRL
   Equity:Transfers:XP:Dividend  -148.21 BRL
 
-2026-03-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500"
+2026-03-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20260320-5aee764b2e
   id: "pluggy-f805567d-8889-4fb2-adf8-f582475d6972"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9554,7 +9554,7 @@
   Assets:Bank:XP:Cash              2.05 BRL
   Equity:Transfers:XP:Rendimento  -2.05 BRL
 
-2026-03-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500"
+2026-03-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            500" ^auto-transfer-20260320-d3b47d7147
   id: "pluggy-ae6b38e8-e0ab-4c5b-9b66-bc29e1feb30f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9563,7 +9563,7 @@
   Assets:Bank:XP:Cash       74.46 BRL
   Equity:Transfers:XP:JCP  -74.46 BRL
 
-2026-03-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500"
+2026-03-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            500" ^auto-transfer-20260320-efacf16920
   id: "pluggy-9f72e7a0-0eff-4c0c-b590-e0a9620b0659"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9572,7 +9572,7 @@
   Assets:Bank:XP:Cash              3.47 BRL
   Equity:Transfers:XP:Rendimento  -3.47 BRL
 
-2026-03-20 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132"
+2026-03-20 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132" ^auto-transfer-20260320-265b6ea47d
   id: "pluggy-09556f43-9046-457d-9010-2ef48ceda55f"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9687,7 +9687,7 @@
   pluggy_category_id: "3000000"
   pluggy_category: "Investments"
   Assets:Bank:XP:Cash            4.57 BRL
-  Equity:Transfers:Investments  -4.57 BRL
+  Equity:Transfers:XP:Cash  -4.57 BRL
 
 2026-03-25 * "REAJ.MON. BC"
   id: "pluggy-211a29f8-c6e9-4550-a46d-32594629c6fb"
@@ -9851,7 +9851,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -17 BRL
   Expenses:Pessoal:Compras                  17 BRL
 
-2026-04-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526"
+2026-04-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526" ^auto-transfer-20260401-ad82a859e6
   id: "pluggy-3d530f22-185a-4779-8c78-6ffc138e0ef5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -9950,7 +9950,7 @@
   Liabilities:Credit:BB:Card:EloGrafite  -7.95 BRL
   Expenses:Alimentação:Delivery           7.95 BRL
 
-2026-04-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113"
+2026-04-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113" ^auto-transfer-20260408-8c9b51a32d
   id: "pluggy-07aeaf0b-b44c-461d-a271-36e6b2709d91"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10130,7 +10130,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -4.5 BRL
   Expenses:Mensalidades:Outras              4.5 BRL
 
-2026-04-13 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400"
+2026-04-13 * "JUROS S/ CAPITAL DE CLIENTES B3SA3 S/            400" ^auto-transfer-20260413-6fd0fd5837
   id: "pluggy-1ca208c2-7a16-409f-a920-3c8df62fbbe8"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10148,7 +10148,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -135.68 BRL
   Expenses:Saude:Farmacia                   135.68 BRL
 
-2026-04-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2026-04-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20260415-eb2cbf26cb
   id: "pluggy-e68a9c19-6c90-461b-848a-28b66d7eabf4"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10157,7 +10157,7 @@
   Assets:Bank:XP:Cash              122.55 BRL
   Equity:Transfers:XP:Rendimento  -122.55 BRL
 
-2026-04-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2026-04-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20260415-d0b79e938b
   id: "pluggy-4dff6a97-d52d-45b2-bca5-00237a2b54d5"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10166,7 +10166,7 @@
   Assets:Bank:XP:Cash              153 BRL
   Equity:Transfers:XP:Rendimento  -153 BRL
 
-2026-04-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2026-04-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20260415-da3027a1ae
   id: "pluggy-1fe6ae30-16c3-483f-9888-20f7461c0319"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10175,7 +10175,7 @@
   Assets:Bank:XP:Cash              108.9 BRL
   Equity:Transfers:XP:Rendimento  -108.9 BRL
 
-2026-04-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147"
+2026-04-16 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147" ^auto-transfer-20260416-48dc2b981c
   id: "pluggy-6609a9e0-a72c-4040-8836-761238409d14"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10229,7 +10229,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -15.94 BRL
   Expenses:Transporte:Uber                  15.94 BRL
 
-2026-04-23 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132"
+2026-04-23 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132" ^auto-transfer-20260423-4438215094
   id: "pluggy-27c82cfd-3c58-486f-ba74-f714a8831458"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10391,7 +10391,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -183.22 BRL
   Expenses:Pessoal:Compras                  183.22 BRL
 
-2026-05-04 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526"
+2026-05-04 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526" ^auto-transfer-20260504-c5ebd1a165
   id: "pluggy-fa6d134a-0a2d-41b9-b5a2-fc3c248707de"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10400,7 +10400,7 @@
   Assets:Bank:XP:Cash       7.89 BRL
   Equity:Transfers:XP:JCP  -7.89 BRL
 
-2026-05-05 * "DIVIDENDOS DE CLIENTES FLRY3 S/            830"
+2026-05-05 * "DIVIDENDOS DE CLIENTES FLRY3 S/            830" ^auto-transfer-20260505-515ccd9fa5
   id: "pluggy-fbd4a787-94ff-4aef-b633-07f9910dfc92"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10427,7 +10427,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -18.9 BRL
   Expenses:Transporte:Uber                  18.9 BRL
 
-2026-05-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113"
+2026-05-08 * "RENDIMENTOS DE CLIENTES LVBI11 S/            113" ^auto-transfer-20260508-f30d82a82c
   id: "pluggy-156a1779-c772-494a-aa66-79d9b0412eb9"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10436,7 +10436,7 @@
   Assets:Bank:XP:Cash              84.75 BRL
   Equity:Transfers:XP:Rendimento  -84.75 BRL
 
-2026-05-08 * "DIVIDENDOS DE CLIENTES MGLU3 S/            115"
+2026-05-08 * "DIVIDENDOS DE CLIENTES MGLU3 S/            115" ^auto-transfer-20260508-904814c796
   id: "pluggy-13657d5a-9c93-4b6d-a947-c59a959f5d24"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10621,7 +10621,7 @@
   Assets:Bank:Inter:Cash       343.82 BRL
   Income:Investment:Interest  -343.82 BRL
 
-2026-05-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129"
+2026-05-15 * "RENDIMENTOS DE CLIENTES HGRU11 S/            129" ^auto-transfer-20260515-99f9107b65
   id: "pluggy-aa334350-bb5e-4e22-9559-52f77d05bebd"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10630,7 +10630,7 @@
   Assets:Bank:XP:Cash              122.55 BRL
   Equity:Transfers:XP:Rendimento  -122.55 BRL
 
-2026-05-15 * "DIVIDENDOS DE CLIENTES CXSE3 S/          1,000"
+2026-05-15 * "DIVIDENDOS DE CLIENTES CXSE3 S/          1,000" ^auto-transfer-20260515-9e888805d8
   id: "pluggy-a59478d2-37f4-444c-bb87-a98ab203b392"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10639,7 +10639,7 @@
   Assets:Bank:XP:Cash            330 BRL
   Equity:Transfers:XP:Dividend  -330 BRL
 
-2026-05-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153"
+2026-05-15 * "RENDIMENTOS DE CLIENTES PMLL11 S/            153" ^auto-transfer-20260515-cb4941f08c
   id: "pluggy-33841294-bcb1-4445-bf10-49f8dd5194bc"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10648,7 +10648,7 @@
   Assets:Bank:XP:Cash              153 BRL
   Equity:Transfers:XP:Rendimento  -153 BRL
 
-2026-05-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99"
+2026-05-15 * "RENDIMENTOS DE CLIENTES HGLG11 S/             99" ^auto-transfer-20260515-b0efbcda47
   id: "pluggy-105ab3a0-9a54-43a1-b624-c328d298ec66"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10720,7 +10720,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -7.9 BRL
   Expenses:Transporte:TransportePublico     7.9 BRL
 
-2026-05-18 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147"
+2026-05-18 * "RENDIMENTOS DE CLIENTES PCIP11 S/            147" ^auto-transfer-20260518-f09d3df91f
   id: "pluggy-21c6321d-5825-4002-ad47-5c890e4a9822"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10756,7 +10756,7 @@
   Liabilities:Credit:BB:Card:EloGrafite  -35.69 BRL
   Expenses:Alimentação:Mercado            35.69 BRL
 
-2026-05-20 * "JUROS S/ CAPITAL DE CLIENTES EGIE3 S/            420"
+2026-05-20 * "JUROS S/ CAPITAL DE CLIENTES EGIE3 S/            420" ^auto-transfer-20260520-eb98586d36
   id: "pluggy-e811f275-b53e-44a7-9a34-be5d22947ceb"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10765,7 +10765,7 @@
   Assets:Bank:XP:Cash       31.25 BRL
   Equity:Transfers:XP:JCP  -31.25 BRL
 
-2026-05-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            600"
+2026-05-20 * "RENDIMENTOS DE CLIENTES PETR4 S/            600" ^auto-transfer-20260520-cd2b6e1cce
   id: "pluggy-b1fa6bd3-8c9d-4305-b581-9b36b5ac6955"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10774,7 +10774,7 @@
   Assets:Bank:XP:Cash              7.67 BRL
   Equity:Transfers:XP:Rendimento  -7.67 BRL
 
-2026-05-20 * "DIVIDENDOS DE CLIENTES EGIE3 S/            620"
+2026-05-20 * "DIVIDENDOS DE CLIENTES EGIE3 S/            620" ^auto-transfer-20260520-b6d2c68115
   id: "pluggy-61c78d3a-22ff-48cf-aa82-c9e8c5a8fc0c"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10783,7 +10783,7 @@
   Assets:Bank:XP:Cash            302.73 BRL
   Equity:Transfers:XP:Dividend  -302.73 BRL
 
-2026-05-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            600"
+2026-05-20 * "JUROS S/ CAPITAL DE CLIENTES PETR4 S/            600" ^auto-transfer-20260520-59eee7a43f
   id: "pluggy-40af23a3-2326-4379-9937-f0311efeb914"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -10846,7 +10846,7 @@
   Assets:Bank:BB:Cash       -465.49 BRL
   Expenses:Pessoal:Compras   465.49 BRL
 
-2026-05-22 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132"
+2026-05-22 * "RENDIMENTOS DE CLIENTES AFHI11 S/            132" ^auto-transfer-20260522-72c58e0647
   id: "pluggy-a0290cad-f0f5-492f-80cf-fffbd1e74602"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11053,7 +11053,7 @@
   Assets:Bank:BB:Savings       20.03 BRL
   Income:Investment:Interest  -20.03 BRL
 
-2026-05-26 * "RENDE FACIL     Rende Facil"
+2026-05-26 * "RENDE FACIL     Rende Facil" ^auto-transfer-20260526-cd69b6c5cb
   id: "pluggy-40b0e782-733d-454b-a449-2aea31043005"
   source: "pluggy"
   pluggy_account: "25eb5f6d-2529-4377-8de5-e38160459cff"
@@ -11062,7 +11062,7 @@
   Assets:Bank:BB:Cash           -24734.59 BRL
   Equity:Transfers:BB:Cash   24734.59 BRL
 
-2026-05-27 * "DIVIDENDOS DE CLIENTES LEVE3 S/            600"
+2026-05-27 * "DIVIDENDOS DE CLIENTES LEVE3 S/            600" ^auto-transfer-20260527-1fd745d73a
   id: "pluggy-e11af2e5-dd38-4587-8449-0b745035db24"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11071,7 +11071,7 @@
   Assets:Bank:XP:Cash            152.01 BRL
   Equity:Transfers:XP:Dividend  -152.01 BRL
 
-2026-05-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700"
+2026-05-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700" ^auto-transfer-20260527-58f7aaff21
   id: "pluggy-ddec9f2d-348a-4018-837e-05b02c263bbf"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11080,7 +11080,7 @@
   Assets:Bank:XP:Cash            107.44 BRL
   Equity:Transfers:XP:Dividend  -107.44 BRL
 
-2026-05-27 * "JUROS S/ CAPITAL DE CLIENTES LEVE3 S/            300"
+2026-05-27 * "JUROS S/ CAPITAL DE CLIENTES LEVE3 S/            300" ^auto-transfer-20260527-664d9c606a
   id: "pluggy-8ae8c674-1de7-4ce0-833c-066c4fdd0c50"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11089,7 +11089,7 @@
   Assets:Bank:XP:Cash       52.57 BRL
   Equity:Transfers:XP:JCP  -52.57 BRL
 
-2026-05-27 * "DIVIDENDOS DE CLIENTES LEVE3 S/            600"
+2026-05-27 * "DIVIDENDOS DE CLIENTES LEVE3 S/            600" ^auto-transfer-20260527-5dbc303097
   id: "pluggy-52633328-4ee9-4fd3-9f30-d9d934e1a59e"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11098,7 +11098,7 @@
   Assets:Bank:XP:Cash            1069.74 BRL
   Equity:Transfers:XP:Dividend  -1069.74 BRL
 
-2026-05-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700"
+2026-05-27 * "DIVIDENDOS DE CLIENTES TAEE11 S/            700" ^auto-transfer-20260527-ae6c06062b
   id: "pluggy-4f6aa503-af0a-4c99-aecb-014a43f6240a"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
@@ -11161,7 +11161,7 @@
   Assets:Bank:BB:Cash   24093.34 BRL
   Income:Salario       -24093.34 BRL
 
-2026-05-29 * "REND.FACIL      Rende Facil"
+2026-05-29 * "REND.FACIL      Rende Facil" ^auto-transfer-20260529-03ef5c3a8c
   id: "pluggy-f590f3b2-f1bd-483c-bcd2-93464e2bbcaa"
   source: "pluggy"
   pluggy_account: "25eb5f6d-2529-4377-8de5-e38160459cff"
@@ -11170,7 +11170,7 @@
   Assets:Bank:BB:Cash           50 BRL
   Equity:Transfers:BB:Cash  -50 BRL
 
-2026-05-30 * "RENDE FACIL     Rende Facil"
+2026-05-30 * "RENDE FACIL     Rende Facil" ^auto-transfer-20260530-badee66b5b
   id: "pluggy-55f43f20-419f-4546-b440-f23f137a3b1f"
   source: "pluggy"
   pluggy_account: "25eb5f6d-2529-4377-8de5-e38160459cff"
@@ -11188,7 +11188,7 @@
   Liabilities:Credit:BB:Card:PlatinumVisa  -63.35 BRL
   Expenses:Pessoal:Compras                  63.35 BRL
 
-2026-06-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526"
+2026-06-01 * "JUROS S/ CAPITAL DE CLIENTES ITUB3 S/            526" ^auto-transfer-20260601-667b2f921a
   id: "pluggy-bb6e727e-463d-4c67-a9ba-72b2e6711723"
   source: "pluggy"
   pluggy_account: "e4d40b2d-f720-4570-8fb6-89c9a12e1e2f"
