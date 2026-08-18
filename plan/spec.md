@@ -17,7 +17,8 @@ BRAPI is retained as a study reference and future paid-tier option.
 
 ### 2. Yahoo Finance Price Service (`plugins/yahoo_price_service.py`)
 - Primary price and events source. Uses `yfinance`. Free, no API key.
-- Appends `.SA` suffix to all tickers for Yahoo lookup.
+- Domicile inference by ledger quote currency: `BRL` → `.SA`, `USD` → `.L`.
+  The `symbols` config map overrides this rule per ticker.
 - Maps Yahoo split `numerator/denominator` → directive type:
   - ratio > 1 and integer → `"desdobramento"`
   - ratio < 1 → `"grupamento"`
@@ -27,6 +28,9 @@ BRAPI is retained as a study reference and future paid-tier option.
 - Tags all entries with `^yahoo`.
 - Same output file format as BRAPI service (`prices/TICKER.bean`, `prices/TICKER_events.bean`).
 - `_events.bean` files are reference only — NOT included in the ledger.
+- Skips known currency codes (USD, BRL, …) so Cash postings are never fetched
+  as securities. Skips tickers whose Yahoo quote currency differs from the
+  ledger currency (user handles manually).
 
 ### 2b. BRAPI Price Service (`plugins/brapi_price_service.py`) — study reference
 - Retained unchanged. Not wired to Fava extension.

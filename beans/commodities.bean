@@ -67,6 +67,22 @@
   precision: 2
 
 ; ===========================================================================
+; International ETFs (IBKR, quoted in USD)
+; ===========================================================================
+
+1900-01-01 commodity VWRA
+  name: "Vanguard FTSE All-World UCITS ETF (USD)"
+  precision: 2
+
+1900-01-01 commodity AVGS
+  name: "Avantis Global Small Cap Equity UCITS ETF (USD)"
+  precision: 2
+
+1900-01-01 commodity IWVL
+  name: "iShares MSCI World Value Factor UCITS ETF (USD)"
+  precision: 2
+
+; ===========================================================================
 ; Crypto
 ; ===========================================================================
 

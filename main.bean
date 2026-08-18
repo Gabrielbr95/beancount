@@ -27,7 +27,12 @@ plugin "beancount.plugins.check_average_cost"
 2016-04-01 custom "fava-option" "default-file" "tmp.bean"
 2010-01-01 custom "fava-extension" "fava_dashboards"
 2010-01-01 custom "fava-extension" "plugins.price_updater" "{
-  'prices_dir': 'beans/prices'
+  'prices_dir': 'beans/prices',
+  'symbols': {
+    'VWRA': 'VWRA.L',
+    'AVGS': 'AVGS.L',
+    'IWVL': 'IWVL.L',
+  }
 }"
 2010-01-01 custom "fava-extension" "fava_portfolio_returns" "{
   'beangrow_config': 'beangrow.pbtxt'

@@ -8,6 +8,10 @@ Output files (prices_dir configurable via main.bean, default 'prices'):
   <prices_dir>/TICKER.bean         — daily close prices
   <prices_dir>/TICKER_events.bean  — splits (desdobramento/grupamento/bonificacao)
                                 and dividends (dividendo, reference only)
+
+Domicile is inferred from the ledger quote currency: BRL -> .SA, USD -> .L.
+The 'symbols' config map overrides this rule per ticker (e.g. for tickers
+listed on an exchange that does not match their currency).
 """
 
 from __future__ import annotations
@@ -25,7 +29,15 @@ import yfinance as yf
 from beancount.core.data import Transaction
 
 
-BR_TICKER_RE = re.compile(r"^[A-Z0-9]{4,5}\d{1,2}$")
+# Well-known currency codes that must never be treated as a security ticker.
+CURRENCY_CODES = frozenset(
+    {
+        "BRL", "USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD",
+        "CNY", "HKD", "SGD", "ARS", "MXN", "CLP", "COP", "PEN", "UYU",
+        "INR", "KRW", "SEK", "NOK", "DKK", "PLN", "CZK", "HUF", "TRY",
+        "ZAR", "ILS", "AED", "SAR", "THB", "MYR", "IDR", "PHP", "VND",
+    }
+)
 PRICE_LINE_RE = re.compile(
     r"^(?P<date>\d{4}-\d{2}-\d{2})\s+price\s+(?P<ticker>[A-Z0-9]+)"
     r"\s+(?P<price>-?\d+(?:\.\d+)?)\s+(?P<currency>[A-Z0-9]+)\s*$"
@@ -78,15 +90,6 @@ def _decimal_to_text(value: Decimal) -> str:
     return format(normalized, "f").rstrip("0").rstrip(".")
 
 
-def _is_b3_ticker(ticker: str) -> bool:
-    return bool(BR_TICKER_RE.match(ticker.upper()))
-
-
-def _yahoo_symbol(ticker: str) -> str:
-    """Append .SA suffix for B3 tickers."""
-    return f"{ticker.upper()}.SA"
-
-
 def _parse_asset_prices(path: Path) -> dict[date, PricePoint]:
     if not path.exists():
         return {}
@@ -115,8 +118,14 @@ def _price_map(points: list[PricePoint]) -> dict[date, PricePoint]:
     return {p.price_date: p for p in points}
 
 
-def _extract_holdings(entries: list[Any]) -> dict[str, Decimal]:
-    holdings: dict[str, Decimal] = {}
+def _extract_holdings(entries: list[Any]) -> dict[str, tuple[Decimal, str | None]]:
+    """Map ticker -> (net units, quote currency) from Assets:Investment postings.
+
+    The quote currency is taken from the posting's cost (preferred) or price,
+    which is the currency the ledger books the holding in. It is None when the
+    posting carries neither (rare — e.g. a bare price-less transfer).
+    """
+    holdings: dict[str, tuple[Decimal, str | None]] = {}
     for entry in entries:
         if not isinstance(entry, Transaction):
             continue
@@ -129,7 +138,16 @@ def _extract_holdings(entries: list[Any]) -> dict[str, Decimal]:
             if units is None:
                 continue
             ticker = units.currency.upper()
-            holdings[ticker] = holdings.get(ticker, Decimal("0")) + Decimal(str(units.number))
+            currency: str | None = None
+            if posting.cost is not None and posting.cost.currency:
+                currency = posting.cost.currency
+            elif posting.price is not None and posting.price.currency:
+                currency = posting.price.currency
+            prev_units, prev_currency = holdings.get(ticker, (Decimal("0"), None))
+            holdings[ticker] = (
+                prev_units + Decimal(str(units.number)),
+                currency if currency is not None else prev_currency,
+            )
     return holdings
 
 
@@ -141,6 +159,10 @@ class YahooPriceUpdater:
         self.prices_dir = self.base_dir / self.config.get("prices_dir", "prices")
         self.overlap_days = int(self.config.get("overlap_days", 7))
         self.max_assets = self.config.get("max_assets")
+        # symbols: optional per-ticker Yahoo symbol overrides. When present for
+        # a ticker, it wins over the currency-based domicile inference
+        # (BRL -> .SA, USD -> .L).
+        self.symbol_overrides: dict[str, str] = self.config.get("symbols", {}) or {}
         # all_history: when True, fetch prices+events for every ticker that ever
         # appeared in Assets:Investment:* postings (including fully-sold ones),
         # not just currently-held tickers. Needed because historical corporate
@@ -159,8 +181,8 @@ class YahooPriceUpdater:
         # held tickers (units > 0). all_history=True: every ticker that ever
         # appeared in investment postings (net balance may be 0 for sold ones),
         # so historical corporate-action events get generated for past lots.
-        target_assets: dict[str, Decimal] = {}
-        for ticker, units in holdings.items():
+        target_assets: dict[str, tuple[Decimal, str | None]] = {}
+        for ticker, (units, currency) in holdings.items():
             # all_history: include any ticker that ever had a posting (key
             # present in holdings), even if net balance is 0 (fully sold).
             # _extract_holdings only adds keys for tickers with real postings,
@@ -169,38 +191,76 @@ class YahooPriceUpdater:
             if not include:
                 summary.skipped.append(ticker)
                 continue
-            if not _is_b3_ticker(ticker):
+            if ticker in CURRENCY_CODES:
                 summary.skipped.append(ticker)
-                summary.warnings.append(f"Skipped unsupported ticker: {ticker}")
+                summary.warnings.append(f"Skipped currency code as ticker: {ticker}")
                 continue
-            target_assets[ticker] = units
+            symbol = self._yahoo_symbol(ticker, currency)
+            if symbol is None:
+                summary.skipped.append(ticker)
+                summary.warnings.append(
+                    f"Skipped ticker (cannot infer Yahoo domicile): {ticker} "
+                    f"(currency={currency!r})"
+                )
+                continue
+            target_assets[ticker] = (units, currency)
 
         self.prices_dir.mkdir(parents=True, exist_ok=True)
 
         for ticker in sorted(target_assets):
+            units, currency = target_assets[ticker]
             try:
-                self._update_asset_files(ticker, summary)
+                self._update_asset_files(ticker, currency, summary)
                 summary.updated.append(ticker)
             except Exception as exc:
                 summary.errors.append(f"{ticker}: {exc}")
 
-        self._write_index(sorted(target_assets))
+        # Index only tickers whose price file actually exists on disk. A failed
+        # fetch (unknown symbol, network error, currency mismatch) must not
+        # leave a dangling include in prices.bean.
+        written_tickers = sorted(
+            ticker
+            for ticker in target_assets
+            if (self.prices_dir / f"{ticker}.bean").exists()
+        )
+        self._write_index(written_tickers)
         summary.generated_files = [str(self.prices_dir / "prices.bean")]
         summary.generated_files.extend(
-            str(self.prices_dir / f"{ticker}.bean") for ticker in sorted(target_assets)
+            str(self.prices_dir / f"{ticker}.bean") for ticker in written_tickers
         )
         summary.generated_files.extend(
-            str(self.prices_dir / f"{ticker}_events.bean") for ticker in sorted(target_assets)
+            str(self.prices_dir / f"{ticker}_events.bean") for ticker in written_tickers
         )
         return summary
 
-    def _update_asset_files(self, ticker: str, summary: RunSummary) -> None:
+    def _yahoo_symbol(self, ticker: str, currency: str | None) -> str | None:
+        """Resolve the Yahoo lookup symbol for a ticker.
+
+        Priority:
+          1. Explicit override from the 'symbols' config map.
+          2. Currency-based domicile inference: BRL -> .SA, USD -> .L.
+        Returns None when the domicile cannot be inferred (ticker is skipped).
+        """
+        override = self.symbol_overrides.get(ticker)
+        if override:
+            return override
+        if currency == "BRL":
+            return f"{ticker.upper()}.SA"
+        if currency == "USD":
+            return f"{ticker.upper()}.L"
+        return None
+
+    def _update_asset_files(self, ticker: str, currency: str | None, summary: RunSummary) -> None:
         asset_path = self.prices_dir / f"{ticker}.bean"
         events_path = self.prices_dir / f"{ticker}_events.bean"
         existing_prices = _parse_asset_prices(asset_path)
         last_price_date = _latest_price_date(existing_prices)
 
-        symbol = _yahoo_symbol(ticker)
+        symbol = self._yahoo_symbol(ticker, currency)
+        if symbol is None:
+            raise RuntimeError(
+                f"cannot infer Yahoo domicile for {ticker} (currency={currency!r})"
+            )
         yf_ticker = yf.Ticker(symbol)
 
         # --- Fetch price history ---
@@ -218,7 +278,24 @@ class YahooPriceUpdater:
         if hist.empty:
             raise RuntimeError(f"Yahoo Finance returned no price data for {symbol}")
 
-        currency = "BRL"  # All B3 tickers are BRL
+        if currency is None:
+            raise RuntimeError(
+                f"no quote currency for {ticker} in ledger; cannot write price lines"
+            )
+
+        # Sanity check: Yahoo's reported quote currency should match the
+        # ledger's. If it does not, the user handles it manually rather than
+        # silently writing a wrong-currency price line.
+        try:
+            yahoo_currency = str(yf_ticker.fast_info["currency"]).upper()
+        except Exception:
+            yahoo_currency = None
+        if yahoo_currency and yahoo_currency != currency.upper():
+            raise RuntimeError(
+                f"Yahoo quotes {symbol} in {yahoo_currency} but ledger books "
+                f"{ticker} in {currency}"
+            )
+
         new_points = []
         for ts, row in hist.iterrows():
             # ts is a pandas Timestamp — convert to date

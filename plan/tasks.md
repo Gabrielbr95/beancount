@@ -55,6 +55,12 @@
 - [x] 37. Run `bean-check main.bean` (Verification: zero errors). Smoke-test `python scripts/check_dividends.py` and `python scripts/reconcile_actions.py --help`.
 - [ ] 38. Commit and push. (Verification: `git log --oneline -1` shows the refactor commit on origin/main)
 
+## Slice 12: International ticker support in price updater (2026-08-17)
+- [x] 39. Support international tickers in `plugins/yahoo_price_service.py`: domicile inferred from ledger quote currency (BRL -> .SA, USD -> .L); `symbols` config map overrides per ticker; `_extract_holdings()` now returns quote currency per ticker; skip known currency codes (CURRENCY_CODES) and tickers whose Yahoo quote currency differs from the ledger. Removed now-dead `BR_TICKER_RE`/`_is_b3_ticker`. (Verification: unit-style run with VWRA/AVGS/IWVL in ledger — correct `.L` symbols and USD price lines)
+- [x] 40. Add `symbols` config map to `main.bean` price_updater extension: `{'VWRA': 'VWRA.L', 'AVGS': 'AVGS.L', 'IWVL': 'IWVL.L'}`. (Verification: `bean-check main.bean` parses extension config)
+- [x] 41. Add `commodity` directives for VWRA/AVGS/IWVL to `beans/commodities.bean` (International ETFs section). (Verification: `bean-check main.bean` no errors; commodities visible in Fava)
+- [x] 42. Only index tickers with an actual price file in `prices.bean` — failed fetches (unknown symbol, network error, currency mismatch) no longer leave a dangling include. (Verification: simulated run — `include "BAD.bean"` absent when BAD.bean missing, GOOD.bean present)
+
 ## Slice 10: Fix "Not enough lots" — pre-booking split application (DEFERRED)
 - [!] 28. Decide between Option B (bake splits into source .bean) vs Option C (standalone `scripts/apply_splits.py` pre-processor). Option C is leading candidate. See decision [011] for full research notes. User will return to this.
 - [ ] 29. Scope the chosen approach against the 20 affected errors and the existing pipeline (import.py → reconcile_actions.py → bean-check).
