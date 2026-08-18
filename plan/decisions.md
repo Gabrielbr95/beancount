@@ -256,3 +256,25 @@
   python-dateutil. Missing for uabean: `ibflex[web]` (pinned commit),
   `openpyxl`, `xlrd`. Per research consensus: use Flex Web Service, STRICT/date
   lot matching, per-symbol sub-accounts, `{{total cost}}` for fractional shares.
+
+## [014] Safe baseline for Beangrow portfolio returns
+- **Date:** 2026-08-18
+- **Context:** The Fava portfolio-returns extension expects a protobuf-text
+  `beangrow.pbtxt` configuration. The ledger has 56 investment asset accounts
+  across BB, IBKR, Inter, and XP, but XP distributions currently use generic
+  income accounts that do not identify the security in their account path.
+- **Options Considered:**
+  - A: Generate the configuration automatically and accept all inferred
+    accounts. Rejected because the generator treats bank cash currencies as
+    investments and cannot safely interpret generic XP distributions.
+  - B: Create explicit investment blocks with broker-specific cash accounts,
+    include only unambiguous dividend/match accounts, and report by broker.
+  - C: Refactor XP income postings first, then configure Beangrow.
+- **Decision:** Option B — create the safe baseline now. Include all 56 exact
+  investment accounts, IBKR VUSD dividends, and the Inter interest match
+  account. Exclude generic XP Dividend/JCP/Rendimento accounts until they are
+  made security-specific.
+- **Rationale:** This produces usable broker-level returns without silently
+  duplicating XP distributions across 46 investments. Separate BRL/USD broker
+  groups avoid requiring an FX price history that is not currently present in
+  the ledger. XP income refactoring remains a follow-up task [046].

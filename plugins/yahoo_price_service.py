@@ -7,7 +7,8 @@ BRAPI is retained as a dormant reference (see brapi_price_service.py).
 Output files (prices_dir configurable via main.bean, default 'prices'):
   <prices_dir>/TICKER.bean         — daily close prices
   <prices_dir>/TICKER_events.bean  — splits (desdobramento/grupamento/bonificacao)
-                                and dividends (dividendo, reference only)
+                                 and dividends (dividendo, reference only)
+  <currencies_dir>/BASE_QUOTE.bean — daily FX close prices, one file per pair
 
 Domicile is inferred from the ledger quote currency: BRL -> .SA, USD -> .L.
 The 'symbols' config map overrides this rule per ticker (e.g. for tickers
@@ -26,7 +27,7 @@ from typing import Any
 
 import yfinance as yf
 
-from beancount.core.data import Transaction
+from beancount.core.data import Price, Transaction
 
 
 # Well-known currency codes that must never be treated as a security ticker.
@@ -60,6 +61,26 @@ class PricePoint:
     price_date: date
     value: Decimal
     currency: str
+
+
+@dataclass(slots=True)
+class CurrencyPair:
+    base: str
+    quote: str
+
+    @property
+    def symbol(self) -> str:
+        return f"{self.base}{self.quote}=X"
+
+    @property
+    def filename(self) -> str:
+        return f"{self.base}_{self.quote}.bean"
+
+
+@dataclass(slots=True)
+class FXPricePoint:
+    price_date: date
+    value: Decimal
 
 
 @dataclass(slots=True)
@@ -151,12 +172,75 @@ def _extract_holdings(entries: list[Any]) -> dict[str, tuple[Decimal, str | None
     return holdings
 
 
+def _extract_currencies(entries: list[Any]) -> set[str]:
+    """Return known currency codes actually used by the loaded ledger."""
+    currencies: set[str] = set()
+    for entry in entries:
+        if isinstance(entry, Transaction):
+            for posting in entry.postings:
+                if posting.units and posting.units.currency.upper() in CURRENCY_CODES:
+                    currencies.add(posting.units.currency.upper())
+                if posting.cost and posting.cost.currency.upper() in CURRENCY_CODES:
+                    currencies.add(posting.cost.currency.upper())
+                if posting.price and posting.price.currency.upper() in CURRENCY_CODES:
+                    currencies.add(posting.price.currency.upper())
+        elif isinstance(entry, Price):
+            if entry.currency.upper() in CURRENCY_CODES:
+                currencies.add(entry.currency.upper())
+            if entry.amount.currency.upper() in CURRENCY_CODES:
+                currencies.add(entry.amount.currency.upper())
+    return currencies
+
+
+def _all_ledger_entries(ledger: Any) -> list[Any]:
+    return [
+        entry
+        for entries in ledger.all_entries_by_type.values()
+        for entry in entries
+    ]
+
+
+def _plan_currency_pairs(currencies: set[str]) -> list[CurrencyPair]:
+    """Plan direct paths from used currencies to BRL and USD.
+
+    The USD/BRL relationship is stored once as USD -> BRL. Beancount creates
+    the inverse lookup automatically.
+    """
+    pairs: set[tuple[str, str]] = set()
+    for currency in currencies:
+        if currency != "BRL":
+            pairs.add((currency, "BRL"))
+        if currency != "USD":
+            pairs.add((currency, "USD"))
+    if ("BRL", "USD") in pairs and ("USD", "BRL") in pairs:
+        pairs.remove(("BRL", "USD"))
+    return [CurrencyPair(base, quote) for base, quote in sorted(pairs)]
+
+
+def _parse_fx_prices(path: Path) -> dict[date, Decimal]:
+    if not path.exists():
+        return {}
+    prices: dict[date, Decimal] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match = PRICE_LINE_RE.match(line.strip())
+        if not match:
+            continue
+        try:
+            prices[date.fromisoformat(match.group("date"))] = Decimal(match.group("price"))
+        except ValueError:
+            continue
+    return prices
+
+
 class YahooPriceUpdater:
     def __init__(self, ledger: Any, config: dict[str, Any] | None = None) -> None:
         self.ledger = ledger
         self.config = config or {}
         self.base_dir = Path(self.ledger.beancount_file_path).parent
         self.prices_dir = self.base_dir / self.config.get("prices_dir", "prices")
+        self.currencies_dir = self.base_dir / self.config.get(
+            "currencies_dir", "beans/currencies"
+        )
         self.overlap_days = int(self.config.get("overlap_days", 7))
         self.max_assets = self.config.get("max_assets")
         # symbols: optional per-ticker Yahoo symbol overrides. When present for
@@ -206,6 +290,7 @@ class YahooPriceUpdater:
             target_assets[ticker] = (units, currency)
 
         self.prices_dir.mkdir(parents=True, exist_ok=True)
+        self.currencies_dir.mkdir(parents=True, exist_ok=True)
 
         for ticker in sorted(target_assets):
             units, currency = target_assets[ticker]
@@ -224,6 +309,15 @@ class YahooPriceUpdater:
             if (self.prices_dir / f"{ticker}.bean").exists()
         )
         self._write_index(written_tickers)
+        currency_pairs = _plan_currency_pairs(
+            _extract_currencies(_all_ledger_entries(self.ledger))
+        )
+        for pair in currency_pairs:
+            try:
+                self._update_currency_file(pair, summary)
+            except Exception as exc:
+                summary.errors.append(f"FX {pair.base}/{pair.quote}: {exc}")
+
         summary.generated_files = [str(self.prices_dir / "prices.bean")]
         summary.generated_files.extend(
             str(self.prices_dir / f"{ticker}.bean") for ticker in written_tickers
@@ -231,7 +325,118 @@ class YahooPriceUpdater:
         summary.generated_files.extend(
             str(self.prices_dir / f"{ticker}_events.bean") for ticker in written_tickers
         )
+        summary.generated_files.extend(
+            str(self.currencies_dir / pair.filename)
+            for pair in currency_pairs
+            if (self.currencies_dir / pair.filename).exists()
+        )
         return summary
+
+    def _update_currency_file(self, pair: CurrencyPair, summary: RunSummary) -> None:
+        path = self.currencies_dir / pair.filename
+        existing = _parse_fx_prices(path)
+        last_date = max(existing) if existing else None
+        yf_ticker = yf.Ticker(pair.symbol)
+
+        if last_date is None:
+            hist = yf_ticker.history(period="max", auto_adjust=False)
+        else:
+            overlap_start = last_date - timedelta(days=self.overlap_days)
+            hist = yf_ticker.history(
+                start=overlap_start.isoformat(),
+                end=date.today().isoformat(),
+                auto_adjust=False,
+            )
+
+        self._validate_currency_metadata(yf_ticker, pair)
+        points = self._extract_fx_points(hist)
+        if not points:
+            raise RuntimeError(f"Yahoo Finance returned no FX price data for {pair.symbol}")
+
+        if last_date is not None:
+            overlap_start = last_date - timedelta(days=self.overlap_days)
+            mismatch = any(
+                point.price_date >= overlap_start
+                and point.price_date in existing
+                and abs(existing[point.price_date] - point.value) > Decimal("0.0000001")
+                for point in points
+            )
+            if mismatch:
+                hist = yf_ticker.history(period="max", auto_adjust=False)
+                points = self._extract_fx_points(hist)
+
+        merged = {d: value for d, value in existing.items() if last_date is None or d < overlap_start}
+        merged.update({point.price_date: point.value for point in points})
+        self._write_currency_file(pair, merged, path)
+        summary.updated.append(f"FX:{pair.base}/{pair.quote}")
+
+    @staticmethod
+    def _extract_fx_points(hist: Any) -> list[FXPricePoint]:
+        points: list[FXPricePoint] = []
+        if hist is None or hist.empty:
+            return points
+        for ts, row in hist.iterrows():
+            price_date = ts.date() if hasattr(ts, "date") else ts.to_pydatetime().date()
+            close = row.get("Close")
+            if close is None:
+                continue
+            try:
+                value = float(close)
+            except (TypeError, ValueError):
+                continue
+            if value != value:
+                continue
+            points.append(
+                FXPricePoint(
+                    price_date=price_date,
+                    value=Decimal(str(round(value, 10))),
+                )
+            )
+        return points
+
+    @staticmethod
+    def _validate_currency_metadata(yf_ticker: yf.Ticker, pair: CurrencyPair) -> None:
+        metadata: dict[str, Any] = {}
+        try:
+            metadata = yf_ticker.history_metadata or {}
+        except Exception:
+            metadata = {}
+        try:
+            fast_info = yf_ticker.fast_info
+            if fast_info:
+                metadata = {**metadata, **dict(fast_info)}
+        except Exception:
+            pass
+        instrument_type = str(metadata.get("instrumentType") or "").upper()
+        if instrument_type and instrument_type not in {"CURRENCY", "CURRENCY_PAIR"}:
+            raise RuntimeError(
+                f"Yahoo identifies {pair.symbol} as {instrument_type}, not a currency"
+            )
+        reported_currency = str(metadata.get("currency") or "").upper()
+        if reported_currency and reported_currency != pair.quote:
+            raise RuntimeError(
+                f"Yahoo quotes {pair.symbol} in {reported_currency}, expected {pair.quote}"
+            )
+
+    @staticmethod
+    def _write_currency_file(
+        pair: CurrencyPair, prices: dict[date, Decimal], path: Path
+    ) -> None:
+        latest = max(prices) if prices else None
+        generated_at = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+        lines = [
+            "; source: Yahoo Finance",
+            f"; currency_pair: {pair.base}/{pair.quote}",
+            f"; last_update: {latest.isoformat() if latest else ''}",
+            f"; generated_at: {generated_at}",
+            "",
+        ]
+        for price_date in sorted(prices):
+            lines.append(
+                f"{price_date.isoformat()} price {pair.base} "
+                f"{_decimal_to_text(prices[price_date])} {pair.quote}"
+            )
+        path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
     def _yahoo_symbol(self, ticker: str, currency: str | None) -> str | None:
         """Resolve the Yahoo lookup symbol for a ticker.

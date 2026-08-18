@@ -66,3 +66,18 @@
 - [ ] 29. Scope the chosen approach against the 20 affected errors and the existing pipeline (import.py → reconcile_actions.py → bean-check).
 - [ ] 30. Implement the chosen approach. (Verification: `bean-check main.bean` "Not enough lots" errors drop from 20 toward 0)
 
+## Slice 13: Beangrow portfolio returns configuration (2026-08-18)
+- [x] 43. Research current Beangrow configuration syntax and reconcile it with the local `fava-portfolio-returns` vendored implementation. (Verification: protobuf syntax and local parser confirmed.)
+- [x] 44. Create `beangrow.pbtxt` with one exact investment block for each of the 56 investment asset accounts and broker-specific reporting groups. (Verification: config parses; all 56 ledger asset accounts are covered with no cash account accidentally treated as an investment.)
+- [x] 45. Validate the configuration against `main.bean` and extract investment cash flows. (Verification: `bean-check main.bean` passes; 56 investments extract; BB, IBKR, Inter, and XP groups load.)
+- [ ] 46. Refactor XP dividend/JCP/rendimento postings into security-specific income accounts so those distributions can be included accurately in Beangrow returns. (Verification: no duplicated XP distributions and per-security dividend flows appear in the returns reports.)
+- [x] 47. Save the Beangrow research findings as a facts-only document in `docs/Beangrow - Configuration Research.md`. (Verification: document contains source links, observed versions, schema facts, ledger observations, and validation results without recommendations.)
+
+## Slice 14: USD/BRL valuation price (2026-08-18)
+- [x] 48. Add the `2026-08-18 price USD 5.2102 BRL` directive to `beans/manual_corrections.bean`. (Verification: `bean-check main.bean` passes and the directive is present.)
+
+## Slice 15: Automated currency conversion prices (implemented and validated)
+- [x] 49. Research Yahoo Finance currency-pair symbols, ledger currency discovery, and output implications. (Verification: findings and proposed decisions are recorded in `plan/spec_currency_conversion_prices.md` and `plan/decisions_currency_conversion_prices.md`.)
+- [x] 49a. Confirm Beancount price orientation, automatic inverse rates, Fava conversion behavior, and the limits of `operating_currency`. (Verification: current Beancount/Fava documentation and source behavior are recorded in the feature specification.)
+- [x] 49b. Select one generated `*.bean` file per currency pair under `beans/currencies/`. (Verification: output layout is recorded in the feature specification and decision log.)
+- [x] 50. Implement the approved currency discovery and FX pair-fetching plan in `plugins/yahoo_price_service.py`. (Verification: complete criteria are in `plan/tasks_currency_conversion_prices.md`.)

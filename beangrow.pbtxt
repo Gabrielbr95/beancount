@@ -1,0 +1,368 @@
+# Safe baseline for fava-portfolio-returns.
+#
+# Each investment is one commodity held in one exact asset account.  XP
+# dividend/JCP/Rendimento accounts are intentionally not listed here because
+# they are generic accounts and cannot be assigned to a specific security
+# without duplicating the income across every XP investment.
+
+investments {
+  # Banco do Brasil
+  investment {
+    currency: "CDB-BB"
+    asset_account: "Assets:Investment:BB:CDB-BB"
+    cash_accounts: "Equity:Transfers:BB:Cash"
+    cash_accounts: "Assets:Bank:BB:Cash"
+  }
+
+  # Interactive Brokers
+  investment {
+    currency: "AVGS"
+    asset_account: "Assets:Investment:IBKR:AVGS"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+  investment {
+    currency: "EIMI"
+    asset_account: "Assets:Investment:IBKR:EIMI"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+  investment {
+    currency: "IWDA"
+    asset_account: "Assets:Investment:IBKR:IWDA"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+  investment {
+    currency: "IWVL"
+    asset_account: "Assets:Investment:IBKR:IWVL"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+  investment {
+    currency: "VUSD"
+    asset_account: "Assets:Investment:IBKR:VUSD"
+    dividend_accounts: "Income:Investment:IBKR:VUSD:Dividend"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+  investment {
+    currency: "VWRA"
+    asset_account: "Assets:Investment:IBKR:VWRA"
+    cash_accounts: "Assets:Bank:IBKR:Cash:USD"
+  }
+
+  # Inter
+  investment {
+    currency: "CDB-CDB3257NOQI-BANCO-BMG-S-A"
+    asset_account: "Assets:Investment:Inter:CDB-CDB3257NOQI-BANCO-BMG-S-A"
+    cash_accounts: "Equity:Transfers:Inter:Cash"
+  }
+  investment {
+    currency: "CRI-22B0004808-RIZA-SECURITIZADORA-S-A"
+    asset_account: "Assets:Investment:Inter:CRI-22B0004808-RIZA-SECURITIZADORA-S-A"
+    match_accounts: "Income:Investment:Inter:Interest"
+    cash_accounts: "Equity:Transfers:Inter:Cash"
+  }
+  investment {
+    currency: "TESOURO-IPCA-2050"
+    asset_account: "Assets:Investment:Inter:TESOURO-IPCA-2050"
+    cash_accounts: "Equity:Transfers:Inter:Cash"
+  }
+
+  # XP
+  investment {
+    currency: "AERI3"
+    asset_account: "Assets:Investment:XP:AERI3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "AFHI11"
+    asset_account: "Assets:Investment:XP:AFHI11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "B3SA3"
+    asset_account: "Assets:Investment:XP:B3SA3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "BBAS3"
+    asset_account: "Assets:Investment:XP:BBAS3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "BBDC3"
+    asset_account: "Assets:Investment:XP:BBDC3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "BBSE3"
+    asset_account: "Assets:Investment:XP:BBSE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "CRFB3"
+    asset_account: "Assets:Investment:XP:CRFB3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "CVCB11"
+    asset_account: "Assets:Investment:XP:CVCB11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "CVCB3"
+    asset_account: "Assets:Investment:XP:CVCB3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "CXSE3"
+    asset_account: "Assets:Investment:XP:CXSE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "EGIE3"
+    asset_account: "Assets:Investment:XP:EGIE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "ENBR3"
+    asset_account: "Assets:Investment:XP:ENBR3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "ETER3"
+    asset_account: "Assets:Investment:XP:ETER3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "FLRY3"
+    asset_account: "Assets:Investment:XP:FLRY3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "HGLG11"
+    asset_account: "Assets:Investment:XP:HGLG11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "HGRU11"
+    asset_account: "Assets:Investment:XP:HGRU11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "HSML11"
+    asset_account: "Assets:Investment:XP:HSML11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "HYPE3"
+    asset_account: "Assets:Investment:XP:HYPE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "IRBR3"
+    asset_account: "Assets:Investment:XP:IRBR3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "IRDM11"
+    asset_account: "Assets:Investment:XP:IRDM11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "IRIM11"
+    asset_account: "Assets:Investment:XP:IRIM11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "ITSA3"
+    asset_account: "Assets:Investment:XP:ITSA3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "ITUB3"
+    asset_account: "Assets:Investment:XP:ITUB3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "KNRI11"
+    asset_account: "Assets:Investment:XP:KNRI11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "LEVE3"
+    asset_account: "Assets:Investment:XP:LEVE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "LVBI11"
+    asset_account: "Assets:Investment:XP:LVBI11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "MALL11"
+    asset_account: "Assets:Investment:XP:MALL11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "MCCI11"
+    asset_account: "Assets:Investment:XP:MCCI11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "MDIA3"
+    asset_account: "Assets:Investment:XP:MDIA3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "MGLU3"
+    asset_account: "Assets:Investment:XP:MGLU3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "ODPV3"
+    asset_account: "Assets:Investment:XP:ODPV3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "PCIP11"
+    asset_account: "Assets:Investment:XP:PCIP11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "PETR4"
+    asset_account: "Assets:Investment:XP:PETR4"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "PMLL11"
+    asset_account: "Assets:Investment:XP:PMLL11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "RBRP11"
+    asset_account: "Assets:Investment:XP:RBRP11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "TAEE11"
+    asset_account: "Assets:Investment:XP:TAEE11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "TESOURO-IPCA-2045"
+    asset_account: "Assets:Investment:XP:TESOURO-IPCA-2045"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "TESOURO-PREFIXADO-2029"
+    asset_account: "Assets:Investment:XP:TESOURO-PREFIXADO-2029"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "TESOURO-PREFIXADO-2031"
+    asset_account: "Assets:Investment:XP:TESOURO-PREFIXADO-2031"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "VALE3"
+    asset_account: "Assets:Investment:XP:VALE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "VILG11"
+    asset_account: "Assets:Investment:XP:VILG11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "VISC11"
+    asset_account: "Assets:Investment:XP:VISC11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "WEGE3"
+    asset_account: "Assets:Investment:XP:WEGE3"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "XPBR31"
+    asset_account: "Assets:Investment:XP:XPBR31"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "XPLG11"
+    asset_account: "Assets:Investment:XP:XPLG11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+  investment {
+    currency: "XPML11"
+    asset_account: "Assets:Investment:XP:XPML11"
+    cash_accounts: "Equity:Transfers:XP:Cash"
+    cash_accounts: "Assets:Investment:XP:Cash"
+  }
+}
+
+groups {
+  group {
+    name: "Broker BB"
+    investment: "Assets:Investment:BB:*"
+    currency: "BRL"
+  }
+  group {
+    name: "Broker IBKR"
+    investment: "Assets:Investment:IBKR:*"
+    currency: "USD"
+  }
+  group {
+    name: "Broker Inter"
+    investment: "Assets:Investment:Inter:*"
+    currency: "BRL"
+  }
+  group {
+    name: "Broker XP"
+    investment: "Assets:Investment:XP:*"
+    currency: "BRL"
+  }
+}

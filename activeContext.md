@@ -2,32 +2,37 @@
 
 ## Resume Here
 - **Tier:** Script
-- **Current Slice:** Exact cash-transfer reconciliation (Slice 1) — report complete.
-- **Current Task:** `plan/tasks_transfers.md` task 4 (pending) — decide whether a later workflow should add links to reviewed pairs.
-- **Next Action:** After each import, run `python scripts/reconcile_transfers.py main.bean` to review the report, then `python scripts/reconcile_transfers.py main.bean --apply` to link new exact matches. Use `--apply --rewrite` only to regenerate this script's `^auto-transfer-*` links across all eligible transactions. Separately, task 24 remains manual: `python scripts/ledger_csv.py to-csv tmp.bean tmp.csv` → edit the relevant `leg_N_account` Excel column (for `tmp.bean`, normally `leg_2_account`) to replace `Expenses:TODO` / `Income:TODO` / `Assets:TODO` counterparts → `python scripts/ledger_csv.py from-csv tmp.csv tmp_new.bean` → swap `tmp.bean` ← `tmp_new.bean` → `bean-check main.bean`.
+- **Current Slice:** Automated currency conversion prices (Slice 15) — implementation complete and validated.
+- **Current Task:** `plan/tasks.md` task 50 — complete.
+- **Next Action:** Review the commit result and remote status. The generated FX files under `beans/currencies/` are part of the implementation and must be retained.
 
 ## Completed This Session
-- Pluggy single-leg refactor + dead-code cleanup (commit `c550bfa`): deleted `CATEGORY_MAP` (~70 lines) and `_map_category` from `importers/pluggy.py`; removed unreachable POSTED guard and unused `urlencode` import; reworded misleading "ML features" comments (PredictPostings trains on narration/payee/day-of-month only, not custom metadata); added `# TODO: reclassify tmp.bean` near HOOKS in `import.py`. Decision `[018]` supersedes `[014]`; `spec_pluggy.md` §4 and Out-of-Scope amended; `tasks_pluggy.md` Slice 6 added (tasks 20–24).
-- Updated `scripts/ledger_csv.py`: CSV now has one row per transaction, with postings in numbered `leg_N_*` columns. It discovers the maximum leg count, retains each populated leg on reimport, requires unique `txn_id` values, and clearly rejects the old one-row-per-posting CSV shape. Verified on `tmp.bean`: 1,546 transaction rows and all postings retained; a three-leg in-memory round-trip also passes.
-- Diagnosed `tmp_pluggy.bean` → `tmp_pluggy.csv`: `-e main.bean` caused Beangulp to comment out 1,548 duplicate entries. `ledger_csv.py` correctly exported the remaining 76 active Transaction directives as 76 CSV rows; commented duplicate text is not a Beancount Transaction and is intentionally not exported.
-- Disabled (but retained) Smart Importer in `import.py`: its import and hook registration are commented out. Upstream Smart Importer does not safely support this combined bank-and-card Pluggy importer (issue #130 open; no released fix).
-- Added `scripts/reconcile_transfers.py`: read-only exact-match report for `Equity:Transfers:Card` and `Equity:Transfers:General`, excluding investment transfers. It requires the same transfer account and currency, equal-and-opposite amount, and ≤4 calendar-day delay; identical-value batches are paired by nearest date, then source order. `main.bean` currently reports 79 exact matches and 10 missing counterparts.
-- Applied 79 `^auto-transfer-*` links to 158 matching `tmp.bean` transactions. Normal `--apply` skips any already linked transaction; `--apply --rewrite` removes and recreates only this script's reserved links, leaving other links untouched.
-- Probed the live Pluggy API for 2025-07-10. BB checking's BRL 2,000.00 same-person transfer and BB savings's BRL 2,000.00 deposit form a high-confidence pair, but Pluggy exposes no shared transfer/counterpart ID. Decision [019] documents the evidence and conservative-only recommendation.
+- Added `2026-08-18 price USD 5.2102 BRL` to `beans/manual_corrections.bean`.
+- Verified the directive with `bean-check main.bean` and `git diff --check`.
+- Recorded the completed price task as task 48 in `plan/tasks.md`.
+- Researched Yahoo `BASEQUOTE=X` currency symbols and the current ledger currency set.
+- Added a feature specification, proposed decisions, and implementation task breakdown for automated FX prices. No application code was changed.
+- Confirmed from current Beancount source and Fava documentation that `price BASE RATE QUOTE` entries feed the price map, inverse rates are generated automatically, and Fava's `Converted to X` conversion is the portfolio-valuation mechanism.
+- Implemented Yahoo FX retrieval in `plugins/yahoo_price_service.py`; it discovers ledger currencies, fetches direct BRL/USD pairs, writes one file per pair under `beans/currencies/`, and reports pair-level failures.
+- Added the `beans/currencies/*.bean` include, removed the one-off manual USD/BRL directive, generated seven current pair files, and added offline tests.
 
 ## Blockers / Open Questions
-- Task 24 (pending): ~1546 `tmp.bean` Pluggy entries carry `Expenses:TODO` / `Income:TODO` / `Assets:TODO` counterparts. `PredictPostings` will learn to predict TODO accounts until these are reclassified. Unblocks trustworthy auto-categorization.
-- Smart Importer is intentionally disabled. Do not use it with the current combined Pluggy importer; a per-source-account import workflow is required before revisiting automated second-leg prediction.
-- Reviewer-flagged low-probability items deferred (not blocking, tracked here for awareness): `_parse_date("")` raises `ValueError` (POSTED txns always have a date in practice); synthetic `id` collision if Pluggy omits `id` for same-date txns across accounts; `_parse_amount`/`_parse_date` one-line wrappers (kept for parity with `importers/b3.py`); `except+raise` in `extract` (kept — log aids debugging); cursor-pagination 3-branch handling (kept until proven speculative); `load_credentials` typo tolerance (kept until `api_keys.txt` typo fixed at source).
-- `ledger_csv.py` known limitation: meta values stored as strings. Lossless for Pluggy data; lossy in TYPE for numeric/date meta (value round-trips but beancount sees it as a string on reimport). Documented in the script's module docstring.
+- None blocking. The working tree contains several intentional but uncommitted Beangrow/configuration and documentation changes from the preceding work.
+- Beangrow task 46 remains pending: refactor generic XP dividend/JCP/rendimento postings into security-specific income accounts.
+- FX decisions in `plan/decisions_currency_conversion_prices.md` were accepted as the implementation direction on 2026-08-18.
+- Do not emit both orientations of the same FX pair; store one authoritative orientation and rely on Beancount's inverse lookup.
+- Generate one `*.bean` file per stored currency pair under `beans/currencies/`; do not use a combined FX file.
+- The generated pair files are currently uncommitted and contain Yahoo history through 2026-08-18.
 
 ## Read These First
-- `scripts/ledger_csv.py`: module docstring (workflow + losslessness contract + limitation), `discover_schema` (column discovery and max leg count), `build_txn` (rebuilds numbered legs), `build_posting` (empty leg-account skip)
-- `scripts/reconcile_transfers.py`: read-only cash-transfer report; use after imports and before manually resolving transfer counterparts.
-- `plan/spec_transfers.md`, `plan/decisions_transfers.md`, `plan/tasks_transfers.md`: exact-transfer report scope, rules, and follow-on work.
-- `importers/pluggy.py`: `_build_transaction` (single-leg, docstring honest about PredictPostings scope), `extract` (status filter at line 321)
-- `import.py`: HOOKS with `# TODO: reclassify tmp.bean` comment, CONFIG order rationale
-- `plan/decisions_pluggy.md`: Decision `[018]` (single-leg + PredictPostings, supersedes `[014]`)
-- `plan/tasks_pluggy.md`: Slices 6–7 (task 24 is manual reclassification; task 26 is the pending transfer-detection implementation)
-- `plan/decisions_pluggy.md`: Decision `[019]` (live API evidence, limits, and safe proposed pairing rule)
-- `tmp.bean`: existing entries needing manual classification (task 24)
+- `beans/manual_corrections.bean`: newly added USD/BRL price directive.
+- `plan/tasks.md`: current task state, especially Slices 13–14.
+- `beangrow.pbtxt`: uncommitted Beangrow configuration baseline.
+- `docs/Beangrow - Configuration Research.md`: facts-only research supporting the configuration.
+- `plan/decisions.md`: durable Beangrow decision and other recent decisions.
+- `plan/spec_currency_conversion_prices.md`: FX requirements, findings, scope, and open migration point.
+- `plan/decisions_currency_conversion_prices.md`: proposed Yahoo/source, discovery, and output decisions.
+- `plan/tasks_currency_conversion_prices.md`: implementation and verification sequence.
+- `plugins/yahoo_price_service.py`: FX discovery, pair planning, retrieval, validation, merge, and output implementation.
+- `tests/test_yahoo_price_service.py`: offline FX helper tests.
+- `beans/currencies/*.bean`: generated Yahoo currency-pair price histories.
