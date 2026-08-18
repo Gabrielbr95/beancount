@@ -89,3 +89,52 @@
 1900-01-01 commodity USDT
   name: "Tether USD"
   precision: 6
+
+; ===========================================================================
+; Frozen inventory - commodities used but not explicitly declared (2026-08-17)
+; Plain declarations; annotate with names if desired.
+; ===========================================================================
+1900-01-01 commodity AERI3
+1900-01-01 commodity AFHI11
+1900-01-01 commodity ARS
+1900-01-01 commodity B3SA3
+1900-01-01 commodity BBSE3
+1900-01-01 commodity CDB-BB
+1900-01-01 commodity CDB-CDB3257NOQI-BANCO-BMG-S-A
+1900-01-01 commodity CRFB3
+1900-01-01 commodity CRI-22B0004808-RIZA-SECURITIZADORA-S-A
+1900-01-01 commodity CVCB11
+1900-01-01 commodity CVCB3
+1900-01-01 commodity CXSE3
+1900-01-01 commodity EGIE3
+1900-01-01 commodity EIMI
+1900-01-01 commodity ENBR3
+1900-01-01 commodity ETER3
+1900-01-01 commodity FLRY3
+1900-01-01 commodity GBP
+1900-01-01 commodity HSML11
+1900-01-01 commodity IRBR3
+1900-01-01 commodity IRDM11
+1900-01-01 commodity ITSA3
+1900-01-01 commodity IWDA
+1900-01-01 commodity KNRI11
+1900-01-01 commodity LVBI11
+1900-01-01 commodity MALL11
+1900-01-01 commodity MCCI11
+1900-01-01 commodity MDIA3
+1900-01-01 commodity ODPV3
+1900-01-01 commodity PCIP11
+1900-01-01 commodity RBRP11
+1900-01-01 commodity SGD
+1900-01-01 commodity TAEE11
+1900-01-01 commodity TESOURO-IPCA-2045
+1900-01-01 commodity TESOURO-IPCA-2050
+1900-01-01 commodity TESOURO-PREFIXADO-2029
+1900-01-01 commodity TESOURO-PREFIXADO-2031
+1900-01-01 commodity VALE3
+1900-01-01 commodity VILG11
+1900-01-01 commodity VISC11
+1900-01-01 commodity VUSD
+1900-01-01 commodity XPBR31
+1900-01-01 commodity XPLG11
+1900-01-01 commodity XPML11

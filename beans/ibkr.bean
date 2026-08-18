@@ -4,11 +4,11 @@
 
 2021-05-20 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2021-06-09 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2021-09-24 * "EIMI" "BUY 18 EIMI @ 36.45 USD"
   Assets:Bank:IBKR:Cash:USD  -660.1 USD
@@ -35,11 +35,11 @@
 
 2022-01-21 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  904.29 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-02-22 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1907.8 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-03-01 * "VWRA" "BUY 27 VWRA @ 109 USD"
   Assets:Bank:IBKR:Cash:USD        -2947 USD
@@ -49,7 +49,7 @@
 
 2022-03-17 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  2895.34 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-03-18 * "VWRA" "BUY 26 VWRA @ 108.76 USD"
   Assets:Bank:IBKR:Cash:USD        -2831.76 USD
@@ -59,7 +59,7 @@
 
 2022-04-27 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-05-16 * "VWRA" "BUY 10 VWRA @ 99.13 USD"
   Assets:Bank:IBKR:Cash:USD        -995.3 USD
@@ -69,7 +69,7 @@
 
 2022-05-16 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  500 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-05-20 * "VWRA" "BUY 5 VWRA @ 98.85 USD"
   Assets:Bank:IBKR:Cash:USD        -498.25 USD
@@ -85,11 +85,11 @@
 
 2022-05-20 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-07-29 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  943.22 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-08-01 * "VWRA" "BUY 10 VWRA @ 101.26 USD"
   Assets:Bank:IBKR:Cash:USD        -1016.6 USD
@@ -99,7 +99,7 @@
 
 2022-08-22 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  500 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2022-08-26 * "VWRA" "BUY 5 VWRA @ 101.7 USD"
   Assets:Bank:IBKR:Cash:USD        -512.5 USD
@@ -114,7 +114,7 @@
 
 2023-01-25 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2023-01-31 * "VWRA" "BUY 9 VWRA @ 102.96 USD"
   Assets:Bank:IBKR:Cash:USD        -930.64 USD
@@ -124,7 +124,7 @@
 
 2023-05-11 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1500 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2023-05-15 * "VWRA" "BUY 14 VWRA @ 104.8 USD"
   Assets:Bank:IBKR:Cash:USD        -1471.2 USD
@@ -134,7 +134,7 @@
 
 2023-11-13 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1002.08 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2023-11-20 * "VWRA" "BUY 9 VWRA @ 111.46 USD"
   Assets:Bank:IBKR:Cash:USD        -1007.14 USD
@@ -144,7 +144,7 @@
 
 2023-12-01 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1009.68 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2023-12-27 * "VWRA" "BUY 7 VWRA @ 117.96 USD"
   Assets:Bank:IBKR:Cash:USD        -829.72 USD
@@ -165,11 +165,11 @@
 
 2024-01-25 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  1000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2024-03-01 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  3000 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2024-03-04 * "EIMI" "SELL -18 EIMI @ 32.22 USD"
   Assets:Bank:IBKR:Cash:USD        575.96 USD
@@ -262,7 +262,7 @@
 
 2025-12-30 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:USD  8570.32 USD
-  Equity:Transfers:Interbakn:USD
+  Equity:Transfers:Interbank:USD
 
 2026-01-01 balance Assets:Bank:IBKR:Cash:USD                       8727.5175 USD
 
@@ -336,7 +336,7 @@
 
 2026-01-23 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
   Assets:Bank:IBKR:Cash:GBP  4614.74 GBP
-  Equity:Transfers:Interbakn:GBP
+  Equity:Transfers:Interbank:GBP
 
 2026-08-15 balance Assets:Bank:IBKR:Cash:GBP                       0 GBP
 
