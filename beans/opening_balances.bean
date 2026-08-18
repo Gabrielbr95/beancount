@@ -1,0 +1,50 @@
+; ===========================================================================
+; Opening Balances & Transfer-Account Closure (2026-08-17)
+; ===========================================================================
+; Bank accounts started mid-history (B3 data since 2019, bank data since
+; mid-2025 / Dec-2025). The funding side of pre-tracking transfers was never
+; imported, leaving large holes in Equity:Transfers:* and unanchored bank
+; balances. Pads anchor each account to a known true balance:
+;
+;   - Bank accounts: asserted to today's real statement balances (2026-08-17).
+;   - Equity:Transfers:*: asserted to zero at the bank-data boundary date, so
+;     only genuine post-boundary pending transfers remain visible.
+;
+; The pad source account Equity:Opening-Balances represents pre-tracking net
+; worth. Pads are recomputed at every load, so importing older bank data later
+; automatically shrinks them instead of double-counting.
+
+; --- Bank account anchors (asserted to real balances on 2026-08-17) ---
+
+2018-01-01 pad     Assets:Bank:BB:Cash Equity:Opening-Balances
+2026-08-17 balance Assets:Bank:BB:Cash 32281.90 BRL
+
+2018-01-01 pad     Assets:Bank:BB:Savings Equity:Opening-Balances
+2026-08-17 balance Assets:Bank:BB:Savings 42849.21 BRL
+
+2018-01-01 pad     Assets:Bank:Inter:Cash Equity:Opening-Balances
+2026-08-17 balance Assets:Bank:Inter:Cash 4638.55 BRL
+
+2018-01-01 pad     Assets:Bank:XP:Cash Equity:Opening-Balances
+2026-08-17 balance Assets:Bank:XP:Cash 31137.31 BRL
+
+; --- Transfer-account closure (asserted to zero at bank-data boundary) ---
+
+
+2018-01-01 pad     Equity:Transfers:Card Equity:Opening-Balances
+2025-06-17 balance Equity:Transfers:Card 0.00 BRL
+
+2018-01-01 pad     Equity:Transfers:Investments Equity:Opening-Balances
+2025-12-19 balance Equity:Transfers:Investments 0.00 BRL
+
+2018-01-01 pad     Equity:Transfers:XP:Cash Equity:Opening-Balances
+2025-06-17 balance Equity:Transfers:XP:Cash 0.00 BRL
+
+2018-01-01 pad     Equity:Transfers:XP:Rendimento Equity:Opening-Balances
+2025-06-17 balance Equity:Transfers:XP:Rendimento 0.00 BRL
+
+2018-01-01 pad     Equity:Transfers:XP:Dividend Equity:Opening-Balances
+2025-06-17 balance Equity:Transfers:XP:Dividend 0.00 BRL
+
+2018-01-01 pad     Equity:Transfers:XP:JCP Equity:Opening-Balances
+2025-06-17 balance Equity:Transfers:XP:JCP 0.00 BRL

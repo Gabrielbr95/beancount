@@ -17,6 +17,10 @@
 1900-01-01 open Income:Investment:BB:Gains BRL
 1900-01-01 open Income:Investment:Inter:Interest BRL
 
+; Equity
+; Pre-tracking net worth; pad source for opening balances (see opening_balances.bean)
+1900-01-01 open Equity:Opening-Balances BRL
+
 ; Liabilities
 1900-01-01 open Liabilities:Credit:BB:Card:EloGrafite BRL
 ; PlatinumVisa is multicurrency (BRL, USD, ARS, SGD) — no currency constraint.
