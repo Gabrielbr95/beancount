@@ -2,7 +2,7 @@
 ; asset: ITUB3
 ; quote_currency: BRL
 ; last_update: 2026-08-03
-; generated_at: 2026-08-16T23:13:25-03:00
+; generated_at: 2026-08-17T21:34:11-03:00
 
 2004-10-20 custom "grupamento" "ITUB3" 0.001 "source=yahoo-splits"
 2005-10-03 custom "desdobramento" "ITUB3" 10 "source=yahoo-splits"

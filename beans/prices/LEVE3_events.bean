@@ -2,7 +2,7 @@
 ; asset: LEVE3
 ; quote_currency: BRL
 ; last_update: 2026-04-30
-; generated_at: 2026-08-16T23:13:26-03:00
+; generated_at: 2026-08-17T21:34:14-03:00
 
 2005-09-22 custom "grupamento" "LEVE3" 0.0033333333 "source=yahoo-splits"
 2009-12-16 custom "dividendo" "LEVE3" 0.284645 "source=yahoo-dividends"

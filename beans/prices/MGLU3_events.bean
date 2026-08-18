@@ -2,7 +2,7 @@
 ; asset: MGLU3
 ; quote_currency: BRL
 ; last_update: 2026-04-27
-; generated_at: 2026-08-16T23:13:28-03:00
+; generated_at: 2026-08-17T21:34:17-03:00
 
 2012-05-02 custom "dividendo" "MGLU3" 0.004136 "source=yahoo-dividends"
 2014-02-21 custom "dividendo" "MGLU3" 0.018284 "source=yahoo-dividends"

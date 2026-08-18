@@ -2,7 +2,7 @@
 ; asset: EGIE3
 ; quote_currency: BRL
 ; last_update: 2026-05-05
-; generated_at: 2026-08-16T23:13:18-03:00
+; generated_at: 2026-08-17T21:34:02-03:00
 
 2005-05-23 custom "grupamento" "EGIE3" 0.001 "source=yahoo-splits"
 2007-12-14 custom "dividendo" "EGIE3" 0.076439 "source=yahoo-dividends"
