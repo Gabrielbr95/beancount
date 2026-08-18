@@ -147,3 +147,6 @@ Thumbs.db
 
 # Disposable working files and CSV/Beancount round-trip outputs
 scratch/
+
+# Per-window extraction scratch (Wise full-history verification)
+tmp/

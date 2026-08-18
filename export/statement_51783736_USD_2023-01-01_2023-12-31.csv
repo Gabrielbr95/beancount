@@ -1,0 +1,7 @@
+"TransferWise ID",Date,"Date Time",Amount,Currency,Description,"Payment Reference","Running Balance","Exchange From","Exchange To","Exchange Rate","Payer Name","Payee Name","Payee Account Number",Merchant,"Card Last Four Digits","Card Holder Full Name",Attachment,Note,"Total fees","Exchange To Amount","Transaction Type","Transaction Details Type"
+BALANCE-924219524,23-03-2023,"23-03-2023 15:25:13.044",-32.95,USD,"33,10 USD convertidos para 30,32 EUR (fee: 0,15 USD)",,0.00,USD,EUR,0.92005,,,,,,,,,0.15,30.32,DEBIT,CONVERSION
+FEE-BALANCE-924219524,23-03-2023,"23-03-2023 15:25:13.043",-0.15,USD,"Wise Charges for: BALANCE-924219524",,32.95,,,,,,,,,,,,0,,DEBIT,CONVERSION
+CARD-628802292,10-03-2023,"10-03-2023 21:17:21.883",-49.90,USD,"Transação por cartão de 49,90 USD emitida por Dufry Free Lest Minute RIO DE JANEIR",,33.10,,,,,,,"Dufry Free Lest Minute RIO DE JANEIR",2379,"Gabriel Barros Rodrigues",,,0.00,,DEBIT,CARD
+CARD-623308541,06-03-2023,"06-03-2023 16:05:51.684",1.00,USD,"Transação por cartão de 1,00 USD emitida por Aliexpress.com London",,83.00,,,,,,,"Aliexpress.com London",2379,"Gabriel Barros Rodrigues",,,0.00,,CREDIT,CARD
+CARD-623308541,06-03-2023,"06-03-2023 16:04:02.035",-1.00,USD,"Transação por cartão de 1,00 USD emitida por Aliexpress.com London",,82.00,,,,,,,"Aliexpress.com London",2379,"Gabriel Barros Rodrigues",,,0.00,,DEBIT,CARD
+TRANSFER-626437577,06-03-2023,"06-03-2023 14:12:32.745",83.00,USD,"Dinheiro adicionado à conta",,83.00,BRL,USD,0.19357,,,,,,,,,0.00,83.00,CREDIT,MONEY_ADDED

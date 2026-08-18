@@ -81,3 +81,7 @@
 - [x] 49a. Confirm Beancount price orientation, automatic inverse rates, Fava conversion behavior, and the limits of `operating_currency`. (Verification: current Beancount/Fava documentation and source behavior are recorded in the feature specification.)
 - [x] 49b. Select one generated `*.bean` file per currency pair under `beans/currencies/`. (Verification: output layout is recorded in the feature specification and decision log.)
 - [x] 50. Implement the approved currency discovery and FX pair-fetching plan in `plugins/yahoo_price_service.py`. (Verification: complete criteria are in `plan/tasks_currency_conversion_prices.md`.)
+
+## Slice 16: Wise (TransferWise) importer (implemented, tests added)
+- [x] 51. Implement `importers/wise.py` + register in `import.py` + `beans/wise.bean` include + tests, per `plan/tasks_wise.md`. (Verification: 247/247 sample transactions import with `bean-check` clean, conversions merged, fees booked.)
+- Note: implementation + E2E (tasks 1-14) and offline unit tests (task 15) are done. Task 17 (opening balances) resolved — full history downloaded and imported (2022-05-13 → 2026-08-18, 5 windows), `emit_balance=True` active, accounts/commodities declared, `bean-check` clean. See `plan/tasks_wise.md`.

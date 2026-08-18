@@ -27,6 +27,24 @@
 1900-01-01 open Liabilities:Credit:BB:Card:PlatinumVisa
 
 ; ===========================================================================
+; Wise (multi-currency). Per-currency sub-accounts each hold only their own
+; currency; the Uncategorized/BankFees placeholders are multi-currency.
+; Dates = first use, from bean-doctor missing-open.
+; ===========================================================================
+2022-05-13 open Assets:Bank:Wise:EUR EUR
+2022-05-13 open Income:Uncategorized:Wise
+2022-11-20 open Expenses:Uncategorized:Wise
+2023-02-02 open Equity:Transfers:Wise
+2023-02-24 open Assets:Bank:Wise:CHF CHF
+2023-03-06 open Assets:Bank:Wise:USD USD
+2023-03-16 open Expenses:BankFees:Wise
+2023-03-23 open Assets:Bank:Wise:BRL BRL
+2024-12-11 open Assets:Bank:Wise:CNY CNY
+2024-12-17 open Assets:Bank:Wise:GBP GBP
+2025-02-03 open Income:Cashback:Wise BRL
+2026-03-15 open Assets:Bank:Wise:SGD SGD
+
+; ===========================================================================
 ; Frozen inventory - accounts used but not explicitly opened (2026-08-17)
 ; Generated from first-use dates; safe to edit. auto_accounts stays enabled
 ; as a safeguard for any future accounts.

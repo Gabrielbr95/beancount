@@ -14,6 +14,18 @@
   name: "US Dollar"
   precision: 2
 
+1900-01-01 commodity EUR
+  name: "Euro"
+  precision: 2
+
+1900-01-01 commodity CHF
+  name: "Swiss Franc"
+  precision: 2
+
+1900-01-01 commodity CNY
+  name: "Chinese Yuan"
+  precision: 2
+
 ; ===========================================================================
 ; Brazilian Stocks (B3)
 ; ===========================================================================

@@ -1,0 +1,3 @@
+"TransferWise ID",Date,"Date Time",Amount,Currency,Description,"Payment Reference","Running Balance","Exchange From","Exchange To","Exchange Rate","Payer Name","Payee Name","Payee Account Number",Merchant,"Card Last Four Digits","Card Holder Full Name",Attachment,Note,"Total fees","Exchange To Amount","Transaction Type","Transaction Details Type"
+BALANCE-1746739259,08-02-2024,"08-02-2024 22:17:34.179",-196.44,EUR,"197,54 EUR convertidos para 211,67 USD (fee: 1,10 EUR)",,0.00,EUR,USD,1.07755,,,,,,,,,1.10,211.67,DEBIT,CONVERSION
+FEE-BALANCE-1746739259,08-02-2024,"08-02-2024 22:17:34.178",-1.10,EUR,"Wise Charges for: BALANCE-1746739259",,196.44,,,,,,,,,,,,0,,DEBIT,CONVERSION

@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from importers.b3 import B3Importer
 from importers.pluggy import PluggyImporter
 from importers.ibkr import Importer as IBKRImporter
+from importers.wise import WiseImporter
 
 # Pluggy account mapping: {pluggy_account_id: beancount_account}
 # Item 1 — Banco Inter
@@ -35,17 +36,6 @@ PLUGGY_ACCOUNT_MAP = {
 }
 
 
-#    "4f7d29bc-1c6d-4349-b70a-6ab38b332a3a": "Assets:Bank:Wise",
-#    "3f9afa2a-380d-4d72-950a-de06e2f50d17": "Assets:Bank:Wise",
-#    "31f6c109-2785-4c52-a9ac-006455cacdc1": "Assets:Bank:Wise",
-#    "aa21d4ba-f6c1-4c15-85e3-f444bcca8c99": "Assets:Bank:Wise",
-#    "b87167ae-101e-4ed6-917b-a232d7e5aac4": "Assets:Bank:Wise",
-#    "15454b9e-eb9b-479d-9a29-c58a706cb2c2": "Assets:Bank:Wise",
-#    "28049575-dde9-4581-9ffa-5d9d90a4d0ea": "Assets:Bank:Wise",
-#    "d6e1d76e-616e-43e2-9442-b4890b04eb81": "Assets:Bank:Wise",
-#    "e7ff02ae-01dd-4d19-937c-a8b5d341e7f8": "Assets:Bank:Wise",
-
-
 # List of importers to be used by Beangulp and Fava
 CONFIG = [
     B3Importer(account_root="Assets:Investment"),
@@ -67,6 +57,12 @@ CONFIG = [
         pnl_account="Income:Investment:IBKR:{symbol}:PnL",
         document_archiving_account="ibkr",
     ),
+    # Wise per-currency statement CSVs (plan/tasks_wise.md). emit_balance=True
+    # (decision [007], amended): the user downloaded the full history
+    # (2022-05-13 → 2026-08-18, 5 windows in export/), the 2022 window starts
+    # from zero (account creation), so the history itself anchors every Wise
+    # account. Windows must be extracted/processed in chronological order.
+    WiseImporter(emit_balance=True),
 ]
 
 # Hooks to process entries after extraction.

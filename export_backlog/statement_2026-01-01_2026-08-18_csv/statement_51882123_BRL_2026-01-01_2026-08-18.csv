@@ -1,0 +1,2 @@
+"TransferWise ID",Date,"Date Time",Amount,Currency,Description,"Payment Reference","Running Balance","Exchange From","Exchange To","Exchange Rate","Payer Name","Payee Name","Payee Account Number",Merchant,"Card Last Four Digits","Card Holder Full Name",Attachment,Note,"Total fees","Exchange To Amount","Transaction Type","Transaction Details Type"
+CARD-4008134850,04-07-2026,"04-07-2026 01:03:45.491",-7.90,BRL,"Transação por cartão de 7,90 BRL emitida por Metro Rj RIO DE JANEIR",,19.76,,,,,,,"Metro Rj RIO DE JANEIR",2379,"Gabriel Barros Rodrigues",,,0.00,,DEBIT,CARD
