@@ -9,6 +9,7 @@ import beangulp
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from importers.b3 import B3Importer
 from importers.pluggy import PluggyImporter
+from importers.ibkr import Importer as IBKRImporter
 
 # Pluggy account mapping: {pluggy_account_id: beancount_account}
 # Item 1 — Banco Inter
@@ -52,6 +53,19 @@ CONFIG = [
         account_map=PLUGGY_ACCOUNT_MAP,
         credentials_file=os.path.join(os.path.dirname(os.path.abspath(__file__)), "api_keys.txt"),
         account_root="Assets:Bank",
+    ),
+    # IBKR Flex Query XML importer (vendored from uabean, decision [005]).
+    # Account names use the ledger's singular "Investment" convention; see
+    # plan/decisions_ibkr.md decision [002].
+    IBKRImporter(
+        cash_account="Assets:Bank:IBKR:Cash:{currency}",
+        assets_account="Assets:Investment:IBKR:{symbol}",
+        div_account="Income:Investment:IBKR:{symbol}:Dividend",
+        interest_account="Income:Investment:IBKR:Interest",
+        wht_account="Expenses:Investment:IBKR:WithholdingTax",
+        fees_account="Expenses:Investment:IBKR:Fees",
+        pnl_account="Income:Investment:IBKR:{symbol}:PnL",
+        document_archiving_account="ibkr",
     ),
 ]
 

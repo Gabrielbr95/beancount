@@ -1,0 +1,345 @@
+;; -*- mode: beancount -*-
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2021.xml
+
+2021-05-20 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2021-06-09 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2021-09-24 * "EIMI" "BUY 18 EIMI @ 36.45 USD"
+  Assets:Bank:IBKR:Cash:USD  -660.1 USD
+  Assets:Investment:IBKR:EIMI          18 EIMI {36.45 USD, 2021-09-24} @ 36.45 USD
+    ib_cost: 660.1
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2021-09-24 * "IWDA" "BUY 1 IWDA @ 85.53 USD"
+  Assets:Bank:IBKR:Cash:USD  -89.53 USD
+  Assets:Investment:IBKR:IWDA           1 IWDA {85.53 USD, 2021-09-24} @ 85.53 USD
+    ib_cost: 89.53
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2021-09-24 * "IWDA" "BUY 13 IWDA @ 85.51 USD"
+  Assets:Bank:IBKR:Cash:USD  -1111.63 USD
+  Assets:Investment:IBKR:IWDA            13 IWDA {85.51 USD, 2021-09-24} @ 85.51 USD
+    ib_cost: 1111.63
+  C Expenses:Investment:IBKR:Fees         0 USD
+
+2022-01-01 balance Assets:Bank:IBKR:Cash:USD                 138.74 USD
+
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2022.xml
+
+2022-01-21 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  904.29 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-02-22 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1907.8 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-03-01 * "VWRA" "BUY 27 VWRA @ 109 USD"
+  Assets:Bank:IBKR:Cash:USD        -2947 USD
+  Assets:Investment:IBKR:VWRA         27 VWRA {109 USD, 2022-03-01} @ 109 USD
+    ib_cost: 2947
+  C Expenses:Investment:IBKR:Fees      4 USD
+
+2022-03-17 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  2895.34 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-03-18 * "VWRA" "BUY 26 VWRA @ 108.76 USD"
+  Assets:Bank:IBKR:Cash:USD        -2831.76 USD
+  Assets:Investment:IBKR:VWRA            26 VWRA {108.76 USD, 2022-03-18} @ 108.76 USD
+    ib_cost: 2831.76
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2022-04-27 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-05-16 * "VWRA" "BUY 10 VWRA @ 99.13 USD"
+  Assets:Bank:IBKR:Cash:USD        -995.3 USD
+  Assets:Investment:IBKR:VWRA          10 VWRA {99.13 USD, 2022-05-16} @ 99.13 USD
+    ib_cost: 995.3
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2022-05-16 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  500 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-05-20 * "VWRA" "BUY 5 VWRA @ 98.85 USD"
+  Assets:Bank:IBKR:Cash:USD        -498.25 USD
+  Assets:Investment:IBKR:VWRA            5 VWRA {98.85 USD, 2022-05-20} @ 98.85 USD
+    ib_cost: 498.25
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2022-05-20 * "VWRA" "BUY 10 VWRA @ 97.9 USD"
+  Assets:Bank:IBKR:Cash:USD        -983 USD
+  Assets:Investment:IBKR:VWRA        10 VWRA {97.9 USD, 2022-05-20} @ 97.9 USD
+    ib_cost: 983
+  C Expenses:Investment:IBKR:Fees     4 USD
+
+2022-05-20 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-07-29 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  943.22 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-08-01 * "VWRA" "BUY 10 VWRA @ 101.26 USD"
+  Assets:Bank:IBKR:Cash:USD        -1016.6 USD
+  Assets:Investment:IBKR:VWRA           10 VWRA {101.26 USD, 2022-08-01} @ 101.26 USD
+    ib_cost: 1016.6
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2022-08-22 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  500 USD
+  Equity:Transfers:Interbakn:USD
+
+2022-08-26 * "VWRA" "BUY 5 VWRA @ 101.7 USD"
+  Assets:Bank:IBKR:Cash:USD        -512.5 USD
+  Assets:Investment:IBKR:VWRA           5 VWRA {101.7 USD, 2022-08-26} @ 101.7 USD
+    ib_cost: 512.5
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2022-12-31 balance Assets:Bank:IBKR:Cash:USD                       4.98 USD
+
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2023.xml
+
+2023-01-25 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2023-01-31 * "VWRA" "BUY 9 VWRA @ 102.96 USD"
+  Assets:Bank:IBKR:Cash:USD        -930.64 USD
+  Assets:Investment:IBKR:VWRA            9 VWRA {102.96 USD, 2023-01-31} @ 102.96 USD
+    ib_cost: 930.64
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2023-05-11 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1500 USD
+  Equity:Transfers:Interbakn:USD
+
+2023-05-15 * "VWRA" "BUY 14 VWRA @ 104.8 USD"
+  Assets:Bank:IBKR:Cash:USD        -1471.2 USD
+  Assets:Investment:IBKR:VWRA           14 VWRA {104.8 USD, 2023-05-15} @ 104.8 USD
+    ib_cost: 1471.2
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2023-11-13 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1002.08 USD
+  Equity:Transfers:Interbakn:USD
+
+2023-11-20 * "VWRA" "BUY 9 VWRA @ 111.46 USD"
+  Assets:Bank:IBKR:Cash:USD        -1007.14 USD
+  Assets:Investment:IBKR:VWRA             9 VWRA {111.46 USD, 2023-11-20} @ 111.46 USD
+    ib_cost: 1007.14
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2023-12-01 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1009.68 USD
+  Equity:Transfers:Interbakn:USD
+
+2023-12-27 * "VWRA" "BUY 7 VWRA @ 117.96 USD"
+  Assets:Bank:IBKR:Cash:USD        -829.72 USD
+  Assets:Investment:IBKR:VWRA            7 VWRA {117.96 USD, 2023-12-27} @ 117.96 USD
+    ib_cost: 829.72
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2023-12-27 * "VWRA" "BUY 2 VWRA @ 117.96 USD"
+  Assets:Bank:IBKR:Cash:USD        -235.92 USD
+  Assets:Investment:IBKR:VWRA            2 VWRA {117.96 USD, 2023-12-27} @ 117.96 USD
+    ib_cost: 235.92
+  C Expenses:Investment:IBKR:Fees        0 USD
+
+2023-12-30 balance Assets:Bank:IBKR:Cash:USD                       42.12 USD
+
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2024.xml
+
+2024-01-25 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  1000 USD
+  Equity:Transfers:Interbakn:USD
+
+2024-03-01 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  3000 USD
+  Equity:Transfers:Interbakn:USD
+
+2024-03-04 * "EIMI" "SELL -18 EIMI @ 32.22 USD"
+  Assets:Bank:IBKR:Cash:USD        575.96 USD
+  Assets:Investment:IBKR:EIMI         -18 EIMI {36.45 USD, 2021-09-24} @ 32.22 USD
+    ib_cost: 660.1
+  Income:Investment:IBKR:EIMI:PnL
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2024-03-04 * "IWDA" "SELL -14 IWDA @ 96.5 USD"
+  Assets:Bank:IBKR:Cash:USD        1347 USD
+  Assets:Investment:IBKR:IWDA        -1 IWDA {85.53 USD, 2021-09-24} @ 96.5 USD
+    ib_cost: 89.53
+  Assets:Investment:IBKR:IWDA       -13 IWDA {85.51 USD, 2021-09-24} @ 96.5 USD
+    ib_cost: 1111.63
+  Income:Investment:IBKR:IWDA:PnL
+  C Expenses:Investment:IBKR:Fees     4 USD
+
+2024-03-05 * "VUSD" "BUY 60 VUSD @ 97.15 USD"
+  Assets:Bank:IBKR:Cash:USD        -5833 USD
+  Assets:Investment:IBKR:VUSD         60 VUSD {97.15 USD, 2024-03-05} @ 97.15 USD
+    ib_cost: 5833
+  C Expenses:Investment:IBKR:Fees      4 USD
+
+2024-03-18 * "VUSD" "BUY 1 VUSD @ 97.8825 USD"
+  Assets:Bank:IBKR:Cash:USD        -101.8825 USD
+  Assets:Investment:IBKR:VUSD              1 VUSD {97.8825 USD, 2024-03-18} @ 97.8825 USD
+    ib_cost: 101.8825
+  C Expenses:Investment:IBKR:Fees          4 USD
+
+2024-03-28 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.302416 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.302416"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -18.14 USD
+  Assets:Bank:IBKR:Cash:USD              18.14 USD
+
+2024-06-27 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.259254 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.259254"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -15.81 USD
+  Assets:Bank:IBKR:Cash:USD              15.81 USD
+
+2024-09-26 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.284484 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.284484"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -17.35 USD
+  Assets:Bank:IBKR:Cash:USD              17.35 USD
+
+2024-12-30 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.30615 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.30615"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -18.68 USD
+  Assets:Bank:IBKR:Cash:USD              18.68 USD
+
+2025-01-01 balance Assets:Bank:IBKR:Cash:USD                       100.1775 USD
+
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2025.xml
+
+2025-04-03 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.32063 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.32063"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -19.56 USD
+  Assets:Bank:IBKR:Cash:USD              19.56 USD
+
+2025-07-03 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.31292 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.31292"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -19.09 USD
+  Assets:Bank:IBKR:Cash:USD              19.09 USD
+
+2025-10-02 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.301175 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.301175"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -18.37 USD
+  Assets:Bank:IBKR:Cash:USD              18.37 USD
+
+2025-12-30 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:USD  8570.32 USD
+  Equity:Transfers:Interbakn:USD
+
+2026-01-01 balance Assets:Bank:IBKR:Cash:USD                       8727.5175 USD
+
+
+**** /home/gabriel/Documents/Projects/my_beancount/export/Beancount-uabean-2026_parcial.xml
+
+2026-01-02 * "VUSD" "VUSD(IE00B3XXRP09) CASH DIVIDEND USD 0.299086 PER SHARE (Mixed Income)"
+  isin: "IE00B3XXRP09"
+  per_share: "0.299086"
+  div: TRUE
+  div_type: "Dividends"
+  Income:Investment:IBKR:VUSD:Dividend  -18.24 USD
+  Assets:Bank:IBKR:Cash:USD              18.24 USD
+
+2026-01-05 * "AVGS" "BUY 100 AVGS @ 24.0407 USD"
+  Assets:Bank:IBKR:Cash:USD        -2408.07 USD
+  Assets:Investment:IBKR:AVGS           100 AVGS {24.0407 USD, 2026-01-05} @ 24.0407 USD
+    ib_cost: 2408.07
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2026-01-05 * "VWRA" "BUY 20 VWRA @ 171.2622 USD"
+  Assets:Bank:IBKR:Cash:USD        -3429.24 USD
+  Assets:Investment:IBKR:VWRA            20 VWRA {171.2622 USD, 2026-01-05} @ 171.2622 USD
+    ib_cost: 3429.24
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2026-01-08 * "IWVL" "BUY 47 IWVL @ 61.18 USD"
+  Assets:Bank:IBKR:Cash:USD        -2879.46 USD
+  Assets:Investment:IBKR:IWVL            47 IWVL {61.18 USD, 2026-01-08} @ 61.18 USD
+    ib_cost: 2879.46
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2026-01-23 * "GBP.USD" "SELL -4614.74 GBP @ 1.35425 USD"
+  Assets:Bank:IBKR:Cash:GBP         -4614.74 GBP @ 1.35425 USD
+  Assets:Bank:IBKR:Cash:USD      6249.511645 USD
+  Assets:Bank:IBKR:Cash:USD               -2 USD
+  Expenses:Investment:IBKR:Fees            2 USD
+
+2026-01-23 * "AVGS" "BUY 80 AVGS @ 25.425 USD"
+  Assets:Bank:IBKR:Cash:USD        -2038 USD
+  Assets:Investment:IBKR:AVGS         80 AVGS {25.425 USD, 2026-01-23} @ 25.425 USD
+    ib_cost: 2038
+  C Expenses:Investment:IBKR:Fees      4 USD
+
+2026-01-23 * "AVGS" "BUY 3 AVGS @ 25.4196 USD"
+  Assets:Bank:IBKR:Cash:USD        -80.26 USD
+  Assets:Investment:IBKR:AVGS           3 AVGS {25.4196 USD, 2026-01-23} @ 25.4196 USD
+    ib_cost: 80.26
+  C Expenses:Investment:IBKR:Fees       4 USD
+
+2026-01-23 * "IWVL" "BUY 27 IWVL @ 62.84 USD"
+  Assets:Bank:IBKR:Cash:USD        -1700.68 USD
+  Assets:Investment:IBKR:IWVL            27 IWVL {62.84 USD, 2026-01-23} @ 62.84 USD
+    ib_cost: 1700.68
+  C Expenses:Investment:IBKR:Fees         4 USD
+
+2026-01-23 * "VUSD" "SELL -61 VUSD @ 130.93 USD"
+  Assets:Bank:IBKR:Cash:USD        7982.73 USD
+  Assets:Investment:IBKR:VUSD          -60 VUSD {2024-03-05} @ 130.93 USD
+    ib_cost: 5833
+  Assets:Investment:IBKR:VUSD           -1 VUSD {2024-03-18} @ 130.93 USD
+    ib_cost: 101.8825
+  Income:Investment:IBKR:VUSD:PnL
+  C Expenses:Investment:IBKR:Fees        4 USD
+
+2026-01-23 * "VWRA" "BUY 60 VWRA @ 173.64 USD"
+  Assets:Bank:IBKR:Cash:USD        -10423.6092 USD
+  Assets:Investment:IBKR:VWRA               60 VWRA {173.64 USD, 2026-01-23} @ 173.64 USD
+    ib_cost: 10423.6092
+  C Expenses:Investment:IBKR:Fees       5.2092 USD
+
+2026-01-23 * "self" "CASH RECEIPTS / ELECTRONIC FUND TRANSFERS"
+  Assets:Bank:IBKR:Cash:GBP  4614.74 GBP
+  Equity:Transfers:Interbakn:GBP
+
+2026-08-15 balance Assets:Bank:IBKR:Cash:GBP                       0 GBP
+
+2026-08-15 balance Assets:Bank:IBKR:Cash:USD                       16.679945 USD
+
+

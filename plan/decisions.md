@@ -226,3 +226,33 @@
   are not included in `main.bean` (decision [003]), so `bean-check` never sees
   them. Left as-is for now; flagged for future cleanup if those files ever get
   included.
+
+## [013] IBKR integration importer: uabean
+- **Date:** 2026-08-17
+- **Context:** The user will integrate Interactive Brokers into the Beancount
+  ledger and needs an importer. Research (via subagents, 2026-08-17) covered the
+  full IBKR importer landscape: drnuke-bean, uabean, reds_importers (v2-only for
+  stable), tarioch/beancounttools, alens-importers, and the `ibflex` building
+  block. The user also plans Wise and Binance integration in the future.
+- **Options Considered:**
+  - A: drnuke-bean — most complete, actively maintained, v3/beangulp, exact lot
+    matching. Heavier: Python >=3.12, more deps (loguru, smart_importer,
+    diskcache), Swiss-flavored defaults to configure.
+  - B: uabean — v3/beangulp, MIT, offline-capable (manual Flex XML export),
+    fewest deps (beangulp, ibflex, openpyxl, xlrd, requests, python-dateutil).
+    Also ships `uabean-wise-downloader` (relevant to the future Wise plan).
+  - C: reds_importers — most-cited but v3 port is explicitly "not ready".
+  - D: Roll own thin importer on `ibflex` — full control, most work.
+- **Decision:** Option B — uabean.
+- **Rationale:** Fits the corporate Windows/no-admin, local-first constraint
+  (manual Flex XML export means zero connectivity at import time). Fewest
+  dependencies, MIT license, already beangulp-native for the v3 ledger. Wise
+  downloader is a bonus for the stated future plan. Known caveats accepted:
+  `beangulp` pinned to git master (may override the installed 0.2.0 — test
+  before committing), and ibflex pinned to a git commit. Binance will need a
+  separate importer (not in uabean); revisit when needed.
+- **Implementation Notes:** Venv (Python 3.14.6) already has beancount 3.2.3,
+  beangulp 0.2.0, beanquery 0.2.0, smart_importer 1.2, diskcache, requests,
+  python-dateutil. Missing for uabean: `ibflex[web]` (pinned commit),
+  `openpyxl`, `xlrd`. Per research consensus: use Flex Web Service, STRICT/date
+  lot matching, per-symbol sub-accounts, `{{total cost}}` for fractional shares.
